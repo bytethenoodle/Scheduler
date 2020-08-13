@@ -3,17 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		525C4AA824E4BC4500659EC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C4AA724E4BC4500659EC6 /* AppDelegate.swift */; };
 		525C4AAA24E4BC4500659EC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C4AA924E4BC4500659EC6 /* SceneDelegate.swift */; };
 		525C4AAC24E4BC4500659EC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C4AAB24E4BC4500659EC6 /* ViewController.swift */; };
-		525C4AAF24E4BC4500659EC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525C4AAD24E4BC4500659EC6 /* Main.storyboard */; };
+		525C4AAF24E4BC4500659EC6 /* ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525C4AAD24E4BC4500659EC6 /* ViewController.storyboard */; };
 		525C4AB224E4BC4500659EC6 /* Scheduler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 525C4AB024E4BC4500659EC6 /* Scheduler.xcdatamodeld */; };
 		525C4AB424E4BC4800659EC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 525C4AB324E4BC4800659EC6 /* Assets.xcassets */; };
 		525C4AB724E4BC4800659EC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525C4AB524E4BC4800659EC6 /* LaunchScreen.storyboard */; };
+		525C4ABF24E4EEA600659EC6 /* SceneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C4ABE24E4EEA600659EC6 /* SceneRouter.swift */; };
+		A20DE51C7A32A74815A780DB /* Pods_Scheduler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70526C0E2D27263308DCBFF2 /* Pods_Scheduler.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +23,15 @@
 		525C4AA724E4BC4500659EC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		525C4AA924E4BC4500659EC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		525C4AAB24E4BC4500659EC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		525C4AAE24E4BC4500659EC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		525C4AAE24E4BC4500659EC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/ViewController.storyboard; sourceTree = "<group>"; };
 		525C4AB124E4BC4500659EC6 /* Scheduler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Scheduler.xcdatamodel; sourceTree = "<group>"; };
 		525C4AB324E4BC4800659EC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		525C4AB624E4BC4800659EC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		525C4AB824E4BC4800659EC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		525C4ABE24E4EEA600659EC6 /* SceneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneRouter.swift; sourceTree = "<group>"; };
+		6EE5C9A298FFDF2AA059A61C /* Pods-Scheduler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scheduler.debug.xcconfig"; path = "Target Support Files/Pods-Scheduler/Pods-Scheduler.debug.xcconfig"; sourceTree = "<group>"; };
+		70526C0E2D27263308DCBFF2 /* Pods_Scheduler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scheduler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89613AE0124B96B465532C28 /* Pods-Scheduler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scheduler.release.xcconfig"; path = "Target Support Files/Pods-Scheduler/Pods-Scheduler.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A20DE51C7A32A74815A780DB /* Pods_Scheduler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B98DBFB7644D605C5EE8AFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70526C0E2D27263308DCBFF2 /* Pods_Scheduler.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		525C4A9B24E4BC4500659EC6 = {
 			isa = PBXGroup;
 			children = (
 				525C4AA624E4BC4500659EC6 /* Scheduler */,
 				525C4AA524E4BC4500659EC6 /* Products */,
+				AA8D1B426BF1F13E467D8C66 /* Pods */,
+				3B98DBFB7644D605C5EE8AFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,16 +75,58 @@
 		525C4AA624E4BC4500659EC6 /* Scheduler */ = {
 			isa = PBXGroup;
 			children = (
-				525C4AA724E4BC4500659EC6 /* AppDelegate.swift */,
-				525C4AA924E4BC4500659EC6 /* SceneDelegate.swift */,
-				525C4AAB24E4BC4500659EC6 /* ViewController.swift */,
-				525C4AAD24E4BC4500659EC6 /* Main.storyboard */,
-				525C4AB324E4BC4800659EC6 /* Assets.xcassets */,
-				525C4AB524E4BC4800659EC6 /* LaunchScreen.storyboard */,
-				525C4AB824E4BC4800659EC6 /* Info.plist */,
-				525C4AB024E4BC4500659EC6 /* Scheduler.xcdatamodeld */,
+				525C4AC024E4EEEB00659EC6 /* Main */,
+				525C4AC124E4EEF700659EC6 /* Scenes */,
+				525C4AC324E5778500659EC6 /* Resources */,
 			);
 			path = Scheduler;
+			sourceTree = "<group>";
+		};
+		525C4AC024E4EEEB00659EC6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				525C4AA724E4BC4500659EC6 /* AppDelegate.swift */,
+				525C4AA924E4BC4500659EC6 /* SceneDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		525C4AC124E4EEF700659EC6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				525C4ABE24E4EEA600659EC6 /* SceneRouter.swift */,
+				525C4AC224E573E500659EC6 /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		525C4AC224E573E500659EC6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				525C4AAB24E4BC4500659EC6 /* ViewController.swift */,
+				525C4AAD24E4BC4500659EC6 /* ViewController.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		525C4AC324E5778500659EC6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				525C4AB824E4BC4800659EC6 /* Info.plist */,
+				525C4AB324E4BC4800659EC6 /* Assets.xcassets */,
+				525C4AB024E4BC4500659EC6 /* Scheduler.xcdatamodeld */,
+				525C4AB524E4BC4800659EC6 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AA8D1B426BF1F13E467D8C66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6EE5C9A298FFDF2AA059A61C /* Pods-Scheduler.debug.xcconfig */,
+				89613AE0124B96B465532C28 /* Pods-Scheduler.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 525C4ABB24E4BC4800659EC6 /* Build configuration list for PBXNativeTarget "Scheduler" */;
 			buildPhases = (
+				DA708E3151027D6F48D13B3D /* [CP] Check Pods Manifest.lock */,
 				525C4AA024E4BC4500659EC6 /* Sources */,
 				525C4AA124E4BC4500659EC6 /* Frameworks */,
 				525C4AA224E4BC4500659EC6 /* Resources */,
+				F7F4211FDFBA81841F3622F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,11 +191,53 @@
 			files = (
 				525C4AB724E4BC4800659EC6 /* LaunchScreen.storyboard in Resources */,
 				525C4AB424E4BC4800659EC6 /* Assets.xcassets in Resources */,
-				525C4AAF24E4BC4500659EC6 /* Main.storyboard in Resources */,
+				525C4AAF24E4BC4500659EC6 /* ViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA708E3151027D6F48D13B3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Scheduler-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7F4211FDFBA81841F3622F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Scheduler/Pods-Scheduler-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Scheduler/Pods-Scheduler-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Scheduler/Pods-Scheduler-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		525C4AA024E4BC4500659EC6 /* Sources */ = {
@@ -144,6 +247,7 @@
 				525C4AAC24E4BC4500659EC6 /* ViewController.swift in Sources */,
 				525C4AB224E4BC4500659EC6 /* Scheduler.xcdatamodeld in Sources */,
 				525C4AA824E4BC4500659EC6 /* AppDelegate.swift in Sources */,
+				525C4ABF24E4EEA600659EC6 /* SceneRouter.swift in Sources */,
 				525C4AAA24E4BC4500659EC6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,12 +255,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		525C4AAD24E4BC4500659EC6 /* Main.storyboard */ = {
+		525C4AAD24E4BC4500659EC6 /* ViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				525C4AAE24E4BC4500659EC6 /* Base */,
 			);
-			name = Main.storyboard;
+			name = ViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		525C4AB524E4BC4800659EC6 /* LaunchScreen.storyboard */ = {
@@ -220,7 +324,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -286,11 +390,13 @@
 		};
 		525C4ABC24E4BC4800659EC6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EE5C9A298FFDF2AA059A61C /* Pods-Scheduler.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Scheduler/Info.plist;
+				INFOPLIST_FILE = Scheduler/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,11 +411,13 @@
 		};
 		525C4ABD24E4BC4800659EC6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89613AE0124B96B465532C28 /* Pods-Scheduler.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Scheduler/Info.plist;
+				INFOPLIST_FILE = Scheduler/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
