@@ -8,13 +8,26 @@
 
 import ReSwift
 
-final class SceneCoordinator {
+final class SceneCoordinator: StoreSubscriber {
+    
+    typealias StoreSubscriberStateType = SceneRouteState
     
     let navigationController: UINavigationController
     
     init(window: UIWindow) {
+        
         navigationController = UINavigationController()
         window.rootViewController = navigationController
+        
+        SceneStore.shared.subscribe(self) {
+            $0.select {
+                $0.sceneRouteState
+            }
+        }
+    }
+    
+    func newState(state: SceneRouteState) {
+        
     }
 }
 

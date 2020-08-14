@@ -9,6 +9,7 @@
 import ReSwift
 
 struct SceneState: StateType {
+    
   let sceneRouteState: SceneRouteState
   let loginState: LoginState
 }

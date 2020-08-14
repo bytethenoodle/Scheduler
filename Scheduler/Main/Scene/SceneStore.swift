@@ -9,6 +9,7 @@
 import ReSwift
 
 final class SceneStore: Store<SceneState> {
+    
     static let shared = SceneStore(reducer: SceneReducer.reduce, state: nil)
 }
 
