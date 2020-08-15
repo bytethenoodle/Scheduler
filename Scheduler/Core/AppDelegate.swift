@@ -10,13 +10,14 @@ import UIKit
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: SceneResponder, UIApplicationDelegate {
 
     // MARK: - AppDelegate Methods
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        if #available(iOS 13, *) {} else {sceneCoordinator = SceneCoordinator()}
         return true
     }
     

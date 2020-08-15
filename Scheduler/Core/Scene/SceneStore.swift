@@ -1,5 +1,5 @@
 //
-//  SceneRouteAction.swift
+//  SceneStore.swift
 //  Scheduler
 //
 //  Created by Elbert John Orozco on 2020/08/14.
@@ -8,6 +8,7 @@
 
 import ReSwift
 
-struct SceneRouteAction: Action {
-  let sceneRoute: SceneRoute
-}
+open class SceneStore: Store<SceneState> {}
+
+
+

@@ -13,11 +13,11 @@ class LoginCoordinator: StoreSubscriber {
     typealias StoreSubscriberStateType = LoginState
     
     init() {
-        SceneStore.shared.subscribe(self) {
-            $0.select {
-                $0.loginState
-            }
-        }
+//        SceneStore.shared.subscribe(self) {
+//            $0.select {
+//                $0.loginState
+//            }
+//        }
     }
     
     func newState(state: LoginState) {

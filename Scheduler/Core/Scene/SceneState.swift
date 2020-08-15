@@ -1,5 +1,5 @@
 //
-//  SceneRouteState.swift
+//  SceneState.swift
 //  Scheduler
 //
 //  Created by Elbert John Orozco on 2020/08/14.
@@ -8,11 +8,11 @@
 
 import ReSwift
 
-struct SceneRouteState: StateType {
- 
-    var sceneRoute: SceneRoute
+public struct SceneState: StateType {
     
-    init(sceneRoute: SceneRoute = .login) {
+    public var sceneRoute: SceneRoute
+    
+    public init(sceneRoute: SceneRoute) {
         self.sceneRoute = sceneRoute
     }
 }

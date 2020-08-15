@@ -25,7 +25,9 @@
 		5284C52724E673CE0032FFB4 /* SceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52624E673CE0032FFB4 /* SceneState.swift */; };
 		5284C52924E678610032FFB4 /* SceneReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52824E678610032FFB4 /* SceneReducer.swift */; };
 		5284C52D24E67DA80032FFB4 /* SceneRouteReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52C24E67DA80032FFB4 /* SceneRouteReducer.swift */; };
-		5284C52F24E67E790032FFB4 /* SceneRouteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52E24E67E790032FFB4 /* SceneRouteAction.swift */; };
+		5284C52F24E67E790032FFB4 /* SceneAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52E24E67E790032FFB4 /* SceneAction.swift */; };
+		52ACACC824E7905700147137 /* SceneWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACACC724E7905700147137 /* SceneWindow.swift */; };
+		52F7FBB624E7BC09008F7FDB /* SceneResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7FBB524E7BC09008F7FDB /* SceneResponder.swift */; };
 		A20DE51C7A32A74815A780DB /* Pods_Scheduler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70526C0E2D27263308DCBFF2 /* Pods_Scheduler.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,7 +52,9 @@
 		5284C52624E673CE0032FFB4 /* SceneState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneState.swift; sourceTree = "<group>"; };
 		5284C52824E678610032FFB4 /* SceneReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneReducer.swift; sourceTree = "<group>"; };
 		5284C52C24E67DA80032FFB4 /* SceneRouteReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneRouteReducer.swift; sourceTree = "<group>"; };
-		5284C52E24E67E790032FFB4 /* SceneRouteAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneRouteAction.swift; sourceTree = "<group>"; };
+		5284C52E24E67E790032FFB4 /* SceneAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneAction.swift; sourceTree = "<group>"; };
+		52ACACC724E7905700147137 /* SceneWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneWindow.swift; sourceTree = "<group>"; };
+		52F7FBB524E7BC09008F7FDB /* SceneResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneResponder.swift; sourceTree = "<group>"; };
 		6EE5C9A298FFDF2AA059A61C /* Pods-Scheduler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scheduler.debug.xcconfig"; path = "Target Support Files/Pods-Scheduler/Pods-Scheduler.debug.xcconfig"; sourceTree = "<group>"; };
 		70526C0E2D27263308DCBFF2 /* Pods_Scheduler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scheduler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89613AE0124B96B465532C28 /* Pods-Scheduler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scheduler.release.xcconfig"; path = "Target Support Files/Pods-Scheduler/Pods-Scheduler.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 		525C4AA624E4BC4500659EC6 /* Scheduler */ = {
 			isa = PBXGroup;
 			children = (
+				52ACACC624E78E3E00147137 /* Core */,
 				525C4AC024E4EEEB00659EC6 /* Main */,
 				525C4AC124E4EEF700659EC6 /* Scenes */,
 				525C4AC324E5778500659EC6 /* Resources */,
@@ -107,10 +112,6 @@
 		525C4AC024E4EEEB00659EC6 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				525C4AA724E4BC4500659EC6 /* AppDelegate.swift */,
-				525C4AA924E4BC4500659EC6 /* SceneDelegate.swift */,
-				5284C52B24E67C4C0032FFB4 /* Scene */,
-				5284C52A24E67B860032FFB4 /* SceneRoute */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -118,7 +119,6 @@
 		525C4AC124E4EEF700659EC6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				525C4ABE24E4EEA600659EC6 /* SceneCoordinator.swift */,
 				525C4AC224E573E500659EC6 /* Login */,
 			);
 			path = Scenes;
@@ -151,9 +151,7 @@
 		5284C52A24E67B860032FFB4 /* SceneRoute */ = {
 			isa = PBXGroup;
 			children = (
-				525C4AC424E632C600659EC6 /* SceneRoute.swift */,
 				5284C51C24E663160032FFB4 /* SceneRouteState.swift */,
-				5284C52E24E67E790032FFB4 /* SceneRouteAction.swift */,
 				5284C52C24E67DA80032FFB4 /* SceneRouteReducer.swift */,
 			);
 			path = SceneRoute;
@@ -162,11 +160,27 @@
 		5284C52B24E67C4C0032FFB4 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				5284C52E24E67E790032FFB4 /* SceneAction.swift */,
+				525C4ABE24E4EEA600659EC6 /* SceneCoordinator.swift */,
+				5284C52824E678610032FFB4 /* SceneReducer.swift */,
+				52F7FBB524E7BC09008F7FDB /* SceneResponder.swift */,
+				525C4AC424E632C600659EC6 /* SceneRoute.swift */,
 				5284C52624E673CE0032FFB4 /* SceneState.swift */,
 				5284C52424E671FF0032FFB4 /* SceneStore.swift */,
-				5284C52824E678610032FFB4 /* SceneReducer.swift */,
+				52ACACC724E7905700147137 /* SceneWindow.swift */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		52ACACC624E78E3E00147137 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				525C4AA724E4BC4500659EC6 /* AppDelegate.swift */,
+				525C4AA924E4BC4500659EC6 /* SceneDelegate.swift */,
+				5284C52B24E67C4C0032FFB4 /* Scene */,
+				5284C52A24E67B860032FFB4 /* SceneRoute */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		AA8D1B426BF1F13E467D8C66 /* Pods */ = {
@@ -301,14 +315,16 @@
 				525C4AB224E4BC4500659EC6 /* Scheduler.xcdatamodeld in Sources */,
 				5284C52124E666D20032FFB4 /* LoginReducer.swift in Sources */,
 				525C4AA824E4BC4500659EC6 /* AppDelegate.swift in Sources */,
-				5284C52F24E67E790032FFB4 /* SceneRouteAction.swift in Sources */,
+				5284C52F24E67E790032FFB4 /* SceneAction.swift in Sources */,
 				525C4ABF24E4EEA600659EC6 /* SceneCoordinator.swift in Sources */,
 				5284C51F24E666C00032FFB4 /* LoginActions.swift in Sources */,
 				5284C51D24E663160032FFB4 /* SceneRouteState.swift in Sources */,
 				5284C52D24E67DA80032FFB4 /* SceneRouteReducer.swift in Sources */,
 				5284C52524E671FF0032FFB4 /* SceneStore.swift in Sources */,
 				5284C52724E673CE0032FFB4 /* SceneState.swift in Sources */,
+				52ACACC824E7905700147137 /* SceneWindow.swift in Sources */,
 				525C4AAA24E4BC4500659EC6 /* SceneDelegate.swift in Sources */,
+				52F7FBB624E7BC09008F7FDB /* SceneResponder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +481,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -486,7 +502,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
