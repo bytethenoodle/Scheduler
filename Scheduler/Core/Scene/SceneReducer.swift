@@ -8,17 +8,21 @@
 
 import ReSwift
 
-final class SceneReducer {
-    static func reduce(action: Action, state: SceneState?) -> SceneState {
+final class SceneReducer: Reducer {
+    
+    typealias ActionType = Action
+    typealias ReducerStateType = SceneState
+    
+    static func reduce(action: ActionType, state: ReducerStateType?) -> ReducerStateType {
         var state = state ?? SceneState(sceneRoute: .login)
-        
+
         switch action {
             case let sceneAction as SceneAction:
                 state.sceneRoute = sceneAction.sceneRoute
             default:
                 break
         }
-        
+
         return state
     }
 }

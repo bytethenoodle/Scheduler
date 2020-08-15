@@ -8,35 +8,33 @@
 
 import ReSwift
 
-final class SceneCoordinator: StoreSubscriber {
+final class SceneCoordinator: Coordinator {
     
     typealias StoreSubscriberStateType = SceneState
-           
-    var window : SceneWindow?
+    typealias CoordinatorStoreType = SceneStore
+
+    lazy var store: CoordinatorStoreType = CoordinatorStoreType(reducer: SceneReducer.reduce,
+                                                                state: nil)
     
+    var window : SceneWindow?
+
     init(window: SceneWindow? = SceneWindow()) {
         self.window = window
-        
-        window?.store.subscribe(self) { $0.select { $0 }}
-        window?.makeKeyAndVisible()
+        self.window?.makeKeyAndVisible()
+
+        store.subscribe(self) { $0.select { $0 }}
     }
-    
-    func newState(state: SceneState) {
+
+    func newState(state: StoreSubscriberStateType) {
         switch state.sceneRoute {
         case .login:
+
             
-            
-            
+
             break
         default:
             break
         }
-        
-        
-        
-//        let vc = UIStoryboard(name: String(describing: LoginViewController.self), bundle: .main).instantiateViewController(identifier: String(describing: LoginViewController.self))
-//        window?.rootViewController = vc
-//        window?.makeKeyAndVisible()
     }
 }
 

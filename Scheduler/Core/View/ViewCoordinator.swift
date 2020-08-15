@@ -6,30 +6,11 @@
 //  Copyright © 2020 mynt. All rights reserved.
 //
 
-//import ReSwift
-//
-//struct SceneRouteState: StateType {
-// 
-//    var sceneRoute: SceneRoute
-//    
-//    init(sceneRoute: SceneRoute = .login) {
-//        self.sceneRoute = sceneRoute
-//    }
-//}
-
 import ReSwift
 
-class ViewCoordinator<T: StateType>: StoreSubscriber {
+protocol ViewCoordinator: Coordinator {
     
-    typealias StoreSubscriberStateType = T
-           
-    weak var sceneCoordinator: SceneCoordinator?
+    var sceneCoordinator: SceneCoordinator? {get set}
     
-    init(sceneCoordinator: SceneCoordinator) {
-        
-    }
-    
-    func newState(state: T) {
-        
-    }
+    init(sceneCoordinator: SceneCoordinator)
 }
