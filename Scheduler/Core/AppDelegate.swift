@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: SceneResponder, UIApplicationDelegate {
+final class AppDelegate: SceneResponder, UIApplicationDelegate {
 
     // MARK: - AppDelegate Methods
 

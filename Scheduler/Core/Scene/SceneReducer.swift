@@ -8,8 +8,8 @@
 
 import ReSwift
 
-open class SceneReducer {
-    public static func reduce(action: Action, state: SceneState?) -> SceneState {
+final class SceneReducer {
+    static func reduce(action: Action, state: SceneState?) -> SceneState {
         var state = state ?? SceneState(sceneRoute: .login)
         
         switch action {

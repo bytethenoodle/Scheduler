@@ -8,11 +8,11 @@
 
 import ReSwift
 
-open class SceneCoordinator: StoreSubscriber {
+final class SceneCoordinator: StoreSubscriber {
     
-    public typealias StoreSubscriberStateType = SceneState
+    typealias StoreSubscriberStateType = SceneState
            
-    open var window : SceneWindow?
+    var window : SceneWindow?
     
     init(window: SceneWindow? = SceneWindow()) {
         self.window = window
@@ -21,7 +21,7 @@ open class SceneCoordinator: StoreSubscriber {
         window?.makeKeyAndVisible()
     }
     
-    open func newState(state: SceneState) {
+    func newState(state: SceneState) {
         switch state.sceneRoute {
         case .login:
             

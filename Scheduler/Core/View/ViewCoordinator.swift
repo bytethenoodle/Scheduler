@@ -16,3 +16,20 @@
 //        self.sceneRoute = sceneRoute
 //    }
 //}
+
+import ReSwift
+
+class ViewCoordinator<T: StateType>: StoreSubscriber {
+    
+    typealias StoreSubscriberStateType = T
+           
+    weak var sceneCoordinator: SceneCoordinator?
+    
+    init(sceneCoordinator: SceneCoordinator) {
+        
+    }
+    
+    func newState(state: T) {
+        
+    }
+}

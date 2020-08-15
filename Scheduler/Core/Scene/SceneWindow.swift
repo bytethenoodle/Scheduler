@@ -8,7 +8,7 @@
 
 import ReSwift
 
-open class SceneWindow: UIWindow {
-    open lazy var store = Store<SceneState>(reducer: SceneReducer.reduce,
-                                            state: nil)
+final class SceneWindow: UIWindow {
+    lazy var store = Store<SceneState>(reducer: SceneReducer.reduce,
+                                       state: nil)
 }

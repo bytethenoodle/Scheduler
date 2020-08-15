@@ -8,6 +8,6 @@
 
 import UIKit
 
-open class SceneResponder: UIResponder {
-    open var sceneCoordinator: SceneCoordinator?
+class SceneResponder: UIResponder {
+    var sceneCoordinator: SceneCoordinator?
 }

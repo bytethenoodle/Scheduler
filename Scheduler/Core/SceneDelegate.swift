@@ -9,7 +9,7 @@
 import UIKit
 
 @available(iOS 13.0, *)
-class SceneDelegate: SceneResponder, UIWindowSceneDelegate {
+final class SceneDelegate: SceneResponder, UIWindowSceneDelegate {
         
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.

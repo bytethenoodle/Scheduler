@@ -9,7 +9,6 @@
 import ReSwift
 
 final class LoginReducer {
-    
     static func reduce(action: Action, state: LoginState?) -> LoginState {
       return LoginState()
     }

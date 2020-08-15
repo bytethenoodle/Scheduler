@@ -8,11 +8,11 @@
 
 import ReSwift
 
-public struct SceneState: StateType {
+struct SceneState: StateType {
     
-    public var sceneRoute: SceneRoute
+    var sceneRoute: SceneRoute
     
-    public init(sceneRoute: SceneRoute) {
+    init(sceneRoute: SceneRoute) {
         self.sceneRoute = sceneRoute
     }
 }

@@ -8,6 +8,6 @@
 
 import ReSwift
 
-public struct SceneAction: Action {
-  public let sceneRoute: SceneRoute
+struct SceneAction: Action {
+    let sceneRoute: SceneRoute
 }

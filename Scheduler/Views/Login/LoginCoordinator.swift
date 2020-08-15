@@ -8,9 +8,9 @@
 
 import ReSwift
 
-open class LoginCoordinator: StoreSubscriber {
+class LoginCoordinator: StoreSubscriber {
     
-    public typealias StoreSubscriberStateType = LoginState
+    typealias StoreSubscriberStateType = LoginState
     
     
     
@@ -22,7 +22,7 @@ open class LoginCoordinator: StoreSubscriber {
 //        }
     }
     
-    open func newState(state: LoginState) {
+    func newState(state: LoginState) {
         
     }
 }

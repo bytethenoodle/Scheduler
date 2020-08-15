@@ -8,7 +8,7 @@
 
 import ReSwift
 
-open class SceneStore: Store<SceneState> {}
+final class SceneStore: Store<SceneState> {}
 
 
 

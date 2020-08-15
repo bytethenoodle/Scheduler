@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum SceneRoute {
+enum SceneRoute {
     case login
     case registration
     case calendar
