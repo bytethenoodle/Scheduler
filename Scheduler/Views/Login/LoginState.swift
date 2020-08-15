@@ -8,6 +8,6 @@
 
 import ReSwift
 
-struct LoginState: StateType {
+public struct LoginState: StateType {
     
 }

@@ -17,14 +17,14 @@
 		525C4ABF24E4EEA600659EC6 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C4ABE24E4EEA600659EC6 /* SceneCoordinator.swift */; };
 		525C4AC524E632C600659EC6 /* SceneRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C4AC424E632C600659EC6 /* SceneRoute.swift */; };
 		525C4AC724E633F800659EC6 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C4AC624E633F800659EC6 /* LoginCoordinator.swift */; };
-		5284C51D24E663160032FFB4 /* SceneRouteState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C51C24E663160032FFB4 /* SceneRouteState.swift */; };
+		5284C51D24E663160032FFB4 /* ViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C51C24E663160032FFB4 /* ViewCoordinator.swift */; };
 		5284C51F24E666C00032FFB4 /* LoginActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C51E24E666C00032FFB4 /* LoginActions.swift */; };
 		5284C52124E666D20032FFB4 /* LoginReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52024E666D20032FFB4 /* LoginReducer.swift */; };
 		5284C52324E667580032FFB4 /* LoginState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52224E667580032FFB4 /* LoginState.swift */; };
 		5284C52524E671FF0032FFB4 /* SceneStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52424E671FF0032FFB4 /* SceneStore.swift */; };
 		5284C52724E673CE0032FFB4 /* SceneState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52624E673CE0032FFB4 /* SceneState.swift */; };
 		5284C52924E678610032FFB4 /* SceneReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52824E678610032FFB4 /* SceneReducer.swift */; };
-		5284C52D24E67DA80032FFB4 /* SceneRouteReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52C24E67DA80032FFB4 /* SceneRouteReducer.swift */; };
+		5284C52D24E67DA80032FFB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52C24E67DA80032FFB4 /* ViewController.swift */; };
 		5284C52F24E67E790032FFB4 /* SceneAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52E24E67E790032FFB4 /* SceneAction.swift */; };
 		52ACACC824E7905700147137 /* SceneWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACACC724E7905700147137 /* SceneWindow.swift */; };
 		52F7FBB624E7BC09008F7FDB /* SceneResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7FBB524E7BC09008F7FDB /* SceneResponder.swift */; };
@@ -44,14 +44,14 @@
 		525C4ABE24E4EEA600659EC6 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
 		525C4AC424E632C600659EC6 /* SceneRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneRoute.swift; sourceTree = "<group>"; };
 		525C4AC624E633F800659EC6 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
-		5284C51C24E663160032FFB4 /* SceneRouteState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneRouteState.swift; sourceTree = "<group>"; };
+		5284C51C24E663160032FFB4 /* ViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinator.swift; sourceTree = "<group>"; };
 		5284C51E24E666C00032FFB4 /* LoginActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginActions.swift; sourceTree = "<group>"; };
 		5284C52024E666D20032FFB4 /* LoginReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReducer.swift; sourceTree = "<group>"; };
 		5284C52224E667580032FFB4 /* LoginState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginState.swift; sourceTree = "<group>"; };
 		5284C52424E671FF0032FFB4 /* SceneStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneStore.swift; sourceTree = "<group>"; };
 		5284C52624E673CE0032FFB4 /* SceneState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneState.swift; sourceTree = "<group>"; };
 		5284C52824E678610032FFB4 /* SceneReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneReducer.swift; sourceTree = "<group>"; };
-		5284C52C24E67DA80032FFB4 /* SceneRouteReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneRouteReducer.swift; sourceTree = "<group>"; };
+		5284C52C24E67DA80032FFB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5284C52E24E67E790032FFB4 /* SceneAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneAction.swift; sourceTree = "<group>"; };
 		52ACACC724E7905700147137 /* SceneWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneWindow.swift; sourceTree = "<group>"; };
 		52F7FBB524E7BC09008F7FDB /* SceneResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneResponder.swift; sourceTree = "<group>"; };
@@ -102,26 +102,26 @@
 			isa = PBXGroup;
 			children = (
 				52ACACC624E78E3E00147137 /* Core */,
-				525C4AC024E4EEEB00659EC6 /* Main */,
-				525C4AC124E4EEF700659EC6 /* Scenes */,
+				525C4AC124E4EEF700659EC6 /* Views */,
 				525C4AC324E5778500659EC6 /* Resources */,
 			);
 			path = Scheduler;
 			sourceTree = "<group>";
 		};
-		525C4AC024E4EEEB00659EC6 /* Main */ = {
+		525C4AC024E4EEEB00659EC6 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Main;
+			path = Registration;
 			sourceTree = "<group>";
 		};
-		525C4AC124E4EEF700659EC6 /* Scenes */ = {
+		525C4AC124E4EEF700659EC6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				525C4AC224E573E500659EC6 /* Login */,
+				525C4AC024E4EEEB00659EC6 /* Registration */,
 			);
-			path = Scenes;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		525C4AC224E573E500659EC6 /* Login */ = {
@@ -148,13 +148,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		5284C52A24E67B860032FFB4 /* SceneRoute */ = {
+		5284C52A24E67B860032FFB4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5284C51C24E663160032FFB4 /* SceneRouteState.swift */,
-				5284C52C24E67DA80032FFB4 /* SceneRouteReducer.swift */,
+				5284C51C24E663160032FFB4 /* ViewCoordinator.swift */,
+				5284C52C24E67DA80032FFB4 /* ViewController.swift */,
 			);
-			path = SceneRoute;
+			path = View;
 			sourceTree = "<group>";
 		};
 		5284C52B24E67C4C0032FFB4 /* Scene */ = {
@@ -178,7 +178,7 @@
 				525C4AA724E4BC4500659EC6 /* AppDelegate.swift */,
 				525C4AA924E4BC4500659EC6 /* SceneDelegate.swift */,
 				5284C52B24E67C4C0032FFB4 /* Scene */,
-				5284C52A24E67B860032FFB4 /* SceneRoute */,
+				5284C52A24E67B860032FFB4 /* View */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -318,8 +318,8 @@
 				5284C52F24E67E790032FFB4 /* SceneAction.swift in Sources */,
 				525C4ABF24E4EEA600659EC6 /* SceneCoordinator.swift in Sources */,
 				5284C51F24E666C00032FFB4 /* LoginActions.swift in Sources */,
-				5284C51D24E663160032FFB4 /* SceneRouteState.swift in Sources */,
-				5284C52D24E67DA80032FFB4 /* SceneRouteReducer.swift in Sources */,
+				5284C51D24E663160032FFB4 /* ViewCoordinator.swift in Sources */,
+				5284C52D24E67DA80032FFB4 /* ViewController.swift in Sources */,
 				5284C52524E671FF0032FFB4 /* SceneStore.swift in Sources */,
 				5284C52724E673CE0032FFB4 /* SceneState.swift in Sources */,
 				52ACACC824E7905700147137 /* SceneWindow.swift in Sources */,

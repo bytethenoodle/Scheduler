@@ -8,9 +8,11 @@
 
 import ReSwift
 
-class LoginCoordinator: StoreSubscriber {
+open class LoginCoordinator: StoreSubscriber {
     
-    typealias StoreSubscriberStateType = LoginState
+    public typealias StoreSubscriberStateType = LoginState
+    
+    
     
     init() {
 //        SceneStore.shared.subscribe(self) {
@@ -20,7 +22,7 @@ class LoginCoordinator: StoreSubscriber {
 //        }
     }
     
-    func newState(state: LoginState) {
+    open func newState(state: LoginState) {
         
     }
 }

@@ -11,20 +11,22 @@ import ReSwift
 open class SceneCoordinator: StoreSubscriber {
     
     public typealias StoreSubscriberStateType = SceneState
+           
+    open var window : SceneWindow?
     
-    open lazy var navigationController: UINavigationController = UINavigationController()
-        
     init(window: SceneWindow? = SceneWindow()) {
-        window?.rootViewController = navigationController
+        self.window = window
+        
         window?.store.subscribe(self) { $0.select { $0 }}
-        if #available(iOS 13, *) {} else {
-            window?.makeKeyAndVisible()
-        }
+        window?.makeKeyAndVisible()
     }
     
     open func newState(state: SceneState) {
         switch state.sceneRoute {
         case .login:
+            
+            
+            
             break
         default:
             break

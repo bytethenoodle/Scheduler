@@ -1,5 +1,5 @@
 //
-//  SceneRouteState.swift
+//  ViewCoordinator.swift
 //  Scheduler
 //
 //  Created by Elbert John Orozco on 2020/08/14.
