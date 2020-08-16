@@ -23,10 +23,7 @@ final class LoginReducer: ActionReducer {
             case let keyboardAction as KeyboardAction:
                 // For handling keyboard: If frame width is equal to screen bounds, the keyboard is not floating
                 // Scroll offset height is based on the keyboard origin
-                state.keyboardSpec =
-                KeyboardSpec(keyboardHeight: keyboardAction.keyboardFrame.width == UIScreen.main.bounds.width ?
-                                             UIScreen.main.bounds.height - keyboardAction.keyboardFrame.origin.y : 0.0,
-                             animationDuration: keyboardAction.animationDuration)
+                state.keyboardSpec = keyboardAction.getKeyboardSpec()
                 break
             default:
                 break

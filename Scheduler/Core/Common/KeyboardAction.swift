@@ -11,4 +11,10 @@ import ReSwift
 struct KeyboardAction: Action {
     let keyboardFrame: CGRect
     let animationDuration: Double
+    
+    func getKeyboardSpec() -> KeyboardSpec {
+        return KeyboardSpec(keyboardHeight: keyboardFrame.width == UIScreen.main.bounds.width ?
+                                            UIScreen.main.bounds.height - keyboardFrame.origin.y : 0.0,
+                            animationDuration: animationDuration)
+    }
 }
