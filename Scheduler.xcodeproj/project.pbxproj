@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520B55A324E93335007621DE /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B55A224E93335007621DE /* View.swift */; };
+		522CE73F24E93EF200F5EF78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522CE73E24E93EF200F5EF78 /* ViewController.swift */; };
 		524E5D1524E818C7001FC71B /* RegistrationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1424E818C7001FC71B /* RegistrationState.swift */; };
 		524E5D1824E821DB001FC71B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1724E821DB001FC71B /* Coordinator.swift */; };
 		524E5D1A24E826E2001FC71B /* ActionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1924E826E2001FC71B /* ActionReducer.swift */; };
@@ -31,6 +33,7 @@
 		5284C52F24E67E790032FFB4 /* SceneAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52E24E67E790032FFB4 /* SceneAction.swift */; };
 		52A2FB6024E927F8000ECBFF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2FB5F24E927F8000ECBFF /* Color.swift */; };
 		52A2FB6224E92A52000ECBFF /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2FB6124E92A52000ECBFF /* UIColor.swift */; };
+		52A2FB6624E92E7E000ECBFF /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2FB6524E92E7E000ECBFF /* NavigationController.swift */; };
 		52ACACC824E7905700147137 /* SceneWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACACC724E7905700147137 /* SceneWindow.swift */; };
 		52C7640B24E8D89C00E02E2D /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7640A24E8D89C00E02E2D /* Storyboardable.swift */; };
 		52C7640D24E8E8A900E02E2D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7640C24E8E8A900E02E2D /* Store.swift */; };
@@ -41,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		520B55A224E93335007621DE /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		522CE73E24E93EF200F5EF78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		524E5D1424E818C7001FC71B /* RegistrationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationState.swift; sourceTree = "<group>"; };
 		524E5D1724E821DB001FC71B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		524E5D1924E826E2001FC71B /* ActionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionReducer.swift; sourceTree = "<group>"; };
@@ -67,6 +72,7 @@
 		5284C52E24E67E790032FFB4 /* SceneAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneAction.swift; sourceTree = "<group>"; };
 		52A2FB5F24E927F8000ECBFF /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		52A2FB6124E92A52000ECBFF /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		52A2FB6524E92E7E000ECBFF /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		52ACACC724E7905700147137 /* SceneWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneWindow.swift; sourceTree = "<group>"; };
 		52C7640A24E8D89C00E02E2D /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		52C7640C24E8E8A900E02E2D /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
@@ -131,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				52ACACC624E78E3E00147137 /* Core */,
+				52A2FB6424E92E16000ECBFF /* Components */,
 				525C4AC124E4EEF700659EC6 /* Views */,
 				525C4AC324E5778500659EC6 /* Resources */,
 			);
@@ -205,11 +212,21 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
-		52A2FB6324E92C57000ECBFF /* Navigation */ = {
+		52A2FB6324E92C57000ECBFF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				522CE73E24E93EF200F5EF78 /* ViewController.swift */,
+				52A2FB6524E92E7E000ECBFF /* NavigationController.swift */,
 			);
-			path = Navigation;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		52A2FB6424E92E16000ECBFF /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				520B55A224E93335007621DE /* View.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		52ACACC624E78E3E00147137 /* Core */ = {
@@ -219,7 +236,7 @@
 				525C4AA924E4BC4500659EC6 /* SceneDelegate.swift */,
 				5284C52B24E67C4C0032FFB4 /* Scene */,
 				5284C52A24E67B860032FFB4 /* View */,
-				52A2FB6324E92C57000ECBFF /* Navigation */,
+				52A2FB6324E92C57000ECBFF /* Controller */,
 				524E5D1624E819EB001FC71B /* Common */,
 				52C7640E24E8F38100E02E2D /* Extension */,
 			);
@@ -379,12 +396,15 @@
 				52A2FB6224E92A52000ECBFF /* UIColor.swift in Sources */,
 				5284C52124E666D20032FFB4 /* LoginReducer.swift in Sources */,
 				525C4AA824E4BC4500659EC6 /* AppDelegate.swift in Sources */,
+				520B55A324E93335007621DE /* View.swift in Sources */,
 				5284C52F24E67E790032FFB4 /* SceneAction.swift in Sources */,
+				52A2FB6624E92E7E000ECBFF /* NavigationController.swift in Sources */,
 				525C4ABF24E4EEA600659EC6 /* SceneCoordinator.swift in Sources */,
 				524E5D1A24E826E2001FC71B /* ActionReducer.swift in Sources */,
 				5284C51F24E666C00032FFB4 /* LoginAction.swift in Sources */,
 				524E5D1824E821DB001FC71B /* Coordinator.swift in Sources */,
 				5284C51D24E663160032FFB4 /* ViewCoordinator.swift in Sources */,
+				522CE73F24E93EF200F5EF78 /* ViewController.swift in Sources */,
 				5284C52D24E67DA80032FFB4 /* ViewControllerCoordinatable.swift in Sources */,
 				52A2FB6024E927F8000ECBFF /* Color.swift in Sources */,
 				5284C52524E671FF0032FFB4 /* SceneStore.swift in Sources */,

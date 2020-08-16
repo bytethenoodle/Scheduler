@@ -19,7 +19,7 @@ final class SceneCoordinator: Coordinator {
     
     init(window: SceneWindow? = SceneWindow()) {
         self.window = window
-        self.window?.makeKeyAndVisible()
+        window?.makeKeyAndVisible()
 
         store.subscribe(self) { $0.select { $0 }}
     }

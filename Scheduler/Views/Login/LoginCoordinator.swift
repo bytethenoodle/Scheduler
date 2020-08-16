@@ -26,7 +26,7 @@ class LoginCoordinator: ViewCoordinator {
     
     func start() {
         guard let loginViewController = LoginViewController.instantiateFromStoryboard() else { return }
-        let navigationController = UINavigationController(rootViewController: loginViewController)
+        let navigationController = NavigationController(rootViewController: loginViewController)
         sceneCoordinator?.window?.rootViewController = navigationController
     }
     

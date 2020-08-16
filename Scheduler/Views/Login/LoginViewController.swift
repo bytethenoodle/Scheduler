@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class LoginViewController: UIViewController, ViewControllerCoordinatable, Storyboardable {
+final class LoginViewController: ViewController, ViewControllerCoordinatable, Storyboardable {
     
     typealias CoordinatorType = LoginCoordinator
 
