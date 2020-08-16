@@ -8,8 +8,6 @@
 
 import UIKit
 
-import UIKit
-
 class Color {
     
     static var primary: UIColor? {

@@ -22,6 +22,13 @@
 		525C4ABF24E4EEA600659EC6 /* SceneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C4ABE24E4EEA600659EC6 /* SceneCoordinator.swift */; };
 		525C4AC524E632C600659EC6 /* SceneRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C4AC424E632C600659EC6 /* SceneRoute.swift */; };
 		525C4AC724E633F800659EC6 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C4AC624E633F800659EC6 /* LoginCoordinator.swift */; };
+		526302CA24E9440400CDCD1D /* PrimaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526302C924E9440400CDCD1D /* PrimaryLabel.swift */; };
+		526302CC24E9441200CDCD1D /* SecondaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526302CB24E9441200CDCD1D /* SecondaryLabel.swift */; };
+		526302CE24E9441E00CDCD1D /* ErrorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526302CD24E9441E00CDCD1D /* ErrorLabel.swift */; };
+		526302D024E9442A00CDCD1D /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526302CF24E9442A00CDCD1D /* TextField.swift */; };
+		526302D224E9443300CDCD1D /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526302D124E9443300CDCD1D /* PrimaryButton.swift */; };
+		526302D424E9445900CDCD1D /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526302D324E9445900CDCD1D /* SecondaryButton.swift */; };
+		526302DA24E9465A00CDCD1D /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526302D924E9465A00CDCD1D /* Font.swift */; };
 		5284C51D24E663160032FFB4 /* ViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C51C24E663160032FFB4 /* ViewCoordinator.swift */; };
 		5284C51F24E666C00032FFB4 /* LoginAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C51E24E666C00032FFB4 /* LoginAction.swift */; };
 		5284C52124E666D20032FFB4 /* LoginReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52024E666D20032FFB4 /* LoginReducer.swift */; };
@@ -61,6 +68,13 @@
 		525C4ABE24E4EEA600659EC6 /* SceneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneCoordinator.swift; sourceTree = "<group>"; };
 		525C4AC424E632C600659EC6 /* SceneRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneRoute.swift; sourceTree = "<group>"; };
 		525C4AC624E633F800659EC6 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		526302C924E9440400CDCD1D /* PrimaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryLabel.swift; sourceTree = "<group>"; };
+		526302CB24E9441200CDCD1D /* SecondaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryLabel.swift; sourceTree = "<group>"; };
+		526302CD24E9441E00CDCD1D /* ErrorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorLabel.swift; sourceTree = "<group>"; };
+		526302CF24E9442A00CDCD1D /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		526302D124E9443300CDCD1D /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		526302D324E9445900CDCD1D /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
+		526302D924E9465A00CDCD1D /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		5284C51C24E663160032FFB4 /* ViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinator.swift; sourceTree = "<group>"; };
 		5284C51E24E666C00032FFB4 /* LoginAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAction.swift; sourceTree = "<group>"; };
 		5284C52024E666D20032FFB4 /* LoginReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReducer.swift; sourceTree = "<group>"; };
@@ -107,6 +121,7 @@
 		524E5D1624E819EB001FC71B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				526302D924E9465A00CDCD1D /* Font.swift */,
 				52A2FB5F24E927F8000ECBFF /* Color.swift */,
 				524E5D1724E821DB001FC71B /* Coordinator.swift */,
 				524E5D1924E826E2001FC71B /* ActionReducer.swift */,
@@ -188,6 +203,41 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		526302D524E9446E00CDCD1D /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				526302C924E9440400CDCD1D /* PrimaryLabel.swift */,
+				526302CB24E9441200CDCD1D /* SecondaryLabel.swift */,
+				526302CD24E9441E00CDCD1D /* ErrorLabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		526302D624E9447900CDCD1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				520B55A224E93335007621DE /* View.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		526302D724E9447F00CDCD1D /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				526302D124E9443300CDCD1D /* PrimaryButton.swift */,
+				526302D324E9445900CDCD1D /* SecondaryButton.swift */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		526302D824E944BF00CDCD1D /* Field */ = {
+			isa = PBXGroup;
+			children = (
+				526302CF24E9442A00CDCD1D /* TextField.swift */,
+			);
+			path = Field;
+			sourceTree = "<group>";
+		};
 		5284C52A24E67B860032FFB4 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,7 +274,10 @@
 		52A2FB6424E92E16000ECBFF /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				520B55A224E93335007621DE /* View.swift */,
+				526302D624E9447900CDCD1D /* View */,
+				526302D724E9447F00CDCD1D /* Button */,
+				526302D524E9446E00CDCD1D /* Label */,
+				526302D824E944BF00CDCD1D /* Field */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -394,7 +447,10 @@
 				525C4AB224E4BC4500659EC6 /* Scheduler.xcdatamodeld in Sources */,
 				524E5D1524E818C7001FC71B /* RegistrationState.swift in Sources */,
 				52A2FB6224E92A52000ECBFF /* UIColor.swift in Sources */,
+				526302D424E9445900CDCD1D /* SecondaryButton.swift in Sources */,
+				526302CC24E9441200CDCD1D /* SecondaryLabel.swift in Sources */,
 				5284C52124E666D20032FFB4 /* LoginReducer.swift in Sources */,
+				526302D024E9442A00CDCD1D /* TextField.swift in Sources */,
 				525C4AA824E4BC4500659EC6 /* AppDelegate.swift in Sources */,
 				520B55A324E93335007621DE /* View.swift in Sources */,
 				5284C52F24E67E790032FFB4 /* SceneAction.swift in Sources */,
@@ -404,12 +460,16 @@
 				5284C51F24E666C00032FFB4 /* LoginAction.swift in Sources */,
 				524E5D1824E821DB001FC71B /* Coordinator.swift in Sources */,
 				5284C51D24E663160032FFB4 /* ViewCoordinator.swift in Sources */,
+				526302CE24E9441E00CDCD1D /* ErrorLabel.swift in Sources */,
 				522CE73F24E93EF200F5EF78 /* ViewController.swift in Sources */,
+				526302D224E9443300CDCD1D /* PrimaryButton.swift in Sources */,
 				5284C52D24E67DA80032FFB4 /* ViewControllerCoordinatable.swift in Sources */,
 				52A2FB6024E927F8000ECBFF /* Color.swift in Sources */,
 				5284C52524E671FF0032FFB4 /* SceneStore.swift in Sources */,
 				52C7640B24E8D89C00E02E2D /* Storyboardable.swift in Sources */,
+				526302CA24E9440400CDCD1D /* PrimaryLabel.swift in Sources */,
 				5284C52724E673CE0032FFB4 /* SceneState.swift in Sources */,
+				526302DA24E9465A00CDCD1D /* Font.swift in Sources */,
 				52ACACC824E7905700147137 /* SceneWindow.swift in Sources */,
 				525C4AAA24E4BC4500659EC6 /* SceneDelegate.swift in Sources */,
 				52F7FBB624E7BC09008F7FDB /* SceneResponder.swift in Sources */,
