@@ -8,8 +8,12 @@
 
 import UIKit
 
-final class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController, ViewControllerCoordinatable {
+    
+    typealias CoordinatorType = LoginCoordinator
 
+    var viewCoordinator: LoginCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

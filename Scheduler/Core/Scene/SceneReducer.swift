@@ -14,7 +14,7 @@ final class SceneReducer: Reducer {
     typealias ReducerStateType = SceneState
     
     static func reduce(action: ActionType, state: ReducerStateType?) -> ReducerStateType {
-        var state = state ?? SceneState(sceneRoute: .login)
+        var state = state ?? ReducerStateType(sceneRoute: .login)
 
         switch action {
             case let sceneAction as SceneAction:

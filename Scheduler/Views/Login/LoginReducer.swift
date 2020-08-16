@@ -8,10 +8,13 @@
 
 import ReSwift
 
-final class LoginReducer {
-    static func reduce(action: Action, state: LoginState?) -> LoginState {
-      return LoginState()
+final class LoginReducer: Reducer {
+    
+    typealias ActionType = Action
+    typealias ReducerStateType = LoginState
+    
+    static func reduce(action: ActionType, state: ReducerStateType?) -> ReducerStateType {
+        let state = state ?? ReducerStateType()
+        return state
     }
 }
-
-

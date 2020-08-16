@@ -9,5 +9,5 @@
 import ReSwift
 
 struct LoginState: StateType {
-    
 }
+

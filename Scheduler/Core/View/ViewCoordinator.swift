@@ -10,7 +10,11 @@ import ReSwift
 
 protocol ViewCoordinator: Coordinator {
     
+    associatedtype ViewControllerType: ViewControllerCoordinatable
+    
     var sceneCoordinator: SceneCoordinator? {get set}
+    
+    var viewController: ViewControllerType? {get set}
     
     init(sceneCoordinator: SceneCoordinator)
 }
