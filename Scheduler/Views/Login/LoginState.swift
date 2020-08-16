@@ -12,8 +12,24 @@ struct LoginState: StateType {
     
     var navigationTitle: String
     
+    var usernameTitleLabel: String
+    var passwordTitleLabel: String
+    var errorTitleLabel: String
+    var registerTitleLabel: String
+    
+    var submitButtonTitleLabel: String
+    var registerButtonTitleLabel: String
+    
     init() {
         navigationTitle = "Login"
+        
+        usernameTitleLabel = "Username"
+        passwordTitleLabel = "Password"
+        errorTitleLabel = "Invalid username or password"
+        registerTitleLabel = "No account yet?"
+        
+        submitButtonTitleLabel = "Submit"
+        registerButtonTitleLabel = "Register"
     }
 }
 
