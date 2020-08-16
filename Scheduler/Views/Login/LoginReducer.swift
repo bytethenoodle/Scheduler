@@ -8,7 +8,7 @@
 
 import ReSwift
 
-final class LoginReducer: Reducer {
+final class LoginReducer: ActionReducer {
     
     typealias ActionType = Action
     typealias ReducerStateType = LoginState

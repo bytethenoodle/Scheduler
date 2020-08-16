@@ -14,8 +14,7 @@ class LoginCoordinator: ViewCoordinator {
     typealias CoordinatorStoreType = LoginStore
     typealias ViewControllerType = LoginViewController
 
-    lazy var store: CoordinatorStoreType = CoordinatorStoreType(reducer: LoginReducer.reduce,
-                                                                state: nil)
+    lazy var store: CoordinatorStoreType = CoordinatorStoreType(reducer: LoginReducer.reduce)
     
     weak var sceneCoordinator: SceneCoordinator?
     
@@ -26,6 +25,7 @@ class LoginCoordinator: ViewCoordinator {
     }
     
     func start() {
+        
         
     }
     

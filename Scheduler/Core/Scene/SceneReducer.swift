@@ -8,7 +8,7 @@
 
 import ReSwift
 
-final class SceneReducer: Reducer {
+final class SceneReducer: ActionReducer {
     
     typealias ActionType = Action
     typealias ReducerStateType = SceneState

@@ -1,5 +1,5 @@
 //
-//  Reducer.swift
+//  ActionReducer.swift
 //  Scheduler
 //
 //  Created by Elbert John Orozco on 2020/08/15.
@@ -8,7 +8,7 @@
 
 import ReSwift
 
-protocol Reducer {
+protocol ActionReducer {
     
     associatedtype ActionType
     associatedtype ReducerStateType

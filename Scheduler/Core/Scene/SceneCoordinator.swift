@@ -13,8 +13,7 @@ final class SceneCoordinator: Coordinator {
     typealias StoreSubscriberStateType = SceneState
     typealias CoordinatorStoreType = SceneStore
 
-    lazy var store: CoordinatorStoreType = CoordinatorStoreType(reducer: SceneReducer.reduce,
-                                                                state: nil)
+    lazy var store: CoordinatorStoreType = CoordinatorStoreType(reducer: SceneReducer.reduce)
     
     var window : SceneWindow?
 
