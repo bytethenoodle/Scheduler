@@ -13,6 +13,8 @@ struct KeyboardAction: Action {
     let animationDuration: Double
     
     func getKeyboardSpec() -> KeyboardSpec {
+        // For handling keyboard: If frame width is equal to screen bounds, the keyboard is not floating
+        // Scroll offset height is based on the keyboard origin
         return KeyboardSpec(keyboardHeight: keyboardFrame.width == UIScreen.main.bounds.width ?
                                             UIScreen.main.bounds.height - keyboardFrame.origin.y : 0.0,
                             animationDuration: animationDuration)

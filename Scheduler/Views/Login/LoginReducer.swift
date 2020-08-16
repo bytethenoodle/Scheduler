@@ -21,8 +21,6 @@ final class LoginReducer: ActionReducer {
             case _ as LoginAction:
                 break
             case let keyboardAction as KeyboardAction:
-                // For handling keyboard: If frame width is equal to screen bounds, the keyboard is not floating
-                // Scroll offset height is based on the keyboard origin
                 state.keyboardSpec = keyboardAction.getKeyboardSpec()
                 break
             default:
