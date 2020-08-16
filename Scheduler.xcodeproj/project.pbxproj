@@ -29,6 +29,7 @@
 		526302D224E9443300CDCD1D /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526302D124E9443300CDCD1D /* PrimaryButton.swift */; };
 		526302D424E9445900CDCD1D /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526302D324E9445900CDCD1D /* SecondaryButton.swift */; };
 		526302DA24E9465A00CDCD1D /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526302D924E9465A00CDCD1D /* Font.swift */; };
+		52630EB924E98A4E0018AECE /* KeyboardObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52630EB824E98A4E0018AECE /* KeyboardObservableViewController.swift */; };
 		5284C51D24E663160032FFB4 /* ViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C51C24E663160032FFB4 /* ViewCoordinator.swift */; };
 		5284C51F24E666C00032FFB4 /* LoginAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C51E24E666C00032FFB4 /* LoginAction.swift */; };
 		5284C52124E666D20032FFB4 /* LoginReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52024E666D20032FFB4 /* LoginReducer.swift */; };
@@ -75,6 +76,7 @@
 		526302D124E9443300CDCD1D /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		526302D324E9445900CDCD1D /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		526302D924E9465A00CDCD1D /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		52630EB824E98A4E0018AECE /* KeyboardObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservableViewController.swift; sourceTree = "<group>"; };
 		5284C51C24E663160032FFB4 /* ViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinator.swift; sourceTree = "<group>"; };
 		5284C51E24E666C00032FFB4 /* LoginAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAction.swift; sourceTree = "<group>"; };
 		5284C52024E666D20032FFB4 /* LoginReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReducer.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 			children = (
 				522CE73E24E93EF200F5EF78 /* ViewController.swift */,
 				52A2FB6524E92E7E000ECBFF /* NavigationController.swift */,
+				52630EB824E98A4E0018AECE /* KeyboardObservableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				525C4AAC24E4BC4500659EC6 /* LoginViewController.swift in Sources */,
 				525C4AC524E632C600659EC6 /* SceneRoute.swift in Sources */,
 				52C7640D24E8E8A900E02E2D /* Store.swift in Sources */,
+				52630EB924E98A4E0018AECE /* KeyboardObservableViewController.swift in Sources */,
 				525C4AC724E633F800659EC6 /* LoginCoordinator.swift in Sources */,
 				52F5BFB424E8A2D400EB8CDD /* LoginStore.swift in Sources */,
 				5284C52924E678610032FFB4 /* SceneReducer.swift in Sources */,

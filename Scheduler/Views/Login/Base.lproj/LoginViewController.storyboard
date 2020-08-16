@@ -136,6 +136,7 @@
                         <outlet property="passwordTitleLabel" destination="Aam-SK-iXD" id="G03-ln-Iwi"/>
                         <outlet property="registerButton" destination="Guf-iL-4bL" id="WUN-Jd-zE0"/>
                         <outlet property="registerTitleLabel" destination="dvT-6b-jUr" id="F9a-0S-IjX"/>
+                        <outlet property="scrollView" destination="KLp-0t-9R1" id="r30-pZ-350"/>
                         <outlet property="submitButton" destination="Nbz-gg-2dV" id="xAv-NO-gcF"/>
                         <outlet property="usernameField" destination="gcU-Y1-jdE" id="1P9-sO-oYx"/>
                         <outlet property="usernameTitleLabel" destination="Q3a-R1-UrI" id="t3s-k7-hbX"/>

@@ -8,11 +8,13 @@
 
 import UIKit
 
-final class LoginViewController: ViewController, ViewControllerCoordinatable, Storyboardable {
+final class LoginViewController: KeyboardObservableViewController, ViewControllerCoordinatable, Storyboardable {
     
     typealias CoordinatorType = LoginCoordinator
 
     var viewCoordinator: LoginCoordinator?
+    
+    @IBOutlet weak var scrollView: UIScrollView?
     
     @IBOutlet weak var usernameTitleLabel: PrimaryLabel?
     @IBOutlet weak var passwordTitleLabel: PrimaryLabel?
@@ -31,9 +33,23 @@ final class LoginViewController: ViewController, ViewControllerCoordinatable, St
         subscribeStore()
     }
     
+    deinit {
+        unsubscribeStore()
+    }
+    
     func subscribeStore() {
         guard let viewCoordinator = viewCoordinator else {return}
         viewCoordinator.store.subscribe(viewCoordinator) { $0.select { $0 }}
     }
+    
+    func unsubscribeStore() {
+        guard let viewCoordinator = viewCoordinator else {return}
+        viewCoordinator.store.unsubscribe(viewCoordinator)
+    }
+    
+    override func keyboardHeightChanged(keyboardHeight: CGFloat) {
+        super.keyboardHeightChanged(keyboardHeight: keyboardHeight)
+        
+        print("---> \(keyboardHeight)")
+    }
 }
-
