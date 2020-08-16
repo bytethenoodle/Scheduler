@@ -17,4 +17,6 @@ protocol ViewCoordinator: Coordinator {
     var viewController: ViewControllerType? {get set}
     
     init(sceneCoordinator: SceneCoordinator)
+    
+    func start()
 }

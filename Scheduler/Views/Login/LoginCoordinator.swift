@@ -8,20 +8,25 @@
 
 import ReSwift
 
-class LoginCoordinator: Coordinator {
+class LoginCoordinator: ViewCoordinator {
     
     typealias StoreSubscriberStateType = LoginState
     typealias CoordinatorStoreType = LoginStore
+    typealias ViewControllerType = LoginViewController
 
     lazy var store: CoordinatorStoreType = CoordinatorStoreType(reducer: LoginReducer.reduce,
                                                                 state: nil)
     
-    init() {
-//        SceneStore.shared.subscribe(self) {
-//            $0.select {
-//                $0.loginState
-//            }
-//        }
+    weak var sceneCoordinator: SceneCoordinator?
+    
+    weak var viewController: LoginViewController?
+    
+    required init(sceneCoordinator: SceneCoordinator) {
+        self.sceneCoordinator = sceneCoordinator
+    }
+    
+    func start() {
+        
     }
     
     func newState(state: StoreSubscriberStateType) {
