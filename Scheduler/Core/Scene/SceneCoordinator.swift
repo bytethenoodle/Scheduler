@@ -16,7 +16,7 @@ final class SceneCoordinator: Coordinator {
     lazy var store: CoordinatorStoreType = CoordinatorStoreType(reducer: SceneReducer.reduce)
     
     var window : SceneWindow?
-
+    
     init(window: SceneWindow? = SceneWindow()) {
         self.window = window
         self.window?.makeKeyAndVisible()
@@ -27,9 +27,7 @@ final class SceneCoordinator: Coordinator {
     func newState(state: StoreSubscriberStateType) {
         switch state.sceneRoute {
         case .login:
-
-            
-
+            LoginCoordinator(sceneCoordinator: self).start()
             break
         default:
             break

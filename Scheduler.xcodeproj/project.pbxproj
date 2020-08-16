@@ -32,6 +32,7 @@
 		52ACACC824E7905700147137 /* SceneWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACACC724E7905700147137 /* SceneWindow.swift */; };
 		52C7640B24E8D89C00E02E2D /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7640A24E8D89C00E02E2D /* Storyboardable.swift */; };
 		52C7640D24E8E8A900E02E2D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7640C24E8E8A900E02E2D /* Store.swift */; };
+		52E84FB724E916BC007C2D21 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E84FB624E916BC007C2D21 /* Colors.xcassets */; };
 		52F5BFB424E8A2D400EB8CDD /* LoginStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5BFB324E8A2D400EB8CDD /* LoginStore.swift */; };
 		52F7FBB624E7BC09008F7FDB /* SceneResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7FBB524E7BC09008F7FDB /* SceneResponder.swift */; };
 		A20DE51C7A32A74815A780DB /* Pods_Scheduler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70526C0E2D27263308DCBFF2 /* Pods_Scheduler.framework */; };
@@ -65,6 +66,7 @@
 		52ACACC724E7905700147137 /* SceneWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneWindow.swift; sourceTree = "<group>"; };
 		52C7640A24E8D89C00E02E2D /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		52C7640C24E8E8A900E02E2D /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		52E84FB624E916BC007C2D21 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		52F5BFB324E8A2D400EB8CDD /* LoginStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStore.swift; sourceTree = "<group>"; };
 		52F7FBB524E7BC09008F7FDB /* SceneResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneResponder.swift; sourceTree = "<group>"; };
 		6EE5C9A298FFDF2AA059A61C /* Pods-Scheduler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scheduler.debug.xcconfig"; path = "Target Support Files/Pods-Scheduler/Pods-Scheduler.debug.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				525C4AB824E4BC4800659EC6 /* Info.plist */,
 				525C4AB324E4BC4800659EC6 /* Assets.xcassets */,
+				52E84FB624E916BC007C2D21 /* Colors.xcassets */,
 				525C4AB024E4BC4500659EC6 /* Scheduler.xcdatamodeld */,
 				525C4AB524E4BC4800659EC6 /* LaunchScreen.storyboard */,
 			);
@@ -205,6 +208,7 @@
 				5284C52A24E67B860032FFB4 /* View */,
 				524E5D1624E819EB001FC71B /* Common */,
 				52C7640E24E8F38100E02E2D /* Extension */,
+				52E84FB524E91695007C2D21 /* Color */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -215,6 +219,13 @@
 				52C7640C24E8E8A900E02E2D /* Store.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		52E84FB524E91695007C2D21 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Color;
 			sourceTree = "<group>";
 		};
 		AA8D1B426BF1F13E467D8C66 /* Pods */ = {
@@ -287,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				525C4AB724E4BC4800659EC6 /* LaunchScreen.storyboard in Resources */,
+				52E84FB724E916BC007C2D21 /* Colors.xcassets in Resources */,
 				525C4AB424E4BC4800659EC6 /* Assets.xcassets in Resources */,
 				525C4AAF24E4BC4500659EC6 /* LoginViewController.storyboard in Resources */,
 			);

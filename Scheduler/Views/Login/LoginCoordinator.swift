@@ -19,14 +19,15 @@ class LoginCoordinator: ViewCoordinator {
     weak var sceneCoordinator: SceneCoordinator?
     
     weak var viewController: LoginViewController?
-    
+        
     required init(sceneCoordinator: SceneCoordinator) {
         self.sceneCoordinator = sceneCoordinator
     }
     
     func start() {
-        
-        
+        guard let loginViewController = LoginViewController.instantiateFromStoryboard() else { return }
+        let navigationController = UINavigationController(rootViewController: loginViewController)
+        sceneCoordinator?.window?.rootViewController = navigationController
     }
     
     func newState(state: StoreSubscriberStateType) {
