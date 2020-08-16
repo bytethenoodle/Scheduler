@@ -9,5 +9,11 @@
 import ReSwift
 
 struct LoginState: StateType {
+    
+    var navigationTitle: String
+    
+    init() {
+        navigationTitle = "Login"
+    }
 }
 

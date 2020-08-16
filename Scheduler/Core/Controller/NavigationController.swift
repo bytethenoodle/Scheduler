@@ -31,7 +31,7 @@ class NavigationController: UINavigationController {
         navigationBar.barTintColor = Color.primaryBackground
         navigationBar.tintColor = Color.primaryText
         
-        navigationBar.titleTextAttributes?[.foregroundColor] = Color.navigationTitle
-        navigationBar.titleTextAttributes?[.font] = Font.navigationTitle
+        navigationBar.titleTextAttributes = [.foregroundColor : Color.navigationTitle as Any,
+                                             .font: Font.navigationTitle]
     }
 }

@@ -26,11 +26,17 @@ class LoginCoordinator: ViewCoordinator {
     
     func start() {
         guard let loginViewController = LoginViewController.instantiateFromStoryboard() else { return }
+        viewController = loginViewController
+        loginViewController.viewCoordinator = self
+
         let navigationController = NavigationController(rootViewController: loginViewController)
         sceneCoordinator?.window?.rootViewController = navigationController
+        
+        store.subscribe(self) { $0.select { $0 }}
     }
     
     func newState(state: StoreSubscriberStateType) {
-        
+        guard let viewController = viewController else {return}
+        viewController.navigationItem.title = state.navigationTitle
     }
 }
