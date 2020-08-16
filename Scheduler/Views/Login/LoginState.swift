@@ -20,6 +20,8 @@ struct LoginState: StateType {
     var submitButtonTitleLabel: String
     var registerButtonTitleLabel: String
     
+    var keyboardSpec: KeyboardSpec?
+    
     init() {
         navigationTitle = "Login"
         
@@ -29,7 +31,7 @@ struct LoginState: StateType {
         registerTitleLabel = "No account yet?"
         
         submitButtonTitleLabel = "Submit"
-        registerButtonTitleLabel = "Register"
+        registerButtonTitleLabel = "Register"        
     }
 }
 

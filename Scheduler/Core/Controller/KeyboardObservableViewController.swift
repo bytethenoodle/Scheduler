@@ -10,6 +10,10 @@ import UIKit
 
 class KeyboardObservableViewController: ViewController {
     
+    @IBOutlet weak var scrollView: UIScrollView?
+    
+    // MARK: - Lifecycle
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         observeKeyboard()
@@ -20,43 +24,50 @@ class KeyboardObservableViewController: ViewController {
         unobserveKeyboard()
     }
     
+    // MARK: - Keyboard
+    
     private func observeKeyboard() {
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillShow(_:)),
-                                               name: UIResponder.keyboardWillShowNotification,
-                                               object: nil
-        )
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillHide(_:)),
-                                               name: UIResponder.keyboardWillHideNotification,
+                                               selector: #selector(keyboardWillChangeFrame(_:)),
+                                               name: UIResponder.keyboardWillChangeFrameNotification,
                                                object: nil
         )
     }
     
     private func unobserveKeyboard() {
         NotificationCenter.default.removeObserver(self,
-                                                  name: UIResponder.keyboardWillShowNotification,
-                                                  object: nil)
-        NotificationCenter.default.removeObserver(self,
-                                                  name: UIResponder.keyboardWillHideNotification,
+                                                  name: UIResponder.keyboardWillChangeFrameNotification,
                                                   object: nil)
     }
     
-    @objc private func keyboardWillShow(_ notification: Notification) {
-        guard let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue
+    @objc private func keyboardWillChangeFrame(_ notification: Notification) {
+        guard
+        let keyboardFrame =
+            notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
+        let duration =
+            notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double
         else {return}
+        
         let keyboardRectangle = keyboardFrame.cgRectValue
-        let keyboardHeight = keyboardRectangle.height
-        keyboardHeightChanged(keyboardHeight: keyboardHeight)
+        keyboardFrameChanged(keyboardFrame: keyboardRectangle, animationDuration: duration)
     }
     
-    @objc private func keyboardWillHide(_ notification: Notification) {
-        guard let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue
-        else {return}
-        let keyboardRectangle = keyboardFrame.cgRectValue
-        let keyboardHeight = keyboardRectangle.height
-        keyboardHeightChanged(keyboardHeight: keyboardHeight)
-    }
+    // MARK: - Return Methods From Observers
     
-    func keyboardHeightChanged(keyboardHeight: CGFloat) {}
+    func keyboardFrameChanged(keyboardFrame: CGRect, animationDuration: Double) {}
+    
+    // MARK: - Utilities
+    
+    func adjustScrollViewBottomOffset(_ bottomOffset: CGFloat, animationDuration: Double) {
+        guard let scrollView = scrollView else {return}
+        var contentInset = scrollView.contentInset
+        var scrollIndicatorInsets = scrollView.scrollIndicatorInsets
+        contentInset.bottom = bottomOffset
+        scrollIndicatorInsets.bottom = bottomOffset
+        
+        UIView.animate(withDuration: animationDuration) {
+            scrollView.scrollIndicatorInsets = scrollIndicatorInsets
+            scrollView.contentInset = contentInset
+        }
+    }
 }

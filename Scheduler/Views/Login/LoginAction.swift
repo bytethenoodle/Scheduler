@@ -9,5 +9,5 @@
 import ReSwift
 
 struct LoginAction: Action {
-    let username: String
+    
 }

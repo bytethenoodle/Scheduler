@@ -13,9 +13,7 @@ final class LoginViewController: KeyboardObservableViewController, ViewControlle
     typealias CoordinatorType = LoginCoordinator
 
     var viewCoordinator: LoginCoordinator?
-    
-    @IBOutlet weak var scrollView: UIScrollView?
-    
+        
     @IBOutlet weak var usernameTitleLabel: PrimaryLabel?
     @IBOutlet weak var passwordTitleLabel: PrimaryLabel?
     @IBOutlet weak var registerTitleLabel: PrimaryLabel?
@@ -47,9 +45,9 @@ final class LoginViewController: KeyboardObservableViewController, ViewControlle
         viewCoordinator.store.unsubscribe(viewCoordinator)
     }
     
-    override func keyboardHeightChanged(keyboardHeight: CGFloat) {
-        super.keyboardHeightChanged(keyboardHeight: keyboardHeight)
-        
-        print("---> \(keyboardHeight)")
+    override func keyboardFrameChanged(keyboardFrame: CGRect, animationDuration: Double) {
+        super.keyboardFrameChanged(keyboardFrame: keyboardFrame, animationDuration: animationDuration)
+        viewCoordinator?.store.dispatch(KeyboardAction(keyboardFrame:
+                                                       keyboardFrame, animationDuration: animationDuration))
     }
 }

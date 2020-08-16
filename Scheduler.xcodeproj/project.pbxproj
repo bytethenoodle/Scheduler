@@ -30,6 +30,8 @@
 		526302D424E9445900CDCD1D /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526302D324E9445900CDCD1D /* SecondaryButton.swift */; };
 		526302DA24E9465A00CDCD1D /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526302D924E9465A00CDCD1D /* Font.swift */; };
 		52630EB924E98A4E0018AECE /* KeyboardObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52630EB824E98A4E0018AECE /* KeyboardObservableViewController.swift */; };
+		52630EBB24E99D610018AECE /* KeyboardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52630EBA24E99D610018AECE /* KeyboardAction.swift */; };
+		52630EBD24E9A0540018AECE /* KeyboardSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52630EBC24E9A0540018AECE /* KeyboardSpec.swift */; };
 		5284C51D24E663160032FFB4 /* ViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C51C24E663160032FFB4 /* ViewCoordinator.swift */; };
 		5284C51F24E666C00032FFB4 /* LoginAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C51E24E666C00032FFB4 /* LoginAction.swift */; };
 		5284C52124E666D20032FFB4 /* LoginReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52024E666D20032FFB4 /* LoginReducer.swift */; };
@@ -77,6 +79,8 @@
 		526302D324E9445900CDCD1D /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		526302D924E9465A00CDCD1D /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		52630EB824E98A4E0018AECE /* KeyboardObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservableViewController.swift; sourceTree = "<group>"; };
+		52630EBA24E99D610018AECE /* KeyboardAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAction.swift; sourceTree = "<group>"; };
+		52630EBC24E9A0540018AECE /* KeyboardSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSpec.swift; sourceTree = "<group>"; };
 		5284C51C24E663160032FFB4 /* ViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinator.swift; sourceTree = "<group>"; };
 		5284C51E24E666C00032FFB4 /* LoginAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAction.swift; sourceTree = "<group>"; };
 		5284C52024E666D20032FFB4 /* LoginReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReducer.swift; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 				524E5D1724E821DB001FC71B /* Coordinator.swift */,
 				524E5D1924E826E2001FC71B /* ActionReducer.swift */,
 				52C7640A24E8D89C00E02E2D /* Storyboardable.swift */,
+				52630EBA24E99D610018AECE /* KeyboardAction.swift */,
+				52630EBC24E9A0540018AECE /* KeyboardSpec.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -452,6 +458,7 @@
 				524E5D1524E818C7001FC71B /* RegistrationState.swift in Sources */,
 				52A2FB6224E92A52000ECBFF /* UIColor.swift in Sources */,
 				526302D424E9445900CDCD1D /* SecondaryButton.swift in Sources */,
+				52630EBB24E99D610018AECE /* KeyboardAction.swift in Sources */,
 				526302CC24E9441200CDCD1D /* SecondaryLabel.swift in Sources */,
 				5284C52124E666D20032FFB4 /* LoginReducer.swift in Sources */,
 				526302D024E9442A00CDCD1D /* TextField.swift in Sources */,
@@ -471,6 +478,7 @@
 				52A2FB6024E927F8000ECBFF /* Color.swift in Sources */,
 				5284C52524E671FF0032FFB4 /* SceneStore.swift in Sources */,
 				52C7640B24E8D89C00E02E2D /* Storyboardable.swift in Sources */,
+				52630EBD24E9A0540018AECE /* KeyboardSpec.swift in Sources */,
 				526302CA24E9440400CDCD1D /* PrimaryLabel.swift in Sources */,
 				5284C52724E673CE0032FFB4 /* SceneState.swift in Sources */,
 				526302DA24E9465A00CDCD1D /* Font.swift in Sources */,

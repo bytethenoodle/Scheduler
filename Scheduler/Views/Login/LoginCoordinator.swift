@@ -44,5 +44,9 @@ class LoginCoordinator: ViewCoordinator {
         
         viewController.submitButton?.setTitle(state.submitButtonTitleLabel, for: UIControl.State())
         viewController.registerButton?.setTitle(state.registerButtonTitleLabel, for: UIControl.State())
+        
+        guard let keyboardSpec = state.keyboardSpec else {return}
+        viewController.adjustScrollViewBottomOffset(keyboardSpec.keyboardHeight,
+                                                    animationDuration: keyboardSpec.animationDuration)
     }
 }
