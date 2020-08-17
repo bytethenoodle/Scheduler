@@ -68,7 +68,7 @@ extension LoginState {
         case .verifyError:
             return "Username and/or password is invalid"
         case .allInputError:
-            return "Username and password are required"
+            return "All fields are required"
         case .usernameError:
             return "Username is required"
         case .passwordError:

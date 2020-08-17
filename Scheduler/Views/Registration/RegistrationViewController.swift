@@ -9,7 +9,7 @@
 import UIKit
 
 class RegistrationViewController: KeyboardObservableViewController<RegistrationCoordinator, RegistrationState>, Storyboardable, UITextFieldDelegate {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

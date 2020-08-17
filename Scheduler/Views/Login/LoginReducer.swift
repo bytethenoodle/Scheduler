@@ -43,7 +43,7 @@ final class LoginReducer: KeyboardObservableActionReducer<LoginState> {
                                                                        password: loginAction.password)
                         else {
                             // TODO: Handle async call here
-                            next(action)
+                            next(LoginProcessAction(loginViewState: .login))
                             break
                         }
                         next(LoginProcessAction(loginViewState: errorState))
