@@ -15,12 +15,12 @@ protocol KeyboardObservableViewCoordinator: ViewCoordinator where StoreSubscribe
 extension KeyboardObservableViewCoordinator {
     func newState(state: StoreSubscriberStateType) {
         
-        if state.keyboardSpec == nil {
-            keyboardObservableNewState(state: state)
-        }
-        
         guard let viewController = viewController,
-        let keyboardSpec = state.keyboardSpec else {return}
+        let keyboardSpec = state.keyboardSpec else {
+            // Notify state change only if it is not a keyboard action
+            keyboardObservableNewState(state: state)
+            return
+        }
         (viewController as? KeyboardObservableViewController<Self, StoreSubscriberStateType>)?
             .adjustScrollViewBottomOffset(keyboardSpec.keyboardHeight,
                                           animationDuration: keyboardSpec.animationDuration)
