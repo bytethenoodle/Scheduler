@@ -56,6 +56,18 @@ class LoginCoordinator: KeyboardObservableViewCoordinator {
         case .login, .register:
             viewController.usernameField?.text = String.empty
             viewController.passwordField?.text = String.empty
+            transitionViewWithState(state)
+            break
+        default:
+            break
+        }
+    }
+    
+    func transitionViewWithState(_ state: StoreSubscriberStateType) {
+        switch state.loginViewState {
+        case .login:
+            break
+        case .register:
             break
         default:
             break
