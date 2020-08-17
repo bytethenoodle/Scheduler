@@ -14,7 +14,11 @@ protocol KeyboardObservableViewCoordinator: ViewCoordinator where StoreSubscribe
 
 extension KeyboardObservableViewCoordinator {
     func newState(state: StoreSubscriberStateType) {
-        keyboardObservableNewState(state: state)
+        
+        if state.keyboardSpec == nil {
+            keyboardObservableNewState(state: state)
+        }
+        
         guard let viewController = viewController,
         let keyboardSpec = state.keyboardSpec else {return}
         (viewController as? KeyboardObservableViewController<Self, StoreSubscriberStateType>)?
