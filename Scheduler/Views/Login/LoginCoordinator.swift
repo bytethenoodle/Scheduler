@@ -8,7 +8,7 @@
 
 import ReSwift
 
-class LoginCoordinator: ViewCoordinator {    
+class LoginCoordinator: KeyboardObservableViewCoordinator {
     
     typealias StoreSubscriberStateType = LoginState
     typealias CoordinatorStoreType = LoginStore
@@ -18,7 +18,7 @@ class LoginCoordinator: ViewCoordinator {
     
     weak var sceneCoordinator: SceneCoordinator?
     
-    weak var viewController: LoginViewController?
+    weak var viewController: ViewControllerType?
     
     required init(sceneCoordinator: SceneCoordinator) {
         self.store = CoordinatorStoreType(reducer: LoginReducer().reduce)
@@ -26,7 +26,7 @@ class LoginCoordinator: ViewCoordinator {
     }
     
     func start() {
-        guard let loginViewController = LoginViewController.instantiateFromStoryboard() else { return }
+        guard let loginViewController = ViewControllerType.instantiateFromStoryboard() else { return }
         viewController = loginViewController
         loginViewController.viewCoordinator = self
 
@@ -34,7 +34,7 @@ class LoginCoordinator: ViewCoordinator {
         sceneCoordinator?.window?.rootViewController = navigationController
     }
     
-    func newState(state: StoreSubscriberStateType) {
+    func keyboardObservableNewState(state: StoreSubscriberStateType) {
         guard let viewController = viewController else {return}
         viewController.navigationItem.title = state.navigationTitle
         

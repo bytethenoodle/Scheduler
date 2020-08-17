@@ -15,6 +15,7 @@ final class LoginReducer: KeyboardObservableActionReducer<LoginState> {
         
         switch action {
             case _ as LoginAction:
+                
                 break
             default:
                 break
