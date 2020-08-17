@@ -34,7 +34,7 @@ final class LoginReducer: KeyboardObservableActionReducer<LoginState> {
     func middleware() -> Middleware<ReducerStateType> {
         return { dispatch, getState in
             return { next in
-                return { [] action in
+                return { action in
                     
                     switch action {
                     case let loginAction as LoginAction:

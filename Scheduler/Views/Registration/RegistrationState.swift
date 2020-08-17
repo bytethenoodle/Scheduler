@@ -6,11 +6,9 @@
 //  Copyright © 2020 mynt. All rights reserved.
 //
 
-//import ReSwift
-//
-//struct RegistrationState {
-//
-//
-//    init foo() {
-//    }
-//}
+import ReSwift
+
+struct RegistrationState: KeyboardObservableStateType {
+    
+    var keyboardSpec: KeyboardSpec?
+}

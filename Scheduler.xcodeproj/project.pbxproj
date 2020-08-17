@@ -39,6 +39,11 @@
 		52630EB924E98A4E0018AECE /* KeyboardObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52630EB824E98A4E0018AECE /* KeyboardObservableViewController.swift */; };
 		52630EBB24E99D610018AECE /* KeyboardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52630EBA24E99D610018AECE /* KeyboardAction.swift */; };
 		52630EBD24E9A0540018AECE /* KeyboardSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52630EBC24E9A0540018AECE /* KeyboardSpec.swift */; };
+		526C3A3724EAB28E002A3D9F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C3A3624EAB28E002A3D9F /* RegistrationViewController.swift */; };
+		526C3A3924EAB2A1002A3D9F /* RegistrationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526C3A3824EAB2A1002A3D9F /* RegistrationViewController.storyboard */; };
+		526C3A3B24EAB532002A3D9F /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C3A3A24EAB532002A3D9F /* RegistrationCoordinator.swift */; };
+		526C3A3D24EAB5CB002A3D9F /* RegistrationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C3A3C24EAB5CB002A3D9F /* RegistrationStore.swift */; };
+		526C3A3F24EAB6CC002A3D9F /* RegistrationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C3A3E24EAB6CC002A3D9F /* RegistrationReducer.swift */; };
 		5284C51D24E663160032FFB4 /* ViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C51C24E663160032FFB4 /* ViewCoordinator.swift */; };
 		5284C51F24E666C00032FFB4 /* LoginAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C51E24E666C00032FFB4 /* LoginAction.swift */; };
 		5284C52124E666D20032FFB4 /* LoginReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52024E666D20032FFB4 /* LoginReducer.swift */; };
@@ -96,6 +101,11 @@
 		52630EB824E98A4E0018AECE /* KeyboardObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservableViewController.swift; sourceTree = "<group>"; };
 		52630EBA24E99D610018AECE /* KeyboardAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAction.swift; sourceTree = "<group>"; };
 		52630EBC24E9A0540018AECE /* KeyboardSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSpec.swift; sourceTree = "<group>"; };
+		526C3A3624EAB28E002A3D9F /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		526C3A3824EAB2A1002A3D9F /* RegistrationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationViewController.storyboard; sourceTree = "<group>"; };
+		526C3A3A24EAB532002A3D9F /* RegistrationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCoordinator.swift; sourceTree = "<group>"; };
+		526C3A3C24EAB5CB002A3D9F /* RegistrationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationStore.swift; sourceTree = "<group>"; };
+		526C3A3E24EAB6CC002A3D9F /* RegistrationReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationReducer.swift; sourceTree = "<group>"; };
 		5284C51C24E663160032FFB4 /* ViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinator.swift; sourceTree = "<group>"; };
 		5284C51E24E666C00032FFB4 /* LoginAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAction.swift; sourceTree = "<group>"; };
 		5284C52024E666D20032FFB4 /* LoginReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReducer.swift; sourceTree = "<group>"; };
@@ -228,8 +238,13 @@
 		525C4AC024E4EEEB00659EC6 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				526C3A3C24EAB5CB002A3D9F /* RegistrationStore.swift */,
+				526C3A3A24EAB532002A3D9F /* RegistrationCoordinator.swift */,
 				525A54A824EA84FE00CA0274 /* RegistrationAction.swift */,
 				524E5D1424E818C7001FC71B /* RegistrationState.swift */,
+				526C3A3624EAB28E002A3D9F /* RegistrationViewController.swift */,
+				526C3A3824EAB2A1002A3D9F /* RegistrationViewController.storyboard */,
+				526C3A3E24EAB6CC002A3D9F /* RegistrationReducer.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -450,6 +465,7 @@
 				52E84FB724E916BC007C2D21 /* Colors.xcassets in Resources */,
 				525C4AB424E4BC4800659EC6 /* Assets.xcassets in Resources */,
 				525C4AAF24E4BC4500659EC6 /* LoginViewController.storyboard in Resources */,
+				526C3A3924EAB2A1002A3D9F /* RegistrationViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,11 +527,13 @@
 				52630EB924E98A4E0018AECE /* KeyboardObservableViewController.swift in Sources */,
 				525C4AC724E633F800659EC6 /* LoginCoordinator.swift in Sources */,
 				525A54A924EA84FE00CA0274 /* RegistrationAction.swift in Sources */,
+				526C3A3F24EAB6CC002A3D9F /* RegistrationReducer.swift in Sources */,
 				52F5BFB424E8A2D400EB8CDD /* LoginStore.swift in Sources */,
 				5284C52924E678610032FFB4 /* SceneReducer.swift in Sources */,
 				5284C52324E667580032FFB4 /* LoginState.swift in Sources */,
 				525C4AB224E4BC4500659EC6 /* Scheduler.xcdatamodeld in Sources */,
 				524E5D1524E818C7001FC71B /* RegistrationState.swift in Sources */,
+				526C3A3B24EAB532002A3D9F /* RegistrationCoordinator.swift in Sources */,
 				52A2FB6224E92A52000ECBFF /* UIColor.swift in Sources */,
 				525A54A724EA845A00CA0274 /* LoginProcessAction.swift in Sources */,
 				526302D424E9445900CDCD1D /* SecondaryButton.swift in Sources */,
@@ -533,6 +551,7 @@
 				5284C51F24E666C00032FFB4 /* LoginAction.swift in Sources */,
 				524E5D1824E821DB001FC71B /* Coordinator.swift in Sources */,
 				5284C51D24E663160032FFB4 /* ViewCoordinator.swift in Sources */,
+				526C3A3D24EAB5CB002A3D9F /* RegistrationStore.swift in Sources */,
 				526302CE24E9441E00CDCD1D /* ErrorLabel.swift in Sources */,
 				522CE73F24E93EF200F5EF78 /* ViewController.swift in Sources */,
 				526302D224E9443300CDCD1D /* PrimaryButton.swift in Sources */,
@@ -544,6 +563,7 @@
 				52630EBD24E9A0540018AECE /* KeyboardSpec.swift in Sources */,
 				526302CA24E9440400CDCD1D /* PrimaryLabel.swift in Sources */,
 				5284C52724E673CE0032FFB4 /* SceneState.swift in Sources */,
+				526C3A3724EAB28E002A3D9F /* RegistrationViewController.swift in Sources */,
 				526302DA24E9465A00CDCD1D /* Font.swift in Sources */,
 				52ACACC824E7905700147137 /* SceneWindow.swift in Sources */,
 				525C4AAA24E4BC4500659EC6 /* SceneDelegate.swift in Sources */,

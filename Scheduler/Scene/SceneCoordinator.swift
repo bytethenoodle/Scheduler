@@ -30,6 +30,9 @@ final class SceneCoordinator: Coordinator {
         case .login:
             LoginCoordinator(sceneCoordinator: self).start()
             break
+        case .registration:
+            RegistrationCoordinator(sceneCoordinator: self).start()
+            break
         default:
             break
         }
