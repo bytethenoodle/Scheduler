@@ -14,6 +14,8 @@
 		524E5D1524E818C7001FC71B /* RegistrationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1424E818C7001FC71B /* RegistrationState.swift */; };
 		524E5D1824E821DB001FC71B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1724E821DB001FC71B /* Coordinator.swift */; };
 		524E5D1A24E826E2001FC71B /* ActionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1924E826E2001FC71B /* ActionReducer.swift */; };
+		525A54A324EA5F5500CA0274 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A54A224EA5F5500CA0274 /* String.swift */; };
+		525A54A524EA73B600CA0274 /* LoginRegisterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A54A424EA73B600CA0274 /* LoginRegisterAction.swift */; };
 		525C4AA824E4BC4500659EC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C4AA724E4BC4500659EC6 /* AppDelegate.swift */; };
 		525C4AAA24E4BC4500659EC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C4AA924E4BC4500659EC6 /* SceneDelegate.swift */; };
 		525C4AAC24E4BC4500659EC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C4AAB24E4BC4500659EC6 /* LoginViewController.swift */; };
@@ -64,6 +66,8 @@
 		524E5D1424E818C7001FC71B /* RegistrationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationState.swift; sourceTree = "<group>"; };
 		524E5D1724E821DB001FC71B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		524E5D1924E826E2001FC71B /* ActionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionReducer.swift; sourceTree = "<group>"; };
+		525A54A224EA5F5500CA0274 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		525A54A424EA73B600CA0274 /* LoginRegisterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterAction.swift; sourceTree = "<group>"; };
 		525C4AA424E4BC4500659EC6 /* Scheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		525C4AA724E4BC4500659EC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		525C4AA924E4BC4500659EC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 				52F5BFB324E8A2D400EB8CDD /* LoginStore.swift */,
 				5284C52224E667580032FFB4 /* LoginState.swift */,
 				5284C51E24E666C00032FFB4 /* LoginAction.swift */,
+				525A54A424EA73B600CA0274 /* LoginRegisterAction.swift */,
 				5284C52024E666D20032FFB4 /* LoginReducer.swift */,
 				525C4AC624E633F800659EC6 /* LoginCoordinator.swift */,
 				525C4AAB24E4BC4500659EC6 /* LoginViewController.swift */,
@@ -327,6 +332,7 @@
 			children = (
 				52C7640C24E8E8A900E02E2D /* Store.swift */,
 				52A2FB6124E92A52000ECBFF /* UIColor.swift */,
+				525A54A224EA5F5500CA0274 /* String.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -465,6 +471,7 @@
 			files = (
 				525C4AAC24E4BC4500659EC6 /* LoginViewController.swift in Sources */,
 				525C4AC524E632C600659EC6 /* SceneRoute.swift in Sources */,
+				525A54A324EA5F5500CA0274 /* String.swift in Sources */,
 				52C7640D24E8E8A900E02E2D /* Store.swift in Sources */,
 				52FCA62224EA462E0091235F /* KeyboardObservableViewCoordinator.swift in Sources */,
 				52630EB924E98A4E0018AECE /* KeyboardObservableViewController.swift in Sources */,
@@ -494,6 +501,7 @@
 				522CE73F24E93EF200F5EF78 /* ViewController.swift in Sources */,
 				526302D224E9443300CDCD1D /* PrimaryButton.swift in Sources */,
 				5284C52D24E67DA80032FFB4 /* ViewControllerCoordinatable.swift in Sources */,
+				525A54A524EA73B600CA0274 /* LoginRegisterAction.swift in Sources */,
 				52A2FB6024E927F8000ECBFF /* Color.swift in Sources */,
 				5284C52524E671FF0032FFB4 /* SceneStore.swift in Sources */,
 				52C7640B24E8D89C00E02E2D /* Storyboardable.swift in Sources */,

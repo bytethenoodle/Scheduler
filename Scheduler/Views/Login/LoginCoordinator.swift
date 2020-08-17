@@ -21,7 +21,8 @@ class LoginCoordinator: KeyboardObservableViewCoordinator {
     weak var viewController: ViewControllerType?
     
     required init(sceneCoordinator: SceneCoordinator) {
-        self.store = CoordinatorStoreType(reducer: LoginReducer().reduce)
+        let reducer = LoginReducer()
+        self.store = CoordinatorStoreType(reducer: reducer.reduce, state: LoginState(), middleware: [reducer.middleware()])
         self.sceneCoordinator = sceneCoordinator
     }
     
@@ -40,10 +41,20 @@ class LoginCoordinator: KeyboardObservableViewCoordinator {
         
         viewController.usernameTitleLabel?.text = state.usernameTitleLabel
         viewController.passwordTitleLabel?.text = state.passwordTitleLabel
-        viewController.errorTitleLabel?.text = state.errorTitleLabel
         viewController.registerTitleLabel?.text = state.registerTitleLabel
         
         viewController.submitButton?.setTitle(state.submitButtonTitleLabel, for: UIControl.State())
         viewController.registerButton?.setTitle(state.registerButtonTitleLabel, for: UIControl.State())
+        
+        viewController.usernameField?.isError = state.showError
+        viewController.passwordField?.isError = state.showError
+        
+        viewController.errorTitleLabel?.text = state.errorTitleLabel
+        viewController.errorTitleLabel?.isHidden = !state.showError
+        
+        if state.resetFields {
+            viewController.usernameField?.text = String.empty
+            viewController.passwordField?.text = String.empty
+        }
     }
 }

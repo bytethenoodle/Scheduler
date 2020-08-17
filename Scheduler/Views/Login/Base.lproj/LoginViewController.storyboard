@@ -41,6 +41,9 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" textContentType="username"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="XOz-1h-zOU"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -60,6 +63,9 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Cv3-Le-1yC"/>
+                                                                </connections>
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
@@ -75,6 +81,9 @@
                                                             <constraint firstAttribute="height" constant="44" id="zvh-6W-S5J"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="didTapSubmitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kCX-T3-i3R"/>
+                                                        </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jbr-kh-wiC">
                                                         <rect key="frame" x="0.0" y="273" width="311" height="72.333333333333314"/>
@@ -91,6 +100,9 @@
                                                                     <constraint firstAttribute="height" constant="44" id="X2D-xQ-7sc"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="didTapRegisterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yng-c9-F1h"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>

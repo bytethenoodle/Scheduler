@@ -10,21 +10,37 @@ import UIKit
 
 class TextField: UITextField {
     
+    var isError: Bool = false {
+        didSet {
+            isError ? errorAppearance() : normalAppearance()
+        }
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupAppearance()
+        normalAppearance()
     }
     
     func setupAppearance() {
         borderStyle = .none
-        backgroundColor = Color.primaryBackground
-        layer.borderWidth = 1
+        
         layer.borderColor = Color.primary?.cgColor
+        layer.borderWidth = 1
         layer.cornerRadius = 16.0
         
-        font = Font.fieldText
         textColor = Color.primaryText
+        font = Font.fieldText
         tintColor = Color.primary
+    }
+    
+    private func normalAppearance() {
+        setupAppearance()
+        backgroundColor = Color.primaryBackground
+    }
+    
+    private func errorAppearance() {
+        setupAppearance()
+        backgroundColor = Color.errorBackground
     }
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {

@@ -11,10 +11,13 @@ import ReSwift
 final class LoginReducer: KeyboardObservableActionReducer<LoginState> {
     
     override func reduce(action: ActionType, state: ReducerStateType?) -> ReducerStateType {
-        let state = super.reduce(action: action, state: state)
-        
+        var state = super.reduce(action: action, state: state)
+                
         switch action {
             case _ as LoginAction:
+                
+                break
+            case _ as LoginRegisterAction:
                 
                 break
             default:
@@ -22,5 +25,18 @@ final class LoginReducer: KeyboardObservableActionReducer<LoginState> {
         }
         
         return state
+    }
+    
+    func middleware() -> Middleware<ReducerStateType> {
+        return { dispatch, getState in
+            return { next in
+                return { action in
+                    
+                    // Handle async call here
+                    
+                    next(action)
+                }
+            }
+        }
     }
 }

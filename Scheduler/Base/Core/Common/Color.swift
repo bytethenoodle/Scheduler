@@ -54,6 +54,14 @@ class Color {
         }
     }
     
+    static var errorBackground: UIColor? {
+        if #available(iOS 11.0, *) {
+            return UIColor(named: "ErrorBackground")
+        } else {
+            return UIColor(rgbRed: 242, rgbGreen: 105, rgbBlue: 116, alpha: 1.0)
+        }
+    }
+    
     static var navigationTitle: UIColor? {
         if #available(iOS 11.0, *) {
             return UIColor(named: "NavigationTitle")

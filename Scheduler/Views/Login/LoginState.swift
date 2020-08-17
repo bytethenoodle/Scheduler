@@ -8,6 +8,8 @@
 
 import ReSwift
 
+
+
 struct LoginState: KeyboardObservableStateType {
     
     var navigationTitle: String
@@ -21,17 +23,29 @@ struct LoginState: KeyboardObservableStateType {
     var registerButtonTitleLabel: String
     
     var keyboardSpec: KeyboardSpec?
+        
+    var resetFields: Bool
+    var showError: Bool
+    
+    var loginSucceeded: Bool
+    var registerButtonTapped: Bool
     
     init() {
         navigationTitle = "Login"
         
         usernameTitleLabel = "Username"
         passwordTitleLabel = "Password"
-        errorTitleLabel = "Invalid username or password"
+        errorTitleLabel = String.empty
         registerTitleLabel = "No account yet?"
         
         submitButtonTitleLabel = "Submit"
-        registerButtonTitleLabel = "Register"        
+        registerButtonTitleLabel = "Register"
+        
+        resetFields = false
+        showError = false
+        
+        loginSucceeded = false
+        registerButtonTapped = false
     }
 }
 
