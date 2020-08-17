@@ -9,5 +9,7 @@
 import ReSwift
 
 struct RegistrationAction: Action {
-    
+    let username: String
+    let password: String
+    let retypePassword: String
 }

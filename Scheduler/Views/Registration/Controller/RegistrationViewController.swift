@@ -36,8 +36,9 @@ class RegistrationViewController: KeyboardObservableViewController<RegistrationC
     
     @IBAction func didTapRegisterButton(_ sender: Any?) {
         UIApplication.shared.sendAction(#selector(resignFirstResponder), to: nil, from: nil, for: nil);
-//        viewCoordinator?.store?.dispatch(LoginAction(username: usernameField?.text ?? String.empty,
-//                                                     password: passwordField?.text ?? String.empty))
+        viewCoordinator?.store?.dispatch(RegistrationAction(username: usernameField?.text ?? String.empty,
+                                                            password: passwordField?.text ?? String.empty,
+                                                            retypePassword: retypePasswordField?.text ?? String.empty))
     }
     
     // MARK: - UITextFieldDelegate

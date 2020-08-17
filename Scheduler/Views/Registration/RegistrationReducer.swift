@@ -13,7 +13,16 @@ final class RegistrationReducer: KeyboardObservableActionReducer<RegistrationSta
     // MARK: - Reducer Methods
     
     override func reduce(action: ActionType, state: ReducerStateType?) -> ReducerStateType {
-        let state = super.reduce(action: action, state: state)
+        var state = super.reduce(action: action, state: state)
+        
+        switch action {
+            case let registrationProcessAction as RegistrationProcessAction:
+                state.registrationErrorStates = registrationProcessAction.registrationErrorStates
+                break
+            default:
+                break
+        }
+        
         return state
     }
     
@@ -23,7 +32,14 @@ final class RegistrationReducer: KeyboardObservableActionReducer<RegistrationSta
         return { dispatch, getState in
             return { next in
                 return { action in
-                    next(action)
+                    switch action {
+                    case _ as RegistrationAction:
+                        next(RegistrationProcessAction(registrationErrorStates: [.usernameError]))
+                        break
+                    default:
+                        next(action)
+                        break
+                    }
                 }
             }
         }
