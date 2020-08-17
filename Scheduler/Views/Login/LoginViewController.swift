@@ -8,11 +8,7 @@
 
 import UIKit
 
-final class LoginViewController: KeyboardObservableViewController, ViewControllerCoordinatable, Storyboardable {
-    
-    typealias CoordinatorType = LoginCoordinator
-
-    var viewCoordinator: LoginCoordinator?
+final class LoginViewController: KeyboardObservableViewController<LoginCoordinator, LoginState>, Storyboardable {
         
     @IBOutlet weak var usernameTitleLabel: PrimaryLabel?
     @IBOutlet weak var passwordTitleLabel: PrimaryLabel?
@@ -28,26 +24,5 @@ final class LoginViewController: KeyboardObservableViewController, ViewControlle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        subscribeStore()
-    }
-    
-    deinit {
-        unsubscribeStore()
-    }
-    
-    func subscribeStore() {
-        guard let viewCoordinator = viewCoordinator else {return}
-        viewCoordinator.store.subscribe(viewCoordinator) { $0.select { $0 }}
-    }
-    
-    func unsubscribeStore() {
-        guard let viewCoordinator = viewCoordinator else {return}
-        viewCoordinator.store.unsubscribe(viewCoordinator)
-    }
-    
-    override func keyboardFrameChanged(keyboardFrame: CGRect, animationDuration: Double) {
-        super.keyboardFrameChanged(keyboardFrame: keyboardFrame, animationDuration: animationDuration)
-        viewCoordinator?.store.dispatch(KeyboardAction(keyboardFrame:
-                                                       keyboardFrame, animationDuration: animationDuration))
     }
 }

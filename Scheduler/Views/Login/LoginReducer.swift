@@ -8,20 +8,13 @@
 
 import ReSwift
 
-final class LoginReducer: ActionReducer {
+final class LoginReducer: KeyboardObservableActionReducer<LoginState> {
     
-    typealias ActionType = Action
-    typealias ReducerStateType = LoginState
-    
-    static func reduce(action: ActionType, state: ReducerStateType?) -> ReducerStateType {
-        var state = state ?? ReducerStateType()
-        state.keyboardSpec = nil
+    override func reduce(action: ActionType, state: ReducerStateType?) -> ReducerStateType {
+        let state = super.reduce(action: action, state: state)
         
         switch action {
             case _ as LoginAction:
-                break
-            case let keyboardAction as KeyboardAction:
-                state.keyboardSpec = keyboardAction.getKeyboardSpec()
                 break
             default:
                 break

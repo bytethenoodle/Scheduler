@@ -8,7 +8,7 @@
 
 import ReSwift
 
-struct LoginState: StateType {
+struct LoginState: KeyboardObservableStateType {
     
     var navigationTitle: String
     

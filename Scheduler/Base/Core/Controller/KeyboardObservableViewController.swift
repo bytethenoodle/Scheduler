@@ -6,9 +6,11 @@
 //  Copyright © 2020 mynt. All rights reserved.
 //
 
-import UIKit
+import ReSwift
 
-class KeyboardObservableViewController: ViewController {
+class KeyboardObservableViewController<C: Coordinator, S: KeyboardObservableStateType>: ViewController<C,S>  {
+    
+    // MARK: - Outlets
     
     @IBOutlet weak var scrollView: UIScrollView?
     
@@ -54,7 +56,10 @@ class KeyboardObservableViewController: ViewController {
     
     // MARK: - Return Methods From Observers
     
-    func keyboardFrameChanged(keyboardFrame: CGRect, animationDuration: Double) {}
+    func keyboardFrameChanged(keyboardFrame: CGRect, animationDuration: Double) {
+        (viewCoordinator?.store as? Store<S>)?.dispatch(KeyboardAction(keyboardFrame:
+                                                                       keyboardFrame, animationDuration: animationDuration))
+    }
     
     // MARK: - Utilities
     

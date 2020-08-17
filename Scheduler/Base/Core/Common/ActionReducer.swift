@@ -13,5 +13,5 @@ protocol ActionReducer {
     associatedtype ActionType
     associatedtype ReducerStateType
 
-    static func reduce(action: ActionType, state: ReducerStateType?) -> ReducerStateType
+    func reduce(action: ActionType, state: ReducerStateType?) -> ReducerStateType
 }

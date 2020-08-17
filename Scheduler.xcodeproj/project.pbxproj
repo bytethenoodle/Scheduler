@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520B179724E9FF800061C03C /* KeyboardObservableStateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B179624E9FF800061C03C /* KeyboardObservableStateType.swift */; };
+		520B179924EA03510061C03C /* KeyboardObservableActionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B179824EA03510061C03C /* KeyboardObservableActionReducer.swift */; };
 		520B55A324E93335007621DE /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B55A224E93335007621DE /* View.swift */; };
 		522CE73F24E93EF200F5EF78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522CE73E24E93EF200F5EF78 /* ViewController.swift */; };
 		524E5D1524E818C7001FC71B /* RegistrationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1424E818C7001FC71B /* RegistrationState.swift */; };
@@ -54,6 +56,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		520B179624E9FF800061C03C /* KeyboardObservableStateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservableStateType.swift; sourceTree = "<group>"; };
+		520B179824EA03510061C03C /* KeyboardObservableActionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservableActionReducer.swift; sourceTree = "<group>"; };
 		520B55A224E93335007621DE /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		522CE73E24E93EF200F5EF78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		524E5D1424E818C7001FC71B /* RegistrationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationState.swift; sourceTree = "<group>"; };
@@ -124,6 +128,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		522B08FB24EA33CD00BD9719 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				525C4AA724E4BC4500659EC6 /* AppDelegate.swift */,
+				525C4AA924E4BC4500659EC6 /* SceneDelegate.swift */,
+				52ACACC624E78E3E00147137 /* Core */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		524E5D1624E819EB001FC71B /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +148,8 @@
 				52C7640A24E8D89C00E02E2D /* Storyboardable.swift */,
 				52630EBA24E99D610018AECE /* KeyboardAction.swift */,
 				52630EBC24E9A0540018AECE /* KeyboardSpec.swift */,
+				520B179624E9FF800061C03C /* KeyboardObservableStateType.swift */,
+				520B179824EA03510061C03C /* KeyboardObservableActionReducer.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -159,9 +175,10 @@
 		525C4AA624E4BC4500659EC6 /* Scheduler */ = {
 			isa = PBXGroup;
 			children = (
-				52ACACC624E78E3E00147137 /* Core */,
-				52A2FB6424E92E16000ECBFF /* Components */,
+				522B08FB24EA33CD00BD9719 /* Base */,
+				5284C52B24E67C4C0032FFB4 /* Scene */,
 				525C4AC124E4EEF700659EC6 /* Views */,
+				52A2FB6424E92E16000ECBFF /* ViewComponents */,
 				525C4AC324E5778500659EC6 /* Resources */,
 			);
 			path = Scheduler;
@@ -280,7 +297,7 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		52A2FB6424E92E16000ECBFF /* Components */ = {
+		52A2FB6424E92E16000ECBFF /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
 				526302D624E9447900CDCD1D /* View */,
@@ -288,15 +305,12 @@
 				526302D524E9446E00CDCD1D /* Label */,
 				526302D824E944BF00CDCD1D /* Field */,
 			);
-			path = Components;
+			path = ViewComponents;
 			sourceTree = "<group>";
 		};
 		52ACACC624E78E3E00147137 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				525C4AA724E4BC4500659EC6 /* AppDelegate.swift */,
-				525C4AA924E4BC4500659EC6 /* SceneDelegate.swift */,
-				5284C52B24E67C4C0032FFB4 /* Scene */,
 				5284C52A24E67B860032FFB4 /* View */,
 				52A2FB6324E92C57000ECBFF /* Controller */,
 				524E5D1624E819EB001FC71B /* Common */,
@@ -465,6 +479,7 @@
 				525C4AA824E4BC4500659EC6 /* AppDelegate.swift in Sources */,
 				520B55A324E93335007621DE /* View.swift in Sources */,
 				5284C52F24E67E790032FFB4 /* SceneAction.swift in Sources */,
+				520B179924EA03510061C03C /* KeyboardObservableActionReducer.swift in Sources */,
 				52A2FB6624E92E7E000ECBFF /* NavigationController.swift in Sources */,
 				525C4ABF24E4EEA600659EC6 /* SceneCoordinator.swift in Sources */,
 				524E5D1A24E826E2001FC71B /* ActionReducer.swift in Sources */,
@@ -485,6 +500,7 @@
 				52ACACC824E7905700147137 /* SceneWindow.swift in Sources */,
 				525C4AAA24E4BC4500659EC6 /* SceneDelegate.swift in Sources */,
 				52F7FBB624E7BC09008F7FDB /* SceneResponder.swift in Sources */,
+				520B179724E9FF800061C03C /* KeyboardObservableStateType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

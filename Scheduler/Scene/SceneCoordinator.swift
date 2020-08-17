@@ -13,15 +13,16 @@ final class SceneCoordinator: Coordinator {
     typealias StoreSubscriberStateType = SceneState
     typealias CoordinatorStoreType = SceneStore
 
-    lazy var store: CoordinatorStoreType = CoordinatorStoreType(reducer: SceneReducer.reduce)
+    var store: CoordinatorStoreType?
     
     var window : SceneWindow?
     
-    init(window: SceneWindow? = SceneWindow()) {
+    required init(window: SceneWindow? = SceneWindow()) {
+        self.store = CoordinatorStoreType(reducer: SceneReducer().reduce)
         self.window = window
         window?.makeKeyAndVisible()
 
-        store.subscribe(self) { $0.select { $0 }}
+        store?.subscribe(self) { $0.select { $0 }}
     }
 
     func newState(state: StoreSubscriberStateType) {
