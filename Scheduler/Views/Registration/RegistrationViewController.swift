@@ -14,6 +14,7 @@ class RegistrationViewController: KeyboardObservableViewController<RegistrationC
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
     
 

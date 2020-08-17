@@ -27,6 +27,7 @@ class ViewController<C: Coordinator, S: StateType>: UIViewController, ViewContro
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setAppearance()
         subscribeStore()
     }
     
@@ -34,12 +35,16 @@ class ViewController<C: Coordinator, S: StateType>: UIViewController, ViewContro
         unsubscribeStore()
     }
     
-    func subscribeStore() {
+    private func setAppearance() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: String.empty, style: .plain, target: nil, action: nil)
+    }
+    
+    private func subscribeStore() {
         guard let viewCoordinator = viewCoordinator else {return}
         (viewCoordinator.store as? Store<S>)?.subscribe(viewCoordinator) { $0.select { $0 as! C.StoreSubscriberStateType }}
     }
     
-    func unsubscribeStore() {
+    private func unsubscribeStore() {
         guard let viewCoordinator = viewCoordinator else {return}
         (viewCoordinator.store as? Store<S>)?.unsubscribe(viewCoordinator)
     }

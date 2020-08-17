@@ -72,6 +72,7 @@ class LoginCoordinator: KeyboardObservableViewCoordinator {
         case .login:
             break
         case .register:
+            sceneCoordinator?.store?.dispatch(SceneAction(sceneRoute: .registration))
             break
         default:
             break

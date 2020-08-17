@@ -29,7 +29,11 @@ class RegistrationCoordinator: KeyboardObservableViewCoordinator {
     }
     
     func start() {
-        
+        guard let navigationController = sceneCoordinator?.window?.rootViewController as? NavigationController,
+              let registrationViewController = ViewControllerType.instantiateFromStoryboard() else { return }
+        viewController = registrationViewController
+        registrationViewController.viewCoordinator = self
+        navigationController.pushViewController(registrationViewController, animated: true)
     }
     
     func keyboardObservableNewState(state: StoreSubscriberStateType) {
