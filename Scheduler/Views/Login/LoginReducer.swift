@@ -12,10 +12,13 @@ final class LoginReducer: KeyboardObservableActionReducer<LoginState> {
     
     override func reduce(action: ActionType, state: ReducerStateType?) -> ReducerStateType {
         var state = super.reduce(action: action, state: state)
-                
+        
         switch action {
             case _ as LoginRegisterAction:
-                
+                state.loginViewState = .register
+                break
+            case let loginProcessAction as LoginProcessAction:
+                state.loginViewState = loginProcessAction.loginViewState
                 break
             default:
                 break
@@ -31,13 +34,19 @@ final class LoginReducer: KeyboardObservableActionReducer<LoginState> {
                     
                     // Handle async call here
                     switch action {
-                    case _ as LoginAction:
+                    case let loginAction as LoginAction:
                         
+                        loginAction.username.isEmpty
+                        loginAction.password.isEmpty
+                        
+                        
+                        
+                        next(LoginProcessAction(loginViewState: .usernameError))
                         break
                     default:
+                        next(action)
                         break
                     }
-                    next(action)
                 }
             }
         }

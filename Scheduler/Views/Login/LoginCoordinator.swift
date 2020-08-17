@@ -39,8 +39,12 @@ class LoginCoordinator: KeyboardObservableViewCoordinator {
         guard let viewController = viewController else {return}
         viewController.navigationItem.title = state.navigationTitle
         
+        viewController.usernameTitleLabel?.isError = state.isUsernameError
         viewController.usernameTitleLabel?.text = state.usernameTitleLabel
+
+        viewController.passwordTitleLabel?.isError = state.isPasswordError
         viewController.passwordTitleLabel?.text = state.passwordTitleLabel
+
         viewController.registerTitleLabel?.text = state.registerTitleLabel
         
         viewController.submitButton?.setTitle(state.submitButtonTitleLabel, for: UIControl.State())

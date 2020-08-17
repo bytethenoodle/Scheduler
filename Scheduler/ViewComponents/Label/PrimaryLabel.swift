@@ -10,9 +10,15 @@ import UIKit
 
 class PrimaryLabel: UILabel {
     
+    var isError: Bool = false {
+        didSet {
+            isError ? errorAppearance() : normalAppearance()
+        }
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupAppearance()
+        normalAppearance()
     }
     
     func setupAppearance() {
@@ -21,7 +27,16 @@ class PrimaryLabel: UILabel {
         layer.borderColor = UIColor.clear.cgColor
         
         font = Font.primaryText
-        textColor = Color.primaryText
         tintColor = Color.primary
+    }
+    
+    private func normalAppearance() {
+        setupAppearance()
+        textColor = Color.primaryText
+    }
+    
+    private func errorAppearance() {
+        setupAppearance()
+        textColor = Color.errorText
     }
 }
