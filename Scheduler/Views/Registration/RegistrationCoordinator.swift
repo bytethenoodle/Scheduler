@@ -37,6 +37,7 @@ class RegistrationCoordinator: KeyboardObservableViewCoordinator {
     }
     
     func keyboardObservableNewState(state: StoreSubscriberStateType) {
-        
+        guard let viewController = viewController else {return}
+        viewController.navigationItem.title = state.navigationTitle
     }
 }

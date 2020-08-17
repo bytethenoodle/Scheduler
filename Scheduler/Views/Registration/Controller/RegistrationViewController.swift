@@ -10,6 +10,21 @@ import UIKit
 
 class RegistrationViewController: KeyboardObservableViewController<RegistrationCoordinator, RegistrationState>, Storyboardable, UITextFieldDelegate {
     
+    @IBOutlet weak var usernameTitleLabel: PrimaryLabel?
+    @IBOutlet weak var passwordTitleLabel: PrimaryLabel?
+    @IBOutlet weak var retypePasswordTitleLabel: PrimaryLabel?
+    
+    @IBOutlet weak var usernameHintLabel: SecondaryLabel?
+    @IBOutlet weak var passwordHintLabel: SecondaryLabel?
+    @IBOutlet weak var retypePasswordHintLabel: SecondaryLabel?
+    
+    @IBOutlet weak var errorTitleLabel: ErrorLabel?
+    @IBOutlet weak var registerButton: PrimaryButton?
+    
+    @IBOutlet weak var usernameField: TextField?
+    @IBOutlet weak var passwordField: TextField?
+    @IBOutlet weak var retypePasswordField: TextField?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

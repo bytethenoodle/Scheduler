@@ -44,6 +44,7 @@
 		526C3A3B24EAB532002A3D9F /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C3A3A24EAB532002A3D9F /* RegistrationCoordinator.swift */; };
 		526C3A3D24EAB5CB002A3D9F /* RegistrationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C3A3C24EAB5CB002A3D9F /* RegistrationStore.swift */; };
 		526C3A3F24EAB6CC002A3D9F /* RegistrationReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C3A3E24EAB6CC002A3D9F /* RegistrationReducer.swift */; };
+		526C3A4124EAE173002A3D9F /* RegistrationViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C3A4024EAE172002A3D9F /* RegistrationViewState.swift */; };
 		5284C51D24E663160032FFB4 /* ViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C51C24E663160032FFB4 /* ViewCoordinator.swift */; };
 		5284C51F24E666C00032FFB4 /* LoginAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C51E24E666C00032FFB4 /* LoginAction.swift */; };
 		5284C52124E666D20032FFB4 /* LoginReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52024E666D20032FFB4 /* LoginReducer.swift */; };
@@ -106,6 +107,7 @@
 		526C3A3A24EAB532002A3D9F /* RegistrationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCoordinator.swift; sourceTree = "<group>"; };
 		526C3A3C24EAB5CB002A3D9F /* RegistrationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationStore.swift; sourceTree = "<group>"; };
 		526C3A3E24EAB6CC002A3D9F /* RegistrationReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationReducer.swift; sourceTree = "<group>"; };
+		526C3A4024EAE172002A3D9F /* RegistrationViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewState.swift; sourceTree = "<group>"; };
 		5284C51C24E663160032FFB4 /* ViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinator.swift; sourceTree = "<group>"; };
 		5284C51E24E666C00032FFB4 /* LoginAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAction.swift; sourceTree = "<group>"; };
 		5284C52024E666D20032FFB4 /* LoginReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReducer.swift; sourceTree = "<group>"; };
@@ -239,12 +241,11 @@
 			isa = PBXGroup;
 			children = (
 				526C3A3C24EAB5CB002A3D9F /* RegistrationStore.swift */,
-				526C3A3A24EAB532002A3D9F /* RegistrationCoordinator.swift */,
-				525A54A824EA84FE00CA0274 /* RegistrationAction.swift */,
-				524E5D1424E818C7001FC71B /* RegistrationState.swift */,
-				526C3A3624EAB28E002A3D9F /* RegistrationViewController.swift */,
-				526C3A3824EAB2A1002A3D9F /* RegistrationViewController.storyboard */,
 				526C3A3E24EAB6CC002A3D9F /* RegistrationReducer.swift */,
+				526C3A3A24EAB532002A3D9F /* RegistrationCoordinator.swift */,
+				526C3A4224EAE186002A3D9F /* States */,
+				526C3A4424EAE2A0002A3D9F /* Actions */,
+				526C3A4324EAE267002A3D9F /* Controller */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -317,6 +318,32 @@
 				526302CF24E9442A00CDCD1D /* TextField.swift */,
 			);
 			path = Field;
+			sourceTree = "<group>";
+		};
+		526C3A4224EAE186002A3D9F /* States */ = {
+			isa = PBXGroup;
+			children = (
+				524E5D1424E818C7001FC71B /* RegistrationState.swift */,
+				526C3A4024EAE172002A3D9F /* RegistrationViewState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		526C3A4324EAE267002A3D9F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				526C3A3624EAB28E002A3D9F /* RegistrationViewController.swift */,
+				526C3A3824EAB2A1002A3D9F /* RegistrationViewController.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		526C3A4424EAE2A0002A3D9F /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				525A54A824EA84FE00CA0274 /* RegistrationAction.swift */,
+			);
+			path = Actions;
 			sourceTree = "<group>";
 		};
 		5284C52A24E67B860032FFB4 /* View */ = {
@@ -567,6 +594,7 @@
 				526302DA24E9465A00CDCD1D /* Font.swift in Sources */,
 				52ACACC824E7905700147137 /* SceneWindow.swift in Sources */,
 				525C4AAA24E4BC4500659EC6 /* SceneDelegate.swift in Sources */,
+				526C3A4124EAE173002A3D9F /* RegistrationViewState.swift in Sources */,
 				52F7FBB624E7BC09008F7FDB /* SceneResponder.swift in Sources */,
 				520B179724E9FF800061C03C /* KeyboardObservableStateType.swift in Sources */,
 			);
