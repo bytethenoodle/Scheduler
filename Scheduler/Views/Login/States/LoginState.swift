@@ -8,8 +8,6 @@
 
 import ReSwift
 
-
-
 struct LoginState: KeyboardObservableStateType {
     
     var navigationTitle: String
@@ -24,6 +22,22 @@ struct LoginState: KeyboardObservableStateType {
     var keyboardSpec: KeyboardSpec?
         
     var loginViewState: LoginViewState
+    
+    init() {
+        navigationTitle = "Login"
+        
+        usernameTitleLabel = "Username"
+        passwordTitleLabel = "Password"
+        registerTitleLabel = "No account yet?"
+        
+        submitButtonTitleLabel = "Submit"
+        registerButtonTitleLabel = "Register"
+        
+        loginViewState = .normal
+    }
+}
+
+extension LoginState {
     
     var isVerifyError: Bool {
         [LoginViewState.verifyError].contains(loginViewState)
@@ -62,19 +76,6 @@ struct LoginState: KeyboardObservableStateType {
         default:
             return String.empty
         }
-    }
-    
-    init() {
-        navigationTitle = "Login"
-        
-        usernameTitleLabel = "Username"
-        passwordTitleLabel = "Password"
-        registerTitleLabel = "No account yet?"
-        
-        submitButtonTitleLabel = "Submit"
-        registerButtonTitleLabel = "Register"
-        
-        loginViewState = .normal
     }
 }
 

@@ -10,6 +10,8 @@ import ReSwift
 
 final class LoginReducer: KeyboardObservableActionReducer<LoginState> {
     
+    // MARK: - Reducer Methods
+    
     override func reduce(action: ActionType, state: ReducerStateType?) -> ReducerStateType {
         var state = super.reduce(action: action, state: state)
         
@@ -27,24 +29,24 @@ final class LoginReducer: KeyboardObservableActionReducer<LoginState> {
         return state
     }
     
+    // MARK: - Middleware Methods
+    
     func middleware() -> Middleware<ReducerStateType> {
         return { dispatch, getState in
             return { next in
-                return { action in
+                return { [] action in
                     
-                    // Handle async call here
                     switch action {
                     case let loginAction as LoginAction:
                         
-//                        if loginAction.username.isEmpty &&
-//                            loginAction.password.isEmpty {
-//
-//                        }
-//                        else if
-                        
-                        
-                        
-                        next(LoginProcessAction(loginViewState: .verifyError))
+                        guard let errorState = self.errorStateForInput(username: loginAction.username,
+                                                                       password: loginAction.password)
+                        else {
+                            // TODO: Handle async call here
+                            next(action)
+                            break
+                        }
+                        next(LoginProcessAction(loginViewState: errorState))
                         break
                     default:
                         next(action)
@@ -53,5 +55,23 @@ final class LoginReducer: KeyboardObservableActionReducer<LoginState> {
                 }
             }
         }
+    }
+    
+    // MARK: - Utilities
+    
+    private func errorStateForInput(username: String, password: String) -> LoginViewState? {
+        
+        if username.isEmpty &&
+           password.isEmpty {
+            return .allInputError
+        }
+        else if username.isEmpty {
+            return .usernameError
+        }
+        else if password.isEmpty {
+            return .passwordError
+        }
+        
+        return nil
     }
 }
