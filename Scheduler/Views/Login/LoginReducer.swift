@@ -36,12 +36,15 @@ final class LoginReducer: KeyboardObservableActionReducer<LoginState> {
                     switch action {
                     case let loginAction as LoginAction:
                         
-                        loginAction.username.isEmpty
-                        loginAction.password.isEmpty
+//                        if loginAction.username.isEmpty &&
+//                            loginAction.password.isEmpty {
+//
+//                        }
+//                        else if
                         
                         
                         
-                        next(LoginProcessAction(loginViewState: .usernameError))
+                        next(LoginProcessAction(loginViewState: .verifyError))
                         break
                     default:
                         next(action)

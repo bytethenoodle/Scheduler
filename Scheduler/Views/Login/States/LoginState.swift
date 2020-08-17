@@ -25,28 +25,36 @@ struct LoginState: KeyboardObservableStateType {
         
     var loginViewState: LoginViewState
     
-    var isAllError: Bool {
-        [LoginViewState.allError].contains(loginViewState)
+    var isVerifyError: Bool {
+        [LoginViewState.verifyError].contains(loginViewState)
+    }
+    
+    var isAllInputError: Bool {
+        [LoginViewState.allInputError].contains(loginViewState)
     }
     
     var isUsernameError: Bool {
-        [LoginViewState.allError,
+        [LoginViewState.verifyError,
+         LoginViewState.allInputError,
          LoginViewState.usernameError].contains(loginViewState)
     }
     
     var isPasswordError: Bool {
-        [LoginViewState.allError,
+        [LoginViewState.verifyError,
+         LoginViewState.allInputError,
          LoginViewState.passwordError].contains(loginViewState)
     }
     
     var hasError: Bool {
-        isAllError || isUsernameError || isPasswordError
+        isVerifyError || isAllInputError || isUsernameError || isPasswordError
     }
     
     var errorTitleLabel: String {
         switch loginViewState {
-        case .allError:
+        case .verifyError:
             return "Username and/or password is invalid"
+        case .allInputError:
+            return "Username and password are required"
         case .usernameError:
             return "Username is required"
         case .passwordError:

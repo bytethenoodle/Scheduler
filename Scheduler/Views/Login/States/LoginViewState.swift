@@ -14,7 +14,8 @@ enum LoginViewState {
     case login
     case register
     
-    case allError
+    case verifyError
+    case allInputError
     case usernameError
     case passwordError
 }
