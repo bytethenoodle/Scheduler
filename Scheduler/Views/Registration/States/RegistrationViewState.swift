@@ -9,12 +9,6 @@
 import Foundation
 
 enum RegistrationViewState {
-    
     case normal
     case register
-    
-    case verifyError
-    case usernameError
-    case passwordError
-    case retypePasswordError
 }

@@ -11,6 +11,7 @@
 		520B179924EA03510061C03C /* KeyboardObservableActionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B179824EA03510061C03C /* KeyboardObservableActionReducer.swift */; };
 		520B55A324E93335007621DE /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B55A224E93335007621DE /* View.swift */; };
 		522CE73F24E93EF200F5EF78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522CE73E24E93EF200F5EF78 /* ViewController.swift */; };
+		522CF5BF24EAEAD5004B3B01 /* RegistrationErrorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522CF5BE24EAEAD5004B3B01 /* RegistrationErrorState.swift */; };
 		524E5D1524E818C7001FC71B /* RegistrationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1424E818C7001FC71B /* RegistrationState.swift */; };
 		524E5D1824E821DB001FC71B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1724E821DB001FC71B /* Coordinator.swift */; };
 		524E5D1A24E826E2001FC71B /* ActionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1924E826E2001FC71B /* ActionReducer.swift */; };
@@ -72,6 +73,7 @@
 		520B179824EA03510061C03C /* KeyboardObservableActionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservableActionReducer.swift; sourceTree = "<group>"; };
 		520B55A224E93335007621DE /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		522CE73E24E93EF200F5EF78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		522CF5BE24EAEAD5004B3B01 /* RegistrationErrorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationErrorState.swift; sourceTree = "<group>"; };
 		524E5D1424E818C7001FC71B /* RegistrationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationState.swift; sourceTree = "<group>"; };
 		524E5D1724E821DB001FC71B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		524E5D1924E826E2001FC71B /* ActionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionReducer.swift; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 			children = (
 				524E5D1424E818C7001FC71B /* RegistrationState.swift */,
 				526C3A4024EAE172002A3D9F /* RegistrationViewState.swift */,
+				522CF5BE24EAEAD5004B3B01 /* RegistrationErrorState.swift */,
 			);
 			path = States;
 			sourceTree = "<group>";
@@ -563,6 +566,7 @@
 				526C3A3B24EAB532002A3D9F /* RegistrationCoordinator.swift in Sources */,
 				52A2FB6224E92A52000ECBFF /* UIColor.swift in Sources */,
 				525A54A724EA845A00CA0274 /* LoginProcessAction.swift in Sources */,
+				522CF5BF24EAEAD5004B3B01 /* RegistrationErrorState.swift in Sources */,
 				526302D424E9445900CDCD1D /* SecondaryButton.swift in Sources */,
 				52630EBB24E99D610018AECE /* KeyboardAction.swift in Sources */,
 				526302CC24E9441200CDCD1D /* SecondaryLabel.swift in Sources */,

@@ -39,5 +39,28 @@ class RegistrationCoordinator: KeyboardObservableViewCoordinator {
     func keyboardObservableNewState(state: StoreSubscriberStateType) {
         guard let viewController = viewController else {return}
         viewController.navigationItem.title = state.navigationTitle
+        
+        viewController.usernameTitleLabel?.text = state.usernameTitleLabel
+        viewController.usernameTitleLabel?.isError = state.isUsernameError || state.isVerifyError
+        viewController.passwordTitleLabel?.text = state.passwordTitleLabel
+        viewController.passwordTitleLabel?.isError = state.isPasswordError
+        viewController.retypePasswordTitleLabel?.text = state.retypePasswordTitleLabel
+        viewController.retypePasswordTitleLabel?.isError = state.isRetypePasswordError
+
+        viewController.usernameHintLabel?.text = state.usernameHintLabel
+        viewController.usernameHintLabel?.isError = state.isUsernameError || state.isVerifyError
+        viewController.passwordHintLabel?.text = state.passwordHintLabel
+        viewController.passwordHintLabel?.isError = state.isPasswordError
+        viewController.retypePasswordHintLabel?.text = state.retypePasswordHintLabel
+        viewController.retypePasswordHintLabel?.isError = state.isRetypePasswordError
+        
+        viewController.usernameField?.isError = state.isUsernameError || state.isVerifyError
+        viewController.passwordField?.isError = state.isPasswordError
+        viewController.retypePasswordField?.isError = state.isRetypePasswordError
+
+        viewController.registerButton?.setTitle(state.registerButtonTitleLabel, for: UIControl.State())
+        
+        viewController.errorTitleLabel?.text = state.errorTitleLabel
+        viewController.errorTitleLabel?.isHidden = !state.hasError
     }
 }

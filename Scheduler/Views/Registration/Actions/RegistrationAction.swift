@@ -8,4 +8,6 @@
 
 import ReSwift
 
-struct RegistrationAction: Action {}
+struct RegistrationAction: Action {
+    
+}

@@ -31,16 +31,31 @@ class RegistrationViewController: KeyboardObservableViewController<RegistrationC
         // Do any additional setup after loading the view.
         
     }
+
+    // MARK: - Actions
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func didTapRegisterButton(_ sender: Any?) {
+        UIApplication.shared.sendAction(#selector(resignFirstResponder), to: nil, from: nil, for: nil);
+//        viewCoordinator?.store?.dispatch(LoginAction(username: usernameField?.text ?? String.empty,
+//                                                     password: passwordField?.text ?? String.empty))
     }
-    */
-
+    
+    // MARK: - UITextFieldDelegate
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case usernameField:
+            passwordField?.becomeFirstResponder()
+            break
+        case passwordField:
+            retypePasswordField?.becomeFirstResponder()
+            break
+        case retypePasswordField:
+            didTapRegisterButton(textField)
+            break
+        default:
+            break
+        }
+        return true
+    }
 }

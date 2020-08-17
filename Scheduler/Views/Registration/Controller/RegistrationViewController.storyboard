@@ -41,6 +41,9 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" textContentType="username"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="a8a-7S-Ig9" id="b3X-0f-e4v"/>
+                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKX-M1-N4y" customClass="SecondaryLabel" customModule="Scheduler" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="80.5" width="350" height="20.5"/>
@@ -66,6 +69,9 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="a8a-7S-Ig9" id="XYF-vE-7XW"/>
+                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45x-tG-lgX" customClass="SecondaryLabel" customModule="Scheduler" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="80.5" width="350" height="20.5"/>
@@ -91,6 +97,9 @@
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                                <connections>
+                                                                    <outlet property="delegate" destination="a8a-7S-Ig9" id="SHU-iW-ARc"/>
+                                                                </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FM-2R-vZJ" customClass="SecondaryLabel" customModule="Scheduler" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="80.5" width="350" height="20.5"/>
@@ -112,6 +121,9 @@
                                                             <constraint firstAttribute="height" constant="44" id="OQN-Is-Kko"/>
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="didTapRegisterButton:" destination="a8a-7S-Ig9" eventType="touchUpInside" id="u3R-Ts-7zs"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -151,7 +163,18 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="errorTitleLabel" destination="cyD-o7-A9K" id="BaP-XZ-yY2"/>
+                        <outlet property="passwordField" destination="dWc-9w-quZ" id="IQ3-2F-WYW"/>
+                        <outlet property="passwordHintLabel" destination="45x-tG-lgX" id="cLm-MB-Osh"/>
+                        <outlet property="passwordTitleLabel" destination="XdQ-0H-s5Q" id="PFW-B8-dIm"/>
+                        <outlet property="registerButton" destination="xe8-he-eOJ" id="G2p-Wf-oW3"/>
+                        <outlet property="retypePasswordField" destination="jCA-MT-537" id="QW0-U7-QaK"/>
+                        <outlet property="retypePasswordHintLabel" destination="4FM-2R-vZJ" id="wWa-2Q-fFg"/>
+                        <outlet property="retypePasswordTitleLabel" destination="bto-iJ-qsP" id="8YG-zl-NiO"/>
                         <outlet property="scrollView" destination="fID-UI-aYB" id="gkG-E2-oYV"/>
+                        <outlet property="usernameField" destination="z9R-rb-nBS" id="Ex6-mg-cVV"/>
+                        <outlet property="usernameHintLabel" destination="jKX-M1-N4y" id="w9c-LB-Oc4"/>
+                        <outlet property="usernameTitleLabel" destination="hkg-Ae-l4W" id="tyv-Kk-xqD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rlw-Vb-Swt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
