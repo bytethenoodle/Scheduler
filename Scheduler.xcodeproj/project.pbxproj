@@ -16,6 +16,9 @@
 		524E5D1A24E826E2001FC71B /* ActionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1924E826E2001FC71B /* ActionReducer.swift */; };
 		525A54A324EA5F5500CA0274 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A54A224EA5F5500CA0274 /* String.swift */; };
 		525A54A524EA73B600CA0274 /* LoginRegisterAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A54A424EA73B600CA0274 /* LoginRegisterAction.swift */; };
+		525A54A724EA845A00CA0274 /* LoginProcessAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A54A624EA845A00CA0274 /* LoginProcessAction.swift */; };
+		525A54A924EA84FE00CA0274 /* RegistrationAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A54A824EA84FE00CA0274 /* RegistrationAction.swift */; };
+		525A54AB24EA881600CA0274 /* LoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525A54AA24EA881600CA0274 /* LoginViewState.swift */; };
 		525C4AA824E4BC4500659EC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C4AA724E4BC4500659EC6 /* AppDelegate.swift */; };
 		525C4AAA24E4BC4500659EC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C4AA924E4BC4500659EC6 /* SceneDelegate.swift */; };
 		525C4AAC24E4BC4500659EC6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525C4AAB24E4BC4500659EC6 /* LoginViewController.swift */; };
@@ -68,6 +71,9 @@
 		524E5D1924E826E2001FC71B /* ActionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionReducer.swift; sourceTree = "<group>"; };
 		525A54A224EA5F5500CA0274 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		525A54A424EA73B600CA0274 /* LoginRegisterAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRegisterAction.swift; sourceTree = "<group>"; };
+		525A54A624EA845A00CA0274 /* LoginProcessAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProcessAction.swift; sourceTree = "<group>"; };
+		525A54A824EA84FE00CA0274 /* RegistrationAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAction.swift; sourceTree = "<group>"; };
+		525A54AA24EA881600CA0274 /* LoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
 		525C4AA424E4BC4500659EC6 /* Scheduler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scheduler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		525C4AA724E4BC4500659EC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		525C4AA924E4BC4500659EC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +167,34 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		525A54AC24EA994B00CA0274 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				5284C51E24E666C00032FFB4 /* LoginAction.swift */,
+				525A54A624EA845A00CA0274 /* LoginProcessAction.swift */,
+				525A54A424EA73B600CA0274 /* LoginRegisterAction.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		525A54AD24EA995F00CA0274 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				525C4AAB24E4BC4500659EC6 /* LoginViewController.swift */,
+				525C4AAD24E4BC4500659EC6 /* LoginViewController.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		525A54AE24EA998500CA0274 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				5284C52224E667580032FFB4 /* LoginState.swift */,
+				525A54AA24EA881600CA0274 /* LoginViewState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
 		525C4A9B24E4BC4500659EC6 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +228,7 @@
 		525C4AC024E4EEEB00659EC6 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				525A54A824EA84FE00CA0274 /* RegistrationAction.swift */,
 				524E5D1424E818C7001FC71B /* RegistrationState.swift */,
 			);
 			path = Registration;
@@ -213,13 +248,11 @@
 			isa = PBXGroup;
 			children = (
 				52F5BFB324E8A2D400EB8CDD /* LoginStore.swift */,
-				5284C52224E667580032FFB4 /* LoginState.swift */,
-				5284C51E24E666C00032FFB4 /* LoginAction.swift */,
-				525A54A424EA73B600CA0274 /* LoginRegisterAction.swift */,
 				5284C52024E666D20032FFB4 /* LoginReducer.swift */,
 				525C4AC624E633F800659EC6 /* LoginCoordinator.swift */,
-				525C4AAB24E4BC4500659EC6 /* LoginViewController.swift */,
-				525C4AAD24E4BC4500659EC6 /* LoginViewController.storyboard */,
+				525A54AE24EA998500CA0274 /* States */,
+				525A54AC24EA994B00CA0274 /* Actions */,
+				525A54AD24EA995F00CA0274 /* Controller */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -472,16 +505,19 @@
 				525C4AAC24E4BC4500659EC6 /* LoginViewController.swift in Sources */,
 				525C4AC524E632C600659EC6 /* SceneRoute.swift in Sources */,
 				525A54A324EA5F5500CA0274 /* String.swift in Sources */,
+				525A54AB24EA881600CA0274 /* LoginViewState.swift in Sources */,
 				52C7640D24E8E8A900E02E2D /* Store.swift in Sources */,
 				52FCA62224EA462E0091235F /* KeyboardObservableViewCoordinator.swift in Sources */,
 				52630EB924E98A4E0018AECE /* KeyboardObservableViewController.swift in Sources */,
 				525C4AC724E633F800659EC6 /* LoginCoordinator.swift in Sources */,
+				525A54A924EA84FE00CA0274 /* RegistrationAction.swift in Sources */,
 				52F5BFB424E8A2D400EB8CDD /* LoginStore.swift in Sources */,
 				5284C52924E678610032FFB4 /* SceneReducer.swift in Sources */,
 				5284C52324E667580032FFB4 /* LoginState.swift in Sources */,
 				525C4AB224E4BC4500659EC6 /* Scheduler.xcdatamodeld in Sources */,
 				524E5D1524E818C7001FC71B /* RegistrationState.swift in Sources */,
 				52A2FB6224E92A52000ECBFF /* UIColor.swift in Sources */,
+				525A54A724EA845A00CA0274 /* LoginProcessAction.swift in Sources */,
 				526302D424E9445900CDCD1D /* SecondaryButton.swift in Sources */,
 				52630EBB24E99D610018AECE /* KeyboardAction.swift in Sources */,
 				526302CC24E9441200CDCD1D /* SecondaryLabel.swift in Sources */,

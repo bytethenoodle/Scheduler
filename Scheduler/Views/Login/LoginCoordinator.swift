@@ -46,15 +46,19 @@ class LoginCoordinator: KeyboardObservableViewCoordinator {
         viewController.submitButton?.setTitle(state.submitButtonTitleLabel, for: UIControl.State())
         viewController.registerButton?.setTitle(state.registerButtonTitleLabel, for: UIControl.State())
         
-        viewController.usernameField?.isError = state.showError
-        viewController.passwordField?.isError = state.showError
+        viewController.usernameField?.isError = state.isUsernameError
+        viewController.passwordField?.isError = state.isPasswordError
         
         viewController.errorTitleLabel?.text = state.errorTitleLabel
-        viewController.errorTitleLabel?.isHidden = !state.showError
+        viewController.errorTitleLabel?.isHidden = !state.hasError
         
-        if state.resetFields {
+        switch state.loginViewState {
+        case .login, .register:
             viewController.usernameField?.text = String.empty
             viewController.passwordField?.text = String.empty
+            break
+        default:
+            break
         }
     }
 }

@@ -14,9 +14,6 @@ final class LoginReducer: KeyboardObservableActionReducer<LoginState> {
         var state = super.reduce(action: action, state: state)
                 
         switch action {
-            case _ as LoginAction:
-                
-                break
             case _ as LoginRegisterAction:
                 
                 break
@@ -33,7 +30,13 @@ final class LoginReducer: KeyboardObservableActionReducer<LoginState> {
                 return { action in
                     
                     // Handle async call here
-                    
+                    switch action {
+                    case _ as LoginAction:
+                        
+                        break
+                    default:
+                        break
+                    }
                     next(action)
                 }
             }
