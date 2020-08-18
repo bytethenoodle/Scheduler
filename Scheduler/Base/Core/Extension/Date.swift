@@ -76,7 +76,7 @@ extension Date {
     func monthYearString() -> String {
         let df = DateFormatter()
         df.dateFormat = "MMMM yyyy"
-        return df.string(from: Date())
+        return df.string(from: self)
     }
     
     func dateString() -> String {

@@ -15,6 +15,7 @@ final class CalendarReducer: ActionReducer {
     
     func reduce(action: ActionType, state: ReducerStateType?) -> ReducerStateType {
         var state = state ?? ReducerStateType()
+        state.calendarViewState = .normal
         
         switch action {
         case _ as CalendarSelectAction:
@@ -23,8 +24,13 @@ final class CalendarReducer: ActionReducer {
         case _ as CalendarLogoutAction:
             state.calendarViewState = .logout
             break
+        case _ as CalendarIncrementAction:
+            state.currentDate = state.currentDate.nextMonth()
+            break
+        case _ as CalendarDecrementAction:
+            state.currentDate = state.currentDate.lastMonth()
+            break
         default:
-            state.calendarViewState = .normal
             break
         }
         

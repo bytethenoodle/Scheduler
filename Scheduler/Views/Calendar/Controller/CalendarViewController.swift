@@ -42,11 +42,11 @@ class CalendarViewController: ViewController<CalendarCoordinator,
     }
     
     @IBAction func leftButtonTapped(_ sender: Any?) {
-        
+        viewCoordinator?.store?.dispatch(CalendarDecrementAction())
     }
     
     @IBAction func rightButtonTapped(_ sender: Any?) {
-        
+        viewCoordinator?.store?.dispatch(CalendarIncrementAction())
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

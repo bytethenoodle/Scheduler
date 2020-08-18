@@ -39,6 +39,9 @@ class CalendarCoordinator: ViewCoordinator {
     func newState(state: CalendarState) {
         guard let viewController = viewController else {return}
         viewController.navigationItem.title = state.navigationTitle
+        
+        viewController.monthLabel?.text = state.currentDate.monthYearString()
+        
         setupDataSource(state)
         transitionViewWithState(state)
     }

@@ -71,6 +71,8 @@
 		5284C52924E678610032FFB4 /* SceneReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52824E678610032FFB4 /* SceneReducer.swift */; };
 		5284C52D24E67DA80032FFB4 /* ViewControllerCoordinatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52C24E67DA80032FFB4 /* ViewControllerCoordinatable.swift */; };
 		5284C52F24E67E790032FFB4 /* SceneAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284C52E24E67E790032FFB4 /* SceneAction.swift */; };
+		52985B8724EC3BE100F9F27C /* CalendarIncrementAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B8624EC3BE100F9F27C /* CalendarIncrementAction.swift */; };
+		52985B8924EC3C0000F9F27C /* CalendarDecrementAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B8824EC3C0000F9F27C /* CalendarDecrementAction.swift */; };
 		52A2FB6024E927F8000ECBFF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2FB5F24E927F8000ECBFF /* Color.swift */; };
 		52A2FB6224E92A52000ECBFF /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2FB6124E92A52000ECBFF /* UIColor.swift */; };
 		52A2FB6624E92E7E000ECBFF /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2FB6524E92E7E000ECBFF /* NavigationController.swift */; };
@@ -172,6 +174,8 @@
 		5284C52824E678610032FFB4 /* SceneReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneReducer.swift; sourceTree = "<group>"; };
 		5284C52C24E67DA80032FFB4 /* ViewControllerCoordinatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCoordinatable.swift; sourceTree = "<group>"; };
 		5284C52E24E67E790032FFB4 /* SceneAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneAction.swift; sourceTree = "<group>"; };
+		52985B8624EC3BE100F9F27C /* CalendarIncrementAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarIncrementAction.swift; sourceTree = "<group>"; };
+		52985B8824EC3C0000F9F27C /* CalendarDecrementAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDecrementAction.swift; sourceTree = "<group>"; };
 		52A2FB5F24E927F8000ECBFF /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		52A2FB6124E92A52000ECBFF /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		52A2FB6524E92E7E000ECBFF /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -526,6 +530,8 @@
 				52B9F76924EC025B00AA1DC0 /* CalendarAction.swift */,
 				52B9F77524EC082A00AA1DC0 /* CalendarSelectAction.swift */,
 				52B9F77324EC081B00AA1DC0 /* CalendarLogoutAction.swift */,
+				52985B8624EC3BE100F9F27C /* CalendarIncrementAction.swift */,
+				52985B8824EC3C0000F9F27C /* CalendarDecrementAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -822,6 +828,7 @@
 				526302D424E9445900CDCD1D /* SecondaryButton.swift in Sources */,
 				52630EBB24E99D610018AECE /* KeyboardAction.swift in Sources */,
 				52EF201724EB6DB6001B20F0 /* User+CoreDataProperties.swift in Sources */,
+				52985B8724EC3BE100F9F27C /* CalendarIncrementAction.swift in Sources */,
 				526302CC24E9441200CDCD1D /* SecondaryLabel.swift in Sources */,
 				5284C52124E666D20032FFB4 /* LoginReducer.swift in Sources */,
 				5233DDAA24EB8DF200FDBCB2 /* RegistrationSuccessState.swift in Sources */,
@@ -829,6 +836,7 @@
 				525C4AA824E4BC4500659EC6 /* AppDelegate.swift in Sources */,
 				520B55A324E93335007621DE /* View.swift in Sources */,
 				52B9F76824EC024900AA1DC0 /* CalendarState.swift in Sources */,
+				52985B8924EC3C0000F9F27C /* CalendarDecrementAction.swift in Sources */,
 				5233DDA824EB8DE800FDBCB2 /* RegistrationSuccessCoordinator.swift in Sources */,
 				5284C52F24E67E790032FFB4 /* SceneAction.swift in Sources */,
 				520B179924EA03510061C03C /* KeyboardObservableActionReducer.swift in Sources */,
