@@ -17,19 +17,28 @@ class RegistrationSuccessViewController: ViewController<RegistrationSuccessCoord
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        setupNavigation()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        restoreNavigation()
     }
-    */
+    
+    private func setupNavigation() {
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: String.empty,
+                                                           style: .plain,
+                                                           target: nil, action: nil)
 
+    }
+    
+    private func restoreNavigation() {
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = true
+    }
+    
+    @IBAction func didTapReturnToLoginButton(_ sender: Any?) {
+        viewCoordinator?.store?.dispatch(RegistrationSuccessAction())
+    }
 }

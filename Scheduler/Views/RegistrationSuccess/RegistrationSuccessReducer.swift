@@ -16,6 +16,14 @@ final class RegistrationSuccessReducer: ActionReducer {
     func reduce(action: ActionType, state: ReducerStateType?) -> ReducerStateType {
         var state = state ?? ReducerStateType()
 
+        switch action {
+        case _ as RegistrationSuccessAction:
+            state.registrationSuccessViewState = .login
+            break
+        default:
+            break
+        }
+        
         return state
     }
 }

@@ -29,6 +29,9 @@ class LoginCoordinator: KeyboardObservableViewCoordinator {
     }
     
     func start() {
+        
+        
+        
         guard let loginViewController = ViewControllerType.instantiateFromStoryboard() else { return }
         viewController = loginViewController
         loginViewController.viewCoordinator = self

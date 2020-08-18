@@ -31,6 +31,9 @@
                                             <constraint firstAttribute="height" constant="44" id="u99-4u-bPj"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="didTapReturnToLoginButton:" destination="QIL-zE-GTb" eventType="touchUpInside" id="Zwl-sD-Zc2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -49,6 +52,10 @@
                             <constraint firstItem="vjk-BW-CyN" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Y2R-mI-CSl" secondAttribute="topMargin" constant="32" id="t94-Yd-vKL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="returnButton" destination="Oy1-I3-JKQ" id="fzd-EV-yq2"/>
+                        <outlet property="successLabel" destination="xzf-SJ-OmF" id="v4c-Vi-Uz3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gU-6l-5GL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

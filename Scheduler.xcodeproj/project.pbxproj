@@ -20,6 +20,7 @@
 		5233DDAC24EB8E0100FDBCB2 /* RegistrationSuccessStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233DDAB24EB8E0100FDBCB2 /* RegistrationSuccessStore.swift */; };
 		5233DDAE24EB8E1500FDBCB2 /* RegistrationSuccessReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233DDAD24EB8E1500FDBCB2 /* RegistrationSuccessReducer.swift */; };
 		5233DDB024EB8F8F00FDBCB2 /* RegistrationSuccessViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233DDAF24EB8F8F00FDBCB2 /* RegistrationSuccessViewState.swift */; };
+		5233DDB424EB957F00FDBCB2 /* RegistrationSuccessAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233DDB324EB957F00FDBCB2 /* RegistrationSuccessAction.swift */; };
 		524E5D1524E818C7001FC71B /* RegistrationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1424E818C7001FC71B /* RegistrationState.swift */; };
 		524E5D1824E821DB001FC71B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1724E821DB001FC71B /* Coordinator.swift */; };
 		524E5D1A24E826E2001FC71B /* ActionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1924E826E2001FC71B /* ActionReducer.swift */; };
@@ -102,6 +103,7 @@
 		5233DDAB24EB8E0100FDBCB2 /* RegistrationSuccessStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessStore.swift; sourceTree = "<group>"; };
 		5233DDAD24EB8E1500FDBCB2 /* RegistrationSuccessReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessReducer.swift; sourceTree = "<group>"; };
 		5233DDAF24EB8F8F00FDBCB2 /* RegistrationSuccessViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessViewState.swift; sourceTree = "<group>"; };
+		5233DDB324EB957F00FDBCB2 /* RegistrationSuccessAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessAction.swift; sourceTree = "<group>"; };
 		524E5D1424E818C7001FC71B /* RegistrationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationState.swift; sourceTree = "<group>"; };
 		524E5D1724E821DB001FC71B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		524E5D1924E826E2001FC71B /* ActionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionReducer.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				5233DDAB24EB8E0100FDBCB2 /* RegistrationSuccessStore.swift */,
+				5233DDB324EB957F00FDBCB2 /* RegistrationSuccessAction.swift */,
 				5233DDA724EB8DE800FDBCB2 /* RegistrationSuccessCoordinator.swift */,
 				5233DDAD24EB8E1500FDBCB2 /* RegistrationSuccessReducer.swift */,
 				5233DDB124EB93FE00FDBCB2 /* State */,
@@ -712,6 +715,7 @@
 				5233DDAC24EB8E0100FDBCB2 /* RegistrationSuccessStore.swift in Sources */,
 				525A54A724EA845A00CA0274 /* LoginProcessAction.swift in Sources */,
 				522CF5BF24EAEAD5004B3B01 /* RegistrationErrorState.swift in Sources */,
+				5233DDB424EB957F00FDBCB2 /* RegistrationSuccessAction.swift in Sources */,
 				5233DDAE24EB8E1500FDBCB2 /* RegistrationSuccessReducer.swift in Sources */,
 				52EF202A24EB7CC7001B20F0 /* RegistrationReducer+Persistence.swift in Sources */,
 				526302D424E9445900CDCD1D /* SecondaryButton.swift in Sources */,

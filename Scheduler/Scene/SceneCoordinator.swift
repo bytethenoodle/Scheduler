@@ -33,6 +33,9 @@ final class SceneCoordinator: Coordinator {
         case .registration:
             RegistrationCoordinator(sceneCoordinator: self).start()
             break
+        case .registrationSuccess:
+            RegistrationSuccessCoordinator(sceneCoordinator: self).start()
+            break
         default:
             break
         }

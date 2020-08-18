@@ -52,7 +52,13 @@ class RegistrationSuccessCoordinator: ViewCoordinator {
     }
     
     func transitionViewWithState(_ state: StoreSubscriberStateType) {
-        
+        switch state.registrationSuccessViewState {
+        case .login:
+            sceneCoordinator?.store?.dispatch(SceneAction(sceneRoute: .login))
+            break
+        default:
+            break
+        }
     }
 }
 
