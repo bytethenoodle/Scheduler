@@ -57,8 +57,11 @@ class CalendarCoordinator: ViewCoordinator {
         guard let viewController = viewController else {return}
         viewController.collectionViewDataSource =
             CollectionViewDataSource(cellIdentifier:String(describing: CalendarCollectionViewCell.self),
-                                     models: state.currentDate.calendarArray()) { cell, model in
+                                     models: state.dates) { cell, model in
+                
                 cell.dateLabel?.text = model?.dayString()
+                cell.hasNoDate()
+                
           return cell
         }
 

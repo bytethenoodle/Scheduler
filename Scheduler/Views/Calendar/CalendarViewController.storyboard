@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17120"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,21 +35,32 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wsc-0y-JWA">
-                                                    <rect key="frame" x="31" y="46" width="66" height="36.5"/>
+                                                    <rect key="frame" x="8" y="46" width="112" height="36.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoB-1X-2XC" customClass="PrimaryLabel" customModule="Scheduler" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="66" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="112" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YG7-YV-erm">
-                                                            <rect key="frame" x="0.0" y="28.5" width="66" height="8"/>
-                                                            <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="8" id="xoT-Rs-W9q"/>
-                                                            </constraints>
-                                                        </view>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Pp-tx-Qcy">
+                                                            <rect key="frame" x="0.0" y="28.5" width="112" height="8"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPP-Ix-QwV">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="8"/>
+                                                                </stackView>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YG7-YV-erm">
+                                                                    <rect key="frame" x="40" y="0.0" width="32" height="8"/>
+                                                                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="8" id="xoT-Rs-W9q"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqN-5D-cvw">
+                                                                    <rect key="frame" x="80" y="0.0" width="32" height="8"/>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
@@ -58,9 +68,9 @@
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="wsc-0y-JWA" secondAttribute="bottom" constant="8" id="W2x-60-0NH"/>
                                                 <constraint firstItem="wsc-0y-JWA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="txx-ZB-clR" secondAttribute="top" constant="8" id="WMC-up-8XU"/>
                                                 <constraint firstItem="wsc-0y-JWA" firstAttribute="centerY" secondItem="txx-ZB-clR" secondAttribute="centerY" id="dhO-ef-ob1"/>
-                                                <constraint firstItem="wsc-0y-JWA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="txx-ZB-clR" secondAttribute="leading" constant="8" id="e8k-V3-L0S"/>
+                                                <constraint firstItem="wsc-0y-JWA" firstAttribute="leading" secondItem="txx-ZB-clR" secondAttribute="leading" constant="8" id="e8k-V3-L0S"/>
                                                 <constraint firstItem="wsc-0y-JWA" firstAttribute="centerX" secondItem="txx-ZB-clR" secondAttribute="centerX" id="e9J-xX-Lg2"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wsc-0y-JWA" secondAttribute="trailing" constant="8" id="eOh-8w-iaw"/>
+                                                <constraint firstAttribute="trailing" secondItem="wsc-0y-JWA" secondAttribute="trailing" constant="8" id="eOh-8w-iaw"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -91,9 +101,4 @@
         </scene>
     </scenes>
     <color key="tintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-    <resources>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

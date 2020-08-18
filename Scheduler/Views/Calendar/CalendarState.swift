@@ -22,3 +22,11 @@ struct CalendarState: StateType {
         calendarViewState = .normal
     }
 }
+
+extension CalendarState {
+    
+    var dates: [Date?] {
+        currentDate.calendarArray()
+    }
+}
+
