@@ -75,6 +75,13 @@
 		52985B8924EC3C0000F9F27C /* CalendarDecrementAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B8824EC3C0000F9F27C /* CalendarDecrementAction.swift */; };
 		52985B8B24EC415600F9F27C /* Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B8A24EC415600F9F27C /* Optional.swift */; };
 		52985B8D24EC41D500F9F27C /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B8C24EC41D500F9F27C /* EventRepository.swift */; };
+		52985B9024EC94D100F9F27C /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B8F24EC94D100F9F27C /* EventsViewController.swift */; };
+		52985B9224EC94DB00F9F27C /* EventsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52985B9124EC94DB00F9F27C /* EventsViewController.storyboard */; };
+		52985B9424EC94EB00F9F27C /* EventsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B9324EC94EB00F9F27C /* EventsCoordinator.swift */; };
+		52985B9624EC94F700F9F27C /* EventsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B9524EC94F700F9F27C /* EventsState.swift */; };
+		52985B9824EC950200F9F27C /* EventsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B9724EC950200F9F27C /* EventsReducer.swift */; };
+		52985B9A24EC950F00F9F27C /* EventsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B9924EC950F00F9F27C /* EventsAction.swift */; };
+		52985B9C24EC962600F9F27C /* EventsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B9B24EC962600F9F27C /* EventsStore.swift */; };
 		52A2FB6024E927F8000ECBFF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2FB5F24E927F8000ECBFF /* Color.swift */; };
 		52A2FB6224E92A52000ECBFF /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2FB6124E92A52000ECBFF /* UIColor.swift */; };
 		52A2FB6624E92E7E000ECBFF /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2FB6524E92E7E000ECBFF /* NavigationController.swift */; };
@@ -180,6 +187,13 @@
 		52985B8824EC3C0000F9F27C /* CalendarDecrementAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDecrementAction.swift; sourceTree = "<group>"; };
 		52985B8A24EC415600F9F27C /* Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
 		52985B8C24EC41D500F9F27C /* EventRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRepository.swift; sourceTree = "<group>"; };
+		52985B8F24EC94D100F9F27C /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		52985B9124EC94DB00F9F27C /* EventsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EventsViewController.storyboard; sourceTree = "<group>"; };
+		52985B9324EC94EB00F9F27C /* EventsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCoordinator.swift; sourceTree = "<group>"; };
+		52985B9524EC94F700F9F27C /* EventsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsState.swift; sourceTree = "<group>"; };
+		52985B9724EC950200F9F27C /* EventsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsReducer.swift; sourceTree = "<group>"; };
+		52985B9924EC950F00F9F27C /* EventsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAction.swift; sourceTree = "<group>"; };
+		52985B9B24EC962600F9F27C /* EventsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsStore.swift; sourceTree = "<group>"; };
 		52A2FB5F24E927F8000ECBFF /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		52A2FB6124E92A52000ECBFF /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		52A2FB6524E92E7E000ECBFF /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -392,6 +406,7 @@
 				525C4AC024E4EEEB00659EC6 /* Registration */,
 				5233DDA224EB893F00FDBCB2 /* RegistrationSuccess */,
 				52E84FB524E91695007C2D21 /* Calendar */,
+				52985B8E24EC94B500F9F27C /* Events */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -566,6 +581,20 @@
 				521E417A24EC2C6E005F0318 /* CalendarCollectionViewCell.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		52985B8E24EC94B500F9F27C /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				52985B9B24EC962600F9F27C /* EventsStore.swift */,
+				52985B9924EC950F00F9F27C /* EventsAction.swift */,
+				52985B9524EC94F700F9F27C /* EventsState.swift */,
+				52985B9724EC950200F9F27C /* EventsReducer.swift */,
+				52985B9324EC94EB00F9F27C /* EventsCoordinator.swift */,
+				52985B8F24EC94D100F9F27C /* EventsViewController.swift */,
+				52985B9124EC94DB00F9F27C /* EventsViewController.storyboard */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 		52A2FB6324E92C57000ECBFF /* Controller */ = {
@@ -744,6 +773,7 @@
 			files = (
 				525C4AB724E4BC4800659EC6 /* LaunchScreen.storyboard in Resources */,
 				52E84FB724E916BC007C2D21 /* Colors.xcassets in Resources */,
+				52985B9224EC94DB00F9F27C /* EventsViewController.storyboard in Resources */,
 				5233DDA624EB899900FDBCB2 /* RegistrationSuccessViewController.storyboard in Resources */,
 				525C4AB424E4BC4800659EC6 /* Assets.xcassets in Resources */,
 				52B9F76E24EC02A300AA1DC0 /* CalendarViewController.storyboard in Resources */,
@@ -813,6 +843,7 @@
 				521E417B24EC2C6E005F0318 /* CalendarCollectionViewCell.swift in Sources */,
 				526BB15C24EBD39B00694BD3 /* SceneReducer+Middleware.swift in Sources */,
 				52630EB924E98A4E0018AECE /* KeyboardObservableViewController.swift in Sources */,
+				52985B9624EC94F700F9F27C /* EventsState.swift in Sources */,
 				525C4AC724E633F800659EC6 /* LoginCoordinator.swift in Sources */,
 				525A54A924EA84FE00CA0274 /* RegistrationAction.swift in Sources */,
 				526C3A3F24EAB6CC002A3D9F /* RegistrationReducer.swift in Sources */,
@@ -827,6 +858,7 @@
 				52A2FB6224E92A52000ECBFF /* UIColor.swift in Sources */,
 				5233DDAC24EB8E0100FDBCB2 /* RegistrationSuccessStore.swift in Sources */,
 				525A54A724EA845A00CA0274 /* LoginProcessAction.swift in Sources */,
+				52985B9A24EC950F00F9F27C /* EventsAction.swift in Sources */,
 				522CF5BF24EAEAD5004B3B01 /* RegistrationErrorState.swift in Sources */,
 				5233DDB424EB957F00FDBCB2 /* RegistrationSuccessAction.swift in Sources */,
 				5233DDAE24EB8E1500FDBCB2 /* RegistrationSuccessReducer.swift in Sources */,
@@ -873,16 +905,20 @@
 				525A54A524EA73B600CA0274 /* LoginRegisterAction.swift in Sources */,
 				52A2FB6024E927F8000ECBFF /* Color.swift in Sources */,
 				5284C52524E671FF0032FFB4 /* SceneStore.swift in Sources */,
+				52985B9C24EC962600F9F27C /* EventsStore.swift in Sources */,
 				526BB16124EBDEA500694BD3 /* SceneReducer+Utilities.swift in Sources */,
 				52EF201A24EB6F01001B20F0 /* Session+CoreDataClass.swift in Sources */,
 				52C7640B24E8D89C00E02E2D /* Storyboardable.swift in Sources */,
 				52B9F77224EC046000AA1DC0 /* CalendarReducer.swift in Sources */,
+				52985B9824EC950200F9F27C /* EventsReducer.swift in Sources */,
 				52EF201B24EB6F01001B20F0 /* Session+CoreDataProperties.swift in Sources */,
+				52985B9024EC94D100F9F27C /* EventsViewController.swift in Sources */,
 				52630EBD24E9A0540018AECE /* KeyboardSpec.swift in Sources */,
 				52B9F76C24EC029300AA1DC0 /* CalendarViewState.swift in Sources */,
 				526302CA24E9440400CDCD1D /* PrimaryLabel.swift in Sources */,
 				5284C52724E673CE0032FFB4 /* SceneState.swift in Sources */,
 				526C3A3724EAB28E002A3D9F /* RegistrationViewController.swift in Sources */,
+				52985B9424EC94EB00F9F27C /* EventsCoordinator.swift in Sources */,
 				526302DA24E9465A00CDCD1D /* Font.swift in Sources */,
 				52ACACC824E7905700147137 /* SceneWindow.swift in Sources */,
 				52EF202624EB7B7F001B20F0 /* RegistrationReducer+Middleware.swift in Sources */,

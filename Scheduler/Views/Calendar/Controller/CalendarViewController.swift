@@ -8,8 +8,6 @@
 
 import ReSwift
 
-import UIKit
-
 class CalendarViewController: ViewController<CalendarCoordinator,
                                              CalendarState>,
                               Storyboardable {

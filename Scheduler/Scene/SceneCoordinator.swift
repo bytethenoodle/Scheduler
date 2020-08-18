@@ -43,7 +43,8 @@ final class SceneCoordinator: Coordinator {
             CalendarCoordinator(sceneCoordinator: self).start()
             break
         case .events:
-            print("---> \(state.reference as? Date)")
+            EventsCoordinator(sceneCoordinator: self,
+                              reference: state.reference).start()
             break
         }
     }
