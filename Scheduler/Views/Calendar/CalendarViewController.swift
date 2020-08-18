@@ -18,7 +18,7 @@ class CalendarViewController: ViewController<CalendarCoordinator,
         super.viewDidLoad()
         setupNavigationItems()
         
-        print("---> \(Date().datesOfMonth().map { $0.dateString() })")
+        print("---> \(Date().calendarArray().map { $0?.dateString()})")
 //        print("---> \(Date().endOfMonth().dateString())")
         
     }

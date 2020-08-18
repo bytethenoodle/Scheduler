@@ -84,4 +84,24 @@ extension Date {
         df.dateFormat = "MMMM dd, yyyy"
         return df.string(from: self)
     }
+    
+    func calendarArray() -> [Date?] {
+        var dates = [Date?]()
+        
+        var initialWeekdateOffset = startOfMonth().weekday() - 1
+        while initialWeekdateOffset > 0 {
+            dates.append(nil)
+            initialWeekdateOffset -= 1
+        }
+        
+        dates.append(contentsOf: datesOfMonth())
+        
+        var endOfWeekdateOffset = 7 - endOfMonth().weekday()
+        while endOfWeekdateOffset > 0 {
+            dates.append(nil)
+            endOfWeekdateOffset -= 1
+        }
+        
+        return dates
+    }
 }
