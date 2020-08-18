@@ -25,13 +25,13 @@ final class SceneReducer: ActionReducer {
         // Perform passing from action
         switch action {
             case let sceneAction as SceneAction:
-                state.session = session
                 state.sceneRoute = sceneAction.sceneRoute
                 break
             default:
                 break
         }
-
+        
+        state.session = session
         return state
     }
 }
