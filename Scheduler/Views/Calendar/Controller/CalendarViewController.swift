@@ -15,7 +15,8 @@ class CalendarViewController: ViewController<CalendarCoordinator,
                               Storyboardable {
     
     @IBOutlet weak var collectionView: UICollectionView?
-    
+    @IBOutlet weak var monthLabel: PrimaryLabel?
+
     var collectionViewDataSource: CollectionViewDataSource<CalendarCollectionViewCell, Date?>?
     
     override func viewDidLoad() {
@@ -38,6 +39,14 @@ class CalendarViewController: ViewController<CalendarCoordinator,
     
     @objc func leftBarButtonItemTapped(_ sender: Any?) {
         viewCoordinator?.store?.dispatch(CalendarLogoutAction())
+    }
+    
+    @IBAction func leftButtonTapped(_ sender: Any?) {
+        
+    }
+    
+    @IBAction func rightButtonTapped(_ sender: Any?) {
+        
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

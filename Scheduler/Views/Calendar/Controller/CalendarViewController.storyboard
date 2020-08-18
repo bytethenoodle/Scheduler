@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tFZ-6e-X5e">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="106" width="414" height="790"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Y2U-VX-0pz">
                                     <size key="itemSize" width="128" height="128"/>
@@ -81,11 +81,48 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fkc-lk-g0C">
+                                <rect key="frame" x="32" y="60" width="350" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDH-yb-EVH" customClass="SecondaryButton" customModule="Scheduler" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="16c-Qu-ZC1"/>
+                                        </constraints>
+                                        <state key="normal" title="&lt;"/>
+                                        <connections>
+                                            <action selector="leftButtonTapped:" destination="Eaj-4p-1QJ" eventType="touchUpInside" id="Xfi-dE-FBZ"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9f-wN-pdy" customClass="PrimaryLabel" customModule="Scheduler" customModuleProvider="target">
+                                        <rect key="frame" x="38" y="0.0" width="274" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyK-nf-skm" customClass="SecondaryButton" customModule="Scheduler" customModuleProvider="target">
+                                        <rect key="frame" x="320" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="lYk-CY-Vrm"/>
+                                        </constraints>
+                                        <state key="normal" title="&gt;"/>
+                                        <connections>
+                                            <action selector="rightButtonTapped:" destination="Eaj-4p-1QJ" eventType="touchUpInside" id="07c-vO-OgS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="trD-H7-uSV"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IZf-k8-bnX"/>
                         <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="tFZ-6e-X5e" firstAttribute="top" secondItem="lcx-BU-i2r" secondAttribute="top" id="ZS4-tg-0tw"/>
+                            <constraint firstItem="fkc-lk-g0C" firstAttribute="top" secondItem="IZf-k8-bnX" secondAttribute="top" constant="16" id="23S-A3-v3M"/>
+                            <constraint firstItem="fkc-lk-g0C" firstAttribute="leadingMargin" secondItem="lcx-BU-i2r" secondAttribute="leading" constant="32" id="NpA-dm-ae8"/>
+                            <constraint firstAttribute="trailing" secondItem="fkc-lk-g0C" secondAttribute="trailingMargin" constant="32" id="Ur9-Pe-Awj"/>
+                            <constraint firstItem="tFZ-6e-X5e" firstAttribute="top" secondItem="fkc-lk-g0C" secondAttribute="bottom" constant="16" id="lyd-3h-iJc"/>
                             <constraint firstAttribute="bottom" secondItem="tFZ-6e-X5e" secondAttribute="bottom" id="n84-ji-sBI"/>
                             <constraint firstItem="tFZ-6e-X5e" firstAttribute="trailing" secondItem="IZf-k8-bnX" secondAttribute="trailing" id="sNw-BN-mdu"/>
                             <constraint firstItem="tFZ-6e-X5e" firstAttribute="leading" secondItem="IZf-k8-bnX" secondAttribute="leading" id="zPN-Ri-Sq7"/>
@@ -93,6 +130,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="tFZ-6e-X5e" id="8cT-og-hcG"/>
+                        <outlet property="monthLabel" destination="d9f-wN-pdy" id="JLy-LL-8Ha"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sED-Ez-Ua5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -520,6 +520,43 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		52985B8224EC3AFF00F9F27C /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				52B9F76924EC025B00AA1DC0 /* CalendarAction.swift */,
+				52B9F77524EC082A00AA1DC0 /* CalendarSelectAction.swift */,
+				52B9F77324EC081B00AA1DC0 /* CalendarLogoutAction.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		52985B8324EC3B0800F9F27C /* State */ = {
+			isa = PBXGroup;
+			children = (
+				52B9F76724EC024900AA1DC0 /* CalendarState.swift */,
+				52B9F76B24EC029300AA1DC0 /* CalendarViewState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		52985B8424EC3B1800F9F27C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				526BB16224EBDF1A00694BD3 /* CalendarViewController.swift */,
+				52B9F76D24EC02A300AA1DC0 /* CalendarViewController.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		52985B8524EC3B4000F9F27C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				521E417824EC2AD9005F0318 /* CollectionViewDataSource.swift */,
+				521E417A24EC2C6E005F0318 /* CalendarCollectionViewCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		52A2FB6324E92C57000ECBFF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,16 +605,11 @@
 			children = (
 				52B9F76F24EC036B00AA1DC0 /* CalendarStore.swift */,
 				52B9F77124EC046000AA1DC0 /* CalendarReducer.swift */,
-				52B9F76924EC025B00AA1DC0 /* CalendarAction.swift */,
-				52B9F77524EC082A00AA1DC0 /* CalendarSelectAction.swift */,
-				52B9F77324EC081B00AA1DC0 /* CalendarLogoutAction.swift */,
-				52B9F76724EC024900AA1DC0 /* CalendarState.swift */,
-				52B9F76B24EC029300AA1DC0 /* CalendarViewState.swift */,
 				52B9F76524EC01F000AA1DC0 /* CalendarCoordinator.swift */,
-				526BB16224EBDF1A00694BD3 /* CalendarViewController.swift */,
-				52B9F76D24EC02A300AA1DC0 /* CalendarViewController.storyboard */,
-				521E417824EC2AD9005F0318 /* CollectionViewDataSource.swift */,
-				521E417A24EC2C6E005F0318 /* CalendarCollectionViewCell.swift */,
+				52985B8224EC3AFF00F9F27C /* Actions */,
+				52985B8324EC3B0800F9F27C /* State */,
+				52985B8424EC3B1800F9F27C /* Controller */,
+				52985B8524EC3B4000F9F27C /* Components */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
