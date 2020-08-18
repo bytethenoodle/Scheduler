@@ -14,9 +14,16 @@ class EventsViewController: ViewController<EventsCoordinator,
     
     @IBOutlet weak var tableView: UITableView?
     
+    var tableDataSource: TableViewDataSource<UITableViewCell, Event>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionViewLayout()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewCoordinator?.store?.dispatch(EventsAction())
     }
     
     func setupCollectionViewLayout() {

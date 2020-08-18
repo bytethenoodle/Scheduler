@@ -44,5 +44,24 @@ class EventsCoordinator: ViewCoordinator {
     func newState(state: EventsState) {
         guard let viewController = viewController else {return}
         viewController.navigationItem.title = state.navigationTitle
+        
+        setupTable(state: state)
+    }
+    
+    func setupTable(state: EventsState) {
+        guard let viewController = viewController else {return}
+        viewController.navigationItem.title = state.navigationTitle
+        
+        viewController.tableDataSource = TableViewDataSource(
+            cellIdentifier:String(describing: UITableViewCell.self),
+            models: state.events) {cell, model in
+            
+            cell.textLabel?.text = model.title
+            
+          return cell
+        }
+        
+        viewController.tableView?.dataSource = viewController.tableDataSource
+        viewController.tableView?.reloadData()
     }
 }

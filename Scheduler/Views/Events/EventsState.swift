@@ -17,4 +17,9 @@ struct EventsState: StateType {
         
         navigationTitle = selectedDate?.dateString() ?? String.empty
     }
+    
+    var events: [Event] {
+        guard let selectedDate = selectedDate else {return []}
+        return EventRepository.getEvents(date: selectedDate)
+    }
 }

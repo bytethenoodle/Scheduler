@@ -82,6 +82,7 @@
 		52985B9824EC950200F9F27C /* EventsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B9724EC950200F9F27C /* EventsReducer.swift */; };
 		52985B9A24EC950F00F9F27C /* EventsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B9924EC950F00F9F27C /* EventsAction.swift */; };
 		52985B9C24EC962600F9F27C /* EventsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B9B24EC962600F9F27C /* EventsStore.swift */; };
+		52985B9E24EC9D6200F9F27C /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B9D24EC9D6200F9F27C /* TableViewDataSource.swift */; };
 		52A2FB6024E927F8000ECBFF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2FB5F24E927F8000ECBFF /* Color.swift */; };
 		52A2FB6224E92A52000ECBFF /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2FB6124E92A52000ECBFF /* UIColor.swift */; };
 		52A2FB6624E92E7E000ECBFF /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2FB6524E92E7E000ECBFF /* NavigationController.swift */; };
@@ -194,6 +195,7 @@
 		52985B9724EC950200F9F27C /* EventsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsReducer.swift; sourceTree = "<group>"; };
 		52985B9924EC950F00F9F27C /* EventsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAction.swift; sourceTree = "<group>"; };
 		52985B9B24EC962600F9F27C /* EventsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsStore.swift; sourceTree = "<group>"; };
+		52985B9D24EC9D6200F9F27C /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		52A2FB5F24E927F8000ECBFF /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		52A2FB6124E92A52000ECBFF /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		52A2FB6524E92E7E000ECBFF /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -593,6 +595,7 @@
 				52985B9324EC94EB00F9F27C /* EventsCoordinator.swift */,
 				52985B8F24EC94D100F9F27C /* EventsViewController.swift */,
 				52985B9124EC94DB00F9F27C /* EventsViewController.storyboard */,
+				52985B9D24EC9D6200F9F27C /* TableViewDataSource.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -876,6 +879,7 @@
 				520B55A324E93335007621DE /* View.swift in Sources */,
 				52B9F76824EC024900AA1DC0 /* CalendarState.swift in Sources */,
 				52985B8924EC3C0000F9F27C /* CalendarDecrementAction.swift in Sources */,
+				52985B9E24EC9D6200F9F27C /* TableViewDataSource.swift in Sources */,
 				5233DDA824EB8DE800FDBCB2 /* RegistrationSuccessCoordinator.swift in Sources */,
 				5284C52F24E67E790032FFB4 /* SceneAction.swift in Sources */,
 				520B179924EA03510061C03C /* KeyboardObservableActionReducer.swift in Sources */,
