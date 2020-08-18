@@ -18,6 +18,8 @@ final class RegistrationReducer: KeyboardObservableActionReducer<RegistrationSta
         switch action {
             case let registrationProcessAction as RegistrationProcessAction:
                 state.registrationErrorStates = registrationProcessAction.registrationErrorStates
+                registrationProcessAction.registrationErrorStates.isEmpty ? (state.registrationViewState = .register) :
+                                                                            (state.registrationViewState = .normal)
                 break
             default:
                 break
@@ -34,10 +36,12 @@ final class RegistrationReducer: KeyboardObservableActionReducer<RegistrationSta
                 return { action in
                     switch action {
                     case let registrationAction as RegistrationAction:
-                        
-                        
-                        
-                        next(RegistrationProcessAction(registrationErrorStates: [.usernameError]))
+                        var errors = [RegistrationErrorState]()
+                        errors.append(contentsOf: self.formatErrorsFor(username: registrationAction.username,
+                                                                       password: registrationAction.password))
+                        errors.append(contentsOf: self.checkErrorForRetypePassword(password: registrationAction.password,
+                                                                                   retypePassword: registrationAction.retypePassword))
+                        next(RegistrationProcessAction(registrationErrorStates: errors))
                         break
                     default:
                         next(action)
@@ -45,6 +49,28 @@ final class RegistrationReducer: KeyboardObservableActionReducer<RegistrationSta
                     }
                 }
             }
+        }
+    }
+    
+    private func formatErrorsFor(username: String, password: String) -> [RegistrationErrorState] {
+        var errors = [RegistrationErrorState]()
+        if !(username.isAlphanumeric() && username.hasNoSpace() && username.isValidUsernameRange() &&
+            username.hasNoSpace()) {
+            errors.append(.usernameError)
+        }
+        if !(password.isAlphanumeric() && password.hasLowerLetter() && password.hasUpperLetter() &&
+            password.isValidPasswordRange()) {
+            errors.append(.passwordError)
+        }
+        return errors
+    }
+    
+    private func checkErrorForRetypePassword(password: String, retypePassword: String) -> [RegistrationErrorState] {
+        if (password != retypePassword) || (retypePassword.isEmpty) {
+            return [.retypePasswordError]
+        }
+        else {
+            return []
         }
     }
 }

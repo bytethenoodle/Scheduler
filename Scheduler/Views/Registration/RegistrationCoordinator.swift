@@ -62,5 +62,16 @@ class RegistrationCoordinator: KeyboardObservableViewCoordinator {
         
         viewController.errorTitleLabel?.text = state.errorTitleLabel
         viewController.errorTitleLabel?.isHidden = !state.hasError
+        
+        switch state.registrationViewState {
+        case .register:
+            viewController.usernameField?.text = String.empty
+            viewController.passwordField?.text = String.empty
+            viewController.retypePasswordField?.text = String.empty
+            //transitionViewWithState(state)
+            break
+        default:
+            break
+        }
     }
 }
