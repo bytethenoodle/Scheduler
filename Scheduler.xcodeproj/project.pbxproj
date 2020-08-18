@@ -69,6 +69,10 @@
 		52EF201724EB6DB6001B20F0 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF201324EB6DB6001B20F0 /* User+CoreDataProperties.swift */; };
 		52EF201A24EB6F01001B20F0 /* Session+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF201824EB6F01001B20F0 /* Session+CoreDataClass.swift */; };
 		52EF201B24EB6F01001B20F0 /* Session+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF201924EB6F01001B20F0 /* Session+CoreDataProperties.swift */; };
+		52EF202024EB73C6001B20F0 /* LoginReducer+Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF201F24EB73C6001B20F0 /* LoginReducer+Middleware.swift */; };
+		52EF202224EB73D6001B20F0 /* LoginReducer+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF202124EB73D6001B20F0 /* LoginReducer+Utilities.swift */; };
+		52EF202624EB7B7F001B20F0 /* RegistrationReducer+Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF202524EB7B7F001B20F0 /* RegistrationReducer+Middleware.swift */; };
+		52EF202824EB7B8A001B20F0 /* RegistrationReducer+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF202724EB7B8A001B20F0 /* RegistrationReducer+Utilities.swift */; };
 		52F5BFB424E8A2D400EB8CDD /* LoginStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5BFB324E8A2D400EB8CDD /* LoginStore.swift */; };
 		52F7FBB624E7BC09008F7FDB /* SceneResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7FBB524E7BC09008F7FDB /* SceneResponder.swift */; };
 		52FCA62224EA462E0091235F /* KeyboardObservableViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCA62124EA462E0091235F /* KeyboardObservableViewCoordinator.swift */; };
@@ -140,6 +144,10 @@
 		52EF201324EB6DB6001B20F0 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		52EF201824EB6F01001B20F0 /* Session+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Session+CoreDataClass.swift"; path = "Scheduler/Persistence/Models/Session/Session+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		52EF201924EB6F01001B20F0 /* Session+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Session+CoreDataProperties.swift"; path = "Scheduler/Persistence/Models/Session/Session+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		52EF201F24EB73C6001B20F0 /* LoginReducer+Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginReducer+Middleware.swift"; sourceTree = "<group>"; };
+		52EF202124EB73D6001B20F0 /* LoginReducer+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginReducer+Utilities.swift"; sourceTree = "<group>"; };
+		52EF202524EB7B7F001B20F0 /* RegistrationReducer+Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationReducer+Middleware.swift"; sourceTree = "<group>"; };
+		52EF202724EB7B8A001B20F0 /* RegistrationReducer+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationReducer+Utilities.swift"; sourceTree = "<group>"; };
 		52F5BFB324E8A2D400EB8CDD /* LoginStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStore.swift; sourceTree = "<group>"; };
 		52F7FBB524E7BC09008F7FDB /* SceneResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneResponder.swift; sourceTree = "<group>"; };
 		52FCA62124EA462E0091235F /* KeyboardObservableViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservableViewCoordinator.swift; sourceTree = "<group>"; };
@@ -276,8 +284,8 @@
 			isa = PBXGroup;
 			children = (
 				526C3A3C24EAB5CB002A3D9F /* RegistrationStore.swift */,
-				526C3A3E24EAB6CC002A3D9F /* RegistrationReducer.swift */,
 				526C3A3A24EAB532002A3D9F /* RegistrationCoordinator.swift */,
+				52EF202424EB7B60001B20F0 /* Reducer */,
 				526C3A4224EAE186002A3D9F /* States */,
 				526C3A4424EAE2A0002A3D9F /* Actions */,
 				526C3A4324EAE267002A3D9F /* Controller */,
@@ -299,8 +307,8 @@
 			isa = PBXGroup;
 			children = (
 				52F5BFB324E8A2D400EB8CDD /* LoginStore.swift */,
-				5284C52024E666D20032FFB4 /* LoginReducer.swift */,
 				525C4AC624E633F800659EC6 /* LoginCoordinator.swift */,
+				52EF202324EB73DF001B20F0 /* Reducer */,
 				525A54AE24EA998500CA0274 /* States */,
 				525A54AC24EA994B00CA0274 /* Actions */,
 				525A54AD24EA995F00CA0274 /* Controller */,
@@ -483,6 +491,26 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		52EF202324EB73DF001B20F0 /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+				5284C52024E666D20032FFB4 /* LoginReducer.swift */,
+				52EF201F24EB73C6001B20F0 /* LoginReducer+Middleware.swift */,
+				52EF202124EB73D6001B20F0 /* LoginReducer+Utilities.swift */,
+			);
+			path = Reducer;
+			sourceTree = "<group>";
+		};
+		52EF202424EB7B60001B20F0 /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+				526C3A3E24EAB6CC002A3D9F /* RegistrationReducer.swift */,
+				52EF202524EB7B7F001B20F0 /* RegistrationReducer+Middleware.swift */,
+				52EF202724EB7B8A001B20F0 /* RegistrationReducer+Utilities.swift */,
+			);
+			path = Reducer;
+			sourceTree = "<group>";
+		};
 		AA8D1B426BF1F13E467D8C66 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -621,8 +649,10 @@
 				525A54A924EA84FE00CA0274 /* RegistrationAction.swift in Sources */,
 				526C3A3F24EAB6CC002A3D9F /* RegistrationReducer.swift in Sources */,
 				52F5BFB424E8A2D400EB8CDD /* LoginStore.swift in Sources */,
+				52EF202024EB73C6001B20F0 /* LoginReducer+Middleware.swift in Sources */,
 				5284C52924E678610032FFB4 /* SceneReducer.swift in Sources */,
 				5284C52324E667580032FFB4 /* LoginState.swift in Sources */,
+				52EF202224EB73D6001B20F0 /* LoginReducer+Utilities.swift in Sources */,
 				525C4AB224E4BC4500659EC6 /* Scheduler.xcdatamodeld in Sources */,
 				524E5D1524E818C7001FC71B /* RegistrationState.swift in Sources */,
 				526C3A3B24EAB532002A3D9F /* RegistrationCoordinator.swift in Sources */,
@@ -664,6 +694,8 @@
 				526C3A3724EAB28E002A3D9F /* RegistrationViewController.swift in Sources */,
 				526302DA24E9465A00CDCD1D /* Font.swift in Sources */,
 				52ACACC824E7905700147137 /* SceneWindow.swift in Sources */,
+				52EF202624EB7B7F001B20F0 /* RegistrationReducer+Middleware.swift in Sources */,
+				52EF202824EB7B8A001B20F0 /* RegistrationReducer+Utilities.swift in Sources */,
 				525C4AAA24E4BC4500659EC6 /* SceneDelegate.swift in Sources */,
 				526C3A4124EAE173002A3D9F /* RegistrationViewState.swift in Sources */,
 				52EF201424EB6DB6001B20F0 /* Event+CoreDataClass.swift in Sources */,

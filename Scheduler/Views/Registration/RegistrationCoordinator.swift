@@ -68,10 +68,14 @@ class RegistrationCoordinator: KeyboardObservableViewCoordinator {
             viewController.usernameField?.text = String.empty
             viewController.passwordField?.text = String.empty
             viewController.retypePasswordField?.text = String.empty
-            //transitionViewWithState(state)
+            transitionViewWithState(state)
             break
         default:
             break
         }
+    }
+    
+    func transitionViewWithState(_ state: StoreSubscriberStateType) {
+        
     }
 }
