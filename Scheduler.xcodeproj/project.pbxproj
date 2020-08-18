@@ -63,6 +63,12 @@
 		52C7640B24E8D89C00E02E2D /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7640A24E8D89C00E02E2D /* Storyboardable.swift */; };
 		52C7640D24E8E8A900E02E2D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7640C24E8E8A900E02E2D /* Store.swift */; };
 		52E84FB724E916BC007C2D21 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E84FB624E916BC007C2D21 /* Colors.xcassets */; };
+		52EF201424EB6DB6001B20F0 /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF201024EB6DB6001B20F0 /* Event+CoreDataClass.swift */; };
+		52EF201524EB6DB6001B20F0 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF201124EB6DB6001B20F0 /* Event+CoreDataProperties.swift */; };
+		52EF201624EB6DB6001B20F0 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF201224EB6DB6001B20F0 /* User+CoreDataClass.swift */; };
+		52EF201724EB6DB6001B20F0 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF201324EB6DB6001B20F0 /* User+CoreDataProperties.swift */; };
+		52EF201A24EB6F01001B20F0 /* Session+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF201824EB6F01001B20F0 /* Session+CoreDataClass.swift */; };
+		52EF201B24EB6F01001B20F0 /* Session+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF201924EB6F01001B20F0 /* Session+CoreDataProperties.swift */; };
 		52F5BFB424E8A2D400EB8CDD /* LoginStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5BFB324E8A2D400EB8CDD /* LoginStore.swift */; };
 		52F7FBB624E7BC09008F7FDB /* SceneResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7FBB524E7BC09008F7FDB /* SceneResponder.swift */; };
 		52FCA62224EA462E0091235F /* KeyboardObservableViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCA62124EA462E0091235F /* KeyboardObservableViewCoordinator.swift */; };
@@ -128,6 +134,12 @@
 		52C7640A24E8D89C00E02E2D /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		52C7640C24E8E8A900E02E2D /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		52E84FB624E916BC007C2D21 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		52EF201024EB6DB6001B20F0 /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
+		52EF201124EB6DB6001B20F0 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		52EF201224EB6DB6001B20F0 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		52EF201324EB6DB6001B20F0 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		52EF201824EB6F01001B20F0 /* Session+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Session+CoreDataClass.swift"; path = "Scheduler/Persistence/Models/Session/Session+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		52EF201924EB6F01001B20F0 /* Session+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Session+CoreDataProperties.swift"; path = "Scheduler/Persistence/Models/Session/Session+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		52F5BFB324E8A2D400EB8CDD /* LoginStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStore.swift; sourceTree = "<group>"; };
 		52F7FBB524E7BC09008F7FDB /* SceneResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneResponder.swift; sourceTree = "<group>"; };
 		52FCA62124EA462E0091235F /* KeyboardObservableViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservableViewCoordinator.swift; sourceTree = "<group>"; };
@@ -164,6 +176,24 @@
 				52ACACC624E78E3E00147137 /* Core */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		522CF5C224EB68F0004B3B01 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				522CF5CB24EB6981004B3B01 /* Models */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		522CF5CB24EB6981004B3B01 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52EF201C24EB6F1F001B20F0 /* Session */,
+				52EF201D24EB6F2D001B20F0 /* Event */,
+				52EF201E24EB6F35001B20F0 /* User */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		524E5D1624E819EB001FC71B /* Common */ = {
@@ -236,6 +266,7 @@
 				5284C52B24E67C4C0032FFB4 /* Scene */,
 				525C4AC124E4EEF700659EC6 /* Views */,
 				52A2FB6424E92E16000ECBFF /* ViewComponents */,
+				522CF5C224EB68F0004B3B01 /* Persistence */,
 				525C4AC324E5778500659EC6 /* Resources */,
 			);
 			path = Scheduler;
@@ -425,6 +456,33 @@
 			path = Calendar;
 			sourceTree = "<group>";
 		};
+		52EF201C24EB6F1F001B20F0 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				52EF201824EB6F01001B20F0 /* Session+CoreDataClass.swift */,
+				52EF201924EB6F01001B20F0 /* Session+CoreDataProperties.swift */,
+			);
+			path = Session;
+			sourceTree = "<group>";
+		};
+		52EF201D24EB6F2D001B20F0 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				52EF201024EB6DB6001B20F0 /* Event+CoreDataClass.swift */,
+				52EF201124EB6DB6001B20F0 /* Event+CoreDataProperties.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		52EF201E24EB6F35001B20F0 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				52EF201224EB6DB6001B20F0 /* User+CoreDataClass.swift */,
+				52EF201324EB6DB6001B20F0 /* User+CoreDataProperties.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		AA8D1B426BF1F13E467D8C66 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -573,6 +631,7 @@
 				522CF5BF24EAEAD5004B3B01 /* RegistrationErrorState.swift in Sources */,
 				526302D424E9445900CDCD1D /* SecondaryButton.swift in Sources */,
 				52630EBB24E99D610018AECE /* KeyboardAction.swift in Sources */,
+				52EF201724EB6DB6001B20F0 /* User+CoreDataProperties.swift in Sources */,
 				526302CC24E9441200CDCD1D /* SecondaryLabel.swift in Sources */,
 				5284C52124E666D20032FFB4 /* LoginReducer.swift in Sources */,
 				526302D024E9442A00CDCD1D /* TextField.swift in Sources */,
@@ -589,12 +648,16 @@
 				526C3A3D24EAB5CB002A3D9F /* RegistrationStore.swift in Sources */,
 				526302CE24E9441E00CDCD1D /* ErrorLabel.swift in Sources */,
 				522CE73F24E93EF200F5EF78 /* ViewController.swift in Sources */,
+				52EF201524EB6DB6001B20F0 /* Event+CoreDataProperties.swift in Sources */,
 				526302D224E9443300CDCD1D /* PrimaryButton.swift in Sources */,
 				5284C52D24E67DA80032FFB4 /* ViewControllerCoordinatable.swift in Sources */,
+				52EF201624EB6DB6001B20F0 /* User+CoreDataClass.swift in Sources */,
 				525A54A524EA73B600CA0274 /* LoginRegisterAction.swift in Sources */,
 				52A2FB6024E927F8000ECBFF /* Color.swift in Sources */,
 				5284C52524E671FF0032FFB4 /* SceneStore.swift in Sources */,
+				52EF201A24EB6F01001B20F0 /* Session+CoreDataClass.swift in Sources */,
 				52C7640B24E8D89C00E02E2D /* Storyboardable.swift in Sources */,
+				52EF201B24EB6F01001B20F0 /* Session+CoreDataProperties.swift in Sources */,
 				52630EBD24E9A0540018AECE /* KeyboardSpec.swift in Sources */,
 				526302CA24E9440400CDCD1D /* PrimaryLabel.swift in Sources */,
 				5284C52724E673CE0032FFB4 /* SceneState.swift in Sources */,
@@ -603,6 +666,7 @@
 				52ACACC824E7905700147137 /* SceneWindow.swift in Sources */,
 				525C4AAA24E4BC4500659EC6 /* SceneDelegate.swift in Sources */,
 				526C3A4124EAE173002A3D9F /* RegistrationViewState.swift in Sources */,
+				52EF201424EB6DB6001B20F0 /* Event+CoreDataClass.swift in Sources */,
 				52F7FBB624E7BC09008F7FDB /* SceneResponder.swift in Sources */,
 				520B179724E9FF800061C03C /* KeyboardObservableStateType.swift in Sources */,
 			);
