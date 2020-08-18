@@ -11,6 +11,8 @@
 		520B179924EA03510061C03C /* KeyboardObservableActionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B179824EA03510061C03C /* KeyboardObservableActionReducer.swift */; };
 		520B55A324E93335007621DE /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B55A224E93335007621DE /* View.swift */; };
 		521E417724EC1BFB005F0318 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E417624EC1BFB005F0318 /* Date.swift */; };
+		521E417924EC2AD9005F0318 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E417824EC2AD9005F0318 /* CollectionViewDataSource.swift */; };
+		521E417B24EC2C6E005F0318 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E417A24EC2C6E005F0318 /* CalendarCollectionViewCell.swift */; };
 		522CE73F24E93EF200F5EF78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522CE73E24E93EF200F5EF78 /* ViewController.swift */; };
 		522CF5BF24EAEAD5004B3B01 /* RegistrationErrorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522CF5BE24EAEAD5004B3B01 /* RegistrationErrorState.swift */; };
 		522CF5C124EAF64E004B3B01 /* RegistrationProcessAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522CF5C024EAF64E004B3B01 /* RegistrationProcessAction.swift */; };
@@ -108,6 +110,8 @@
 		520B179824EA03510061C03C /* KeyboardObservableActionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservableActionReducer.swift; sourceTree = "<group>"; };
 		520B55A224E93335007621DE /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		521E417624EC1BFB005F0318 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		521E417824EC2AD9005F0318 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
+		521E417A24EC2C6E005F0318 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		522CE73E24E93EF200F5EF78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		522CF5BE24EAEAD5004B3B01 /* RegistrationErrorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationErrorState.swift; sourceTree = "<group>"; };
 		522CF5C024EAF64E004B3B01 /* RegistrationProcessAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationProcessAction.swift; sourceTree = "<group>"; };
@@ -572,6 +576,8 @@
 				52B9F76524EC01F000AA1DC0 /* CalendarCoordinator.swift */,
 				526BB16224EBDF1A00694BD3 /* CalendarViewController.swift */,
 				52B9F76D24EC02A300AA1DC0 /* CalendarViewController.storyboard */,
+				521E417824EC2AD9005F0318 /* CollectionViewDataSource.swift */,
+				521E417A24EC2C6E005F0318 /* CalendarCollectionViewCell.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -759,6 +765,7 @@
 				52C7640D24E8E8A900E02E2D /* Store.swift in Sources */,
 				52FCA62224EA462E0091235F /* KeyboardObservableViewCoordinator.swift in Sources */,
 				52B9F77424EC081B00AA1DC0 /* CalendarLogoutAction.swift in Sources */,
+				521E417B24EC2C6E005F0318 /* CalendarCollectionViewCell.swift in Sources */,
 				526BB15C24EBD39B00694BD3 /* SceneReducer+Middleware.swift in Sources */,
 				52630EB924E98A4E0018AECE /* KeyboardObservableViewController.swift in Sources */,
 				525C4AC724E633F800659EC6 /* LoginCoordinator.swift in Sources */,
@@ -800,6 +807,7 @@
 				5233DDB024EB8F8F00FDBCB2 /* RegistrationSuccessViewState.swift in Sources */,
 				524E5D1A24E826E2001FC71B /* ActionReducer.swift in Sources */,
 				5284C51F24E666C00032FFB4 /* LoginAction.swift in Sources */,
+				521E417924EC2AD9005F0318 /* CollectionViewDataSource.swift in Sources */,
 				524E5D1824E821DB001FC71B /* Coordinator.swift in Sources */,
 				526BB16324EBDF1A00694BD3 /* CalendarViewController.swift in Sources */,
 				52B9F77624EC082A00AA1DC0 /* CalendarSelectAction.swift in Sources */,

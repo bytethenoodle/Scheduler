@@ -14,13 +14,14 @@ class CalendarViewController: ViewController<CalendarCoordinator,
                                              CalendarState>,
                               Storyboardable {
     
+    @IBOutlet weak var collectionView: UICollectionView?
+    
+    var collectionViewDataSource: CollectionViewDataSource<UICollectionViewCell, Date?>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationItems()
-        
-        print("---> \(Date().calendarArray().map { $0?.dateString()})")
-//        print("---> \(Date().endOfMonth().dateString())")
-        
+        setupCollectionViewLayout()
     }
     
     func setupNavigationItems() {
@@ -31,7 +32,23 @@ class CalendarViewController: ViewController<CalendarCoordinator,
         navigationItem.leftBarButtonItem = leftBarButtonItem
     }
     
+    func setupCollectionViewLayout() {
+        collectionView?.delegate = self
+    }
+    
     @objc func leftBarButtonItemTapped(_ sender: Any?) {
         viewCoordinator?.store?.dispatch(CalendarLogoutAction())
+    }
+}
+
+extension CalendarViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width / 7.0,
+                      height: view.frame.height / 7.0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
 }

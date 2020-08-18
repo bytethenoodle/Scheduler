@@ -40,6 +40,18 @@ class CalendarCoordinator: ViewCoordinator {
         guard let viewController = viewController else {return}
         viewController.navigationItem.title = state.navigationTitle
         
+        //        print("---> \(Date().calendarArray().map { $0?.dateString()})")
+        //        print("---> \(Date().endOfMonth().dateString())")
+                
+        //        tableDataSource = TableDataSource(cellIdentifier:"CategoryCell", models: state.categories) {cell, model in
+        //          cell.textLabel?.text = model.rawValue
+        //          cell.accessoryType = (state.currentCategorySelected == model) ? .checkmark : .none
+        //          return cell
+        //        }
+        //
+        //        self.tableView.dataSource = tableDataSource
+        //        self.tableView.reloadData()
+        
         transitionViewWithState(state)
     }
 

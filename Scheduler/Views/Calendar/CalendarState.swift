@@ -11,11 +11,13 @@ import ReSwift
 struct CalendarState: StateType {
     
     var navigationTitle: String
-
+    var currentDate: Date
+    
     var calendarViewState: CalendarViewState
     
     init() {
         navigationTitle = "Calendar"
+        currentDate = Date()
         
         calendarViewState = .normal
     }
