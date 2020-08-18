@@ -24,13 +24,16 @@ class RegistrationCoordinator: KeyboardObservableViewCoordinator {
     
     required init(sceneCoordinator: SceneCoordinator) {
         let reducer = RegistrationReducer()
-        self.store = CoordinatorStoreType(reducer: reducer.reduce, state: RegistrationState(), middleware: [reducer.middleware()])
+        self.store = CoordinatorStoreType(reducer: reducer.reduce,
+                                          state: RegistrationState(),
+                                          middleware: [reducer.middleware()])
         self.sceneCoordinator = sceneCoordinator
     }
     
     func start() {
         guard let navigationController = sceneCoordinator?.window?.rootViewController as? NavigationController,
-              let registrationViewController = ViewControllerType.instantiateFromStoryboard() else { return }
+              let registrationViewController = ViewControllerType.instantiateFromStoryboard()
+        else { return }
         viewController = registrationViewController
         registrationViewController.viewCoordinator = self
         navigationController.pushViewController(registrationViewController, animated: true)
@@ -76,6 +79,12 @@ class RegistrationCoordinator: KeyboardObservableViewCoordinator {
     }
     
     func transitionViewWithState(_ state: StoreSubscriberStateType) {
-        
+        switch state.registrationViewState {
+        case .register:
+            sceneCoordinator?.store?.dispatch(SceneAction(sceneRoute: .registrationSuccess))
+            break
+        default:
+            break
+        }
     }
 }

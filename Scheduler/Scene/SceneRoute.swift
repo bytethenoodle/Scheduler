@@ -10,7 +10,10 @@ import Foundation
 
 enum SceneRoute {
     case login
+    
     case registration
+    case registrationSuccess
+    
     case calendar
     case events
 }

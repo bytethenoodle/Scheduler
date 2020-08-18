@@ -13,6 +13,13 @@
 		522CE73F24E93EF200F5EF78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522CE73E24E93EF200F5EF78 /* ViewController.swift */; };
 		522CF5BF24EAEAD5004B3B01 /* RegistrationErrorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522CF5BE24EAEAD5004B3B01 /* RegistrationErrorState.swift */; };
 		522CF5C124EAF64E004B3B01 /* RegistrationProcessAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522CF5C024EAF64E004B3B01 /* RegistrationProcessAction.swift */; };
+		5233DDA424EB898F00FDBCB2 /* RegistrationSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233DDA324EB898F00FDBCB2 /* RegistrationSuccessViewController.swift */; };
+		5233DDA624EB899900FDBCB2 /* RegistrationSuccessViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5233DDA524EB899900FDBCB2 /* RegistrationSuccessViewController.storyboard */; };
+		5233DDA824EB8DE800FDBCB2 /* RegistrationSuccessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233DDA724EB8DE800FDBCB2 /* RegistrationSuccessCoordinator.swift */; };
+		5233DDAA24EB8DF200FDBCB2 /* RegistrationSuccessState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233DDA924EB8DF200FDBCB2 /* RegistrationSuccessState.swift */; };
+		5233DDAC24EB8E0100FDBCB2 /* RegistrationSuccessStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233DDAB24EB8E0100FDBCB2 /* RegistrationSuccessStore.swift */; };
+		5233DDAE24EB8E1500FDBCB2 /* RegistrationSuccessReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233DDAD24EB8E1500FDBCB2 /* RegistrationSuccessReducer.swift */; };
+		5233DDB024EB8F8F00FDBCB2 /* RegistrationSuccessViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233DDAF24EB8F8F00FDBCB2 /* RegistrationSuccessViewState.swift */; };
 		524E5D1524E818C7001FC71B /* RegistrationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1424E818C7001FC71B /* RegistrationState.swift */; };
 		524E5D1824E821DB001FC71B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1724E821DB001FC71B /* Coordinator.swift */; };
 		524E5D1A24E826E2001FC71B /* ActionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1924E826E2001FC71B /* ActionReducer.swift */; };
@@ -88,6 +95,13 @@
 		522CE73E24E93EF200F5EF78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		522CF5BE24EAEAD5004B3B01 /* RegistrationErrorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationErrorState.swift; sourceTree = "<group>"; };
 		522CF5C024EAF64E004B3B01 /* RegistrationProcessAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationProcessAction.swift; sourceTree = "<group>"; };
+		5233DDA324EB898F00FDBCB2 /* RegistrationSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessViewController.swift; sourceTree = "<group>"; };
+		5233DDA524EB899900FDBCB2 /* RegistrationSuccessViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationSuccessViewController.storyboard; sourceTree = "<group>"; };
+		5233DDA724EB8DE800FDBCB2 /* RegistrationSuccessCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessCoordinator.swift; sourceTree = "<group>"; };
+		5233DDA924EB8DF200FDBCB2 /* RegistrationSuccessState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessState.swift; sourceTree = "<group>"; };
+		5233DDAB24EB8E0100FDBCB2 /* RegistrationSuccessStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessStore.swift; sourceTree = "<group>"; };
+		5233DDAD24EB8E1500FDBCB2 /* RegistrationSuccessReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessReducer.swift; sourceTree = "<group>"; };
+		5233DDAF24EB8F8F00FDBCB2 /* RegistrationSuccessViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessViewState.swift; sourceTree = "<group>"; };
 		524E5D1424E818C7001FC71B /* RegistrationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationState.swift; sourceTree = "<group>"; };
 		524E5D1724E821DB001FC71B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		524E5D1924E826E2001FC71B /* ActionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionReducer.swift; sourceTree = "<group>"; };
@@ -209,6 +223,36 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5233DDA224EB893F00FDBCB2 /* RegistrationSuccess */ = {
+			isa = PBXGroup;
+			children = (
+				5233DDAB24EB8E0100FDBCB2 /* RegistrationSuccessStore.swift */,
+				5233DDA724EB8DE800FDBCB2 /* RegistrationSuccessCoordinator.swift */,
+				5233DDAD24EB8E1500FDBCB2 /* RegistrationSuccessReducer.swift */,
+				5233DDB124EB93FE00FDBCB2 /* State */,
+				5233DDB224EB940500FDBCB2 /* Controller */,
+			);
+			path = RegistrationSuccess;
+			sourceTree = "<group>";
+		};
+		5233DDB124EB93FE00FDBCB2 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				5233DDA924EB8DF200FDBCB2 /* RegistrationSuccessState.swift */,
+				5233DDAF24EB8F8F00FDBCB2 /* RegistrationSuccessViewState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		5233DDB224EB940500FDBCB2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5233DDA324EB898F00FDBCB2 /* RegistrationSuccessViewController.swift */,
+				5233DDA524EB899900FDBCB2 /* RegistrationSuccessViewController.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		524E5D1624E819EB001FC71B /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,6 +346,7 @@
 			children = (
 				525C4AC224E573E500659EC6 /* Login */,
 				525C4AC024E4EEEB00659EC6 /* Registration */,
+				5233DDA224EB893F00FDBCB2 /* RegistrationSuccess */,
 				52E84FB524E91695007C2D21 /* Calendar */,
 			);
 			path = Views;
@@ -588,6 +633,7 @@
 			files = (
 				525C4AB724E4BC4800659EC6 /* LaunchScreen.storyboard in Resources */,
 				52E84FB724E916BC007C2D21 /* Colors.xcassets in Resources */,
+				5233DDA624EB899900FDBCB2 /* RegistrationSuccessViewController.storyboard in Resources */,
 				525C4AB424E4BC4800659EC6 /* Assets.xcassets in Resources */,
 				525C4AAF24E4BC4500659EC6 /* LoginViewController.storyboard in Resources */,
 				526C3A3924EAB2A1002A3D9F /* RegistrationViewController.storyboard in Resources */,
@@ -663,22 +709,28 @@
 				524E5D1524E818C7001FC71B /* RegistrationState.swift in Sources */,
 				526C3A3B24EAB532002A3D9F /* RegistrationCoordinator.swift in Sources */,
 				52A2FB6224E92A52000ECBFF /* UIColor.swift in Sources */,
+				5233DDAC24EB8E0100FDBCB2 /* RegistrationSuccessStore.swift in Sources */,
 				525A54A724EA845A00CA0274 /* LoginProcessAction.swift in Sources */,
 				522CF5BF24EAEAD5004B3B01 /* RegistrationErrorState.swift in Sources */,
+				5233DDAE24EB8E1500FDBCB2 /* RegistrationSuccessReducer.swift in Sources */,
 				52EF202A24EB7CC7001B20F0 /* RegistrationReducer+Persistence.swift in Sources */,
 				526302D424E9445900CDCD1D /* SecondaryButton.swift in Sources */,
 				52630EBB24E99D610018AECE /* KeyboardAction.swift in Sources */,
 				52EF201724EB6DB6001B20F0 /* User+CoreDataProperties.swift in Sources */,
 				526302CC24E9441200CDCD1D /* SecondaryLabel.swift in Sources */,
 				5284C52124E666D20032FFB4 /* LoginReducer.swift in Sources */,
+				5233DDAA24EB8DF200FDBCB2 /* RegistrationSuccessState.swift in Sources */,
 				526302D024E9442A00CDCD1D /* TextField.swift in Sources */,
 				525C4AA824E4BC4500659EC6 /* AppDelegate.swift in Sources */,
 				520B55A324E93335007621DE /* View.swift in Sources */,
+				5233DDA824EB8DE800FDBCB2 /* RegistrationSuccessCoordinator.swift in Sources */,
 				5284C52F24E67E790032FFB4 /* SceneAction.swift in Sources */,
 				520B179924EA03510061C03C /* KeyboardObservableActionReducer.swift in Sources */,
 				52EF202C24EB8024001B20F0 /* Persistence.swift in Sources */,
 				52A2FB6624E92E7E000ECBFF /* NavigationController.swift in Sources */,
 				525C4ABF24E4EEA600659EC6 /* SceneCoordinator.swift in Sources */,
+				5233DDA424EB898F00FDBCB2 /* RegistrationSuccessViewController.swift in Sources */,
+				5233DDB024EB8F8F00FDBCB2 /* RegistrationSuccessViewState.swift in Sources */,
 				524E5D1A24E826E2001FC71B /* ActionReducer.swift in Sources */,
 				5284C51F24E666C00032FFB4 /* LoginAction.swift in Sources */,
 				524E5D1824E821DB001FC71B /* Coordinator.swift in Sources */,

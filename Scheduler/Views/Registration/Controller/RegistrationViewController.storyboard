@@ -13,17 +13,17 @@
             <objects>
                 <viewController storyboardIdentifier="RegistrationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="a8a-7S-Ig9" customClass="RegistrationViewController" customModule="Scheduler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ai2-0B-JWi" customClass="View" customModule="Scheduler" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="fID-UI-aYB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H85-17-jXe" customClass="View" customModule="Scheduler" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="G9B-kM-7MW">
-                                                <rect key="frame" x="32" y="156.5" width="350" height="495.5"/>
+                                                <rect key="frame" x="32" y="200.5" width="350" height="495.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="60Y-8I-6EW">
                                                         <rect key="frame" x="0.0" y="0.0" width="350" height="101"/>
@@ -133,12 +133,12 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="G9B-kM-7MW" firstAttribute="leading" secondItem="H85-17-jXe" secondAttribute="leading" priority="750" constant="32" id="2Gp-32-gtQ"/>
+                                            <constraint firstItem="G9B-kM-7MW" firstAttribute="leading" secondItem="H85-17-jXe" secondAttribute="leadingMargin" priority="750" constant="24" id="2Gp-32-gtQ"/>
                                             <constraint firstItem="G9B-kM-7MW" firstAttribute="centerY" secondItem="H85-17-jXe" secondAttribute="centerY" id="FVw-C2-pSi"/>
                                             <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="G9B-kM-7MW" secondAttribute="bottom" constant="32" id="K7o-Ze-TBP"/>
                                             <constraint firstItem="G9B-kM-7MW" firstAttribute="centerX" secondItem="H85-17-jXe" secondAttribute="centerX" id="Wra-fW-r7C"/>
-                                            <constraint firstAttribute="trailing" secondItem="G9B-kM-7MW" secondAttribute="trailing" priority="750" constant="32" id="oVA-dF-thr"/>
-                                            <constraint firstItem="G9B-kM-7MW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H85-17-jXe" secondAttribute="top" constant="32" id="yaZ-Zz-tMT"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="G9B-kM-7MW" secondAttribute="trailing" priority="750" constant="24" id="oVA-dF-thr"/>
+                                            <constraint firstItem="G9B-kM-7MW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H85-17-jXe" secondAttribute="topMargin" constant="32" id="yaZ-Zz-tMT"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -161,7 +161,6 @@
                             <constraint firstAttribute="bottom" secondItem="fID-UI-aYB" secondAttribute="bottom" id="nFX-2F-xrW"/>
                         </constraints>
                     </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="errorTitleLabel" destination="cyD-o7-A9K" id="BaP-XZ-yY2"/>
                         <outlet property="passwordField" destination="dWc-9w-quZ" id="IQ3-2F-WYW"/>

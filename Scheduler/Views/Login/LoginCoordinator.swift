@@ -22,7 +22,9 @@ class LoginCoordinator: KeyboardObservableViewCoordinator {
     
     required init(sceneCoordinator: SceneCoordinator) {
         let reducer = LoginReducer()
-        self.store = CoordinatorStoreType(reducer: reducer.reduce, state: LoginState(), middleware: [reducer.middleware()])
+        self.store = CoordinatorStoreType(reducer: reducer.reduce,
+                                          state: LoginState(),
+                                          middleware: [reducer.middleware()])
         self.sceneCoordinator = sceneCoordinator
     }
     
