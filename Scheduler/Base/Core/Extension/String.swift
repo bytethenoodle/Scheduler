@@ -11,8 +11,43 @@ import Foundation
 extension String {
     
     static let empty: String = ""
+    static let space: String = " "
     
     func isEmpty() -> Bool {
         return self == String.empty
+    }
+    
+    func hasUpperLetter() -> Bool {
+        guard let regex = try? NSRegularExpression(pattern: "[A-Z]", options: []) else {
+            return false }
+        let matches = regex.matches(in: self,
+                                    options: NSRegularExpression.MatchingOptions(),
+                                    range: NSRange(location: 0, length: self.count))
+        return !matches.isEmpty
+    }
+
+    func hasLowerLetter() -> Bool {
+        guard let regex = try? NSRegularExpression(pattern: "[a-z]", options: []) else {
+            return false }
+        let matches = regex.matches(in: self,
+                                    options: NSRegularExpression.MatchingOptions(),
+                                    range: NSRange(location: 0, length: self.count))
+        return !matches.isEmpty
+    }
+    
+    func isAlphanumeric() -> Bool {
+        return !isEmpty && range(of: "[^a-zA-Z0-9]", options: .regularExpression) == nil
+    }
+    
+    func hasNoSpace() -> Bool {
+        return (self.rangeOfCharacter(from: .whitespacesAndNewlines) == nil)
+    }
+    
+    func isValidUsernameRange() -> Bool {
+        return self.count >= 8 && self.count <= 20
+    }
+    
+    func isValidPasswordRange() -> Bool {
+        return self.count >= 8
     }
 }

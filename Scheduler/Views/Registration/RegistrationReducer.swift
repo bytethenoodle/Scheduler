@@ -33,7 +33,10 @@ final class RegistrationReducer: KeyboardObservableActionReducer<RegistrationSta
             return { next in
                 return { action in
                     switch action {
-                    case _ as RegistrationAction:
+                    case let registrationAction as RegistrationAction:
+                        
+                        
+                        
                         next(RegistrationProcessAction(registrationErrorStates: [.usernameError]))
                         break
                     default:
