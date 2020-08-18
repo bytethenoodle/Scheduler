@@ -13,18 +13,31 @@ import CoreData
 
 extension RegistrationReducer {
     
+    internal func doesUsernameExist(username: String) -> Bool {
+        let context = Persistence.persistentContainer.viewContext
+        do {
+            let fetchRequest : NSFetchRequest<User> = User.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "username == %@", username)
+            let fetchedResults = try context.fetch(fetchRequest)
+            return !fetchedResults.isEmpty
+        }
+        catch {
+            fatalError("fetch task failed")
+        }
+    }
+    
     internal func register(username: String, password: String) {
-        let managedObjectContext = Persistence.persistentContainer.viewContext
+        let context = Persistence.persistentContainer.viewContext
         
         let user = NSEntityDescription.insertNewObject(forEntityName: "User",
-                                                        into: managedObjectContext) as! User
+                                                        into: context) as! User
         
         user.username = username
         user.password = password
         user.events = []
         
         do {
-            try managedObjectContext.save()
+            try context.save()
         } catch {
             fatalError("error saving data")
         }

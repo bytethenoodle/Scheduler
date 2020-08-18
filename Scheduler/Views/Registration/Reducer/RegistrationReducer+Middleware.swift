@@ -23,7 +23,19 @@ extension RegistrationReducer {
                                                                        password: registrationAction.password))
                         errors.append(contentsOf: self.checkErrorForRetypePassword(password: registrationAction.password,
                                                                                    retypePassword: registrationAction.retypePassword))
-                        next(RegistrationProcessAction(registrationErrorStates: errors))
+                        guard errors.isEmpty else {
+                            next(RegistrationProcessAction(registrationErrorStates: errors))
+                            break
+                        }
+                        
+                        guard !self.doesUsernameExist(username: registrationAction.username) else {
+                            next(RegistrationProcessAction(registrationErrorStates: [.verifyError]))
+                            break
+                        }
+                        
+                        self.register(username: registrationAction.username,
+                                      password: registrationAction.password)
+                        next(RegistrationProcessAction(registrationErrorStates: []))
                         break
                     default:
                         next(action)

@@ -49,7 +49,5 @@ final class SceneDelegate: SceneResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         Persistence.saveContext()
     }
-
-
 }
 
