@@ -9,4 +9,12 @@
 import ReSwift
 
 struct EventsState: StateType {
+    var navigationTitle: String
+    var selectedDate: Date?
+    
+    init(selectedDate: Date? = nil) {
+        self.selectedDate = selectedDate
+        
+        navigationTitle = selectedDate?.dateString() ?? String.empty
+    }
 }

@@ -8,11 +8,25 @@
 
 import ReSwift
 
-class EventsViewController: ViewController<CalendarCoordinator,
-                                             CalendarState>,
+class EventsViewController: ViewController<EventsCoordinator,
+                                             EventsState>,
                                             Storyboardable {
+    
+    @IBOutlet weak var tableView: UITableView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupCollectionViewLayout()
+    }
+    
+    func setupCollectionViewLayout() {
+        tableView?.delegate = self
+    }
+}
+
+extension EventsViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }

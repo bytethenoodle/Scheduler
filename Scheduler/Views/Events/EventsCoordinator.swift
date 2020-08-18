@@ -22,21 +22,27 @@ class EventsCoordinator: ViewCoordinator {
     
     weak var viewController: EventsViewController?
     
-    required init(sceneCoordinator: SceneCoordinator) {
-        
-    }
+    required init(sceneCoordinator: SceneCoordinator) {}
     
     convenience init(sceneCoordinator: SceneCoordinator, reference: Any?) {
         self.init(sceneCoordinator: sceneCoordinator)
+        let reducer = EventsReducer()
+        self.store = CoordinatorStoreType(reducer: reducer.reduce,
+                                          state: EventsState(selectedDate: reference as? Date))
+        self.sceneCoordinator = sceneCoordinator
     }
     
     func start() {
-        
+        guard let navigationController = sceneCoordinator?.window?.rootViewController as? NavigationController,
+              let eventsViewController = ViewControllerType.instantiateFromStoryboard()
+        else { return }
+        viewController = eventsViewController
+        eventsViewController.viewCoordinator = self
+        navigationController.pushViewController(eventsViewController, animated: true)
     }
     
-    
-    
     func newState(state: EventsState) {
-        
+        guard let viewController = viewController else {return}
+        viewController.navigationItem.title = state.navigationTitle
     }
 }
