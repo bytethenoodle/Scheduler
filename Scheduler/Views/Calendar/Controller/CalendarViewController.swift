@@ -68,6 +68,6 @@ extension CalendarViewController: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        viewCoordinator?.store?.dispatch(CalendarSelectAction(selectedIndex: indexPath.row))
     }
 }

@@ -17,7 +17,4 @@ enum SceneRoute {
     
     case calendar
     case events
-    
-    case add
-    case edit
 }

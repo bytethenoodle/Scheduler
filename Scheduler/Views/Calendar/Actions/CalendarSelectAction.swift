@@ -9,6 +9,5 @@
 import ReSwift
 
 struct CalendarSelectAction: Action {
-    
-    
+    let selectedIndex: Int
 }

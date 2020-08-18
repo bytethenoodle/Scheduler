@@ -18,8 +18,9 @@ final class CalendarReducer: ActionReducer {
         state.calendarViewState = .normal
         
         switch action {
-        case _ as CalendarSelectAction:
+        case let calendarSelectAction as CalendarSelectAction:
             state.calendarViewState = .selected
+            state.selectedIndex = calendarSelectAction.selectedIndex
             break
         case _ as CalendarLogoutAction:
             state.calendarViewState = .logout

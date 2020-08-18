@@ -13,6 +13,8 @@ struct CalendarState: StateType {
     var navigationTitle: String
     var currentDate: Date
     
+    var selectedIndex: Int?
+    
     var calendarViewState: CalendarViewState
     
     init() {
@@ -27,6 +29,11 @@ extension CalendarState {
     
     var dates: [Date?] {
         currentDate.calendarArray()
+    }
+    
+    var selectedDate: Date? {
+        guard let index = selectedIndex else { return nil }
+        return currentDate.calendarArray()[index]
     }
 }
 

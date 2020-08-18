@@ -10,4 +10,5 @@ import ReSwift
 
 struct SceneAction: Action {
     var sceneRoute: SceneRoute
+    var reference: Any?
 }

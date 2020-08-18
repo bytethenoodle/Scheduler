@@ -51,6 +51,9 @@ class CalendarCoordinator: ViewCoordinator {
         case .logout:
             sceneCoordinator?.store?.dispatch(SceneAction(sceneRoute: .logout))
             break
+        case .selected:
+            sceneCoordinator?.store?.dispatch(SceneAction(sceneRoute: .events,
+                                                          reference: state.selectedDate))
         default:
             break
         }
