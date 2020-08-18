@@ -40,6 +40,7 @@ final class SceneCoordinator: Coordinator {
             RegistrationSuccessCoordinator(sceneCoordinator: self).start()
             break
         case .calendar:
+            CalendarCoordinator(sceneCoordinator: self).start()
             break
         default:
             break

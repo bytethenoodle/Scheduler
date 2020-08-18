@@ -72,6 +72,7 @@ class LoginCoordinator: KeyboardObservableViewCoordinator {
     func transitionViewWithState(_ state: StoreSubscriberStateType) {
         switch state.loginViewState {
         case .login:
+            sceneCoordinator?.store?.dispatch(SceneAction(sceneRoute: .calendar))
             break
         case .register:
             sceneCoordinator?.store?.dispatch(SceneAction(sceneRoute: .registration))

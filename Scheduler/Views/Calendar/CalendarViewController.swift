@@ -6,4 +6,15 @@
 //  Copyright © 2020 mynt. All rights reserved.
 //
 
-import Foundation
+import ReSwift
+
+import UIKit
+
+class CalendarViewController: ViewController<CalendarCoordinator,
+                                             CalendarState>,
+                              Storyboardable {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
