@@ -64,8 +64,12 @@ class CalendarCoordinator: ViewCoordinator {
                 
                 cell.dateLabel?.text = model?.dayString()
                 cell.dateLabel?.isError = model?.dateString() == Date().dateString()
-                
                 cell.hasNoDate()
+                
+                if let model = model,
+                   !EventRepository.getEvents(date: model).isEmpty {
+                    cell.hasDate()
+                }
                 
           return cell
         }
