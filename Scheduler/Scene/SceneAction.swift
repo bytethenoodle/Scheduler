@@ -9,5 +9,5 @@
 import ReSwift
 
 struct SceneAction: Action {
-    let sceneRoute: SceneRoute
+    var sceneRoute: SceneRoute
 }

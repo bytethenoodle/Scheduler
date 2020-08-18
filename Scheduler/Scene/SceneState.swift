@@ -11,6 +11,7 @@ import ReSwift
 struct SceneState: StateType {
     
     var sceneRoute: SceneRoute
+    var session: Session?
     
     init(sceneRoute: SceneRoute) {
         self.sceneRoute = sceneRoute

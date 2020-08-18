@@ -18,7 +18,10 @@ final class SceneCoordinator: Coordinator {
     var window : SceneWindow?
     
     required init(window: SceneWindow? = SceneWindow()) {
-        self.store = CoordinatorStoreType(reducer: SceneReducer().reduce)
+        let sceneReducer = SceneReducer()
+        self.store = CoordinatorStoreType(reducer: sceneReducer.reduce,
+                                          state: nil,
+                                          middleware: [sceneReducer.middleware()])
         self.window = window
         window?.makeKeyAndVisible()
 
@@ -35,6 +38,8 @@ final class SceneCoordinator: Coordinator {
             break
         case .registrationSuccess:
             RegistrationSuccessCoordinator(sceneCoordinator: self).start()
+            break
+        case .calendar:
             break
         default:
             break

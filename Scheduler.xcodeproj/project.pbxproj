@@ -49,6 +49,10 @@
 		52630EB924E98A4E0018AECE /* KeyboardObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52630EB824E98A4E0018AECE /* KeyboardObservableViewController.swift */; };
 		52630EBB24E99D610018AECE /* KeyboardAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52630EBA24E99D610018AECE /* KeyboardAction.swift */; };
 		52630EBD24E9A0540018AECE /* KeyboardSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52630EBC24E9A0540018AECE /* KeyboardSpec.swift */; };
+		526BB15C24EBD39B00694BD3 /* SceneReducer+Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BB15B24EBD39B00694BD3 /* SceneReducer+Middleware.swift */; };
+		526BB15E24EBD81300694BD3 /* SceneReducer+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BB15D24EBD81300694BD3 /* SceneReducer+Persistence.swift */; };
+		526BB16124EBDEA500694BD3 /* SceneReducer+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BB16024EBDEA500694BD3 /* SceneReducer+Utilities.swift */; };
+		526BB16324EBDF1A00694BD3 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BB16224EBDF1A00694BD3 /* CalendarViewController.swift */; };
 		526C3A3724EAB28E002A3D9F /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C3A3624EAB28E002A3D9F /* RegistrationViewController.swift */; };
 		526C3A3924EAB2A1002A3D9F /* RegistrationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526C3A3824EAB2A1002A3D9F /* RegistrationViewController.storyboard */; };
 		526C3A3B24EAB532002A3D9F /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C3A3A24EAB532002A3D9F /* RegistrationCoordinator.swift */; };
@@ -134,6 +138,10 @@
 		52630EB824E98A4E0018AECE /* KeyboardObservableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservableViewController.swift; sourceTree = "<group>"; };
 		52630EBA24E99D610018AECE /* KeyboardAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAction.swift; sourceTree = "<group>"; };
 		52630EBC24E9A0540018AECE /* KeyboardSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardSpec.swift; sourceTree = "<group>"; };
+		526BB15B24EBD39B00694BD3 /* SceneReducer+Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneReducer+Middleware.swift"; sourceTree = "<group>"; };
+		526BB15D24EBD81300694BD3 /* SceneReducer+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneReducer+Persistence.swift"; sourceTree = "<group>"; };
+		526BB16024EBDEA500694BD3 /* SceneReducer+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SceneReducer+Utilities.swift"; sourceTree = "<group>"; };
+		526BB16224EBDF1A00694BD3 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		526C3A3624EAB28E002A3D9F /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		526C3A3824EAB2A1002A3D9F /* RegistrationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegistrationViewController.storyboard; sourceTree = "<group>"; };
 		526C3A3A24EAB532002A3D9F /* RegistrationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCoordinator.swift; sourceTree = "<group>"; };
@@ -415,6 +423,17 @@
 			path = Field;
 			sourceTree = "<group>";
 		};
+		526BB15F24EBD85100694BD3 /* Reducer */ = {
+			isa = PBXGroup;
+			children = (
+				5284C52824E678610032FFB4 /* SceneReducer.swift */,
+				526BB15B24EBD39B00694BD3 /* SceneReducer+Middleware.swift */,
+				526BB16024EBDEA500694BD3 /* SceneReducer+Utilities.swift */,
+				526BB15D24EBD81300694BD3 /* SceneReducer+Persistence.swift */,
+			);
+			path = Reducer;
+			sourceTree = "<group>";
+		};
 		526C3A4224EAE186002A3D9F /* States */ = {
 			isa = PBXGroup;
 			children = (
@@ -456,14 +475,14 @@
 		5284C52B24E67C4C0032FFB4 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				5284C52E24E67E790032FFB4 /* SceneAction.swift */,
-				525C4ABE24E4EEA600659EC6 /* SceneCoordinator.swift */,
-				5284C52824E678610032FFB4 /* SceneReducer.swift */,
-				52F7FBB524E7BC09008F7FDB /* SceneResponder.swift */,
-				525C4AC424E632C600659EC6 /* SceneRoute.swift */,
-				5284C52624E673CE0032FFB4 /* SceneState.swift */,
 				5284C52424E671FF0032FFB4 /* SceneStore.swift */,
+				525C4AC424E632C600659EC6 /* SceneRoute.swift */,
+				5284C52E24E67E790032FFB4 /* SceneAction.swift */,
+				5284C52624E673CE0032FFB4 /* SceneState.swift */,
+				525C4ABE24E4EEA600659EC6 /* SceneCoordinator.swift */,
 				52ACACC724E7905700147137 /* SceneWindow.swift */,
+				52F7FBB524E7BC09008F7FDB /* SceneResponder.swift */,
+				526BB15F24EBD85100694BD3 /* Reducer */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -513,6 +532,7 @@
 		52E84FB524E91695007C2D21 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				526BB16224EBDF1A00694BD3 /* CalendarViewController.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -699,6 +719,7 @@
 				525A54AB24EA881600CA0274 /* LoginViewState.swift in Sources */,
 				52C7640D24E8E8A900E02E2D /* Store.swift in Sources */,
 				52FCA62224EA462E0091235F /* KeyboardObservableViewCoordinator.swift in Sources */,
+				526BB15C24EBD39B00694BD3 /* SceneReducer+Middleware.swift in Sources */,
 				52630EB924E98A4E0018AECE /* KeyboardObservableViewController.swift in Sources */,
 				525C4AC724E633F800659EC6 /* LoginCoordinator.swift in Sources */,
 				525A54A924EA84FE00CA0274 /* RegistrationAction.swift in Sources */,
@@ -738,6 +759,7 @@
 				524E5D1A24E826E2001FC71B /* ActionReducer.swift in Sources */,
 				5284C51F24E666C00032FFB4 /* LoginAction.swift in Sources */,
 				524E5D1824E821DB001FC71B /* Coordinator.swift in Sources */,
+				526BB16324EBDF1A00694BD3 /* CalendarViewController.swift in Sources */,
 				5284C51D24E663160032FFB4 /* ViewCoordinator.swift in Sources */,
 				526C3A3D24EAB5CB002A3D9F /* RegistrationStore.swift in Sources */,
 				526302CE24E9441E00CDCD1D /* ErrorLabel.swift in Sources */,
@@ -749,6 +771,7 @@
 				525A54A524EA73B600CA0274 /* LoginRegisterAction.swift in Sources */,
 				52A2FB6024E927F8000ECBFF /* Color.swift in Sources */,
 				5284C52524E671FF0032FFB4 /* SceneStore.swift in Sources */,
+				526BB16124EBDEA500694BD3 /* SceneReducer+Utilities.swift in Sources */,
 				52EF201A24EB6F01001B20F0 /* Session+CoreDataClass.swift in Sources */,
 				52C7640B24E8D89C00E02E2D /* Storyboardable.swift in Sources */,
 				52EF201B24EB6F01001B20F0 /* Session+CoreDataProperties.swift in Sources */,
@@ -765,6 +788,7 @@
 				52EF201424EB6DB6001B20F0 /* Event+CoreDataClass.swift in Sources */,
 				52F7FBB624E7BC09008F7FDB /* SceneResponder.swift in Sources */,
 				520B179724E9FF800061C03C /* KeyboardObservableStateType.swift in Sources */,
+				526BB15E24EBD81300694BD3 /* SceneReducer+Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

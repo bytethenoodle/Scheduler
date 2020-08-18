@@ -29,7 +29,7 @@ extension RegistrationReducer {
     internal func register(username: String, password: String) {
         let context = Persistence.persistentContainer.viewContext
         
-        let user = NSEntityDescription.insertNewObject(forEntityName: "User",
+        let user = NSEntityDescription.insertNewObject(forEntityName: String(describing: User.self),
                                                         into: context) as! User
         
         user.username = username

@@ -1,5 +1,5 @@
 //
-//  RegistrationReducer+Middleware.swift
+//  SceneReducer+Middleware.swift
 //  Scheduler
 //
 //  Created by Elbert John Orozco on 2020/08/18.
@@ -10,15 +10,16 @@ import ReSwift
 
 // MARK: - Middleware Methods
 
-extension RegistrationReducer {
+extension SceneReducer {
     
     func middleware() -> Middleware<ReducerStateType> {
         return { dispatch, getState in
             return { next in
                 return { action in
                     switch action {
-                    case let registrationAction as RegistrationAction:
-                        next(RegistrationProcessAction(registrationErrorStates: self.performRegistration(registrationAction: registrationAction)))
+                    case var sceneAction as SceneAction:
+                        sceneAction.sceneRoute = self.verifyRouteBasedOnSession(actionRoute: sceneAction.sceneRoute)
+                        next(sceneAction)
                         break
                     default:
                         next(action)

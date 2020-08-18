@@ -12,6 +12,25 @@ import ReSwift
 
 extension RegistrationReducer {
     
+    internal func performRegistration(registrationAction: RegistrationAction) -> [RegistrationErrorState] {
+        var errors = [RegistrationErrorState]()
+        errors.append(contentsOf: formatErrorsFor(username: registrationAction.username,
+                                                  password: registrationAction.password))
+        errors.append(contentsOf: checkErrorForRetypePassword(password: registrationAction.password,
+                                                              retypePassword: registrationAction.retypePassword))
+        guard errors.isEmpty else {
+            return errors
+        }
+        
+        guard !self.doesUsernameExist(username: registrationAction.username) else {
+            return [.verifyError]
+        }
+        
+        register(username: registrationAction.username,
+                 password: registrationAction.password)
+        return []
+    }
+    
     internal func formatErrorsFor(username: String, password: String) -> [RegistrationErrorState] {
         var errors = [RegistrationErrorState]()
         if !(username.isAlphanumeric() && username.hasNoSpace() && username.isValidUsernameRange() &&

@@ -7,6 +7,7 @@
 //
 
 import ReSwift
+import CoreData
 
 final class SceneReducer: ActionReducer {
     
@@ -14,11 +15,18 @@ final class SceneReducer: ActionReducer {
     typealias ReducerStateType = SceneState
     
     func reduce(action: ActionType, state: ReducerStateType?) -> ReducerStateType {
-        var state = state ?? ReducerStateType(sceneRoute: .login)
-
+        
+        // Handle entry point on launch based on user session
+        let session = self.fetchSession()
+        var state = state ??
+            (session.user == nil ?
+                ReducerStateType(sceneRoute: .login) : ReducerStateType(sceneRoute: .calendar))
+                
+        // Perform passing from action
         switch action {
             case let sceneAction as SceneAction:
                 state.sceneRoute = sceneAction.sceneRoute
+                break
             default:
                 break
         }
