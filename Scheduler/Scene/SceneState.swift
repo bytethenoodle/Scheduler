@@ -11,8 +11,10 @@ import ReSwift
 struct SceneState: StateType {
     
     var sceneRoute: SceneRoute
+    var reference: Any?
     
-    init(sceneRoute: SceneRoute) {
+    init(sceneRoute: SceneRoute, reference: Any? = nil) {
         self.sceneRoute = sceneRoute
+        self.reference = reference
     }
 }

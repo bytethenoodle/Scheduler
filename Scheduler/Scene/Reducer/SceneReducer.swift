@@ -26,6 +26,7 @@ final class SceneReducer: ActionReducer {
         switch action {
             case let sceneAction as SceneAction:
                 state.sceneRoute = sceneAction.sceneRoute
+                state.reference = sceneAction.reference
                 break
             default:
                 break

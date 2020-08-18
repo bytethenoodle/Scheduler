@@ -42,7 +42,8 @@ final class SceneCoordinator: Coordinator {
         case .calendar:
             CalendarCoordinator(sceneCoordinator: self).start()
             break
-        default:
+        case .events:
+            print("---> \(state.reference as? Date)")
             break
         }
     }
