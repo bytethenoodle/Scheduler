@@ -63,6 +63,8 @@ class CalendarCoordinator: ViewCoordinator {
                                      models: state.dates) { cell, model in
                 
                 cell.dateLabel?.text = model?.dayString()
+                cell.dateLabel?.isError = model?.dateString() == Date().dateString()
+                
                 cell.hasNoDate()
                 
           return cell

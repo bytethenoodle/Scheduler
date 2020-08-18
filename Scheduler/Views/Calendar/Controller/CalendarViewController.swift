@@ -25,6 +25,11 @@ class CalendarViewController: ViewController<CalendarCoordinator,
         setupCollectionViewLayout()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        viewCoordinator?.store?.dispatch(CalendarAction())
+    }
+    
     func setupNavigationItems() {
         let leftBarButtonItem = UIBarButtonItem(title: "Logout",
                                                 style: .plain,
