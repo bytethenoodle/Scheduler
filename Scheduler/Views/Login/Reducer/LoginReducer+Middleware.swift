@@ -31,23 +31,4 @@ extension LoginReducer {
             }
         }
     }
-    
-    func checkCredentials(username: String, password: String) -> LoginViewState {
-        guard let errorState = errorStateForInput(username: username,
-                                                  password: password)
-        else {
-            guard let user = UserRepository.get(username: username, password: password) else {
-                return .verifyError
-            }
-            
-            return .login
-        }
-        return errorState
-    }
-    
-    func attachUser() {
-        
-    }
-    
-    
 }
