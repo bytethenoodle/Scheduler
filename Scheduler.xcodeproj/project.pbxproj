@@ -10,6 +10,7 @@
 		520B179724E9FF800061C03C /* KeyboardObservableStateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B179624E9FF800061C03C /* KeyboardObservableStateType.swift */; };
 		520B179924EA03510061C03C /* KeyboardObservableActionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B179824EA03510061C03C /* KeyboardObservableActionReducer.swift */; };
 		520B55A324E93335007621DE /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B55A224E93335007621DE /* View.swift */; };
+		521E417724EC1BFB005F0318 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E417624EC1BFB005F0318 /* Date.swift */; };
 		522CE73F24E93EF200F5EF78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522CE73E24E93EF200F5EF78 /* ViewController.swift */; };
 		522CF5BF24EAEAD5004B3B01 /* RegistrationErrorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522CF5BE24EAEAD5004B3B01 /* RegistrationErrorState.swift */; };
 		522CF5C124EAF64E004B3B01 /* RegistrationProcessAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522CF5C024EAF64E004B3B01 /* RegistrationProcessAction.swift */; };
@@ -106,6 +107,7 @@
 		520B179624E9FF800061C03C /* KeyboardObservableStateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservableStateType.swift; sourceTree = "<group>"; };
 		520B179824EA03510061C03C /* KeyboardObservableActionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservableActionReducer.swift; sourceTree = "<group>"; };
 		520B55A224E93335007621DE /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		521E417624EC1BFB005F0318 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		522CE73E24E93EF200F5EF78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		522CF5BE24EAEAD5004B3B01 /* RegistrationErrorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationErrorState.swift; sourceTree = "<group>"; };
 		522CF5C024EAF64E004B3B01 /* RegistrationProcessAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationProcessAction.swift; sourceTree = "<group>"; };
@@ -552,6 +554,7 @@
 				52C7640C24E8E8A900E02E2D /* Store.swift */,
 				52A2FB6124E92A52000ECBFF /* UIColor.swift */,
 				525A54A224EA5F5500CA0274 /* String.swift */,
+				521E417624EC1BFB005F0318 /* Date.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -809,6 +812,7 @@
 				526302D224E9443300CDCD1D /* PrimaryButton.swift in Sources */,
 				52B9F77024EC036B00AA1DC0 /* CalendarStore.swift in Sources */,
 				5284C52D24E67DA80032FFB4 /* ViewControllerCoordinatable.swift in Sources */,
+				521E417724EC1BFB005F0318 /* Date.swift in Sources */,
 				52EF201624EB6DB6001B20F0 /* User+CoreDataClass.swift in Sources */,
 				525A54A524EA73B600CA0274 /* LoginRegisterAction.swift in Sources */,
 				52A2FB6024E927F8000ECBFF /* Color.swift in Sources */,

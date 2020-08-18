@@ -17,6 +17,10 @@ class CalendarViewController: ViewController<CalendarCoordinator,
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationItems()
+        
+        print("---> \(Date().datesOfMonth().map { $0.dateString() })")
+//        print("---> \(Date().endOfMonth().dateString())")
+        
     }
     
     func setupNavigationItems() {
