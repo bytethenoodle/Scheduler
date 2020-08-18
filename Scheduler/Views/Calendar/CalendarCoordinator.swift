@@ -39,19 +39,16 @@ class CalendarCoordinator: ViewCoordinator {
     func newState(state: CalendarState) {
         guard let viewController = viewController else {return}
         viewController.navigationItem.title = state.navigationTitle
-        
-        //        print("---> \(Date().calendarArray().map { $0?.dateString()})")
-        //        print("---> \(Date().endOfMonth().dateString())")
-                
-        //        tableDataSource = TableDataSource(cellIdentifier:"CategoryCell", models: state.categories) {cell, model in
-        //          cell.textLabel?.text = model.rawValue
-        //          cell.accessoryType = (state.currentCategorySelected == model) ? .checkmark : .none
-        //          return cell
-        //        }
-        //
-        //        self.tableView.dataSource = tableDataSource
-        //        self.tableView.reloadData()
-        
+                        
+        viewController.collectionViewDataSource =
+            CollectionViewDataSource(cellIdentifier:String(describing: CalendarCollectionViewCell.self),
+                                     models: state.currentDate.calendarArray()) { cell, model in
+                cell.dateLabel?.text = model?.dayString()
+          return cell
+        }
+
+        viewController.collectionView?.dataSource = viewController.collectionViewDataSource
+        viewController.collectionView?.reloadData()
         transitionViewWithState(state)
     }
 

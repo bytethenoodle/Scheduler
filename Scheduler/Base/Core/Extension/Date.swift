@@ -81,7 +81,13 @@ extension Date {
     
     func dateString() -> String {
         let df = DateFormatter()
-        df.dateFormat = "MMMM dd, yyyy"
+        df.dateFormat = "MMMM d, yyyy"
+        return df.string(from: self)
+    }
+    
+    func dayString() -> String {
+        let df = DateFormatter()
+        df.dateFormat = "d"
         return df.string(from: self)
     }
     

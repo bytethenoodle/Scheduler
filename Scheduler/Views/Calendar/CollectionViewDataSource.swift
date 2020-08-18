@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class CollectionViewDataSource<V, T> : NSObject, UICollectionViewDataSource where V: UICollectionViewCell {
+final class CollectionViewDataSource<V, T> : NSObject, UICollectionViewDataSource where V: CalendarCollectionViewCell {
   
     typealias CellConfiguration = (V, T) -> V 
   
