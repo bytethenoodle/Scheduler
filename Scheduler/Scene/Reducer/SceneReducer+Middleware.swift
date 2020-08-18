@@ -18,7 +18,7 @@ extension SceneReducer {
                 return { action in
                     switch action {
                     case var sceneAction as SceneAction:
-                        sceneAction.sceneRoute = self.verifyRouteBasedOnSession(actionRoute: sceneAction.sceneRoute)
+                        sceneAction.sceneRoute = self.processRouteBasedOnSession(actionRoute: sceneAction.sceneRoute)
                         next(sceneAction)
                         break
                     default:

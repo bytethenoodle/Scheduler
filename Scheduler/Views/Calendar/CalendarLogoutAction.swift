@@ -1,5 +1,5 @@
 //
-//  CalendarAction.swift
+//  CalendarLogoutAction.swift
 //  Scheduler
 //
 //  Created by Elbert John Orozco on 2020/08/18.
@@ -8,7 +8,7 @@
 
 import ReSwift
 
-struct CalendarAction: Action {
+struct CalendarLogoutAction: Action {
     
     
 }

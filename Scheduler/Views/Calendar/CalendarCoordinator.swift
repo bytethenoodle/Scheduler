@@ -39,5 +39,17 @@ class CalendarCoordinator: ViewCoordinator {
     func newState(state: CalendarState) {
         guard let viewController = viewController else {return}
         viewController.navigationItem.title = state.navigationTitle
+        
+        transitionViewWithState(state)
+    }
+
+    func transitionViewWithState(_ state: StoreSubscriberStateType) {
+        switch state.calendarViewState {
+        case .logout:
+            sceneCoordinator?.store?.dispatch(SceneAction(sceneRoute: .logout))
+            break
+        default:
+            break
+        }
     }
 }

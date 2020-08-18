@@ -79,6 +79,8 @@
 		52B9F76E24EC02A300AA1DC0 /* CalendarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B9F76D24EC02A300AA1DC0 /* CalendarViewController.storyboard */; };
 		52B9F77024EC036B00AA1DC0 /* CalendarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9F76F24EC036B00AA1DC0 /* CalendarStore.swift */; };
 		52B9F77224EC046000AA1DC0 /* CalendarReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9F77124EC046000AA1DC0 /* CalendarReducer.swift */; };
+		52B9F77424EC081B00AA1DC0 /* CalendarLogoutAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9F77324EC081B00AA1DC0 /* CalendarLogoutAction.swift */; };
+		52B9F77624EC082A00AA1DC0 /* CalendarSelectAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9F77524EC082A00AA1DC0 /* CalendarSelectAction.swift */; };
 		52C7640B24E8D89C00E02E2D /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7640A24E8D89C00E02E2D /* Storyboardable.swift */; };
 		52C7640D24E8E8A900E02E2D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7640C24E8E8A900E02E2D /* Store.swift */; };
 		52E84FB724E916BC007C2D21 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E84FB624E916BC007C2D21 /* Colors.xcassets */; };
@@ -175,6 +177,8 @@
 		52B9F76D24EC02A300AA1DC0 /* CalendarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarViewController.storyboard; sourceTree = "<group>"; };
 		52B9F76F24EC036B00AA1DC0 /* CalendarStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarStore.swift; sourceTree = "<group>"; };
 		52B9F77124EC046000AA1DC0 /* CalendarReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarReducer.swift; sourceTree = "<group>"; };
+		52B9F77324EC081B00AA1DC0 /* CalendarLogoutAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLogoutAction.swift; sourceTree = "<group>"; };
+		52B9F77524EC082A00AA1DC0 /* CalendarSelectAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSelectAction.swift; sourceTree = "<group>"; };
 		52C7640A24E8D89C00E02E2D /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		52C7640C24E8E8A900E02E2D /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		52E84FB624E916BC007C2D21 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -558,6 +562,8 @@
 				52B9F76F24EC036B00AA1DC0 /* CalendarStore.swift */,
 				52B9F77124EC046000AA1DC0 /* CalendarReducer.swift */,
 				52B9F76924EC025B00AA1DC0 /* CalendarAction.swift */,
+				52B9F77524EC082A00AA1DC0 /* CalendarSelectAction.swift */,
+				52B9F77324EC081B00AA1DC0 /* CalendarLogoutAction.swift */,
 				52B9F76724EC024900AA1DC0 /* CalendarState.swift */,
 				52B9F76B24EC029300AA1DC0 /* CalendarViewState.swift */,
 				52B9F76524EC01F000AA1DC0 /* CalendarCoordinator.swift */,
@@ -749,6 +755,7 @@
 				525A54AB24EA881600CA0274 /* LoginViewState.swift in Sources */,
 				52C7640D24E8E8A900E02E2D /* Store.swift in Sources */,
 				52FCA62224EA462E0091235F /* KeyboardObservableViewCoordinator.swift in Sources */,
+				52B9F77424EC081B00AA1DC0 /* CalendarLogoutAction.swift in Sources */,
 				526BB15C24EBD39B00694BD3 /* SceneReducer+Middleware.swift in Sources */,
 				52630EB924E98A4E0018AECE /* KeyboardObservableViewController.swift in Sources */,
 				525C4AC724E633F800659EC6 /* LoginCoordinator.swift in Sources */,
@@ -792,6 +799,7 @@
 				5284C51F24E666C00032FFB4 /* LoginAction.swift in Sources */,
 				524E5D1824E821DB001FC71B /* Coordinator.swift in Sources */,
 				526BB16324EBDF1A00694BD3 /* CalendarViewController.swift in Sources */,
+				52B9F77624EC082A00AA1DC0 /* CalendarSelectAction.swift in Sources */,
 				5284C51D24E663160032FFB4 /* ViewCoordinator.swift in Sources */,
 				526C3A3D24EAB5CB002A3D9F /* RegistrationStore.swift in Sources */,
 				526302CE24E9441E00CDCD1D /* ErrorLabel.swift in Sources */,

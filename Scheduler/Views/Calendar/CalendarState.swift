@@ -12,7 +12,11 @@ struct CalendarState: StateType {
     
     var navigationTitle: String
 
+    var calendarViewState: CalendarViewState
+    
     init() {
         navigationTitle = "Calendar"
+        
+        calendarViewState = .normal
     }
 }

@@ -45,4 +45,17 @@ class SessionRepository {
             fatalError("error saving data")
         }
     }
+    
+    static func detachUser() {
+        let context = Persistence.persistentContainer.viewContext
+        let session = SessionRepository.fetch()
+        
+        session.user = nil
+        
+        do {
+            try context.save()
+        } catch {
+            fatalError("error saving data")
+        }
+    }
 }

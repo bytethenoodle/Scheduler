@@ -30,7 +30,7 @@ final class SceneCoordinator: Coordinator {
 
     func newState(state: StoreSubscriberStateType) {
         switch state.sceneRoute {
-        case .login:
+        case .login, .logout:
             LoginCoordinator(sceneCoordinator: self).start()
             break
         case .registration:

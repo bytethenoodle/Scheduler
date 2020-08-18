@@ -10,10 +10,13 @@ import ReSwift
 
 extension SceneReducer {
     
-    internal func verifyRouteBasedOnSession(actionRoute: SceneRoute) -> SceneRoute {
+    internal func processRouteBasedOnSession(actionRoute: SceneRoute) -> SceneRoute {
         switch actionRoute {
         case .calendar, .events, .add, .edit:
             return (SessionRepository.fetch().user == nil ? .login : actionRoute)
+        case .logout:
+            SessionRepository.detachUser()
+            return actionRoute
         default:
             return actionRoute
         }
