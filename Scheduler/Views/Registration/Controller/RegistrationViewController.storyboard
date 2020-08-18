@@ -40,7 +40,7 @@
                                                                     <constraint firstAttribute="height" constant="44" id="pvg-1f-ePi"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                                                                <textInputTraits key="textInputTraits"/>
                                                                 <connections>
                                                                     <outlet property="delegate" destination="a8a-7S-Ig9" id="b3X-0f-e4v"/>
                                                                 </connections>
@@ -68,7 +68,7 @@
                                                                     <constraint firstAttribute="height" constant="44" id="KJt-P4-P5s"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                                                                 <connections>
                                                                     <outlet property="delegate" destination="a8a-7S-Ig9" id="XYF-vE-7XW"/>
                                                                 </connections>
@@ -96,7 +96,7 @@
                                                                     <constraint firstAttribute="height" constant="44" id="Qvp-T9-KGM"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                 <connections>
                                                                     <outlet property="delegate" destination="a8a-7S-Ig9" id="SHU-iW-ARc"/>
                                                                 </connections>
