@@ -7,6 +7,7 @@
 //
 
 import ReSwift
+import CoreData
 
 // MARK: - Middleware Methods
 
@@ -35,6 +36,23 @@ extension LoginReducer {
                     }
                 }
             }
+        }
+    }
+    
+    func checkUser(username: String, password: String) {
+        
+    }
+    
+    func getUser(username: String, password: String) -> User? {
+        let context = Persistence.persistentContainer.viewContext
+        do {
+            let fetchRequest : NSFetchRequest<User> = User.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "username == %@ && password == %@", username, password)
+            let fetchedResults = try context.fetch(fetchRequest)
+            return fetchedResults.first
+        }
+        catch {
+            return nil
         }
     }
 }
