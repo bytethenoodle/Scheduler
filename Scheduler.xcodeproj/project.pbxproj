@@ -73,6 +73,8 @@
 		52EF202224EB73D6001B20F0 /* LoginReducer+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF202124EB73D6001B20F0 /* LoginReducer+Utilities.swift */; };
 		52EF202624EB7B7F001B20F0 /* RegistrationReducer+Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF202524EB7B7F001B20F0 /* RegistrationReducer+Middleware.swift */; };
 		52EF202824EB7B8A001B20F0 /* RegistrationReducer+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF202724EB7B8A001B20F0 /* RegistrationReducer+Utilities.swift */; };
+		52EF202A24EB7CC7001B20F0 /* RegistrationReducer+Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF202924EB7CC7001B20F0 /* RegistrationReducer+Persistence.swift */; };
+		52EF202C24EB8024001B20F0 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF202B24EB8024001B20F0 /* Persistence.swift */; };
 		52F5BFB424E8A2D400EB8CDD /* LoginStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F5BFB324E8A2D400EB8CDD /* LoginStore.swift */; };
 		52F7FBB624E7BC09008F7FDB /* SceneResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7FBB524E7BC09008F7FDB /* SceneResponder.swift */; };
 		52FCA62224EA462E0091235F /* KeyboardObservableViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCA62124EA462E0091235F /* KeyboardObservableViewCoordinator.swift */; };
@@ -148,6 +150,8 @@
 		52EF202124EB73D6001B20F0 /* LoginReducer+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginReducer+Utilities.swift"; sourceTree = "<group>"; };
 		52EF202524EB7B7F001B20F0 /* RegistrationReducer+Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationReducer+Middleware.swift"; sourceTree = "<group>"; };
 		52EF202724EB7B8A001B20F0 /* RegistrationReducer+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationReducer+Utilities.swift"; sourceTree = "<group>"; };
+		52EF202924EB7CC7001B20F0 /* RegistrationReducer+Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationReducer+Persistence.swift"; sourceTree = "<group>"; };
+		52EF202B24EB8024001B20F0 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		52F5BFB324E8A2D400EB8CDD /* LoginStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginStore.swift; sourceTree = "<group>"; };
 		52F7FBB524E7BC09008F7FDB /* SceneResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneResponder.swift; sourceTree = "<group>"; };
 		52FCA62124EA462E0091235F /* KeyboardObservableViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservableViewCoordinator.swift; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 		522CF5CB24EB6981004B3B01 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				52EF202B24EB8024001B20F0 /* Persistence.swift */,
 				52EF201C24EB6F1F001B20F0 /* Session */,
 				52EF201D24EB6F2D001B20F0 /* Event */,
 				52EF201E24EB6F35001B20F0 /* User */,
@@ -216,7 +221,6 @@
 				52630EBC24E9A0540018AECE /* KeyboardSpec.swift */,
 				520B179624E9FF800061C03C /* KeyboardObservableStateType.swift */,
 				520B179824EA03510061C03C /* KeyboardObservableActionReducer.swift */,
-				52FCA62124EA462E0091235F /* KeyboardObservableViewCoordinator.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -396,6 +400,7 @@
 			children = (
 				5284C51C24E663160032FFB4 /* ViewCoordinator.swift */,
 				5284C52C24E67DA80032FFB4 /* ViewControllerCoordinatable.swift */,
+				52FCA62124EA462E0091235F /* KeyboardObservableViewCoordinator.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -507,6 +512,7 @@
 				526C3A3E24EAB6CC002A3D9F /* RegistrationReducer.swift */,
 				52EF202524EB7B7F001B20F0 /* RegistrationReducer+Middleware.swift */,
 				52EF202724EB7B8A001B20F0 /* RegistrationReducer+Utilities.swift */,
+				52EF202924EB7CC7001B20F0 /* RegistrationReducer+Persistence.swift */,
 			);
 			path = Reducer;
 			sourceTree = "<group>";
@@ -659,6 +665,7 @@
 				52A2FB6224E92A52000ECBFF /* UIColor.swift in Sources */,
 				525A54A724EA845A00CA0274 /* LoginProcessAction.swift in Sources */,
 				522CF5BF24EAEAD5004B3B01 /* RegistrationErrorState.swift in Sources */,
+				52EF202A24EB7CC7001B20F0 /* RegistrationReducer+Persistence.swift in Sources */,
 				526302D424E9445900CDCD1D /* SecondaryButton.swift in Sources */,
 				52630EBB24E99D610018AECE /* KeyboardAction.swift in Sources */,
 				52EF201724EB6DB6001B20F0 /* User+CoreDataProperties.swift in Sources */,
@@ -669,6 +676,7 @@
 				520B55A324E93335007621DE /* View.swift in Sources */,
 				5284C52F24E67E790032FFB4 /* SceneAction.swift in Sources */,
 				520B179924EA03510061C03C /* KeyboardObservableActionReducer.swift in Sources */,
+				52EF202C24EB8024001B20F0 /* Persistence.swift in Sources */,
 				52A2FB6624E92E7E000ECBFF /* NavigationController.swift in Sources */,
 				525C4ABF24E4EEA600659EC6 /* SceneCoordinator.swift in Sources */,
 				524E5D1A24E826E2001FC71B /* ActionReducer.swift in Sources */,
