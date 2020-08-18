@@ -13,7 +13,7 @@ extension SceneReducer {
     internal func verifyRouteBasedOnSession(actionRoute: SceneRoute) -> SceneRoute {
         switch actionRoute {
         case .calendar, .events, .add, .edit:
-            return (fetchSession().user == nil ? .login : actionRoute)
+            return (SessionRepository.fetch().user == nil ? .login : actionRoute)
         default:
             return actionRoute
         }

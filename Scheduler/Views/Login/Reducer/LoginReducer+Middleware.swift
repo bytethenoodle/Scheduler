@@ -20,15 +20,8 @@ extension LoginReducer {
                     
                     switch action {
                     case let loginAction as LoginAction:
-                        
-                        guard let errorState = self.errorStateForInput(username: loginAction.username,
-                                                                       password: loginAction.password)
-                        else {
-                            // TODO: Handle async call here
-                            next(LoginProcessAction(loginViewState: .login))
-                            break
-                        }
-                        next(LoginProcessAction(loginViewState: errorState))
+                        next(LoginProcessAction(loginViewState: self.checkCredentials(username: loginAction.username,
+                                                                                      password: loginAction.password)))
                         break
                     default:
                         next(action)
@@ -39,20 +32,22 @@ extension LoginReducer {
         }
     }
     
-    func checkUser(username: String, password: String) {
+    func checkCredentials(username: String, password: String) -> LoginViewState {
+        guard let errorState = errorStateForInput(username: username,
+                                                  password: password)
+        else {
+            guard let user = UserRepository.get(username: username, password: password) else {
+                return .verifyError
+            }
+            
+            return .login
+        }
+        return errorState
+    }
+    
+    func attachUser() {
         
     }
     
-    func getUser(username: String, password: String) -> User? {
-        let context = Persistence.persistentContainer.viewContext
-        do {
-            let fetchRequest : NSFetchRequest<User> = User.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "username == %@ && password == %@", username, password)
-            let fetchedResults = try context.fetch(fetchRequest)
-            return fetchedResults.first
-        }
-        catch {
-            return nil
-        }
-    }
+    
 }

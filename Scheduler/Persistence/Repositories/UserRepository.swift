@@ -1,5 +1,5 @@
 //
-//  RegistrationReducer+Persistence.swift
+//  UserRepository.swift
 //  Scheduler
 //
 //  Created by Elbert John Orozco on 2020/08/18.
@@ -11,9 +11,9 @@ import CoreData
 
 // MARK: - Persistence
 
-extension RegistrationReducer {
+class UserRepository {
     
-    internal func doesUsernameExist(username: String) -> Bool {
+    static func exist(username: String) -> Bool {
         let context = Persistence.persistentContainer.viewContext
         do {
             let fetchRequest : NSFetchRequest<User> = User.fetchRequest()
@@ -26,7 +26,7 @@ extension RegistrationReducer {
         }
     }
     
-    internal func register(username: String, password: String) {
+    static func register(username: String, password: String) {
         let context = Persistence.persistentContainer.viewContext
         
         let user = NSEntityDescription.insertNewObject(forEntityName: String(describing: User.self),
@@ -40,6 +40,19 @@ extension RegistrationReducer {
             try context.save()
         } catch {
             fatalError("error saving data")
+        }
+    }
+    
+    static func get(username: String, password: String) -> User? {
+        let context = Persistence.persistentContainer.viewContext
+        do {
+            let fetchRequest : NSFetchRequest<User> = User.fetchRequest()
+            fetchRequest.predicate = NSPredicate(format: "username == %@ && password == %@", username, password)
+            let fetchedResults = try context.fetch(fetchRequest)
+            return fetchedResults.first
+        }
+        catch {
+            return nil
         }
     }
 }

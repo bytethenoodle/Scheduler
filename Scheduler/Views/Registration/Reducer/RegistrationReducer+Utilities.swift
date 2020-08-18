@@ -22,12 +22,12 @@ extension RegistrationReducer {
             return errors
         }
         
-        guard !self.doesUsernameExist(username: registrationAction.username) else {
+        guard !UserRepository.exist(username: registrationAction.username) else {
             return [.verifyError]
         }
         
-        register(username: registrationAction.username,
-                 password: registrationAction.password)
+        UserRepository.register(username: registrationAction.username,
+                      password: registrationAction.password)
         return []
     }
     

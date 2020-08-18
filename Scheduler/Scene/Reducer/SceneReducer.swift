@@ -17,7 +17,7 @@ final class SceneReducer: ActionReducer {
     func reduce(action: ActionType, state: ReducerStateType?) -> ReducerStateType {
         
         // Handle entry point on launch based on user session
-        let session = fetchSession()
+        let session = SessionRepository.fetch()
         var state = state ??
             (session.user == nil ?
                 ReducerStateType(sceneRoute: .login) : ReducerStateType(sceneRoute: .calendar))
@@ -31,7 +31,6 @@ final class SceneReducer: ActionReducer {
                 break
         }
         
-        state.session = session
         return state
     }
 }

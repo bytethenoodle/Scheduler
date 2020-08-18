@@ -1,5 +1,5 @@
 //
-//  SceneReducer+Persistence.swift
+//  SessionRepository.swift
 //  Scheduler
 //
 //  Created by Elbert John Orozco on 2020/08/18.
@@ -8,18 +8,18 @@
 
 import CoreData
 
-extension SceneReducer {
+class SessionRepository {
     
-    internal func fetchSession() -> Session {
+    static func fetch() -> Session {
         let managedObjectContext = Persistence.persistentContainer.viewContext
         
         let fetchRequest : NSFetchRequest<Session> = Session.fetchRequest()
         fetchRequest.returnsObjectsAsFaults = false
         
-        return (try? managedObjectContext.fetch(fetchRequest).first) ?? createSession()
+        return (try? managedObjectContext.fetch(fetchRequest).first) ?? create()
     }
     
-    internal func createSession() -> Session {
+    static func create() -> Session {
         let managedObjectContext = Persistence.persistentContainer.viewContext
 
         let newSession = NSEntityDescription.insertNewObject(forEntityName: String(describing: Session.self),
