@@ -39,16 +39,7 @@ class CalendarCoordinator: ViewCoordinator {
     func newState(state: CalendarState) {
         guard let viewController = viewController else {return}
         viewController.navigationItem.title = state.navigationTitle
-                        
-        viewController.collectionViewDataSource =
-            CollectionViewDataSource(cellIdentifier:String(describing: CalendarCollectionViewCell.self),
-                                     models: state.currentDate.calendarArray()) { cell, model in
-                cell.dateLabel?.text = model?.dayString()
-          return cell
-        }
-
-        viewController.collectionView?.dataSource = viewController.collectionViewDataSource
-        viewController.collectionView?.reloadData()
+        setupDataSource(state)
         transitionViewWithState(state)
     }
 
@@ -60,5 +51,18 @@ class CalendarCoordinator: ViewCoordinator {
         default:
             break
         }
+    }
+    
+    func setupDataSource(_ state: StoreSubscriberStateType) {
+        guard let viewController = viewController else {return}
+        viewController.collectionViewDataSource =
+            CollectionViewDataSource(cellIdentifier:String(describing: CalendarCollectionViewCell.self),
+                                     models: state.currentDate.calendarArray()) { cell, model in
+                cell.dateLabel?.text = model?.dayString()
+          return cell
+        }
+
+        viewController.collectionView?.dataSource = viewController.collectionViewDataSource
+        viewController.collectionView?.reloadData()
     }
 }
