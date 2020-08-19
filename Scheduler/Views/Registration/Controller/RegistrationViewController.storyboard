@@ -34,15 +34,15 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z9R-rb-nBS" customClass="TextField" customModule="Scheduler" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VtT-h0-6vo" customClass="TextField" customModule="Scheduler" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="28.5" width="350" height="44"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="44" id="pvg-1f-ePi"/>
+                                                                    <constraint firstAttribute="height" constant="44" id="CK8-bo-xUi"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
-                                                                    <outlet property="delegate" destination="a8a-7S-Ig9" id="b3X-0f-e4v"/>
+                                                                    <outlet property="delegate" destination="a8a-7S-Ig9" id="n5i-5b-kyP"/>
                                                                 </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKX-M1-N4y" customClass="SecondaryLabel" customModule="Scheduler" customModuleProvider="target">
@@ -62,15 +62,15 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dWc-9w-quZ" customClass="TextField" customModule="Scheduler" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bvo-YG-weK" customClass="TextField" customModule="Scheduler" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="28.5" width="350" height="44"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="44" id="KJt-P4-P5s"/>
+                                                                    <constraint firstAttribute="height" constant="44" id="pA4-vK-76j"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
+                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                 <connections>
-                                                                    <outlet property="delegate" destination="a8a-7S-Ig9" id="XYF-vE-7XW"/>
+                                                                    <outlet property="delegate" destination="a8a-7S-Ig9" id="fHt-wd-9LT"/>
                                                                 </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45x-tG-lgX" customClass="SecondaryLabel" customModule="Scheduler" customModuleProvider="target">
@@ -90,15 +90,15 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jCA-MT-537" customClass="TextField" customModule="Scheduler" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NQl-Vu-iuF" customClass="TextField" customModule="Scheduler" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="28.5" width="350" height="44"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="height" constant="44" id="Qvp-T9-KGM"/>
+                                                                    <constraint firstAttribute="height" constant="44" id="QIP-Sw-y6a"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                                 <connections>
-                                                                    <outlet property="delegate" destination="a8a-7S-Ig9" id="SHU-iW-ARc"/>
+                                                                    <outlet property="delegate" destination="a8a-7S-Ig9" id="WSm-kZ-8eH"/>
                                                                 </connections>
                                                             </textField>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FM-2R-vZJ" customClass="SecondaryLabel" customModule="Scheduler" customModuleProvider="target">
@@ -122,7 +122,7 @@
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
-                                                            <action selector="didTapRegisterButton:" destination="a8a-7S-Ig9" eventType="touchUpInside" id="u3R-Ts-7zs"/>
+                                                            <action selector="didTapRegisterButton:" destination="a8a-7S-Ig9" eventType="touchUpInside" id="Ov1-dp-ooC"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -163,15 +163,15 @@
                     </view>
                     <connections>
                         <outlet property="errorTitleLabel" destination="cyD-o7-A9K" id="BaP-XZ-yY2"/>
-                        <outlet property="passwordField" destination="dWc-9w-quZ" id="IQ3-2F-WYW"/>
+                        <outlet property="passwordField" destination="bvo-YG-weK" id="JbV-2p-e5I"/>
                         <outlet property="passwordHintLabel" destination="45x-tG-lgX" id="cLm-MB-Osh"/>
                         <outlet property="passwordTitleLabel" destination="XdQ-0H-s5Q" id="PFW-B8-dIm"/>
                         <outlet property="registerButton" destination="xe8-he-eOJ" id="G2p-Wf-oW3"/>
-                        <outlet property="retypePasswordField" destination="jCA-MT-537" id="QW0-U7-QaK"/>
+                        <outlet property="retypePasswordField" destination="NQl-Vu-iuF" id="Dwu-Ts-FdR"/>
                         <outlet property="retypePasswordHintLabel" destination="4FM-2R-vZJ" id="wWa-2Q-fFg"/>
                         <outlet property="retypePasswordTitleLabel" destination="bto-iJ-qsP" id="8YG-zl-NiO"/>
                         <outlet property="scrollView" destination="fID-UI-aYB" id="gkG-E2-oYV"/>
-                        <outlet property="usernameField" destination="z9R-rb-nBS" id="Ex6-mg-cVV"/>
+                        <outlet property="usernameField" destination="VtT-h0-6vo" id="UZC-Ue-Oif"/>
                         <outlet property="usernameHintLabel" destination="jKX-M1-N4y" id="w9c-LB-Oc4"/>
                         <outlet property="usernameTitleLabel" destination="hkg-Ae-l4W" id="tyv-Kk-xqD"/>
                     </connections>
