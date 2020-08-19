@@ -71,6 +71,9 @@ class EventsCoordinator: ViewCoordinator {
             viewController.present(alert, animated: true, completion: nil)
             
             break
+        case .edit:
+            print("---> \(state.selectedIndex)")
+            break
         default:
             break
         }

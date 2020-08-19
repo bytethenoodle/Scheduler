@@ -9,5 +9,5 @@
 import ReSwift
 
 struct EventsEditAction: Action {
-    var event: Event
+    var selectedIndex: Int
 }

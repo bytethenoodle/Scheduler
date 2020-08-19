@@ -12,6 +12,8 @@ struct EventsState: StateType {
     var navigationTitle: String
     var selectedDate: Date?
     
+    var selectedIndex: Int?
+    
     var eventsViewState: EventsViewState
     
     init(selectedDate: Date? = nil) {

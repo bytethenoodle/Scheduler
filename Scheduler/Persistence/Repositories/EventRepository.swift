@@ -39,4 +39,27 @@ class EventRepository {
             fatalError("error saving data")
         }
     }
+    
+    static func edit(_ event: Event, title: String) {
+        let context = Persistence.persistentContainer.viewContext
+        
+        event.title = title
+        
+        do {
+            try context.save()
+        } catch {
+            fatalError("error saving data")
+        }
+    }
+    
+    static func delete(_ event: Event) {
+        let context = Persistence.persistentContainer.viewContext
+        context.delete(event)
+
+        do {
+            try context.save()
+        } catch {
+            fatalError("error delete data")
+        }
+    }
 }
