@@ -118,6 +118,7 @@
 		52F7FBB624E7BC09008F7FDB /* SceneResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F7FBB524E7BC09008F7FDB /* SceneResponder.swift */; };
 		52FCA62224EA462E0091235F /* KeyboardObservableViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FCA62124EA462E0091235F /* KeyboardObservableViewCoordinator.swift */; };
 		A20DE51C7A32A74815A780DB /* Pods_Scheduler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70526C0E2D27263308DCBFF2 /* Pods_Scheduler.framework */; };
+		EE08440324ECDB5E00CEA705 /* CollectionViewColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE08440224ECDB5E00CEA705 /* CollectionViewColumnFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -236,6 +237,7 @@
 		6EE5C9A298FFDF2AA059A61C /* Pods-Scheduler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scheduler.debug.xcconfig"; path = "Target Support Files/Pods-Scheduler/Pods-Scheduler.debug.xcconfig"; sourceTree = "<group>"; };
 		70526C0E2D27263308DCBFF2 /* Pods_Scheduler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Scheduler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89613AE0124B96B465532C28 /* Pods-Scheduler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Scheduler.release.xcconfig"; path = "Target Support Files/Pods-Scheduler/Pods-Scheduler.release.xcconfig"; sourceTree = "<group>"; };
+		EE08440224ECDB5E00CEA705 /* CollectionViewColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewColumnFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -623,6 +625,7 @@
 			children = (
 				521E417824EC2AD9005F0318 /* CollectionViewDataSource.swift */,
 				521E417A24EC2C6E005F0318 /* CalendarCollectionViewCell.swift */,
+				EE08440224ECDB5E00CEA705 /* CollectionViewColumnFlowLayout.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -957,6 +960,7 @@
 				52EF201A24EB6F01001B20F0 /* Session+CoreDataClass.swift in Sources */,
 				52C7640B24E8D89C00E02E2D /* Storyboardable.swift in Sources */,
 				52B9F77224EC046000AA1DC0 /* CalendarReducer.swift in Sources */,
+				EE08440324ECDB5E00CEA705 /* CollectionViewColumnFlowLayout.swift in Sources */,
 				52985B9824EC950200F9F27C /* EventsReducer.swift in Sources */,
 				52EF201B24EB6F01001B20F0 /* Session+CoreDataProperties.swift in Sources */,
 				52985B9024EC94D100F9F27C /* EventsViewController.swift in Sources */,

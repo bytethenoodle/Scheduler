@@ -18,17 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tFZ-6e-X5e">
-                                <rect key="frame" x="0.0" y="136" width="414" height="760"/>
+                                <rect key="frame" x="0.0" y="152" width="414" height="744"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Y2U-VX-0pz">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="16" maxX="0.0" maxY="16"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalendarCollectionViewCell" id="UAo-45-vYE" customClass="CalendarCollectionViewCell" customModule="Scheduler" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="16" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="txx-ZB-clR">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -170,7 +170,7 @@
                         <viewLayoutGuide key="safeArea" id="IZf-k8-bnX"/>
                         <color key="backgroundColor" red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="tFZ-6e-X5e" firstAttribute="top" secondItem="1RS-0z-FtZ" secondAttribute="bottom" id="1ne-ov-quo"/>
+                            <constraint firstItem="tFZ-6e-X5e" firstAttribute="top" secondItem="1RS-0z-FtZ" secondAttribute="bottom" constant="16" id="1ne-ov-quo"/>
                             <constraint firstItem="fkc-lk-g0C" firstAttribute="top" secondItem="IZf-k8-bnX" secondAttribute="top" constant="16" id="23S-A3-v3M"/>
                             <constraint firstItem="1RS-0z-FtZ" firstAttribute="top" secondItem="fkc-lk-g0C" secondAttribute="bottom" constant="16" id="EyH-9m-JX6"/>
                             <constraint firstItem="fkc-lk-g0C" firstAttribute="leadingMargin" secondItem="lcx-BU-i2r" secondAttribute="leading" constant="32" id="NpA-dm-ae8"/>

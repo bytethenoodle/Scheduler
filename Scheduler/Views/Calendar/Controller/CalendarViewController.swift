@@ -37,6 +37,12 @@ class CalendarViewController: ViewController<CalendarCoordinator,
     }
     
     func setupCollectionViewLayout() {
+        let columnLayout = CollectionViewColumnFlowLayout(
+                cellsPerRow: 7,
+                minimumInteritemSpacing: 0,
+                minimumLineSpacing: 0,
+                sectionInset: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
+        collectionView?.collectionViewLayout = columnLayout
         collectionView?.delegate = self
     }
     
@@ -58,14 +64,10 @@ class CalendarViewController: ViewController<CalendarCoordinator,
     }
 }
 
-extension CalendarViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width / 7.0,
-                      height: view.frame.width / 7.0)
-    }
+extension CalendarViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         viewCoordinator?.store?.dispatch(CalendarSelectAction(selectedIndex: indexPath.row))
     }
 }
+
