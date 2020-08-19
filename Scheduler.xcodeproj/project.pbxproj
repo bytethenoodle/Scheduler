@@ -99,13 +99,13 @@
 		52B9F77224EC046000AA1DC0 /* CalendarReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9F77124EC046000AA1DC0 /* CalendarReducer.swift */; };
 		52B9F77424EC081B00AA1DC0 /* CalendarLogoutAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9F77324EC081B00AA1DC0 /* CalendarLogoutAction.swift */; };
 		52B9F77624EC082A00AA1DC0 /* CalendarSelectAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9F77524EC082A00AA1DC0 /* CalendarSelectAction.swift */; };
+		52BD22B324ECC9320058BFC5 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD22B124ECC9320058BFC5 /* User+CoreDataClass.swift */; };
+		52BD22B424ECC9320058BFC5 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD22B224ECC9320058BFC5 /* User+CoreDataProperties.swift */; };
 		52C7640B24E8D89C00E02E2D /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7640A24E8D89C00E02E2D /* Storyboardable.swift */; };
 		52C7640D24E8E8A900E02E2D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7640C24E8E8A900E02E2D /* Store.swift */; };
 		52E84FB724E916BC007C2D21 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E84FB624E916BC007C2D21 /* Colors.xcassets */; };
 		52EF201424EB6DB6001B20F0 /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF201024EB6DB6001B20F0 /* Event+CoreDataClass.swift */; };
 		52EF201524EB6DB6001B20F0 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF201124EB6DB6001B20F0 /* Event+CoreDataProperties.swift */; };
-		52EF201624EB6DB6001B20F0 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF201224EB6DB6001B20F0 /* User+CoreDataClass.swift */; };
-		52EF201724EB6DB6001B20F0 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF201324EB6DB6001B20F0 /* User+CoreDataProperties.swift */; };
 		52EF201A24EB6F01001B20F0 /* Session+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF201824EB6F01001B20F0 /* Session+CoreDataClass.swift */; };
 		52EF201B24EB6F01001B20F0 /* Session+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF201924EB6F01001B20F0 /* Session+CoreDataProperties.swift */; };
 		52EF202024EB73C6001B20F0 /* LoginReducer+Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EF201F24EB73C6001B20F0 /* LoginReducer+Middleware.swift */; };
@@ -215,13 +215,13 @@
 		52B9F77124EC046000AA1DC0 /* CalendarReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarReducer.swift; sourceTree = "<group>"; };
 		52B9F77324EC081B00AA1DC0 /* CalendarLogoutAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarLogoutAction.swift; sourceTree = "<group>"; };
 		52B9F77524EC082A00AA1DC0 /* CalendarSelectAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarSelectAction.swift; sourceTree = "<group>"; };
+		52BD22B124ECC9320058BFC5 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		52BD22B224ECC9320058BFC5 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		52C7640A24E8D89C00E02E2D /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		52C7640C24E8E8A900E02E2D /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		52E84FB624E916BC007C2D21 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		52EF201024EB6DB6001B20F0 /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
 		52EF201124EB6DB6001B20F0 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		52EF201224EB6DB6001B20F0 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		52EF201324EB6DB6001B20F0 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		52EF201824EB6F01001B20F0 /* Session+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Session+CoreDataClass.swift"; path = "Scheduler/Persistence/Models/Session/Session+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		52EF201924EB6F01001B20F0 /* Session+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Session+CoreDataProperties.swift"; path = "Scheduler/Persistence/Models/Session/Session+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		52EF201F24EB73C6001B20F0 /* LoginReducer+Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginReducer+Middleware.swift"; sourceTree = "<group>"; };
@@ -720,8 +720,8 @@
 		52EF201E24EB6F35001B20F0 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				52EF201224EB6DB6001B20F0 /* User+CoreDataClass.swift */,
-				52EF201324EB6DB6001B20F0 /* User+CoreDataProperties.swift */,
+				52BD22B124ECC9320058BFC5 /* User+CoreDataClass.swift */,
+				52BD22B224ECC9320058BFC5 /* User+CoreDataProperties.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -911,7 +911,6 @@
 				52EF202A24EB7CC7001B20F0 /* UserRepository.swift in Sources */,
 				526302D424E9445900CDCD1D /* SecondaryButton.swift in Sources */,
 				52630EBB24E99D610018AECE /* KeyboardAction.swift in Sources */,
-				52EF201724EB6DB6001B20F0 /* User+CoreDataProperties.swift in Sources */,
 				52985B8724EC3BE100F9F27C /* CalendarIncrementAction.swift in Sources */,
 				526302CC24E9441200CDCD1D /* SecondaryLabel.swift in Sources */,
 				5284C52124E666D20032FFB4 /* LoginReducer.swift in Sources */,
@@ -932,6 +931,7 @@
 				5233DDA424EB898F00FDBCB2 /* RegistrationSuccessViewController.swift in Sources */,
 				52985B8D24EC41D500F9F27C /* EventRepository.swift in Sources */,
 				5233DDB024EB8F8F00FDBCB2 /* RegistrationSuccessViewState.swift in Sources */,
+				52BD22B324ECC9320058BFC5 /* User+CoreDataClass.swift in Sources */,
 				524E5D1A24E826E2001FC71B /* ActionReducer.swift in Sources */,
 				5284C51F24E666C00032FFB4 /* LoginAction.swift in Sources */,
 				5213424D24ECA2DD00C10AC2 /* EventsViewState.swift in Sources */,
@@ -949,7 +949,6 @@
 				52B9F77024EC036B00AA1DC0 /* CalendarStore.swift in Sources */,
 				5284C52D24E67DA80032FFB4 /* ViewControllerCoordinatable.swift in Sources */,
 				521E417724EC1BFB005F0318 /* Date.swift in Sources */,
-				52EF201624EB6DB6001B20F0 /* User+CoreDataClass.swift in Sources */,
 				525A54A524EA73B600CA0274 /* LoginRegisterAction.swift in Sources */,
 				52A2FB6024E927F8000ECBFF /* Color.swift in Sources */,
 				5284C52524E671FF0032FFB4 /* SceneStore.swift in Sources */,
@@ -974,6 +973,7 @@
 				525C4AAA24E4BC4500659EC6 /* SceneDelegate.swift in Sources */,
 				526C3A4124EAE173002A3D9F /* RegistrationViewState.swift in Sources */,
 				52EF201424EB6DB6001B20F0 /* Event+CoreDataClass.swift in Sources */,
+				52BD22B424ECC9320058BFC5 /* User+CoreDataProperties.swift in Sources */,
 				52F7FBB624E7BC09008F7FDB /* SceneResponder.swift in Sources */,
 				520B179724E9FF800061C03C /* KeyboardObservableStateType.swift in Sources */,
 				526BB15E24EBD81300694BD3 /* SessionRepository.swift in Sources */,
