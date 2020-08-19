@@ -83,6 +83,7 @@ class EventsCoordinator: ViewCoordinator {
             models: state.events) {cell, model in
             
             cell.textLabel?.text = model.title
+            cell.textLabel?.textColor = Color.primaryText
             
           return cell
         }
