@@ -19,6 +19,7 @@ class EventsViewController: ViewController<EventsCoordinator,
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionViewLayout()
+        setupNavigationItems()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -28,6 +29,17 @@ class EventsViewController: ViewController<EventsCoordinator,
     
     func setupCollectionViewLayout() {
         tableView?.delegate = self
+    }
+    
+    func setupNavigationItems() {
+        let rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
+                                                 target: self,
+                                                 action: #selector(didTapAddButton(_:)))
+        navigationItem.rightBarButtonItem = rightBarButtonItem
+    }
+    
+    @objc func didTapAddButton(_ sender: Any?) {
+        viewCoordinator?.store?.dispatch(EventsAddAction())
     }
 }
 
