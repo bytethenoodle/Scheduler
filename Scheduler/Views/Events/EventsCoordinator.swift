@@ -49,52 +49,37 @@ class EventsCoordinator: ViewCoordinator {
         transitionViewWithState(state)
     }
     
-    func transitionViewWithState(_ state: StoreSubscriberStateType) {
-        guard let viewController = viewController else {return}
-        
+    func transitionViewWithState(_ state: StoreSubscriberStateType) {        
         switch state.eventsViewState {
         case .add:
-            
-            let alert = UIAlertController(title: "Create Event",
-                                          message: nil, preferredStyle: .alert)
-            
-            alert.addTextField { (field) in
-                field.placeholder = "Title"
-            }
-            alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { al in
-                let fieldString = alert.textFields?.first?.text ?? String.empty
-                EventRepository.addEvent(date: state.selectedDate, title: fieldString)
-                self.store?.dispatch(EventsAction())
-            }))
-            
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-            viewController.present(alert, animated: true, completion: nil)
-            
+            let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+            setupAlert(alert: alert, event: nil, actions: [
+                UIAlertAction(title: "Save", style: .default, handler: { al in
+                    let fieldString = alert.textFields?.first?.text ?? String.empty
+                    EventRepository.addEvent(date: state.selectedDate, title: fieldString)
+                    self.store?.dispatch(EventsAction())
+                }),
+                UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            ])
             break
         case .edit:
             
             guard let selectedIndex = state.selectedIndex else {break}
             let event = state.events[selectedIndex]
+            let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+            setupAlert(alert: alert, event: event, actions: [
+                UIAlertAction(title: "Save", style: .default, handler: { al in
+                    let fieldString = alert.textFields?.first?.text ?? String.empty
+                    EventRepository.edit(event, title: fieldString)
+                    self.store?.dispatch(EventsAction())
+                }),
+                UIAlertAction(title: "Delete", style: .default, handler: { al in
+                    EventRepository.delete(event)
+                    self.store?.dispatch(EventsAction())
+                }),
+                UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            ])
             
-            let alert = UIAlertController(title: "Edit Event",
-                                          message: nil, preferredStyle: .alert)
-            
-            alert.addTextField { (field) in
-                field.text = event.title
-            }
-            alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { al in
-                let fieldString = alert.textFields?.first?.text ?? String.empty
-                EventRepository.edit(event, title: fieldString)
-                self.store?.dispatch(EventsAction())
-            }))
-            
-            alert.addAction(UIAlertAction(title: "Delete", style: .default, handler: { al in
-                EventRepository.delete(event)
-                self.store?.dispatch(EventsAction())
-            }))
-            
-            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-            viewController.present(alert, animated: true, completion: nil)
             break
         default:
             break
@@ -115,5 +100,22 @@ class EventsCoordinator: ViewCoordinator {
         
         viewController.tableView?.dataSource = viewController.tableDataSource
         viewController.tableView?.reloadData()
+    }
+    
+    func setupAlert(alert: UIAlertController, event: Event?, actions: [UIAlertAction]) {
+        guard let viewController = viewController else {return}
+        
+        alert.title = event == nil ? "Create Event" : "Edit Event"
+
+        alert.addTextField { (field) in
+            field.placeholder = "Title"
+            field.text = event?.title
+        }
+        
+        for action in actions {
+            alert.addAction(action)
+        }
+        
+        viewController.present(alert, animated: true, completion: nil)
     }
 }
