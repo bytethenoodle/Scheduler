@@ -72,7 +72,29 @@ class EventsCoordinator: ViewCoordinator {
             
             break
         case .edit:
-            print("---> \(state.selectedIndex)")
+            
+            guard let selectedIndex = state.selectedIndex else {break}
+            let event = state.events[selectedIndex]
+            
+            let alert = UIAlertController(title: "Edit Event",
+                                          message: nil, preferredStyle: .alert)
+            
+            alert.addTextField { (field) in
+                field.text = event.title
+            }
+            alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { al in
+                let fieldString = alert.textFields?.first?.text ?? String.empty
+                EventRepository.edit(event, title: fieldString)
+                self.store?.dispatch(EventsAction())
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Delete", style: .default, handler: { al in
+                EventRepository.delete(event)
+                self.store?.dispatch(EventsAction())
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            viewController.present(alert, animated: true, completion: nil)
             break
         default:
             break
