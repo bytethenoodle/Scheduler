@@ -74,7 +74,7 @@ class CalendarCoordinator: ViewCoordinator {
                     cell.hasDate()
                 }
                 
-          return cell
+                return cell
         }
 
         viewController.collectionView?.dataSource = viewController.collectionViewDataSource

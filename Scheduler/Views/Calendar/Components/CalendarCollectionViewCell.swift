@@ -11,13 +11,17 @@ import UIKit
 class CalendarCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var dateLabel: PrimaryLabel?
-    @IBOutlet weak var indicatorView: UIView?
     
+    @IBOutlet weak var indicatorStackView: UIStackView?
+    @IBOutlet weak var indicatorView: UIView?
+
     func hasDate() {
+        indicatorStackView?.isHidden = false
         indicatorView?.backgroundColor = Color.primary
     }
     
     func hasNoDate() {
+        indicatorStackView?.isHidden = true
         indicatorView?.backgroundColor = Color.primaryBackground
     }
 }

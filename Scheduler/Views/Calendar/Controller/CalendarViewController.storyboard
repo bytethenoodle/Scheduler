@@ -34,8 +34,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wsc-0y-JWA">
-                                                    <rect key="frame" x="8" y="46" width="112" height="36.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="wsc-0y-JWA">
+                                                    <rect key="frame" x="8" y="48" width="112" height="32.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoB-1X-2XC" customClass="PrimaryLabel" customModule="Scheduler" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="0.0" width="112" height="20.5"/>
@@ -44,7 +44,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Pp-tx-Qcy">
-                                                            <rect key="frame" x="0.0" y="28.5" width="112" height="8"/>
+                                                            <rect key="frame" x="0.0" y="24.5" width="112" height="8"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPP-Ix-QwV">
                                                                     <rect key="frame" x="0.0" y="0.0" width="32" height="8"/>
@@ -76,6 +76,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="dateLabel" destination="AoB-1X-2XC" id="cxV-BZ-tH3"/>
+                                            <outlet property="indicatorStackView" destination="1Pp-tx-Qcy" id="rqi-WV-Xzp"/>
                                             <outlet property="indicatorView" destination="YG7-YV-erm" id="ayB-L1-ILr"/>
                                         </connections>
                                     </collectionViewCell>
