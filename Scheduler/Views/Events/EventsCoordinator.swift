@@ -46,6 +46,16 @@ class EventsCoordinator: ViewCoordinator {
         viewController.navigationItem.title = state.navigationTitle
         
         setupTable(state: state)
+        transitionViewWithState(state)
+    }
+    
+    func transitionViewWithState(_ state: StoreSubscriberStateType) {
+        switch state.eventsViewState {
+        case .add:
+            break
+        default:
+            break
+        }
     }
     
     func setupTable(state: EventsState) {

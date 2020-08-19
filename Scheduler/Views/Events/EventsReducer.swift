@@ -15,8 +15,15 @@ final class EventsReducer: ActionReducer {
     
     func reduce(action: ActionType, state: ReducerStateType?) -> ReducerStateType {
         var state = state ?? ReducerStateType()
+        state.eventsViewState = .normal
         
         switch action {
+        case _ as EventsAddAction:
+            state.eventsViewState = .add
+            break
+        case _ as EventsEditAction:
+            state.eventsViewState = .edit
+            break
         default:
             break
         }

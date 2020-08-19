@@ -12,10 +12,13 @@ struct EventsState: StateType {
     var navigationTitle: String
     var selectedDate: Date?
     
+    var eventsViewState: EventsViewState
+    
     init(selectedDate: Date? = nil) {
         self.selectedDate = selectedDate
         
         navigationTitle = selectedDate?.dateString() ?? String.empty
+        eventsViewState = .normal
     }
     
     var events: [Event] {

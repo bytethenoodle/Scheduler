@@ -10,6 +10,9 @@
 		520B179724E9FF800061C03C /* KeyboardObservableStateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B179624E9FF800061C03C /* KeyboardObservableStateType.swift */; };
 		520B179924EA03510061C03C /* KeyboardObservableActionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B179824EA03510061C03C /* KeyboardObservableActionReducer.swift */; };
 		520B55A324E93335007621DE /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B55A224E93335007621DE /* View.swift */; };
+		5213424D24ECA2DD00C10AC2 /* EventsViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213424C24ECA2DD00C10AC2 /* EventsViewState.swift */; };
+		5213425024ECA35900C10AC2 /* EventsAddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213424F24ECA35900C10AC2 /* EventsAddAction.swift */; };
+		5213425224ECA36300C10AC2 /* EventsEditAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213425124ECA36300C10AC2 /* EventsEditAction.swift */; };
 		521E417724EC1BFB005F0318 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E417624EC1BFB005F0318 /* Date.swift */; };
 		521E417924EC2AD9005F0318 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E417824EC2AD9005F0318 /* CollectionViewDataSource.swift */; };
 		521E417B24EC2C6E005F0318 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E417A24EC2C6E005F0318 /* CalendarCollectionViewCell.swift */; };
@@ -121,6 +124,9 @@
 		520B179624E9FF800061C03C /* KeyboardObservableStateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservableStateType.swift; sourceTree = "<group>"; };
 		520B179824EA03510061C03C /* KeyboardObservableActionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservableActionReducer.swift; sourceTree = "<group>"; };
 		520B55A224E93335007621DE /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		5213424C24ECA2DD00C10AC2 /* EventsViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewState.swift; sourceTree = "<group>"; };
+		5213424F24ECA35900C10AC2 /* EventsAddAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAddAction.swift; sourceTree = "<group>"; };
+		5213425124ECA36300C10AC2 /* EventsEditAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsEditAction.swift; sourceTree = "<group>"; };
 		521E417624EC1BFB005F0318 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		521E417824EC2AD9005F0318 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
 		521E417A24EC2C6E005F0318 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -250,6 +256,42 @@
 				70526C0E2D27263308DCBFF2 /* Pods_Scheduler.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5213424A24ECA2AB00C10AC2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				52985B9D24EC9D6200F9F27C /* TableViewDataSource.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5213424B24ECA2B500C10AC2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				52985B8F24EC94D100F9F27C /* EventsViewController.swift */,
+				52985B9124EC94DB00F9F27C /* EventsViewController.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5213424E24ECA2E800C10AC2 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				52985B9524EC94F700F9F27C /* EventsState.swift */,
+				5213424C24ECA2DD00C10AC2 /* EventsViewState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		5213425324ECA3A300C10AC2 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				52985B9924EC950F00F9F27C /* EventsAction.swift */,
+				5213424F24ECA35900C10AC2 /* EventsAddAction.swift */,
+				5213425124ECA36300C10AC2 /* EventsEditAction.swift */,
+			);
+			path = Event;
 			sourceTree = "<group>";
 		};
 		522B08FB24EA33CD00BD9719 /* Base */ = {
@@ -589,13 +631,12 @@
 			isa = PBXGroup;
 			children = (
 				52985B9B24EC962600F9F27C /* EventsStore.swift */,
-				52985B9924EC950F00F9F27C /* EventsAction.swift */,
-				52985B9524EC94F700F9F27C /* EventsState.swift */,
 				52985B9724EC950200F9F27C /* EventsReducer.swift */,
 				52985B9324EC94EB00F9F27C /* EventsCoordinator.swift */,
-				52985B8F24EC94D100F9F27C /* EventsViewController.swift */,
-				52985B9124EC94DB00F9F27C /* EventsViewController.storyboard */,
-				52985B9D24EC9D6200F9F27C /* TableViewDataSource.swift */,
+				5213425324ECA3A300C10AC2 /* Event */,
+				5213424E24ECA2E800C10AC2 /* State */,
+				5213424B24ECA2B500C10AC2 /* Controller */,
+				5213424A24ECA2AB00C10AC2 /* Components */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -845,6 +886,7 @@
 				52B9F77424EC081B00AA1DC0 /* CalendarLogoutAction.swift in Sources */,
 				521E417B24EC2C6E005F0318 /* CalendarCollectionViewCell.swift in Sources */,
 				526BB15C24EBD39B00694BD3 /* SceneReducer+Middleware.swift in Sources */,
+				5213425024ECA35900C10AC2 /* EventsAddAction.swift in Sources */,
 				52630EB924E98A4E0018AECE /* KeyboardObservableViewController.swift in Sources */,
 				52985B9624EC94F700F9F27C /* EventsState.swift in Sources */,
 				525C4AC724E633F800659EC6 /* LoginCoordinator.swift in Sources */,
@@ -875,6 +917,7 @@
 				5284C52124E666D20032FFB4 /* LoginReducer.swift in Sources */,
 				5233DDAA24EB8DF200FDBCB2 /* RegistrationSuccessState.swift in Sources */,
 				526302D024E9442A00CDCD1D /* TextField.swift in Sources */,
+				5213425224ECA36300C10AC2 /* EventsEditAction.swift in Sources */,
 				525C4AA824E4BC4500659EC6 /* AppDelegate.swift in Sources */,
 				520B55A324E93335007621DE /* View.swift in Sources */,
 				52B9F76824EC024900AA1DC0 /* CalendarState.swift in Sources */,
@@ -891,6 +934,7 @@
 				5233DDB024EB8F8F00FDBCB2 /* RegistrationSuccessViewState.swift in Sources */,
 				524E5D1A24E826E2001FC71B /* ActionReducer.swift in Sources */,
 				5284C51F24E666C00032FFB4 /* LoginAction.swift in Sources */,
+				5213424D24ECA2DD00C10AC2 /* EventsViewState.swift in Sources */,
 				521E417924EC2AD9005F0318 /* CollectionViewDataSource.swift in Sources */,
 				524E5D1824E821DB001FC71B /* Coordinator.swift in Sources */,
 				526BB16324EBDF1A00694BD3 /* CalendarViewController.swift in Sources */,
