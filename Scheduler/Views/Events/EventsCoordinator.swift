@@ -50,8 +50,26 @@ class EventsCoordinator: ViewCoordinator {
     }
     
     func transitionViewWithState(_ state: StoreSubscriberStateType) {
+        guard let viewController = viewController else {return}
+        
         switch state.eventsViewState {
         case .add:
+            
+            let alert = UIAlertController(title: "Create Event",
+                                          message: nil, preferredStyle: .alert)
+            
+            alert.addTextField { (field) in
+                field.placeholder = "Title"
+            }
+            alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { al in
+                let fieldString = alert.textFields?.first?.text ?? String.empty
+                EventRepository.addEvent(date: state.selectedDate, title: fieldString)
+                self.store?.dispatch(EventsAction())
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            viewController.present(alert, animated: true, completion: nil)
+            
             break
         default:
             break
@@ -60,8 +78,6 @@ class EventsCoordinator: ViewCoordinator {
     
     func setupTable(state: EventsState) {
         guard let viewController = viewController else {return}
-        viewController.navigationItem.title = state.navigationTitle
-        
         viewController.tableDataSource = TableViewDataSource(
             cellIdentifier:String(describing: UITableViewCell.self),
             models: state.events) {cell, model in

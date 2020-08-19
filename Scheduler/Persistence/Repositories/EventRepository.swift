@@ -22,4 +22,21 @@ class EventRepository {
         let userEvents = (try? context.fetch(fetchRequest))?.filter { $0.user == user } ?? []
         return userEvents.filter { $0.date?.dateString() == date.dateString() }
     }
+    
+    static func addEvent(date: Date?, title: String) {
+        let context = Persistence.persistentContainer.viewContext
+
+        let newEvent = NSEntityDescription.insertNewObject(forEntityName: String(describing: Event.self),
+                                                           into: context) as! Event
+        
+        newEvent.title = title
+        newEvent.date = date
+        newEvent.user = SessionRepository.fetch().user
+        
+        do {
+            try context.save()
+        } catch {
+            fatalError("error saving data")
+        }
+    }
 }
