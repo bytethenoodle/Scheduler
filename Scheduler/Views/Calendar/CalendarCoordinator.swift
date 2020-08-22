@@ -38,11 +38,13 @@ class CalendarCoordinator: ViewCoordinator {
     
     func newState(state: CalendarState) {
         guard let viewController = viewController else {return}
+        
         viewController.navigationItem.title = state.navigationTitle
         
         viewController.monthLabel?.text = state.currentDate.monthYearString()
         
-        setupDataSource(state)
+        viewController.setupDataSource(state.dates)
+        
         transitionViewWithState(state)
     }
 
@@ -57,27 +59,5 @@ class CalendarCoordinator: ViewCoordinator {
         default:
             break
         }
-    }
-    
-    func setupDataSource(_ state: StoreSubscriberStateType) {
-        guard let viewController = viewController else {return}
-        viewController.collectionViewDataSource =
-            CollectionViewDataSource(cellIdentifier:String(describing: CalendarCollectionViewCell.self),
-                                     models: state.dates) { cell, model in
-                
-                cell.dateLabel?.text = model?.dayString()
-                cell.dateLabel?.isError = model?.dateString() == Date().dateString()
-                cell.hasNoDate()
-                
-                if let model = model,
-                   !EventRepository.getEvents(date: model).isEmpty {
-                    cell.hasDate()
-                }
-                
-                return cell
-        }
-
-        viewController.collectionView?.dataSource = viewController.collectionViewDataSource
-        viewController.collectionView?.reloadData()
     }
 }

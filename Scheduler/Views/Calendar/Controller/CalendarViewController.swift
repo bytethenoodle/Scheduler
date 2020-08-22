@@ -12,10 +12,14 @@ class CalendarViewController: ViewController<CalendarCoordinator,
                                              CalendarState>,
                               Storyboardable {
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var collectionView: UICollectionView?
     @IBOutlet weak var monthLabel: PrimaryLabel?
 
     var collectionViewDataSource: CollectionViewDataSource<CalendarCollectionViewCell, Date?>?
+    
+    // MARK: - Controller Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +31,8 @@ class CalendarViewController: ViewController<CalendarCoordinator,
         super.viewDidAppear(animated)
         viewCoordinator?.store?.dispatch(CalendarAction())
     }
+    
+    // MARK: - View Setups
     
     func setupNavigationItems() {
         let leftBarButtonItem = UIBarButtonItem(title: "Logout",
@@ -45,6 +51,23 @@ class CalendarViewController: ViewController<CalendarCoordinator,
         collectionView?.collectionViewLayout = columnLayout
         collectionView?.delegate = self
     }
+    
+    func setupDataSource(_ dates: [Date?]) {
+        
+        collectionViewDataSource =
+            CollectionViewDataSource(models: dates) { cell, model in
+                
+                cell.setup(date: model)
+                
+                return cell
+        }
+        
+        collectionView?.register(CalendarCollectionViewCell.self)
+        collectionView?.dataSource = collectionViewDataSource
+        collectionView?.reloadData()
+    }
+    
+    // MARK: - View Actions
     
     @objc func leftBarButtonItemTapped(_ sender: Any?) {
         viewCoordinator?.store?.dispatch(CalendarLogoutAction())

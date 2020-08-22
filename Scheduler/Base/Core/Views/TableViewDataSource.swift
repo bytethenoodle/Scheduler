@@ -27,7 +27,7 @@ final class TableViewDataSource<V, T> : NSObject, UITableViewDataSource where V:
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as? V
+    let cell = tableView.dequeueReusableCell(V.self, for: indexPath)
     
     guard let currentCell = cell else {
       fatalError("Identifier or class not registered with this table view")

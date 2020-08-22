@@ -8,17 +8,15 @@
 
 import UIKit
 
-final class CollectionViewDataSource<V, T> : NSObject, UICollectionViewDataSource where V: CalendarCollectionViewCell {
+final class CollectionViewDataSource<V, T> : NSObject, UICollectionViewDataSource where V: UICollectionViewCell {
   
     typealias CellConfiguration = (V, T) -> V 
   
     private let models: [T]
     private let configureCell: CellConfiguration
-    private let cellIdentifier: String
   
-    init(cellIdentifier: String, models: [T], configureCell: @escaping CellConfiguration) {
+    init(models: [T], configureCell: @escaping CellConfiguration) {
         self.models = models
-        self.cellIdentifier = cellIdentifier
         self.configureCell = configureCell
     }
   
@@ -27,7 +25,8 @@ final class CollectionViewDataSource<V, T> : NSObject, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? V
+        
+        let cell = collectionView.dequeueReusableCell(V.self, for: indexPath)
         
         guard let currentCell = cell else {
           fatalError("Identifier or class not registered with this collection view")

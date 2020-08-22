@@ -43,9 +43,11 @@ class EventsCoordinator: ViewCoordinator {
     
     func newState(state: EventsState) {
         guard let viewController = viewController else {return}
+        
         viewController.navigationItem.title = state.navigationTitle
         
-        setupTable(state: state)
+        viewController.setupTable(events: state.events)
+        
         transitionViewWithState(state)
     }
     
@@ -84,22 +86,6 @@ class EventsCoordinator: ViewCoordinator {
         default:
             break
         }
-    }
-    
-    func setupTable(state: EventsState) {
-        guard let viewController = viewController else {return}
-        viewController.tableDataSource = TableViewDataSource(
-            cellIdentifier:String(describing: UITableViewCell.self),
-            models: state.events) {cell, model in
-            
-            cell.textLabel?.text = model.title
-            cell.textLabel?.textColor = Color.primaryText
-            
-          return cell
-        }
-        
-        viewController.tableView?.dataSource = viewController.tableDataSource
-        viewController.tableView?.reloadData()
     }
     
     func setupAlert(alert: UIAlertController, event: Event?, actions: [UIAlertAction]) {

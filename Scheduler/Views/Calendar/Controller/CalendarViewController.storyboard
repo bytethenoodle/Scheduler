@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17147" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eaj-4p-1QJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eaj-4p-1QJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17120"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17124"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,61 +25,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalendarCollectionViewCell" id="UAo-45-vYE" customClass="CalendarCollectionViewCell" customModule="Scheduler" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="txx-ZB-clR">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="wsc-0y-JWA">
-                                                    <rect key="frame" x="8" y="48" width="112" height="32.5"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AoB-1X-2XC" customClass="PrimaryLabel" customModule="Scheduler" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="0.0" width="112" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Pp-tx-Qcy">
-                                                            <rect key="frame" x="0.0" y="24.5" width="112" height="8"/>
-                                                            <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zPP-Ix-QwV">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="32" height="8"/>
-                                                                </stackView>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YG7-YV-erm">
-                                                                    <rect key="frame" x="40" y="0.0" width="32" height="8"/>
-                                                                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="8" id="xoT-Rs-W9q"/>
-                                                                    </constraints>
-                                                                </view>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqN-5D-cvw">
-                                                                    <rect key="frame" x="80" y="0.0" width="32" height="8"/>
-                                                                </stackView>
-                                                            </subviews>
-                                                        </stackView>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="wsc-0y-JWA" secondAttribute="bottom" constant="8" id="W2x-60-0NH"/>
-                                                <constraint firstItem="wsc-0y-JWA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="txx-ZB-clR" secondAttribute="top" constant="8" id="WMC-up-8XU"/>
-                                                <constraint firstItem="wsc-0y-JWA" firstAttribute="centerY" secondItem="txx-ZB-clR" secondAttribute="centerY" id="dhO-ef-ob1"/>
-                                                <constraint firstItem="wsc-0y-JWA" firstAttribute="leading" secondItem="txx-ZB-clR" secondAttribute="leading" constant="8" id="e8k-V3-L0S"/>
-                                                <constraint firstItem="wsc-0y-JWA" firstAttribute="centerX" secondItem="txx-ZB-clR" secondAttribute="centerX" id="e9J-xX-Lg2"/>
-                                                <constraint firstAttribute="trailing" secondItem="wsc-0y-JWA" secondAttribute="trailing" constant="8" id="eOh-8w-iaw"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <connections>
-                                            <outlet property="dateLabel" destination="AoB-1X-2XC" id="cxV-BZ-tH3"/>
-                                            <outlet property="indicatorStackView" destination="1Pp-tx-Qcy" id="rqi-WV-Xzp"/>
-                                            <outlet property="indicatorView" destination="YG7-YV-erm" id="ayB-L1-ILr"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fkc-lk-g0C">
                                 <rect key="frame" x="32" y="60" width="350" height="30"/>

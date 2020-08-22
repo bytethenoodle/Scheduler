@@ -10,6 +10,7 @@ import Foundation
 
 enum CalendarViewState {
     case normal
-    case logout
     case selected
+    case logoutWarning
+    case logout
 }

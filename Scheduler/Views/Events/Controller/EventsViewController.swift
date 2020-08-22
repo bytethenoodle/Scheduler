@@ -12,9 +12,13 @@ class EventsViewController: ViewController<EventsCoordinator,
                                              EventsState>,
                                             Storyboardable {
     
+    // MARK: - Outlets
+    
     @IBOutlet weak var tableView: UITableView?
     
-    var tableDataSource: TableViewDataSource<UITableViewCell, Event>?
+    var tableDataSource: TableViewDataSource<EventsTableViewCell, Event>?
+    
+    // MARK: - Action
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +31,8 @@ class EventsViewController: ViewController<EventsCoordinator,
         viewCoordinator?.store?.dispatch(EventsAction())
     }
     
+    // MARK: - View Setups
+    
     func setupCollectionViewLayout() {
         tableView?.delegate = self
     }
@@ -37,6 +43,23 @@ class EventsViewController: ViewController<EventsCoordinator,
                                                  action: #selector(didTapAddButton(_:)))
         navigationItem.rightBarButtonItem = rightBarButtonItem
     }
+    
+    func setupTable(events: [Event]) {
+        tableDataSource = TableViewDataSource(
+            cellIdentifier:String(describing: UITableViewCell.self),
+            models: events) {cell, model in
+            
+            cell.setup(event: model)
+            
+          return cell
+        }
+        
+        tableView?.register(EventsTableViewCell.self)
+        tableView?.dataSource = tableDataSource
+        tableView?.reloadData()
+    }
+    
+    // MARK: - Actions
     
     @objc func didTapAddButton(_ sender: Any?) {
         viewCoordinator?.store?.dispatch(EventsAddAction())
