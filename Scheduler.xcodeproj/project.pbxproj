@@ -275,8 +275,7 @@
 		5213424A24ECA2AB00C10AC2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				52C435E324F191F1009B9DB1 /* EventsTableViewCell.swift */,
-				52C435E524F192CD009B9DB1 /* EventsTableViewCell.xib */,
+				52C435E724F193F4009B9DB1 /* EventsTableViewCell */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -693,6 +692,15 @@
 				52C7640E24E8F38100E02E2D /* Extension */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		52C435E724F193F4009B9DB1 /* EventsTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				52C435E324F191F1009B9DB1 /* EventsTableViewCell.swift */,
+				52C435E524F192CD009B9DB1 /* EventsTableViewCell.xib */,
+			);
+			path = EventsTableViewCell;
 			sourceTree = "<group>";
 		};
 		52C7640E24E8F38100E02E2D /* Extension */ = {
