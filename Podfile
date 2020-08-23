@@ -7,5 +7,6 @@ target 'Scheduler' do
 
   # Pods for Scheduler
   pod 'ReSwift'
-  
+  pod 'RxSwift'
+  pod 'RxCocoa'
 end

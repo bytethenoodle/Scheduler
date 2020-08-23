@@ -7,6 +7,8 @@
 //
 
 import ReSwift
+import RxSwift
+import RxCocoa
 
 class EventsCoordinator: ViewCoordinator {
     
@@ -18,6 +20,8 @@ class EventsCoordinator: ViewCoordinator {
     
     var store: EventsStore?
     
+    var disposeBag = DisposeBag()
+
     weak var sceneCoordinator: SceneCoordinator?
     
     weak var viewController: EventsViewController?
@@ -54,54 +58,61 @@ class EventsCoordinator: ViewCoordinator {
     func transitionViewWithState(_ state: StoreSubscriberStateType) {        
         switch state.eventsViewState {
         case .add:
-            let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-            setupAlert(alert: alert, event: nil, actions: [
-                UIAlertAction(title: "Save", style: .default, handler: { al in
-                    let fieldString = alert.textFields?.first?.text ?? String.empty
+            showAlertWithField(title: "Create New Event",
+                               fieldPlaceholder: "Event Title") { [weak self] (alert, field) -> [UIAlertAction] in
+                
+                guard let strongself = self else { return [] }
+
+                let saveAction = UIAlertAction(title: "Save", style: .default, handler: { al in
+                    let fieldString = field?.text ?? String.empty
                     EventRepository.addEvent(date: state.selectedDate, title: fieldString)
-                    self.store?.dispatch(EventsAction())
-                }),
-                UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            ])
+                    strongself.store?.dispatch(EventsAction())})
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                
+                field?.rx.text
+                .bind {
+                    saveAction.isEnabled = !($0?.isEmpty() ?? true)
+                }
+                .disposed(by: strongself.disposeBag)
+                
+                return [saveAction,
+                        cancelAction]
+            }
             break
         case .edit:
             
             guard let selectedIndex = state.selectedIndex else {break}
             let event = state.events[selectedIndex]
-            let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-            setupAlert(alert: alert, event: event, actions: [
-                UIAlertAction(title: "Save", style: .default, handler: { al in
-                    let fieldString = alert.textFields?.first?.text ?? String.empty
+            showAlertWithField(title: "Edit Event",
+                               fieldPlaceholder: "Event Title") { [weak self] (alert, field) -> [UIAlertAction] in
+                
+                guard let strongself = self else { return [] }
+                
+                let saveAction = UIAlertAction(title: "Save", style: .default, handler: { al in
+                    let fieldString = field?.text ?? String.empty
                     EventRepository.edit(event, title: fieldString)
-                    self.store?.dispatch(EventsAction())
-                }),
-                UIAlertAction(title: "Delete", style: .default, handler: { al in
+                    strongself.store?.dispatch(EventsAction())
+                })
+                let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { al in
                     EventRepository.delete(event)
-                    self.store?.dispatch(EventsAction())
-                }),
-                UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            ])
+                    strongself.store?.dispatch(EventsAction())
+                })
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                
+                field?.rx.text
+                .bind {
+                    saveAction.isEnabled = !($0?.isEmpty() ?? true)
+                }
+                .disposed(by: strongself.disposeBag)
+                
+                return [saveAction,
+                        deleteAction,
+                        cancelAction]
+            }
             
             break
         default:
             break
         }
-    }
-    
-    func setupAlert(alert: UIAlertController, event: Event?, actions: [UIAlertAction]) {
-        guard let viewController = viewController else {return}
-        
-        alert.title = event == nil ? "Create Event" : "Edit Event"
-
-        alert.addTextField { (field) in
-            field.placeholder = "Title"
-            field.text = event?.title
-        }
-        
-        for action in actions {
-            alert.addAction(action)
-        }
-        
-        viewController.present(alert, animated: true, completion: nil)
     }
 }

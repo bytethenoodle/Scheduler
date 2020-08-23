@@ -105,6 +105,7 @@
 		52BD22B424ECC9320058BFC5 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD22B224ECC9320058BFC5 /* User+CoreDataProperties.swift */; };
 		52C435E424F191F1009B9DB1 /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C435E324F191F1009B9DB1 /* EventsTableViewCell.swift */; };
 		52C435E624F192CD009B9DB1 /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52C435E524F192CD009B9DB1 /* EventsTableViewCell.xib */; };
+		52C435EA24F1F523009B9DB1 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C435E924F1F523009B9DB1 /* UIViewController.swift */; };
 		52C7640B24E8D89C00E02E2D /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7640A24E8D89C00E02E2D /* Storyboardable.swift */; };
 		52C7640D24E8E8A900E02E2D /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C7640C24E8E8A900E02E2D /* Store.swift */; };
 		52E84FB724E916BC007C2D21 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E84FB624E916BC007C2D21 /* Colors.xcassets */; };
@@ -228,6 +229,7 @@
 		52BD22B224ECC9320058BFC5 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		52C435E324F191F1009B9DB1 /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		52C435E524F192CD009B9DB1 /* EventsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
+		52C435E924F1F523009B9DB1 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		52C7640A24E8D89C00E02E2D /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		52C7640C24E8E8A900E02E2D /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		52E84FB624E916BC007C2D21 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -714,6 +716,7 @@
 				52985B8A24EC415600F9F27C /* Optional.swift */,
 				52225FEB24F18FF900391FB0 /* UITableView.swift */,
 				52225FED24F1901700391FB0 /* UICollectionView.swift */,
+				52C435E924F1F523009B9DB1 /* UIViewController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -941,6 +944,7 @@
 			files = (
 				525C4AAC24E4BC4500659EC6 /* LoginViewController.swift in Sources */,
 				525C4AC524E632C600659EC6 /* SceneRoute.swift in Sources */,
+				52C435EA24F1F523009B9DB1 /* UIViewController.swift in Sources */,
 				522CF5C124EAF64E004B3B01 /* RegistrationProcessAction.swift in Sources */,
 				52985B8B24EC415600F9F27C /* Optional.swift in Sources */,
 				525A54A324EA5F5500CA0274 /* String.swift in Sources */,

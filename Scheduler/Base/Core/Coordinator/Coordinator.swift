@@ -13,4 +13,5 @@ protocol Coordinator: StoreSubscriber {
     associatedtype CoordinatorStoreType
     
     var store: CoordinatorStoreType? { get set }
+    
 }

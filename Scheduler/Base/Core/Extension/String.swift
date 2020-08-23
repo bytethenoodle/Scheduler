@@ -14,7 +14,7 @@ extension String {
     static let space: String = " "
     
     func isEmpty() -> Bool {
-        return self == String.empty
+        return self.trimmingCharacters(in: .whitespacesAndNewlines) == String.empty
     }
     
     func hasUpperLetter() -> Bool {
