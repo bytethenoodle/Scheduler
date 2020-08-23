@@ -15,7 +15,15 @@ final class LoginFlowReducer: ActionReducer {
     typealias ReducerStateType = LoginFlowState
     
     func reduce(action: ActionType, state: ReducerStateType?) -> ReducerStateType {
-        let state = state ?? ReducerStateType(loginFlowRoute: .loginForm)
+        var state = state ?? ReducerStateType(loginFlowRoute: .loginForm)
+        switch action {
+        case let loginFlowAction as LoginFlowAction:
+            state.reference = loginFlowAction.reference
+            state.loginFlowRoute = loginFlowAction.loginFlowRoute
+            break
+        default:
+            break
+        }
         return state
     }
 }

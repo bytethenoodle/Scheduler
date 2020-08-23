@@ -15,7 +15,16 @@ final class CalendarFlowReducer: ActionReducer {
     typealias ReducerStateType = CalendarFlowState
     
     func reduce(action: ActionType, state: ReducerStateType?) -> ReducerStateType {
-        let state = state ?? ReducerStateType(calendarFlowRoute: .calendar)
+        var state = state ?? ReducerStateType(calendarFlowRoute: .calendar)
+        switch action {
+        case let calendarFlowAction as CalendarFlowAction:
+            state.reference = calendarFlowAction.reference
+            state.calendarFlowRoute = (SessionRepository.fetch().user == nil ?
+                                        .logout : calendarFlowAction.calendarFlowRoute)
+            break
+        default:
+            break
+        }
         return state
     }
 }

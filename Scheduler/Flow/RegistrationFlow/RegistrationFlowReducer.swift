@@ -15,7 +15,15 @@ final class RegistrationFlowReducer: ActionReducer {
     typealias ReducerStateType = RegistrationFlowState
     
     func reduce(action: ActionType, state: ReducerStateType?) -> ReducerStateType {
-        let state = state ?? ReducerStateType(registrationFlowRoute: .registrationForm)
+        var state = state ?? ReducerStateType(registrationFlowRoute: .registrationForm)
+        switch action {
+        case let registrationFlowAction as RegistrationFlowAction:
+            state.reference = registrationFlowAction.reference
+            state.registrationFlowRoute = registrationFlowAction.registrationFlowRoute
+            break
+        default:
+            break
+        }
         return state
     }
 }
