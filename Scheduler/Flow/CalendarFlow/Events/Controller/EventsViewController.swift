@@ -7,6 +7,7 @@
 //
 
 import ReSwift
+import RxCocoa
 
 class EventsViewController: ViewController<EventsCoordinator,
                                              EventsState>,
@@ -79,6 +80,59 @@ class EventsViewController: ViewController<EventsCoordinator,
     
     @objc func didTapDeleteAlertAction(event: Event) {
         viewCoordinator?.store?.dispatch(EventsPerformDeleteAction(event: event))
+    }
+    
+    // MARK: - Alert Setups
+    
+    func showAddAlert(selectedDate: Date?) {
+        showAlertWithField(title: "Create New Event",
+                           fieldPlaceholder: "Event Title") { [weak self] (alert, field) -> [UIAlertAction] in
+            
+            guard let strongself = self else { return [] }
+
+            let saveAction = UIAlertAction(title: "Save", style: .default, handler: { _ in
+                strongself.didTapAddAlertAction(selectedDate: selectedDate,
+                                                title: field?.text ?? String.empty)
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+            field?.rx.text
+            .bind {
+                saveAction.isEnabled = !($0?.isEmpty() ?? true)
+            }
+            .disposed(by: strongself.disposeBag)
+            
+            return [saveAction,
+                    cancelAction]
+        }
+    }
+    
+    func showEditAlert(event: Event) {
+        showAlertWithField(title: "Edit Event",
+                           fieldPlaceholder: "Event Title",
+                           fieldText: event.title) { [weak self] (alert, field) -> [UIAlertAction] in
+            
+            guard let strongself = self else { return [] }
+            
+            let editAction = UIAlertAction(title: "Edit", style: .default, handler: { _ in
+                strongself.didTapEditAlertAction(event: event,
+                                                     title: field?.text ?? String.empty)
+            })
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
+                strongself.didTapDeleteAlertAction(event: event)
+            })
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            
+            field?.rx.text
+            .bind {
+                editAction.isEnabled = !($0?.isEmpty() ?? true)
+            }
+            .disposed(by: strongself.disposeBag)
+            
+            return [editAction,
+                    deleteAction,
+                    cancelAction]
+        }
     }
 }
 

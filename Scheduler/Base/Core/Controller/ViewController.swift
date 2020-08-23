@@ -7,12 +7,15 @@
 //
 
 import ReSwift
+import RxSwift
 
 class ViewController<C: Coordinator, S: StateType>: UIViewController, ViewControllerCoordinatable {
     
     typealias CoordinatorType = C
     
     var viewCoordinator: C?
+    
+    var disposeBag = DisposeBag()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         get {

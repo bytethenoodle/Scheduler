@@ -28,4 +28,27 @@ extension UIViewController {
         
         return self
     }
+    
+    func showAlertWithField(title: String? = nil,
+                            meesage: String? = nil,
+                            fieldPlaceholder: String? = nil,
+                            fieldText: String? = nil,
+                            actions: @escaping (_ alert: UIAlertController, _ field: UITextField?) -> [UIAlertAction]) {
+        
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        
+        alert.title = title
+        alert.message = meesage
+
+        alert.addTextField { (field) in
+            field.placeholder = fieldPlaceholder
+            field.text = fieldText
+        }
+        
+        for action in actions(alert, alert.textFields?.first) {
+            alert.addAction(action)
+        }
+        
+        present(alert, animated: true, completion: nil)
+    }
 }
