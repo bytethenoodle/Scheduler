@@ -13,27 +13,27 @@ class RegistrationSuccessCoordinator: ViewCoordinator {
     typealias StoreSubscriberStateType = RegistrationSuccessState
     typealias CoordinatorStoreType = RegistrationSuccessStore
     typealias ViewControllerType = RegistrationSuccessViewController
-    
+    typealias FlowCoordinatorType = RegistrationFlowCoordinator
+
     var store: CoordinatorStoreType?
         
-    weak var sceneCoordinator: SceneCoordinator?
-    
+    var flowCoordinator: FlowCoordinatorType?
+
     weak var viewController: RegistrationSuccessViewController?
     
-    required init(sceneCoordinator: SceneCoordinator) {
+    required init(flowCoordinator: FlowCoordinatorType) {
         let reducer = RegistrationSuccessReducer()
         self.store = CoordinatorStoreType(reducer: reducer.reduce,
                                           state: RegistrationSuccessState())
-        self.sceneCoordinator = sceneCoordinator
+        self.flowCoordinator = flowCoordinator
     }
 
     func start() {
-        guard let navigationController = sceneCoordinator?.window?.rootViewController as? NavigationController,
-              let registrationViewController = ViewControllerType.instantiateFromStoryboard()
+        guard let registrationSuccessViewController = ViewControllerType.instantiateFromStoryboard()
         else { return }
-        viewController = registrationViewController
-        registrationViewController.viewCoordinator = self
-        navigationController.pushViewController(registrationViewController, animated: true)
+        viewController = registrationSuccessViewController
+        registrationSuccessViewController.viewCoordinator = self
+        flowCoordinator?.navigationController?.pushViewController(registrationSuccessViewController, animated: true)
     }
     
     func newState(state: StoreSubscriberStateType) {
@@ -54,7 +54,7 @@ class RegistrationSuccessCoordinator: ViewCoordinator {
     func transitionViewWithState(_ state: StoreSubscriberStateType) {
         switch state.registrationSuccessViewState {
         case .login:
-            sceneCoordinator?.store?.dispatch(SceneAction(sceneRoute: .login))
+            flowCoordinator?.store?.dispatch(RegistrationFlowAction(registrationFlowRoute: .loginForm))
             break
         default:
             break

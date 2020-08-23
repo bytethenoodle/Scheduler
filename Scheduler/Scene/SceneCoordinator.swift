@@ -31,20 +31,13 @@ final class SceneCoordinator: Coordinator {
     func newState(state: StoreSubscriberStateType) {
         switch state.sceneRoute {
         case .login, .logout:
-            LoginCoordinator(sceneCoordinator: self).start()
+            LoginFlowCoordinator(sceneCoordinator: self).start()
             break
         case .registration:
-            RegistrationCoordinator(sceneCoordinator: self).start()
-            break
-        case .registrationSuccess:
-            RegistrationSuccessCoordinator(sceneCoordinator: self).start()
+            RegistrationFlowCoordinator(sceneCoordinator: self).start()
             break
         case .calendar:
-            CalendarCoordinator(sceneCoordinator: self).start()
-            break
-        case .events:
-            EventsCoordinator(sceneCoordinator: self,
-                              reference: state.reference).start()
+            CalendarFlowCoordinator(sceneCoordinator: self).start()
             break
         }
     }

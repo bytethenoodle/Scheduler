@@ -10,5 +10,5 @@ import Foundation
 
 enum RegistrationViewState {
     case normal
-    case register
+    case registered
 }

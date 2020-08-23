@@ -10,13 +10,14 @@ import ReSwift
 
 protocol ViewCoordinator: Coordinator {
     
+    associatedtype FlowCoordinatorType: FlowCoordinator
     associatedtype ViewControllerType: ViewControllerCoordinatable
     
-    var sceneCoordinator: SceneCoordinator? {get set}
+    var flowCoordinator: FlowCoordinatorType? {get set}
     
     var viewController: ViewControllerType? {get set}
     
-    init(sceneCoordinator: SceneCoordinator)
+    init(flowCoordinator: FlowCoordinatorType)
     
     func start()
 }

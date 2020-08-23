@@ -11,32 +11,30 @@ import ReSwift
 class RegistrationCoordinator: KeyboardObservableViewCoordinator {
     
     typealias ViewControllerType = RegistrationViewController
-    
     typealias CoordinatorStoreType = RegistrationStore
-    
     typealias StoreSubscriberStateType = RegistrationState
-    
+    typealias FlowCoordinatorType = RegistrationFlowCoordinator
+
     var store: RegistrationStore?
     
-    weak var sceneCoordinator: SceneCoordinator?
-    
+    var flowCoordinator: FlowCoordinatorType?
+
     weak var viewController: RegistrationViewController?
     
-    required init(sceneCoordinator: SceneCoordinator) {
+    required init(flowCoordinator: FlowCoordinatorType) {
         let reducer = RegistrationReducer()
         self.store = CoordinatorStoreType(reducer: reducer.reduce,
                                           state: RegistrationState(),
                                           middleware: [reducer.middleware()])
-        self.sceneCoordinator = sceneCoordinator
+        self.flowCoordinator = flowCoordinator
     }
     
     func start() {
-        guard let navigationController = sceneCoordinator?.window?.rootViewController as? NavigationController,
-              let registrationViewController = ViewControllerType.instantiateFromStoryboard()
+        guard let registrationViewController = ViewControllerType.instantiateFromStoryboard()
         else { return }
         viewController = registrationViewController
         registrationViewController.viewCoordinator = self
-        navigationController.pushViewController(registrationViewController, animated: true)
+        flowCoordinator?.navigationController?.pushViewController(registrationViewController, animated: true)
     }
     
     func keyboardObservableNewState(state: StoreSubscriberStateType) {
@@ -67,7 +65,7 @@ class RegistrationCoordinator: KeyboardObservableViewCoordinator {
         viewController.errorTitleLabel?.isHidden = !state.hasError
         
         switch state.registrationViewState {
-        case .register:
+        case .registered:
             viewController.usernameField?.text = String.empty
             viewController.passwordField?.text = String.empty
             viewController.retypePasswordField?.text = String.empty
@@ -80,8 +78,8 @@ class RegistrationCoordinator: KeyboardObservableViewCoordinator {
     
     func transitionViewWithState(_ state: StoreSubscriberStateType) {
         switch state.registrationViewState {
-        case .register:
-            sceneCoordinator?.store?.dispatch(SceneAction(sceneRoute: .registrationSuccess))
+        case .registered:
+            flowCoordinator?.store?.dispatch(RegistrationFlowAction(registrationFlowRoute: .registrationSuccess))
             break
         default:
             break

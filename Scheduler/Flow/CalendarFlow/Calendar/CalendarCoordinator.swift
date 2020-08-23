@@ -13,27 +13,27 @@ class CalendarCoordinator: ViewCoordinator {
     typealias StoreSubscriberStateType = CalendarState
     typealias CoordinatorStoreType = CalendarStore
     typealias ViewControllerType = CalendarViewController
-    
+    typealias FlowCoordinatorType = CalendarFlowCoordinator
+
     var store: CalendarStore?
     
-    weak var sceneCoordinator: SceneCoordinator?
-    
+    var flowCoordinator: FlowCoordinatorType?
+
     weak var viewController: CalendarViewController?
     
-    required init(sceneCoordinator: SceneCoordinator) {
+    required init(flowCoordinator: FlowCoordinatorType) {
         let reducer = CalendarReducer()
         self.store = CoordinatorStoreType(reducer: reducer.reduce,
                                           state: CalendarState())
-        self.sceneCoordinator = sceneCoordinator
+        self.flowCoordinator = flowCoordinator
     }
     
     func start() {
-        guard let calendarViewController = ViewControllerType.instantiateFromStoryboard() else { return }
+        guard let calendarViewController = ViewControllerType.instantiateFromStoryboard()
+        else { return }
         viewController = calendarViewController
         calendarViewController.viewCoordinator = self
-
-        let navigationController = NavigationController(rootViewController: calendarViewController)
-        sceneCoordinator?.window?.rootViewController = navigationController
+        flowCoordinator?.navigationController?.pushViewController(calendarViewController, animated: true)
     }
     
     func newState(state: CalendarState) {
@@ -51,11 +51,11 @@ class CalendarCoordinator: ViewCoordinator {
     func transitionViewWithState(_ state: StoreSubscriberStateType) {
         switch state.calendarViewState {
         case .logout:
-            sceneCoordinator?.store?.dispatch(SceneAction(sceneRoute: .logout))
+            flowCoordinator?.store?.dispatch(CalendarFlowAction(calendarFlowRoute: .logout))
             break
         case .selected:
-            sceneCoordinator?.store?.dispatch(SceneAction(sceneRoute: .events,
-                                                          reference: state.selectedDate))
+            flowCoordinator?.store?.dispatch(CalendarFlowAction(calendarFlowRoute: .event,
+                                                                reference: state.selectedDate))
         default:
             break
         }

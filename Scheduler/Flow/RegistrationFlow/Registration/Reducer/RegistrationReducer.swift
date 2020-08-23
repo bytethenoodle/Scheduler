@@ -18,7 +18,7 @@ final class RegistrationReducer: KeyboardObservableActionReducer<RegistrationSta
         switch action {
             case let registrationProcessAction as RegistrationProcessAction:
                 state.registrationErrorStates = registrationProcessAction.registrationErrorStates
-                registrationProcessAction.registrationErrorStates.isEmpty ? (state.registrationViewState = .register) :
+                registrationProcessAction.registrationErrorStates.isEmpty ? (state.registrationViewState = .registered) :
                                                                             (state.registrationViewState = .normal)
                 break
             default:

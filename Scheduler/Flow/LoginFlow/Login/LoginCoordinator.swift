@@ -13,19 +13,20 @@ class LoginCoordinator: KeyboardObservableViewCoordinator {
     typealias StoreSubscriberStateType = LoginState
     typealias CoordinatorStoreType = LoginStore
     typealias ViewControllerType = LoginViewController
-    
+    typealias FlowCoordinatorType = LoginFlowCoordinator
+
     var store: CoordinatorStoreType?
     
-    weak var sceneCoordinator: SceneCoordinator?
+    var flowCoordinator: FlowCoordinatorType?
     
     weak var viewController: ViewControllerType?
     
-    required init(sceneCoordinator: SceneCoordinator) {
+    required init(flowCoordinator: FlowCoordinatorType) {
         let reducer = LoginReducer()
         self.store = CoordinatorStoreType(reducer: reducer.reduce,
                                           state: LoginState(),
                                           middleware: [reducer.middleware()])
-        self.sceneCoordinator = sceneCoordinator
+        self.flowCoordinator = flowCoordinator
     }
     
     func start() {
@@ -33,8 +34,7 @@ class LoginCoordinator: KeyboardObservableViewCoordinator {
         viewController = loginViewController
         loginViewController.viewCoordinator = self
 
-        let navigationController = NavigationController(rootViewController: loginViewController)
-        sceneCoordinator?.window?.rootViewController = navigationController
+        flowCoordinator?.navigationController?.setViewControllers([loginViewController], animated: true)
     }
     
     func keyboardObservableNewState(state: StoreSubscriberStateType) {
@@ -72,10 +72,10 @@ class LoginCoordinator: KeyboardObservableViewCoordinator {
     func transitionViewWithState(_ state: StoreSubscriberStateType) {
         switch state.loginViewState {
         case .login:
-            sceneCoordinator?.store?.dispatch(SceneAction(sceneRoute: .calendar))
+            flowCoordinator?.store?.dispatch(LoginFlowAction(loginFlowRoute: .calendar))
             break
         case .register:
-            sceneCoordinator?.store?.dispatch(SceneAction(sceneRoute: .registration))
+            flowCoordinator?.store?.dispatch(LoginFlowAction(loginFlowRoute: .registrationForm))
             break
         default:
             break
