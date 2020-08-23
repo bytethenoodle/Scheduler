@@ -13,6 +13,7 @@ struct EventsState: StateType {
     var selectedDate: Date?
     
     var selectedIndex: Int?
+    var inputTitle: String?
     
     var eventsViewState: EventsViewState
     

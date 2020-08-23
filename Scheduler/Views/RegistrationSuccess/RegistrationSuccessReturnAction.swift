@@ -1,5 +1,5 @@
 //
-//  RegistrationSuccessAction.swift
+//  RegistrationSuccessReturnAction.swift
 //  Scheduler
 //
 //  Created by Elbert John Orozco on 2020/08/18.
@@ -8,4 +8,4 @@
 
 import ReSwift
 
-struct RegistrationSuccessAction: Action {}
+struct RegistrationSuccessReturnAction: Action {}

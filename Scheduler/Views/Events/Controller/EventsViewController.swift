@@ -28,7 +28,7 @@ class EventsViewController: ViewController<EventsCoordinator,
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewCoordinator?.store?.dispatch(EventsAction())
+        viewCoordinator?.store?.dispatch(EventsRefreshViewAction())
     }
     
     // MARK: - View Setups
@@ -62,7 +62,7 @@ class EventsViewController: ViewController<EventsCoordinator,
     // MARK: - Actions
     
     @objc func didTapAddButton(_ sender: Any?) {
-        viewCoordinator?.store?.dispatch(EventsAddAction())
+        viewCoordinator?.store?.dispatch(EventsShowAddAction())
     }
 }
 
@@ -70,6 +70,6 @@ extension EventsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        viewCoordinator?.store?.dispatch(EventsEditAction(selectedIndex: indexPath.row))
+        viewCoordinator?.store?.dispatch(EventsShowEditAction(selectedIndex: indexPath.row))
     }
 }

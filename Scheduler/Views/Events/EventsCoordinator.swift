@@ -55,9 +55,11 @@ class EventsCoordinator: ViewCoordinator {
         transitionViewWithState(state)
     }
     
-    func transitionViewWithState(_ state: StoreSubscriberStateType) {        
+    func transitionViewWithState(_ state: StoreSubscriberStateType) {
+        guard let viewController = viewController else {return}
+
         switch state.eventsViewState {
-        case .add:
+        case .showAdd:
             showAlertWithField(title: "Create New Event",
                                fieldPlaceholder: "Event Title") { [weak self] (alert, field) -> [UIAlertAction] in
                 
@@ -66,7 +68,7 @@ class EventsCoordinator: ViewCoordinator {
                 let saveAction = UIAlertAction(title: "Save", style: .default, handler: { al in
                     let fieldString = field?.text ?? String.empty
                     EventRepository.addEvent(date: state.selectedDate, title: fieldString)
-                    strongself.store?.dispatch(EventsAction())})
+                    strongself.store?.dispatch(EventsRefreshViewAction())})
                 let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
                 
                 field?.rx.text
@@ -79,33 +81,34 @@ class EventsCoordinator: ViewCoordinator {
                         cancelAction]
             }
             break
-        case .edit:
+        case .showEdit:
             
             guard let selectedIndex = state.selectedIndex else {break}
             let event = state.events[selectedIndex]
             showAlertWithField(title: "Edit Event",
-                               fieldPlaceholder: "Event Title") { [weak self] (alert, field) -> [UIAlertAction] in
+                               fieldPlaceholder: "Event Title",
+                               fieldText: event.title) { [weak self] (alert, field) -> [UIAlertAction] in
                 
                 guard let strongself = self else { return [] }
                 
-                let saveAction = UIAlertAction(title: "Save", style: .default, handler: { al in
+                let editAction = UIAlertAction(title: "Edit", style: .default, handler: { al in
                     let fieldString = field?.text ?? String.empty
                     EventRepository.edit(event, title: fieldString)
-                    strongself.store?.dispatch(EventsAction())
+                    strongself.store?.dispatch(EventsRefreshViewAction())
                 })
                 let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { al in
                     EventRepository.delete(event)
-                    strongself.store?.dispatch(EventsAction())
+                    strongself.store?.dispatch(EventsRefreshViewAction())
                 })
                 let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
                 
                 field?.rx.text
                 .bind {
-                    saveAction.isEnabled = !($0?.isEmpty() ?? true)
+                    editAction.isEnabled = !($0?.isEmpty() ?? true)
                 }
                 .disposed(by: strongself.disposeBag)
                 
-                return [saveAction,
+                return [editAction,
                         deleteAction,
                         cancelAction]
             }

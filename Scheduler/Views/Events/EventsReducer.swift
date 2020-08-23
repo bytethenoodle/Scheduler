@@ -18,11 +18,11 @@ final class EventsReducer: ActionReducer {
         state.eventsViewState = .normal
         
         switch action {
-        case _ as EventsAddAction:
-            state.eventsViewState = .add
+        case _ as EventsShowAddAction:
+            state.eventsViewState = .showAdd
             break
-        case let eventsEditAction as EventsEditAction:
-            state.eventsViewState = .edit
+        case let eventsEditAction as EventsShowEditAction:
+            state.eventsViewState = .showEdit
             state.selectedIndex = eventsEditAction.selectedIndex
             break
         default:

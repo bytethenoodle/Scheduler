@@ -1,5 +1,5 @@
 //
-//  EventsAddAction.swift
+//  EventsShowAddAction.swift
 //  Scheduler
 //
 //  Created by Elbert John Orozco on 2020/08/19.
@@ -8,7 +8,7 @@
 
 import ReSwift
 
-struct EventsAddAction: Action {
+struct EventsShowAddAction: Action {
     
     
 }

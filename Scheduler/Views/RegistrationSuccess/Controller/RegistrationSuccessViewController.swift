@@ -39,6 +39,6 @@ class RegistrationSuccessViewController: ViewController<RegistrationSuccessCoord
     }
     
     @IBAction func didTapReturnToLoginButton(_ sender: Any?) {
-        viewCoordinator?.store?.dispatch(RegistrationSuccessAction())
+        viewCoordinator?.store?.dispatch(RegistrationSuccessReturnAction())
     }
 }

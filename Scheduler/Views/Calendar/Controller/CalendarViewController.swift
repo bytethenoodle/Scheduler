@@ -29,7 +29,7 @@ class CalendarViewController: ViewController<CalendarCoordinator,
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewCoordinator?.store?.dispatch(CalendarAction())
+        viewCoordinator?.store?.dispatch(CalendarRefreshAction())
     }
     
     // MARK: - View Setups

@@ -17,7 +17,7 @@ final class RegistrationSuccessReducer: ActionReducer {
         var state = state ?? ReducerStateType()
 
         switch action {
-        case _ as RegistrationSuccessAction:
+        case _ as RegistrationSuccessReturnAction:
             state.registrationSuccessViewState = .login
             break
         default:

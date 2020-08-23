@@ -9,7 +9,13 @@
 import Foundation
 
 enum EventsViewState {
+    
     case normal
-    case add
-    case edit
+    
+    case showAdd
+    case showEdit
+    
+    case performAdd
+    case performEdit
+    case PerformDelete
 }

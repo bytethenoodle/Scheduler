@@ -11,8 +11,8 @@
 		520B179924EA03510061C03C /* KeyboardObservableActionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B179824EA03510061C03C /* KeyboardObservableActionReducer.swift */; };
 		520B55A324E93335007621DE /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B55A224E93335007621DE /* View.swift */; };
 		5213424D24ECA2DD00C10AC2 /* EventsViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213424C24ECA2DD00C10AC2 /* EventsViewState.swift */; };
-		5213425024ECA35900C10AC2 /* EventsAddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213424F24ECA35900C10AC2 /* EventsAddAction.swift */; };
-		5213425224ECA36300C10AC2 /* EventsEditAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213425124ECA36300C10AC2 /* EventsEditAction.swift */; };
+		5213425024ECA35900C10AC2 /* EventsShowAddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213424F24ECA35900C10AC2 /* EventsShowAddAction.swift */; };
+		5213425224ECA36300C10AC2 /* EventsShowEditAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213425124ECA36300C10AC2 /* EventsShowEditAction.swift */; };
 		521E417724EC1BFB005F0318 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E417624EC1BFB005F0318 /* Date.swift */; };
 		521E417924EC2AD9005F0318 /* CollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E417824EC2AD9005F0318 /* CollectionViewDataSource.swift */; };
 		52225FEC24F18FF900391FB0 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52225FEB24F18FF900391FB0 /* UITableView.swift */; };
@@ -27,7 +27,7 @@
 		5233DDAC24EB8E0100FDBCB2 /* RegistrationSuccessStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233DDAB24EB8E0100FDBCB2 /* RegistrationSuccessStore.swift */; };
 		5233DDAE24EB8E1500FDBCB2 /* RegistrationSuccessReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233DDAD24EB8E1500FDBCB2 /* RegistrationSuccessReducer.swift */; };
 		5233DDB024EB8F8F00FDBCB2 /* RegistrationSuccessViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233DDAF24EB8F8F00FDBCB2 /* RegistrationSuccessViewState.swift */; };
-		5233DDB424EB957F00FDBCB2 /* RegistrationSuccessAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233DDB324EB957F00FDBCB2 /* RegistrationSuccessAction.swift */; };
+		5233DDB424EB957F00FDBCB2 /* RegistrationSuccessReturnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233DDB324EB957F00FDBCB2 /* RegistrationSuccessReturnAction.swift */; };
 		524E5D1524E818C7001FC71B /* RegistrationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1424E818C7001FC71B /* RegistrationState.swift */; };
 		524E5D1824E821DB001FC71B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1724E821DB001FC71B /* Coordinator.swift */; };
 		524E5D1A24E826E2001FC71B /* ActionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1924E826E2001FC71B /* ActionReducer.swift */; };
@@ -85,7 +85,7 @@
 		52985B9424EC94EB00F9F27C /* EventsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B9324EC94EB00F9F27C /* EventsCoordinator.swift */; };
 		52985B9624EC94F700F9F27C /* EventsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B9524EC94F700F9F27C /* EventsState.swift */; };
 		52985B9824EC950200F9F27C /* EventsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B9724EC950200F9F27C /* EventsReducer.swift */; };
-		52985B9A24EC950F00F9F27C /* EventsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B9924EC950F00F9F27C /* EventsAction.swift */; };
+		52985B9A24EC950F00F9F27C /* EventsRefreshViewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B9924EC950F00F9F27C /* EventsRefreshViewAction.swift */; };
 		52985B9C24EC962600F9F27C /* EventsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B9B24EC962600F9F27C /* EventsStore.swift */; };
 		52985B9E24EC9D6200F9F27C /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52985B9D24EC9D6200F9F27C /* TableViewDataSource.swift */; };
 		52A2FB6024E927F8000ECBFF /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2FB5F24E927F8000ECBFF /* Color.swift */; };
@@ -94,7 +94,7 @@
 		52ACACC824E7905700147137 /* SceneWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ACACC724E7905700147137 /* SceneWindow.swift */; };
 		52B9F76624EC01F000AA1DC0 /* CalendarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9F76524EC01F000AA1DC0 /* CalendarCoordinator.swift */; };
 		52B9F76824EC024900AA1DC0 /* CalendarState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9F76724EC024900AA1DC0 /* CalendarState.swift */; };
-		52B9F76A24EC025B00AA1DC0 /* CalendarAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9F76924EC025B00AA1DC0 /* CalendarAction.swift */; };
+		52B9F76A24EC025B00AA1DC0 /* CalendarRefreshAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9F76924EC025B00AA1DC0 /* CalendarRefreshAction.swift */; };
 		52B9F76C24EC029300AA1DC0 /* CalendarViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9F76B24EC029300AA1DC0 /* CalendarViewState.swift */; };
 		52B9F76E24EC02A300AA1DC0 /* CalendarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B9F76D24EC02A300AA1DC0 /* CalendarViewController.storyboard */; };
 		52B9F77024EC036B00AA1DC0 /* CalendarStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B9F76F24EC036B00AA1DC0 /* CalendarStore.swift */; };
@@ -133,8 +133,8 @@
 		520B179824EA03510061C03C /* KeyboardObservableActionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservableActionReducer.swift; sourceTree = "<group>"; };
 		520B55A224E93335007621DE /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		5213424C24ECA2DD00C10AC2 /* EventsViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewState.swift; sourceTree = "<group>"; };
-		5213424F24ECA35900C10AC2 /* EventsAddAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAddAction.swift; sourceTree = "<group>"; };
-		5213425124ECA36300C10AC2 /* EventsEditAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsEditAction.swift; sourceTree = "<group>"; };
+		5213424F24ECA35900C10AC2 /* EventsShowAddAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsShowAddAction.swift; sourceTree = "<group>"; };
+		5213425124ECA36300C10AC2 /* EventsShowEditAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsShowEditAction.swift; sourceTree = "<group>"; };
 		521E417624EC1BFB005F0318 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		521E417824EC2AD9005F0318 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
 		52225FEB24F18FF900391FB0 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 		5233DDAB24EB8E0100FDBCB2 /* RegistrationSuccessStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessStore.swift; sourceTree = "<group>"; };
 		5233DDAD24EB8E1500FDBCB2 /* RegistrationSuccessReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessReducer.swift; sourceTree = "<group>"; };
 		5233DDAF24EB8F8F00FDBCB2 /* RegistrationSuccessViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessViewState.swift; sourceTree = "<group>"; };
-		5233DDB324EB957F00FDBCB2 /* RegistrationSuccessAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessAction.swift; sourceTree = "<group>"; };
+		5233DDB324EB957F00FDBCB2 /* RegistrationSuccessReturnAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessReturnAction.swift; sourceTree = "<group>"; };
 		524E5D1424E818C7001FC71B /* RegistrationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationState.swift; sourceTree = "<group>"; };
 		524E5D1724E821DB001FC71B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		524E5D1924E826E2001FC71B /* ActionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionReducer.swift; sourceTree = "<group>"; };
@@ -209,7 +209,7 @@
 		52985B9324EC94EB00F9F27C /* EventsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCoordinator.swift; sourceTree = "<group>"; };
 		52985B9524EC94F700F9F27C /* EventsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsState.swift; sourceTree = "<group>"; };
 		52985B9724EC950200F9F27C /* EventsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsReducer.swift; sourceTree = "<group>"; };
-		52985B9924EC950F00F9F27C /* EventsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsAction.swift; sourceTree = "<group>"; };
+		52985B9924EC950F00F9F27C /* EventsRefreshViewAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsRefreshViewAction.swift; sourceTree = "<group>"; };
 		52985B9B24EC962600F9F27C /* EventsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsStore.swift; sourceTree = "<group>"; };
 		52985B9D24EC9D6200F9F27C /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		52A2FB5F24E927F8000ECBFF /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -218,7 +218,7 @@
 		52ACACC724E7905700147137 /* SceneWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneWindow.swift; sourceTree = "<group>"; };
 		52B9F76524EC01F000AA1DC0 /* CalendarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCoordinator.swift; sourceTree = "<group>"; };
 		52B9F76724EC024900AA1DC0 /* CalendarState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarState.swift; sourceTree = "<group>"; };
-		52B9F76924EC025B00AA1DC0 /* CalendarAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAction.swift; sourceTree = "<group>"; };
+		52B9F76924EC025B00AA1DC0 /* CalendarRefreshAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarRefreshAction.swift; sourceTree = "<group>"; };
 		52B9F76B24EC029300AA1DC0 /* CalendarViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewState.swift; sourceTree = "<group>"; };
 		52B9F76D24EC02A300AA1DC0 /* CalendarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarViewController.storyboard; sourceTree = "<group>"; };
 		52B9F76F24EC036B00AA1DC0 /* CalendarStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarStore.swift; sourceTree = "<group>"; };
@@ -300,14 +300,14 @@
 			path = State;
 			sourceTree = "<group>";
 		};
-		5213425324ECA3A300C10AC2 /* Event */ = {
+		5213425324ECA3A300C10AC2 /* Action */ = {
 			isa = PBXGroup;
 			children = (
-				52985B9924EC950F00F9F27C /* EventsAction.swift */,
-				5213424F24ECA35900C10AC2 /* EventsAddAction.swift */,
-				5213425124ECA36300C10AC2 /* EventsEditAction.swift */,
+				52985B9924EC950F00F9F27C /* EventsRefreshViewAction.swift */,
+				5213424F24ECA35900C10AC2 /* EventsShowAddAction.swift */,
+				5213425124ECA36300C10AC2 /* EventsShowEditAction.swift */,
 			);
-			path = Event;
+			path = Action;
 			sourceTree = "<group>";
 		};
 		522B08FB24EA33CD00BD9719 /* Base */ = {
@@ -344,7 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				5233DDAB24EB8E0100FDBCB2 /* RegistrationSuccessStore.swift */,
-				5233DDB324EB957F00FDBCB2 /* RegistrationSuccessAction.swift */,
+				5233DDB324EB957F00FDBCB2 /* RegistrationSuccessReturnAction.swift */,
 				5233DDA724EB8DE800FDBCB2 /* RegistrationSuccessCoordinator.swift */,
 				5233DDAD24EB8E1500FDBCB2 /* RegistrationSuccessReducer.swift */,
 				5233DDB124EB93FE00FDBCB2 /* State */,
@@ -613,7 +613,7 @@
 		52985B8224EC3AFF00F9F27C /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				52B9F76924EC025B00AA1DC0 /* CalendarAction.swift */,
+				52B9F76924EC025B00AA1DC0 /* CalendarRefreshAction.swift */,
 				52B9F77524EC082A00AA1DC0 /* CalendarSelectAction.swift */,
 				52B9F77324EC081B00AA1DC0 /* CalendarLogoutAction.swift */,
 				52985B8624EC3BE100F9F27C /* CalendarIncrementAction.swift */,
@@ -654,7 +654,7 @@
 				52985B9B24EC962600F9F27C /* EventsStore.swift */,
 				52985B9724EC950200F9F27C /* EventsReducer.swift */,
 				52985B9324EC94EB00F9F27C /* EventsCoordinator.swift */,
-				5213425324ECA3A300C10AC2 /* Event */,
+				5213425324ECA3A300C10AC2 /* Action */,
 				5213424E24ECA2E800C10AC2 /* State */,
 				5213424B24ECA2B500C10AC2 /* Controller */,
 				5213424A24ECA2AB00C10AC2 /* Components */,
@@ -953,7 +953,7 @@
 				52FCA62224EA462E0091235F /* KeyboardObservableViewCoordinator.swift in Sources */,
 				52B9F77424EC081B00AA1DC0 /* CalendarLogoutAction.swift in Sources */,
 				526BB15C24EBD39B00694BD3 /* SceneReducer+Middleware.swift in Sources */,
-				5213425024ECA35900C10AC2 /* EventsAddAction.swift in Sources */,
+				5213425024ECA35900C10AC2 /* EventsShowAddAction.swift in Sources */,
 				52C435E424F191F1009B9DB1 /* EventsTableViewCell.swift in Sources */,
 				52630EB924E98A4E0018AECE /* KeyboardObservableViewController.swift in Sources */,
 				52985B9624EC94F700F9F27C /* EventsState.swift in Sources */,
@@ -971,9 +971,9 @@
 				52A2FB6224E92A52000ECBFF /* UIColor.swift in Sources */,
 				5233DDAC24EB8E0100FDBCB2 /* RegistrationSuccessStore.swift in Sources */,
 				525A54A724EA845A00CA0274 /* LoginProcessAction.swift in Sources */,
-				52985B9A24EC950F00F9F27C /* EventsAction.swift in Sources */,
+				52985B9A24EC950F00F9F27C /* EventsRefreshViewAction.swift in Sources */,
 				522CF5BF24EAEAD5004B3B01 /* RegistrationErrorState.swift in Sources */,
-				5233DDB424EB957F00FDBCB2 /* RegistrationSuccessAction.swift in Sources */,
+				5233DDB424EB957F00FDBCB2 /* RegistrationSuccessReturnAction.swift in Sources */,
 				5233DDAE24EB8E1500FDBCB2 /* RegistrationSuccessReducer.swift in Sources */,
 				52B9F76624EC01F000AA1DC0 /* CalendarCoordinator.swift in Sources */,
 				52EF202A24EB7CC7001B20F0 /* UserRepository.swift in Sources */,
@@ -984,7 +984,7 @@
 				5284C52124E666D20032FFB4 /* LoginReducer.swift in Sources */,
 				5233DDAA24EB8DF200FDBCB2 /* RegistrationSuccessState.swift in Sources */,
 				526302D024E9442A00CDCD1D /* TextField.swift in Sources */,
-				5213425224ECA36300C10AC2 /* EventsEditAction.swift in Sources */,
+				5213425224ECA36300C10AC2 /* EventsShowEditAction.swift in Sources */,
 				525C4AA824E4BC4500659EC6 /* AppDelegate.swift in Sources */,
 				520B55A324E93335007621DE /* View.swift in Sources */,
 				52B9F76824EC024900AA1DC0 /* CalendarState.swift in Sources */,
@@ -1015,7 +1015,7 @@
 				526302CE24E9441E00CDCD1D /* ErrorLabel.swift in Sources */,
 				522CE73F24E93EF200F5EF78 /* ViewController.swift in Sources */,
 				52EF201524EB6DB6001B20F0 /* Event+CoreDataProperties.swift in Sources */,
-				52B9F76A24EC025B00AA1DC0 /* CalendarAction.swift in Sources */,
+				52B9F76A24EC025B00AA1DC0 /* CalendarRefreshAction.swift in Sources */,
 				526302D224E9443300CDCD1D /* PrimaryButton.swift in Sources */,
 				52B9F77024EC036B00AA1DC0 /* CalendarStore.swift in Sources */,
 				5284C52D24E67DA80032FFB4 /* ViewControllerCoordinatable.swift in Sources */,

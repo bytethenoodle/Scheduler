@@ -1,5 +1,5 @@
 //
-//  EventsEditAction.swift
+//  EventsShowEditAction.swift
 //  Scheduler
 //
 //  Created by Elbert John Orozco on 2020/08/19.
@@ -8,6 +8,6 @@
 
 import ReSwift
 
-struct EventsEditAction: Action {
+struct EventsShowEditAction: Action {
     var selectedIndex: Int
 }
