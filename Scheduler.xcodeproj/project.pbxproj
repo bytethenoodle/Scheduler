@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5204F97124F20E3F00653B58 /* EventsPerformAddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204F97024F20E3F00653B58 /* EventsPerformAddAction.swift */; };
+		5204F97324F20E4800653B58 /* EventsPerformEditAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204F97224F20E4800653B58 /* EventsPerformEditAction.swift */; };
+		5204F97524F20E5100653B58 /* EventsPerformDeleteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204F97424F20E5100653B58 /* EventsPerformDeleteAction.swift */; };
 		520B179724E9FF800061C03C /* KeyboardObservableStateType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B179624E9FF800061C03C /* KeyboardObservableStateType.swift */; };
 		520B179924EA03510061C03C /* KeyboardObservableActionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B179824EA03510061C03C /* KeyboardObservableActionReducer.swift */; };
 		520B55A324E93335007621DE /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520B55A224E93335007621DE /* View.swift */; };
@@ -129,6 +132,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5204F97024F20E3F00653B58 /* EventsPerformAddAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPerformAddAction.swift; sourceTree = "<group>"; };
+		5204F97224F20E4800653B58 /* EventsPerformEditAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPerformEditAction.swift; sourceTree = "<group>"; };
+		5204F97424F20E5100653B58 /* EventsPerformDeleteAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPerformDeleteAction.swift; sourceTree = "<group>"; };
 		520B179624E9FF800061C03C /* KeyboardObservableStateType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservableStateType.swift; sourceTree = "<group>"; };
 		520B179824EA03510061C03C /* KeyboardObservableActionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObservableActionReducer.swift; sourceTree = "<group>"; };
 		520B55A224E93335007621DE /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -306,6 +312,9 @@
 				52985B9924EC950F00F9F27C /* EventsRefreshViewAction.swift */,
 				5213424F24ECA35900C10AC2 /* EventsShowAddAction.swift */,
 				5213425124ECA36300C10AC2 /* EventsShowEditAction.swift */,
+				5204F97024F20E3F00653B58 /* EventsPerformAddAction.swift */,
+				5204F97224F20E4800653B58 /* EventsPerformEditAction.swift */,
+				5204F97424F20E5100653B58 /* EventsPerformDeleteAction.swift */,
 			);
 			path = Action;
 			sourceTree = "<group>";
@@ -944,6 +953,7 @@
 			files = (
 				525C4AAC24E4BC4500659EC6 /* LoginViewController.swift in Sources */,
 				525C4AC524E632C600659EC6 /* SceneRoute.swift in Sources */,
+				5204F97124F20E3F00653B58 /* EventsPerformAddAction.swift in Sources */,
 				52C435EA24F1F523009B9DB1 /* UIViewController.swift in Sources */,
 				522CF5C124EAF64E004B3B01 /* RegistrationProcessAction.swift in Sources */,
 				52985B8B24EC415600F9F27C /* Optional.swift in Sources */,
@@ -955,6 +965,7 @@
 				526BB15C24EBD39B00694BD3 /* SceneReducer+Middleware.swift in Sources */,
 				5213425024ECA35900C10AC2 /* EventsShowAddAction.swift in Sources */,
 				52C435E424F191F1009B9DB1 /* EventsTableViewCell.swift in Sources */,
+				5204F97324F20E4800653B58 /* EventsPerformEditAction.swift in Sources */,
 				52630EB924E98A4E0018AECE /* KeyboardObservableViewController.swift in Sources */,
 				52985B9624EC94F700F9F27C /* EventsState.swift in Sources */,
 				525C4AC724E633F800659EC6 /* LoginCoordinator.swift in Sources */,
@@ -1012,6 +1023,7 @@
 				52B9F77624EC082A00AA1DC0 /* CalendarSelectAction.swift in Sources */,
 				5284C51D24E663160032FFB4 /* ViewCoordinator.swift in Sources */,
 				526C3A3D24EAB5CB002A3D9F /* RegistrationStore.swift in Sources */,
+				5204F97524F20E5100653B58 /* EventsPerformDeleteAction.swift in Sources */,
 				526302CE24E9441E00CDCD1D /* ErrorLabel.swift in Sources */,
 				522CE73F24E93EF200F5EF78 /* ViewController.swift in Sources */,
 				52EF201524EB6DB6001B20F0 /* Event+CoreDataProperties.swift in Sources */,

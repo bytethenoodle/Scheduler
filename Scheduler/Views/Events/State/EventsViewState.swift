@@ -17,5 +17,5 @@ enum EventsViewState {
     
     case performAdd
     case performEdit
-    case PerformDelete
+    case performDelete
 }

@@ -25,6 +25,20 @@ final class EventsReducer: ActionReducer {
             state.eventsViewState = .showEdit
             state.selectedIndex = eventsEditAction.selectedIndex
             break
+        case let eventsPerformAddAction as EventsPerformAddAction:
+            EventRepository.addEvent(date: eventsPerformAddAction.selectedDate,
+                                     title: eventsPerformAddAction.inputTitle)
+            state.eventsViewState = .performAdd
+            break
+        case let eventsPerformEditAction as EventsPerformEditAction:
+            EventRepository.edit(eventsPerformEditAction.event,
+                                 title: eventsPerformEditAction.inputTitle)
+            state.eventsViewState = .performEdit
+            break
+        case let eventsPerformDeleteAction as EventsPerformDeleteAction:
+            EventRepository.delete(eventsPerformDeleteAction.event)
+            state.eventsViewState = .performDelete
+            break
         default:
             break
         }

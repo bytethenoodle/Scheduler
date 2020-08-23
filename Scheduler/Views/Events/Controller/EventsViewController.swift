@@ -28,10 +28,14 @@ class EventsViewController: ViewController<EventsCoordinator,
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewCoordinator?.store?.dispatch(EventsRefreshViewAction())
+        refreshView()
     }
     
     // MARK: - View Setups
+    
+    func refreshView() {
+        viewCoordinator?.store?.dispatch(EventsRefreshViewAction())
+    }
     
     func setupCollectionViewLayout() {
         tableView?.delegate = self
@@ -63,6 +67,18 @@ class EventsViewController: ViewController<EventsCoordinator,
     
     @objc func didTapAddButton(_ sender: Any?) {
         viewCoordinator?.store?.dispatch(EventsShowAddAction())
+    }
+    
+    @objc func didTapAddAlertAction(selectedDate: Date?, title: String) {
+        viewCoordinator?.store?.dispatch(EventsPerformAddAction(selectedDate: selectedDate, inputTitle: title))
+    }
+    
+    @objc func didTapEditAlertAction(event: Event, title: String) {
+        viewCoordinator?.store?.dispatch(EventsPerformEditAction(event: event, inputTitle: title))
+    }
+    
+    @objc func didTapDeleteAlertAction(event: Event) {
+        viewCoordinator?.store?.dispatch(EventsPerformDeleteAction(event: event))
     }
 }
 
