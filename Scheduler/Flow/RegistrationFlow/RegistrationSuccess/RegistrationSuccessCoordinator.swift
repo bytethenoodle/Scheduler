@@ -10,16 +10,22 @@ import ReSwift
 
 class RegistrationSuccessCoordinator: ViewCoordinator {
     
+    // MARK: - Typealiases
+    
     typealias StoreSubscriberStateType = RegistrationSuccessState
     typealias CoordinatorStoreType = RegistrationSuccessStore
     typealias ViewControllerType = RegistrationSuccessViewController
     typealias FlowCoordinatorType = RegistrationFlowCoordinator
 
+    // MARK: - Properties
+    
     var store: CoordinatorStoreType?
         
     var flowCoordinator: FlowCoordinatorType?
 
     weak var viewController: RegistrationSuccessViewController?
+    
+    // MARK: - Initializations
     
     required init(flowCoordinator: FlowCoordinatorType) {
         let reducer = RegistrationSuccessReducer()
@@ -28,6 +34,8 @@ class RegistrationSuccessCoordinator: ViewCoordinator {
         self.flowCoordinator = flowCoordinator
     }
 
+    // MARK: - Lifecycle
+    
     func start() {
         guard let registrationSuccessViewController = ViewControllerType.instantiateFromStoryboard()
         else { return }

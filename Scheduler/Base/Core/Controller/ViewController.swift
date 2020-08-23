@@ -11,7 +11,11 @@ import RxSwift
 
 class ViewController<C: Coordinator, S: StateType>: UIViewController, ViewControllerCoordinatable {
     
+    // MARK: - Typealiases
+    
     typealias CoordinatorType = C
+    
+    // MARK: - Properties
     
     var viewCoordinator: C?
     
@@ -27,6 +31,8 @@ class ViewController<C: Coordinator, S: StateType>: UIViewController, ViewContro
         }
     }
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -38,10 +44,14 @@ class ViewController<C: Coordinator, S: StateType>: UIViewController, ViewContro
         unsubscribeStore()
     }
     
+    // MARK: - Setups
+    
     private func setAppearance() {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: String.empty, style: .plain,
                                                            target: nil, action: nil)
     }
+    
+    // MARK: - Subscription
     
     private func subscribeStore() {
         guard let viewCoordinator = viewCoordinator else {return}

@@ -10,16 +10,22 @@ import ReSwift
 
 class RegistrationCoordinator: KeyboardObservableViewCoordinator {
     
+    // MARK: - Typealiases
+    
     typealias ViewControllerType = RegistrationViewController
     typealias CoordinatorStoreType = RegistrationStore
     typealias StoreSubscriberStateType = RegistrationState
     typealias FlowCoordinatorType = RegistrationFlowCoordinator
 
+    // MARK: - Properties
+    
     var store: RegistrationStore?
     
     var flowCoordinator: FlowCoordinatorType?
 
     weak var viewController: RegistrationViewController?
+    
+    // MARK: - Initializations
     
     required init(flowCoordinator: FlowCoordinatorType) {
         let reducer = RegistrationReducer()
@@ -28,6 +34,8 @@ class RegistrationCoordinator: KeyboardObservableViewCoordinator {
                                           middleware: [reducer.middleware()])
         self.flowCoordinator = flowCoordinator
     }
+    
+    // MARK: - Lifecycle
     
     func start() {
         guard let registrationViewController = ViewControllerType.instantiateFromStoryboard()

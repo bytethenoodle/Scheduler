@@ -10,14 +10,20 @@ import ReSwift
 
 class LoginFlowCoordinator: FlowCoordinator {
     
+    // MARK: - Typealiases
+    
     typealias CoordinatorStoreType = LoginFlowStore
     typealias StoreSubscriberStateType = LoginFlowState
+    
+    // MARK: - Properties
     
     var store: CoordinatorStoreType?
     var navigationController: NavigationController?
     
     weak var sceneCoordinator: SceneCoordinator?
 
+    // MARK: - Initializations
+    
     required init(sceneCoordinator: SceneCoordinator) {
         self.sceneCoordinator = sceneCoordinator
                 
@@ -26,6 +32,8 @@ class LoginFlowCoordinator: FlowCoordinator {
         
         store?.subscribe(self) { $0.select { $0 }}
     }
+    
+    // MARK: - Lifecycle
     
     func start() {
         sceneCoordinator?.window?.rootViewController = navigationController

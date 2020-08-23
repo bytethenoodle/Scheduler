@@ -10,16 +10,22 @@ import ReSwift
 
 class CalendarCoordinator: ViewCoordinator {
     
+    // MARK: - Typealiases
+    
     typealias StoreSubscriberStateType = CalendarState
     typealias CoordinatorStoreType = CalendarStore
     typealias ViewControllerType = CalendarViewController
     typealias FlowCoordinatorType = CalendarFlowCoordinator
 
+    // MARK: - Properties
+    
     var store: CalendarStore?
     
     var flowCoordinator: FlowCoordinatorType?
 
     weak var viewController: CalendarViewController?
+    
+    // MARK: - Initializations
     
     required init(flowCoordinator: FlowCoordinatorType) {
         let reducer = CalendarReducer()
@@ -27,6 +33,8 @@ class CalendarCoordinator: ViewCoordinator {
                                           state: CalendarState())
         self.flowCoordinator = flowCoordinator
     }
+    
+    // MARK: - Lifecycle
     
     func start() {
         guard let calendarViewController = ViewControllerType.instantiateFromStoryboard()

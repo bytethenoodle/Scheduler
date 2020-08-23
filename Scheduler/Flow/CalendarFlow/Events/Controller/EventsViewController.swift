@@ -19,7 +19,7 @@ class EventsViewController: ViewController<EventsCoordinator,
     
     var tableDataSource: TableViewDataSource<EventsTableViewCell, Event>?
     
-    // MARK: - Action
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -135,6 +135,8 @@ class EventsViewController: ViewController<EventsCoordinator,
         }
     }
 }
+
+// MARK: - UITableViewDelegate
 
 extension EventsViewController: UITableViewDelegate {
     

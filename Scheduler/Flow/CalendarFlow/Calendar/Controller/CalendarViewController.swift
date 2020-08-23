@@ -87,6 +87,8 @@ class CalendarViewController: ViewController<CalendarCoordinator,
     }
 }
 
+// MARK: - UICollectionViewDelegate
+
 extension CalendarViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

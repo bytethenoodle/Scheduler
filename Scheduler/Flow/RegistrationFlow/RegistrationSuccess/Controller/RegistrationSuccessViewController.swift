@@ -12,8 +12,12 @@ class RegistrationSuccessViewController: ViewController<RegistrationSuccessCoord
                                                         RegistrationSuccessState>,
                                          Storyboardable {
 
+    // MARK: - Outlets
+    
     @IBOutlet weak var successLabel: PrimaryLabel?
     @IBOutlet weak var returnButton: PrimaryButton?
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +30,8 @@ class RegistrationSuccessViewController: ViewController<RegistrationSuccessCoord
         restoreNavigation()
     }
     
+    // MARK: - View Setups
+    
     private func setupNavigation() {
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: String.empty,
@@ -37,6 +43,8 @@ class RegistrationSuccessViewController: ViewController<RegistrationSuccessCoord
     private func restoreNavigation() {
         navigationController?.interactivePopGestureRecognizer?.isEnabled = true
     }
+    
+    // MARK: - Actions
     
     @IBAction func didTapReturnToLoginButton(_ sender: Any?) {
         viewCoordinator?.store?.dispatch(RegistrationSuccessReturnAction())

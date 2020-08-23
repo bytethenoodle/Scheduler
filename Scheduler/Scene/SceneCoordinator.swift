@@ -10,12 +10,18 @@ import ReSwift
 
 final class SceneCoordinator: Coordinator {
     
+    // MARK: - Typealiases
+    
     typealias StoreSubscriberStateType = SceneState
     typealias CoordinatorStoreType = SceneStore
 
+    // MARK: - Properties
+    
     var store: CoordinatorStoreType?
     
     var window : SceneWindow?
+    
+    // MARK: - Initializations
     
     required init(window: SceneWindow? = SceneWindow()) {
         let sceneReducer = SceneReducer()
@@ -28,6 +34,8 @@ final class SceneCoordinator: Coordinator {
         store?.subscribe(self) { $0.select { $0 }}
     }
 
+    // MARK: - Lifecycle
+    
     func newState(state: StoreSubscriberStateType) {
         switch state.sceneRoute {
         case .login, .logout:

@@ -10,16 +10,22 @@ import ReSwift
 
 class LoginCoordinator: KeyboardObservableViewCoordinator {
     
+    // MARK: - Typealiases
+    
     typealias StoreSubscriberStateType = LoginState
     typealias CoordinatorStoreType = LoginStore
     typealias ViewControllerType = LoginViewController
     typealias FlowCoordinatorType = LoginFlowCoordinator
 
+    // MARK: - Properties
+    
     var store: CoordinatorStoreType?
     
     var flowCoordinator: FlowCoordinatorType?
     
     weak var viewController: ViewControllerType?
+    
+    // MARK: - Initializations
     
     required init(flowCoordinator: FlowCoordinatorType) {
         let reducer = LoginReducer()
@@ -28,6 +34,8 @@ class LoginCoordinator: KeyboardObservableViewCoordinator {
                                           middleware: [reducer.middleware()])
         self.flowCoordinator = flowCoordinator
     }
+    
+    // MARK: - Lifecycle
     
     func start() {
         guard let loginViewController = ViewControllerType.instantiateFromStoryboard() else { return }
