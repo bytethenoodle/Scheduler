@@ -85,54 +85,70 @@ class EventsViewController: ViewController<EventsCoordinator,
     // MARK: - Alert Setups
     
     func showAddAlert(selectedDate: Date?) {
-        showAlertWithField(title: "Create New Event",
-                           fieldPlaceholder: "Event Title") { [weak self] (alert, field) -> [UIAlertAction] in
-            
-            guard let strongself = self else { return [] }
-
-            let saveAction = UIAlertAction(title: "Save", style: .default, handler: { _ in
-                strongself.didTapAddAlertAction(selectedDate: selectedDate,
-                                                title: field?.text ?? String.empty)
-            })
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-
-            field?.rx.text
-            .bind {
-                saveAction.isEnabled = !($0?.isEmpty() ?? true)
-            }
-            .disposed(by: strongself.disposeBag)
-            
-            return [saveAction,
-                    cancelAction]
+        
+        // Declare elements for alert
+        
+        var inputTextField: UITextField?
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default, handler: { _ in
+            self.didTapAddAlertAction(selectedDate: selectedDate,
+                                      title: inputTextField?.text ?? String.empty)
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        // Setup and show alert
+        
+        showAlertWithTextField(title: "Create New Event",
+                               message: nil,
+                               actions: [saveAction,
+                                         cancelAction]) { (textField) in
+            textField.placeholder = "Event Title"
+            inputTextField = textField
         }
+        
+        // Observe changes in text input
+        
+        inputTextField?.rx.text
+        .bind {
+            saveAction.isEnabled = !($0?.isEmpty() ?? true)
+        }
+        .disposed(by: disposeBag)
     }
     
     func showEditAlert(event: Event) {
-        showAlertWithField(title: "Edit Event",
-                           fieldPlaceholder: "Event Title",
-                           fieldText: event.title) { [weak self] (alert, field) -> [UIAlertAction] in
-            
-            guard let strongself = self else { return [] }
-            
-            let editAction = UIAlertAction(title: "Edit", style: .default, handler: { _ in
-                strongself.didTapEditAlertAction(event: event,
-                                                     title: field?.text ?? String.empty)
-            })
-            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
-                strongself.didTapDeleteAlertAction(event: event)
-            })
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            
-            field?.rx.text
-            .bind {
-                editAction.isEnabled = !($0?.isEmpty() ?? true)
-            }
-            .disposed(by: strongself.disposeBag)
-            
-            return [editAction,
-                    deleteAction,
-                    cancelAction]
+        
+        // Declare elements for alert
+        
+        var inputTextField: UITextField?
+        
+        let editAction = UIAlertAction(title: "Edit", style: .default, handler: { _ in
+            self.didTapEditAlertAction(event: event,
+                                       title: inputTextField?.text ?? String.empty)
+        })
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
+            self.didTapDeleteAlertAction(event: event)
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        // Setup and show alert
+        
+        showAlertWithTextField(title: "Edit Event",
+                               message: nil,
+                               actions: [editAction,
+                                         deleteAction,
+                                         cancelAction]) { (textField) in
+            textField.placeholder = "Event Title"
+            textField.text = event.title
+            inputTextField = textField
         }
+        
+        // Observe changes in text input
+        
+        inputTextField?.rx.text
+        .bind {
+            editAction.isEnabled = !($0?.isEmpty() ?? true)
+        }
+        .disposed(by: disposeBag)
     }
 }
 
