@@ -10,16 +10,23 @@ import UIKit
 
 class TextField: UITextField {
     
+    // MARK: - Computed Properties
+    
     var isError: Bool = false {
         didSet {
             isError ? errorAppearance() : normalAppearance()
         }
     }
     
+    // MARK: - Initialization
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         normalAppearance()
+        setupToolbar()
     }
+    
+    // MARK: - Setups
     
     func setupAppearance() {
         borderStyle = .none
@@ -42,6 +49,12 @@ class TextField: UITextField {
         setupAppearance()
         backgroundColor = Color.errorBackground
     }
+    
+    func setupToolbar() {
+        inputAccessoryView = KeyboardToolbar.instantiateFromNib()
+    }
+    
+    // MARK: - Text Editing
     
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.insetBy(dx: 16.0 , dy: 0.0)

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5204849124F733B3003B915A /* KeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204849024F733B3003B915A /* KeyboardToolbar.swift */; };
+		5204849324F734B5003B915A /* KeyboardToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5204849224F734B5003B915A /* KeyboardToolbar.xib */; };
 		5204F97124F20E3F00653B58 /* EventsPerformAddAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204F97024F20E3F00653B58 /* EventsPerformAddAction.swift */; };
 		5204F97324F20E4800653B58 /* EventsPerformEditAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204F97224F20E4800653B58 /* EventsPerformEditAction.swift */; };
 		5204F97524F20E5100653B58 /* EventsPerformDeleteAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5204F97424F20E5100653B58 /* EventsPerformDeleteAction.swift */; };
@@ -151,6 +153,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5204849024F733B3003B915A /* KeyboardToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardToolbar.swift; sourceTree = "<group>"; };
+		5204849224F734B5003B915A /* KeyboardToolbar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyboardToolbar.xib; sourceTree = "<group>"; };
 		5204F97024F20E3F00653B58 /* EventsPerformAddAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPerformAddAction.swift; sourceTree = "<group>"; };
 		5204F97224F20E4800653B58 /* EventsPerformEditAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPerformEditAction.swift; sourceTree = "<group>"; };
 		5204F97424F20E5100653B58 /* EventsPerformDeleteAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPerformDeleteAction.swift; sourceTree = "<group>"; };
@@ -316,6 +320,15 @@
 				70526C0E2D27263308DCBFF2 /* Pods_Scheduler.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5204848F24F7338A003B915A /* KeyboardToolbar */ = {
+			isa = PBXGroup;
+			children = (
+				5204849024F733B3003B915A /* KeyboardToolbar.swift */,
+				5204849224F734B5003B915A /* KeyboardToolbar.xib */,
+			);
+			path = KeyboardToolbar;
 			sourceTree = "<group>";
 		};
 		5204F97F24F25CE800653B58 /* LoginFlow */ = {
@@ -888,6 +901,7 @@
 			children = (
 				52985B9D24EC9D6200F9F27C /* TableViewDataSource.swift */,
 				52F2184324F17C1F00757B6E /* CollectionView */,
+				5204848F24F7338A003B915A /* KeyboardToolbar */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -973,6 +987,7 @@
 				52C435E624F192CD009B9DB1 /* EventsTableViewCell.xib in Resources */,
 				525C4AB724E4BC4800659EC6 /* LaunchScreen.storyboard in Resources */,
 				52BB97FB24F2CA520039955A /* CalendarCollectionViewCell.xib in Resources */,
+				5204849324F734B5003B915A /* KeyboardToolbar.xib in Resources */,
 				52E84FB724E916BC007C2D21 /* Colors.xcassets in Resources */,
 				52985B9224EC94DB00F9F27C /* EventsViewController.storyboard in Resources */,
 				5233DDA624EB899900FDBCB2 /* RegistrationSuccessViewController.storyboard in Resources */,
@@ -1061,6 +1076,7 @@
 				52EF202024EB73C6001B20F0 /* LoginReducer+Middleware.swift in Sources */,
 				5284C52924E678610032FFB4 /* SceneReducer.swift in Sources */,
 				5284C52324E667580032FFB4 /* LoginState.swift in Sources */,
+				5204849124F733B3003B915A /* KeyboardToolbar.swift in Sources */,
 				52EF202224EB73D6001B20F0 /* LoginReducer+Utilities.swift in Sources */,
 				525C4AB224E4BC4500659EC6 /* Scheduler.xcdatamodeld in Sources */,
 				524E5D1524E818C7001FC71B /* RegistrationState.swift in Sources */,
