@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17147" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a8a-7S-Ig9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a8a-7S-Ig9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17120"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,7 +28,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="60Y-8I-6EW">
                                                         <rect key="frame" x="0.0" y="0.0" width="350" height="101"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkg-Ae-l4W" customClass="PrimaryLabel" customModule="Scheduler" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkg-Ae-l4W" customClass="PrimaryLabel" customModule="Scheduler" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -45,7 +45,7 @@
                                                                     <outlet property="delegate" destination="a8a-7S-Ig9" id="n5i-5b-kyP"/>
                                                                 </connections>
                                                             </textField>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKX-M1-N4y" customClass="SecondaryLabel" customModule="Scheduler" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKX-M1-N4y" customClass="SecondaryLabel" customModule="Scheduler" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="80.5" width="350" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -56,7 +56,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Opf-hj-mgw">
                                                         <rect key="frame" x="0.0" y="133" width="350" height="101"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdQ-0H-s5Q" customClass="PrimaryLabel" customModule="Scheduler" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdQ-0H-s5Q" customClass="PrimaryLabel" customModule="Scheduler" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -73,7 +73,7 @@
                                                                     <outlet property="delegate" destination="a8a-7S-Ig9" id="fHt-wd-9LT"/>
                                                                 </connections>
                                                             </textField>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45x-tG-lgX" customClass="SecondaryLabel" customModule="Scheduler" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45x-tG-lgX" customClass="SecondaryLabel" customModule="Scheduler" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="80.5" width="350" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -84,7 +84,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BhY-aO-Ns9">
                                                         <rect key="frame" x="0.0" y="266" width="350" height="101"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bto-iJ-qsP" customClass="PrimaryLabel" customModule="Scheduler" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bto-iJ-qsP" customClass="PrimaryLabel" customModule="Scheduler" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="350" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -101,7 +101,7 @@
                                                                     <outlet property="delegate" destination="a8a-7S-Ig9" id="WSm-kZ-8eH"/>
                                                                 </connections>
                                                             </textField>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FM-2R-vZJ" customClass="SecondaryLabel" customModule="Scheduler" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FM-2R-vZJ" customClass="SecondaryLabel" customModule="Scheduler" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="80.5" width="350" height="20.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
@@ -109,13 +109,13 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyD-o7-A9K" customClass="ErrorLabel" customModule="Scheduler" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyD-o7-A9K" customClass="ErrorLabel" customModule="Scheduler" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="399" width="350" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xe8-he-eOJ" customClass="PrimaryButton" customModule="Scheduler" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xe8-he-eOJ" customClass="PrimaryButton" customModule="Scheduler" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="451.5" width="350" height="44"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="OQN-Is-Kko"/>
@@ -127,17 +127,17 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="404" id="uWQ-Uk-cq5"/>
+                                                    <constraint firstAttribute="width" priority="999" constant="404" id="uWQ-Uk-cq5"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="G9B-kM-7MW" firstAttribute="leading" secondItem="H85-17-jXe" secondAttribute="leadingMargin" priority="750" constant="24" id="2Gp-32-gtQ"/>
+                                            <constraint firstItem="G9B-kM-7MW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H85-17-jXe" secondAttribute="leadingMargin" constant="24" id="2Gp-32-gtQ"/>
                                             <constraint firstItem="G9B-kM-7MW" firstAttribute="centerY" secondItem="H85-17-jXe" secondAttribute="centerY" id="FVw-C2-pSi"/>
                                             <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="G9B-kM-7MW" secondAttribute="bottom" constant="32" id="K7o-Ze-TBP"/>
                                             <constraint firstItem="G9B-kM-7MW" firstAttribute="centerX" secondItem="H85-17-jXe" secondAttribute="centerX" id="Wra-fW-r7C"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="G9B-kM-7MW" secondAttribute="trailing" priority="750" constant="24" id="oVA-dF-thr"/>
+                                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="G9B-kM-7MW" secondAttribute="trailing" constant="24" id="oVA-dF-thr"/>
                                             <constraint firstItem="G9B-kM-7MW" firstAttribute="top" relation="greaterThanOrEqual" secondItem="H85-17-jXe" secondAttribute="topMargin" constant="32" id="yaZ-Zz-tMT"/>
                                         </constraints>
                                     </view>
@@ -152,7 +152,6 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="xeo-jo-tPe"/>
                         <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="fID-UI-aYB" firstAttribute="leading" secondItem="Ai2-0B-JWi" secondAttribute="leading" id="VF7-g0-n0K"/>
@@ -160,6 +159,7 @@
                             <constraint firstItem="fID-UI-aYB" firstAttribute="trailing" secondItem="Ai2-0B-JWi" secondAttribute="trailing" id="iUK-Nf-cda"/>
                             <constraint firstAttribute="bottom" secondItem="fID-UI-aYB" secondAttribute="bottom" id="nFX-2F-xrW"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="xeo-jo-tPe"/>
                     </view>
                     <connections>
                         <outlet property="errorTitleLabel" destination="cyD-o7-A9K" id="BaP-XZ-yY2"/>

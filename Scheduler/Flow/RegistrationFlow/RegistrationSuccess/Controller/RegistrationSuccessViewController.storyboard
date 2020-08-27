@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17147" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QIL-zE-GTb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QIL-zE-GTb">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17120"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vjk-BW-CyN">
-                                <rect key="frame" x="32" y="408" width="350" height="80.5"/>
+                                <rect key="frame" x="24" y="408" width="366" height="80.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzf-SJ-OmF" customClass="PrimaryLabel" customModule="Scheduler" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="999" verticalCompressionResistancePriority="1000" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzf-SJ-OmF" customClass="PrimaryLabel" customModule="Scheduler" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="366" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oy1-I3-JKQ" customClass="PrimaryButton" customModule="Scheduler" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="36.5" width="350" height="44"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oy1-I3-JKQ" customClass="PrimaryButton" customModule="Scheduler" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="36.5" width="366" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="u99-4u-bPj"/>
                                         </constraints>
@@ -37,20 +37,20 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="404" id="UuO-jU-xG6"/>
+                                    <constraint firstAttribute="width" priority="999" constant="404" id="UuO-jU-xG6"/>
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="OvD-Dg-Sya"/>
                         <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="vjk-BW-CyN" secondAttribute="bottom" constant="32" id="6k7-9z-XK2"/>
                             <constraint firstItem="vjk-BW-CyN" firstAttribute="centerX" secondItem="Y2R-mI-CSl" secondAttribute="centerX" id="D3X-kK-V8y"/>
                             <constraint firstItem="vjk-BW-CyN" firstAttribute="centerY" secondItem="Y2R-mI-CSl" secondAttribute="centerY" id="I8j-Db-teE"/>
-                            <constraint firstItem="OvD-Dg-Sya" firstAttribute="trailing" secondItem="vjk-BW-CyN" secondAttribute="trailing" priority="750" constant="32" id="LdB-B4-uhf"/>
-                            <constraint firstItem="vjk-BW-CyN" firstAttribute="leading" secondItem="OvD-Dg-Sya" secondAttribute="leading" priority="750" constant="32" id="VTX-14-Kb7"/>
+                            <constraint firstItem="OvD-Dg-Sya" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vjk-BW-CyN" secondAttribute="trailing" constant="24" id="LdB-B4-uhf"/>
+                            <constraint firstItem="vjk-BW-CyN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OvD-Dg-Sya" secondAttribute="leading" constant="24" id="VTX-14-Kb7"/>
                             <constraint firstItem="vjk-BW-CyN" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Y2R-mI-CSl" secondAttribute="topMargin" constant="32" id="t94-Yd-vKL"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="OvD-Dg-Sya"/>
                     </view>
                     <connections>
                         <outlet property="returnButton" destination="Oy1-I3-JKQ" id="fzd-EV-yq2"/>
