@@ -35,6 +35,7 @@
 		5233DDAE24EB8E1500FDBCB2 /* RegistrationSuccessReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233DDAD24EB8E1500FDBCB2 /* RegistrationSuccessReducer.swift */; };
 		5233DDB024EB8F8F00FDBCB2 /* RegistrationSuccessViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233DDAF24EB8F8F00FDBCB2 /* RegistrationSuccessViewState.swift */; };
 		5233DDB424EB957F00FDBCB2 /* RegistrationSuccessReturnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5233DDB324EB957F00FDBCB2 /* RegistrationSuccessReturnAction.swift */; };
+		523EBDAF24F8FA3C00AB9409 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523EBDAE24F8FA3C00AB9409 /* Collection.swift */; };
 		524E5D1524E818C7001FC71B /* RegistrationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1424E818C7001FC71B /* RegistrationState.swift */; };
 		524E5D1824E821DB001FC71B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1724E821DB001FC71B /* Coordinator.swift */; };
 		524E5D1A24E826E2001FC71B /* ActionReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E5D1924E826E2001FC71B /* ActionReducer.swift */; };
@@ -181,6 +182,7 @@
 		5233DDAD24EB8E1500FDBCB2 /* RegistrationSuccessReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessReducer.swift; sourceTree = "<group>"; };
 		5233DDAF24EB8F8F00FDBCB2 /* RegistrationSuccessViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessViewState.swift; sourceTree = "<group>"; };
 		5233DDB324EB957F00FDBCB2 /* RegistrationSuccessReturnAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSuccessReturnAction.swift; sourceTree = "<group>"; };
+		523EBDAE24F8FA3C00AB9409 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		524E5D1424E818C7001FC71B /* RegistrationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationState.swift; sourceTree = "<group>"; };
 		524E5D1724E821DB001FC71B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		524E5D1924E826E2001FC71B /* ActionReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionReducer.swift; sourceTree = "<group>"; };
@@ -802,6 +804,7 @@
 				525A54A224EA5F5500CA0274 /* String.swift */,
 				521E417624EC1BFB005F0318 /* Date.swift */,
 				52985B8A24EC415600F9F27C /* Optional.swift */,
+				523EBDAE24F8FA3C00AB9409 /* Collection.swift */,
 				52225FEB24F18FF900391FB0 /* UITableView.swift */,
 				52225FED24F1901700391FB0 /* UICollectionView.swift */,
 				52C435E924F1F523009B9DB1 /* UIViewController.swift */,
@@ -1098,6 +1101,7 @@
 				5233DDAA24EB8DF200FDBCB2 /* RegistrationSuccessState.swift in Sources */,
 				526302D024E9442A00CDCD1D /* TextField.swift in Sources */,
 				5213425224ECA36300C10AC2 /* EventsShowEditAction.swift in Sources */,
+				523EBDAF24F8FA3C00AB9409 /* Collection.swift in Sources */,
 				525C4AA824E4BC4500659EC6 /* AppDelegate.swift in Sources */,
 				52A8291124F2AA5B00A81D4B /* RegistrationFlowAction.swift in Sources */,
 				520B55A324E93335007621DE /* View.swift in Sources */,
