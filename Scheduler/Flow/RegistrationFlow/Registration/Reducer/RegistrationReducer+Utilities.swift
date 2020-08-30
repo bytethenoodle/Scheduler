@@ -28,7 +28,7 @@ extension RegistrationReducer {
         
         UserRepository.register(username: registrationAction.username,
                       password: registrationAction.password)
-        return []
+        return errors
     }
     
     internal func formatErrorsFor(username: String, password: String) -> [RegistrationErrorState] {

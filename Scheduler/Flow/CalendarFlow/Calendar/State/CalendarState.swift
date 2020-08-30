@@ -33,7 +33,7 @@ extension CalendarState {
     
     var selectedDate: Date? {
         guard let index = selectedIndex else { return nil }
-        return currentDate.calendarArray()[index]
+        return currentDate.calendarArray()[safeIndex: index] ?? nil
     }
 }
 

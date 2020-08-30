@@ -10,25 +10,24 @@ import UIKit
 
 class CollectionViewColumnFlowLayout: UICollectionViewFlowLayout {
 
-    let cellsPerRow: Int
+    private var cellsPerRow: Int = 0
 
-    init(cellsPerRow: Int,
+    init(cellsPerRow: Int = 0,
          minimumInteritemSpacing: CGFloat = 0,
          minimumLineSpacing: CGFloat = 0,
          sectionInset: UIEdgeInsets = .zero) {
+        super.init()
         
         self.cellsPerRow = cellsPerRow
-        super.init()
-
         self.minimumInteritemSpacing = minimumInteritemSpacing
         self.minimumLineSpacing = minimumLineSpacing
         self.sectionInset = sectionInset
     }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
     }
-
+    
     override func prepare() {
         super.prepare()
 

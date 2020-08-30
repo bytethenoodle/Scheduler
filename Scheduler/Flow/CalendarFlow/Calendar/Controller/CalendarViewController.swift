@@ -22,9 +22,10 @@ class CalendarViewController: ViewController<CalendarCoordinator,
     // MARK: - Controller Lifecycle
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         setupNavigationItems()
         setupCollectionViewLayout()
+        setupCollectionViewDataSource()
+        super.viewDidLoad()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,26 +49,37 @@ class CalendarViewController: ViewController<CalendarCoordinator,
                 minimumInteritemSpacing: 0,
                 minimumLineSpacing: 0,
                 sectionInset: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
+        
+        // Set layout to collection view
         collectionView?.collectionViewLayout = columnLayout
-        collectionView?.delegate = self
     }
     
-    func setupDataSource(_ dates: [Date?]) {
+    func setupCollectionViewDataSource() {
         
-        collectionViewDataSource =
-            CollectionViewDataSource(models: dates) { cell, model in
+        // Initialize collection view data source
+        collectionViewDataSource = CollectionViewDataSource() { cell, model in
                 
-                cell.setup(date: model)
+                if let model = model {
+                    cell.setup(date: model)
+                }
                 
                 return cell
         }
         
+        // Set data source and delagate to collection view
         collectionView?.register(CalendarCollectionViewCell.self)
         collectionView?.dataSource = collectionViewDataSource
+        collectionView?.delegate = self
+    }
+    
+    // MARK: - UI Actions
+
+    func refreshList(_ dates: [Date?]) {
+        collectionViewDataSource?.models = dates
         collectionView?.reloadData()
     }
     
-    // MARK: - View Actions
+    // MARK: - User Actions
     
     @objc func leftBarButtonItemTapped(_ sender: Any?) {
         viewCoordinator?.store?.dispatch(CalendarLogoutAction())
@@ -80,6 +92,8 @@ class CalendarViewController: ViewController<CalendarCoordinator,
     @IBAction func rightButtonTapped(_ sender: Any?) {
         viewCoordinator?.store?.dispatch(CalendarIncrementAction())
     }
+    
+    // MARK: - View Transitions
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)

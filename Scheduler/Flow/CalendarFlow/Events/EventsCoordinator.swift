@@ -52,7 +52,7 @@ class EventsCoordinator: ViewCoordinator {
         
         viewController.navigationItem.title = state.navigationTitle
         
-        viewController.setupTable(events: state.events)
+        viewController.refreshList(events: state.events)
         
         switch state.eventsViewState {
         case .showAdd, .showEdit:
@@ -74,8 +74,8 @@ class EventsCoordinator: ViewCoordinator {
             viewController.showAddAlert(selectedDate: state.selectedDate)
             break
         case .showEdit:
-            guard let selectedIndex = state.selectedIndex else {break}
-            viewController.showEditAlert(event: state.events[selectedIndex])
+            guard let selectedEvent = state.selectedEvent else {break}
+            viewController.showEditAlert(event: selectedEvent)
             break
         default:
             break

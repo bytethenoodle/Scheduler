@@ -13,7 +13,7 @@ extension SceneReducer {
     internal func processRouteBasedOnSession(actionRoute: SceneRoute) -> SceneRoute {
         switch actionRoute {
         case .calendar:
-            return (SessionRepository.fetch().user == nil ? .login : actionRoute)
+            return (SessionRepository.fetch()?.user == nil ? .login : actionRoute)
         case .logout:
             SessionRepository.detachUser()
             return actionRoute

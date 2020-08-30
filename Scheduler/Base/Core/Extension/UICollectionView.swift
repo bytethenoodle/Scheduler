@@ -12,11 +12,14 @@ extension UICollectionView {
 
     func register<Cell: UICollectionViewCell>(_ cellType: Cell.Type) {
         let nib = UINib(nibName: String(describing: cellType), bundle: nil)
-        self.register(nib, forCellWithReuseIdentifier: String(describing: cellType))
+        register(nib, forCellWithReuseIdentifier: String(describing: cellType))
     }
 
-    func dequeueReusableCell<Cell: UICollectionViewCell>(_ cellType: Cell.Type, for indexPath: IndexPath) -> Cell? {
-        return self.dequeueReusableCell(withReuseIdentifier: String(describing: cellType), for: indexPath) as? Cell
+    func dequeueReusableCell<Cell: UICollectionViewCell>(_ cellType: Cell.Type, for indexPath: IndexPath) -> Cell {
+        
+        let reuseIdentifier = String(describing: cellType)
+        return dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? Cell ??
+               Cell.instantiateFromNib() ??
+               Cell()
     }
-
 }

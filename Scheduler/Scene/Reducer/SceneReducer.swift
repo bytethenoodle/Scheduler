@@ -19,7 +19,7 @@ final class SceneReducer: ActionReducer {
         // Handle entry point on launch based on user session
         let session = SessionRepository.fetch()
         var state = state ??
-            (session.user == nil ?
+            (session?.user == nil ?
                 ReducerStateType(sceneRoute: .login) : ReducerStateType(sceneRoute: .calendar))
                 
         // Perform passing from action

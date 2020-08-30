@@ -10,7 +10,7 @@ import CoreData
 
 class SessionRepository {
     
-    static func fetch() -> Session {
+    static func fetch() -> Session? {
         let context = Persistence.persistentContainer.viewContext
         
         let fetchRequest : NSFetchRequest<Session> = Session.fetchRequest()
@@ -19,16 +19,12 @@ class SessionRepository {
         return (try? context.fetch(fetchRequest).first) ?? create()
     }
     
-    static func create() -> Session {
+    static func create() -> Session? {
         let context = Persistence.persistentContainer.viewContext
 
         let newSession = NSEntityDescription.insertNewObject(forEntityName: String(describing: Session.self),
-                                                             into: context) as! Session
-        do {
-            try context.save()
-        } catch {
-            fatalError("error saving data")
-        }
+                                                             into: context) as? Session
+        try? context.save()
         
         return newSession
     }
@@ -37,25 +33,17 @@ class SessionRepository {
         let context = Persistence.persistentContainer.viewContext
         let session = SessionRepository.fetch()
         
-        session.user = user
+        session?.user = user
         
-        do {
-            try context.save()
-        } catch {
-            fatalError("error saving data")
-        }
+        try? context.save()
     }
     
     static func detachUser() {
         let context = Persistence.persistentContainer.viewContext
         let session = SessionRepository.fetch()
         
-        session.user = nil
+        session?.user = nil
         
-        do {
-            try context.save()
-        } catch {
-            fatalError("error saving data")
-        }
+        try? context.save()
     }
 }

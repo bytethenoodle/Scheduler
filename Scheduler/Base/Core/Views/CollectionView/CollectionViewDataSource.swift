@@ -10,13 +10,13 @@ import UIKit
 
 final class CollectionViewDataSource<V, T> : NSObject, UICollectionViewDataSource where V: UICollectionViewCell {
   
-    typealias CellConfiguration = (V, T) -> V 
+    typealias CellConfiguration = (V, T?) -> V
   
-    private let models: [T]
+    var models: [T] = []
+    
     private let configureCell: CellConfiguration
   
-    init(models: [T], configureCell: @escaping CellConfiguration) {
-        self.models = models
+    init(configureCell: @escaping CellConfiguration) {
         self.configureCell = configureCell
     }
   
@@ -25,14 +25,8 @@ final class CollectionViewDataSource<V, T> : NSObject, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(V.self, for: indexPath)
-        
-        guard let currentCell = cell else {
-          fatalError("Identifier or class not registered with this collection view")
-        }
-        
-        let model = models[indexPath.row]
-        return configureCell(currentCell, model)
+        let model = models[safeIndex: indexPath.row]
+        return configureCell(cell, model)
     }
 }

@@ -10,30 +10,23 @@ import UIKit
 
 final class TableViewDataSource<V, T> : NSObject, UITableViewDataSource where V: UITableViewCell {
   
-  typealias CellConfiguration = (V, T) -> V
+    typealias CellConfiguration = (V, T?) -> V
   
-  private let models: [T]
-  private let configureCell: CellConfiguration
-  private let cellIdentifier: String
-  
-  init(cellIdentifier: String, models: [T], configureCell: @escaping CellConfiguration) {
-    self.models = models
-    self.cellIdentifier = cellIdentifier
-    self.configureCell = configureCell
-  }
-  
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return models.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(V.self, for: indexPath)
+    var models: [T] = []
     
-    guard let currentCell = cell else {
-      fatalError("Identifier or class not registered with this table view")
+    private let configureCell: CellConfiguration
+  
+    init(configureCell: @escaping CellConfiguration) {
+        self.configureCell = configureCell
     }
-    
-    let model = models[indexPath.row]
-    return configureCell(currentCell, model)
-  }
+  
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return models.count
+    }
+  
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(V.self, for: indexPath)
+        let model = models[safeIndex: indexPath.row]
+        return configureCell(cell, model)
+    }
 }

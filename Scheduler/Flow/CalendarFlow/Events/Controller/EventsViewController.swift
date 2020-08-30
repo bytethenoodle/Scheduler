@@ -22,9 +22,9 @@ class EventsViewController: ViewController<EventsCoordinator,
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        setupCollectionViewLayout()
         setupNavigationItems()
+        setupTableView()
+        super.viewDidLoad()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,11 +34,21 @@ class EventsViewController: ViewController<EventsCoordinator,
     
     // MARK: - View Setups
     
-    func refreshView() {
-        viewCoordinator?.store?.dispatch(EventsRefreshViewAction())
-    }
-    
-    func setupCollectionViewLayout() {
+    func setupTableView() {
+        
+        // Initialize table view data source
+        tableDataSource = TableViewDataSource() { cell, model in
+            
+            if let model = model {
+                cell.setup(event: model)
+            }
+            
+          return cell
+        }
+        
+        // Set data source and delagate to table view
+        tableView?.register(EventsTableViewCell.self)
+        tableView?.dataSource = tableDataSource
         tableView?.delegate = self
     }
     
@@ -49,22 +59,18 @@ class EventsViewController: ViewController<EventsCoordinator,
         navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
-    func setupTable(events: [Event]) {
-        tableDataSource = TableViewDataSource(
-            cellIdentifier:String(describing: UITableViewCell.self),
-            models: events) {cell, model in
-            
-            cell.setup(event: model)
-            
-          return cell
-        }
-        
-        tableView?.register(EventsTableViewCell.self)
-        tableView?.dataSource = tableDataSource
+    // MARK: - UI Actions
+    
+    func refreshView() {
+        viewCoordinator?.store?.dispatch(EventsRefreshViewAction())
+    }
+    
+    func refreshList(events: [Event]) {
+        tableDataSource?.models = events
         tableView?.reloadData()
     }
     
-    // MARK: - Actions
+    // MARK: - User Actions
     
     @objc func didTapAddButton(_ sender: Any?) {
         viewCoordinator?.store?.dispatch(EventsShowAddAction())
@@ -97,7 +103,6 @@ class EventsViewController: ViewController<EventsCoordinator,
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
         // Setup and show alert
-        
         showAlertWithTextField(title: "Create New Event",
                                message: nil,
                                actions: [saveAction,

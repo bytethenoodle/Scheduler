@@ -19,7 +19,7 @@ final class CalendarFlowReducer: ActionReducer {
         switch action {
         case let calendarFlowAction as CalendarFlowAction:
             state.reference = calendarFlowAction.reference
-            state.calendarFlowRoute = (SessionRepository.fetch().user == nil ?
+            state.calendarFlowRoute = (SessionRepository.fetch()?.user == nil ?
                                         .logout : calendarFlowAction.calendarFlowRoute)
             break
         default:

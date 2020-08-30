@@ -51,7 +51,7 @@ class CalendarCoordinator: ViewCoordinator {
         
         viewController.monthLabel?.text = state.currentDate.monthYearString()
         
-        viewController.setupDataSource(state.dates)
+        viewController.refreshList(state.dates)
         
         transitionViewWithState(state)
     }

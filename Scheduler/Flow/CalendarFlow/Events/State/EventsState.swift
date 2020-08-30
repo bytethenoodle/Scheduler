@@ -24,6 +24,11 @@ struct EventsState: StateType {
         eventsViewState = .normal
     }
     
+    var selectedEvent: Event? {
+        guard let selectedIndex = selectedIndex else {return nil}
+        return events[safeIndex: selectedIndex]
+    }
+    
     var events: [Event] {
         guard let selectedDate = selectedDate else {return []}
         return EventRepository.getEvents(date: selectedDate)

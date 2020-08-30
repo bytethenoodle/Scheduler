@@ -11,7 +11,7 @@ import CoreData
 class EventRepository {
     
     static func getEvents(date: Date) -> [Event] {
-        guard let user = SessionRepository.fetch().user
+        guard let user = SessionRepository.fetch()?.user
         else { return [] }
         
         let context = Persistence.persistentContainer.viewContext
@@ -31,13 +31,9 @@ class EventRepository {
         
         newEvent.title = title
         newEvent.date = date
-        newEvent.user = SessionRepository.fetch().user
+        newEvent.user = SessionRepository.fetch()?.user
         
-        do {
-            try context.save()
-        } catch {
-            fatalError("error saving data")
-        }
+        try? context.save()
     }
     
     static func edit(_ event: Event, title: String) {
@@ -45,21 +41,13 @@ class EventRepository {
         
         event.title = title
         
-        do {
-            try context.save()
-        } catch {
-            fatalError("error saving data")
-        }
+        try? context.save()
     }
     
     static func delete(_ event: Event) {
         let context = Persistence.persistentContainer.viewContext
         context.delete(event)
 
-        do {
-            try context.save()
-        } catch {
-            fatalError("error delete data")
-        }
+        try? context.save()
     }
 }

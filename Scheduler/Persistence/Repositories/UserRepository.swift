@@ -15,15 +15,10 @@ class UserRepository {
     
     static func exist(username: String) -> Bool {
         let context = Persistence.persistentContainer.viewContext
-        do {
-            let fetchRequest : NSFetchRequest<User> = User.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "username == %@", username)
-            let fetchedResults = try context.fetch(fetchRequest)
-            return !fetchedResults.isEmpty
-        }
-        catch {
-            fatalError("fetch task failed")
-        }
+        let fetchRequest : NSFetchRequest<User> = User.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "username == %@", username)
+        let fetchedResults = try? context.fetch(fetchRequest)
+        return !(fetchedResults?.isEmpty ?? true)
     }
     
     static func register(username: String, password: String) {
@@ -36,23 +31,14 @@ class UserRepository {
         user.password = password
         user.events = []
         
-        do {
-            try context.save()
-        } catch {
-            fatalError("error saving data")
-        }
+        try? context.save()
     }
     
     static func get(username: String, password: String) -> User? {
         let context = Persistence.persistentContainer.viewContext
-        do {
-            let fetchRequest : NSFetchRequest<User> = User.fetchRequest()
-            fetchRequest.predicate = NSPredicate(format: "username == %@ && password == %@", username, password)
-            let fetchedResults = try context.fetch(fetchRequest)
-            return fetchedResults.first
-        }
-        catch {
-            return nil
-        }
+        let fetchRequest : NSFetchRequest<User> = User.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "username == %@ && password == %@", username, password)
+        let fetchedResults = try? context.fetch(fetchRequest)
+        return fetchedResults?.first
     }
 }

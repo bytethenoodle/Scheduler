@@ -11,11 +11,11 @@ import Foundation
 extension MutableCollection {
     subscript(safeIndex index: Index) -> Element? {
         get {
-            return indices.contains(index) ? self[ index] : nil
+            return indices.contains(index) ? self[index] : nil
         }
         set(newValue) {
             if let newValue = newValue, indices.contains(index) {
-                self[ index] = newValue
+                self[index] = newValue
             }
         }
     }
