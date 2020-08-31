@@ -29,8 +29,8 @@ class CalendarCoordinator: ViewCoordinator {
     
     required init(flowCoordinator: FlowCoordinatorType) {
         let reducer = CalendarReducer()
-        self.store = CoordinatorStoreType(reducer: reducer.reduce,
-                                          state: CalendarState())
+        store = CoordinatorStoreType(reducer: reducer.reduce,
+                                     state: CalendarState())
         self.flowCoordinator = flowCoordinator
     }
     

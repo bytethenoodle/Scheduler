@@ -13,12 +13,13 @@ import ReSwift
 extension SceneReducer {
     
     func middleware() -> Middleware<ReducerStateType> {
-        return { dispatch, getState in
-            return { next in
-                return { action in
+        return { [weak self] dispatch, getState in
+            return { [weak self] next in
+                return { [weak self] action in
                     switch action {
                     case var sceneAction as SceneAction:
-                        sceneAction.sceneRoute = self.processRouteBasedOnSession(actionRoute: sceneAction.sceneRoute)
+                        guard let strongself = self else { break }
+                        sceneAction.sceneRoute = strongself.processRouteBasedOnSession(actionRoute: sceneAction.sceneRoute)
                         next(sceneAction)
                         break
                     default:

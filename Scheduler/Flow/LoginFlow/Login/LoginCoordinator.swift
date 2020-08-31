@@ -29,9 +29,9 @@ class LoginCoordinator: KeyboardObservableViewCoordinator {
     
     required init(flowCoordinator: FlowCoordinatorType) {
         let reducer = LoginReducer()
-        self.store = CoordinatorStoreType(reducer: reducer.reduce,
-                                          state: LoginState(),
-                                          middleware: [reducer.middleware()])
+        store = CoordinatorStoreType(reducer: reducer.reduce,
+                                     state: LoginState(),
+                                     middleware: [reducer.middleware()])
         self.flowCoordinator = flowCoordinator
     }
     

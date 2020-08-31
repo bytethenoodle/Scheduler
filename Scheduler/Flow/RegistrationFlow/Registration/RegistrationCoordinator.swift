@@ -29,9 +29,9 @@ class RegistrationCoordinator: KeyboardObservableViewCoordinator {
     
     required init(flowCoordinator: FlowCoordinatorType) {
         let reducer = RegistrationReducer()
-        self.store = CoordinatorStoreType(reducer: reducer.reduce,
-                                          state: RegistrationState(),
-                                          middleware: [reducer.middleware()])
+        store = CoordinatorStoreType(reducer: reducer.reduce,
+                                     state: RegistrationState(),
+                                     middleware: [reducer.middleware()])
         self.flowCoordinator = flowCoordinator
     }
     

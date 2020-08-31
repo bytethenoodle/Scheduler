@@ -14,7 +14,7 @@ extension String {
     static let space: String = " "
     
     func isEmpty() -> Bool {
-        return self.trimmingCharacters(in: .whitespacesAndNewlines) == String.empty
+        return trimmingCharacters(in: .whitespacesAndNewlines) == String.empty
     }
     
     func hasUpperLetter() -> Bool {
@@ -22,7 +22,7 @@ extension String {
             return false }
         let matches = regex.matches(in: self,
                                     options: NSRegularExpression.MatchingOptions(),
-                                    range: NSRange(location: 0, length: self.count))
+                                    range: NSRange(location: 0, length: count))
         return !matches.isEmpty
     }
 
@@ -31,7 +31,7 @@ extension String {
             return false }
         let matches = regex.matches(in: self,
                                     options: NSRegularExpression.MatchingOptions(),
-                                    range: NSRange(location: 0, length: self.count))
+                                    range: NSRange(location: 0, length: count))
         return !matches.isEmpty
     }
     
@@ -40,14 +40,14 @@ extension String {
     }
     
     func hasNoSpace() -> Bool {
-        return (self.rangeOfCharacter(from: .whitespacesAndNewlines) == nil)
+        return (rangeOfCharacter(from: .whitespacesAndNewlines) == nil)
     }
     
     func isValidUsernameRange() -> Bool {
-        return self.count >= 8 && self.count <= 20
+        return count >= 8 && count <= 20
     }
     
     func isValidPasswordRange() -> Bool {
-        return self.count >= 8
+        return count >= 8
     }
 }

@@ -13,12 +13,15 @@ import ReSwift
 extension RegistrationReducer {
     
     func middleware() -> Middleware<ReducerStateType> {
-        return { dispatch, getState in
-            return { next in
-                return { action in
+        return { [weak self] dispatch, getState in
+            return { [weak self] next in
+                return { [weak self] action in
                     switch action {
                     case let registrationAction as RegistrationAction:
-                        next(RegistrationProcessAction(registrationErrorStates: self.performRegistration(registrationAction: registrationAction)))
+                        guard let strongself = self else { break }
+                        next(RegistrationProcessAction(registrationErrorStates:
+                                                       strongself.performRegistration(registrationAction:
+                                                                                      registrationAction)))
                         break
                     default:
                         next(action)

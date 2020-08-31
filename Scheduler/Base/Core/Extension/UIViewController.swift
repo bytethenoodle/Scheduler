@@ -22,7 +22,7 @@ extension UIViewController {
         {
             return selectedController.topViewController()
             
-        } else if let presentedController = self.presentedViewController {
+        } else if let presentedController = presentedViewController {
             return presentedController.topViewController()
         }
         

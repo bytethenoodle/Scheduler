@@ -96,9 +96,9 @@ class EventsViewController: ViewController<EventsCoordinator,
         
         var inputTextField: UITextField?
         
-        let saveAction = UIAlertAction(title: "Save", style: .default, handler: { _ in
-            self.didTapAddAlertAction(selectedDate: selectedDate,
-                                      title: inputTextField?.text ?? String.empty)
+        let saveAction = UIAlertAction(title: "Save", style: .default, handler: { [weak self] _ in
+            self?.didTapAddAlertAction(selectedDate: selectedDate,
+                                       title: inputTextField?.text ?? String.empty)
         })
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
@@ -126,12 +126,12 @@ class EventsViewController: ViewController<EventsCoordinator,
         
         var inputTextField: UITextField?
         
-        let editAction = UIAlertAction(title: "Edit", style: .default, handler: { _ in
-            self.didTapEditAlertAction(event: event,
-                                       title: inputTextField?.text ?? String.empty)
+        let editAction = UIAlertAction(title: "Edit", style: .default, handler: { [weak self] _ in
+            self?.didTapEditAlertAction(event: event,
+                                        title: inputTextField?.text ?? String.empty)
         })
-        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
-            self.didTapDeleteAlertAction(event: event)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { [weak self] _ in
+            self?.didTapDeleteAlertAction(event: event)
         })
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         

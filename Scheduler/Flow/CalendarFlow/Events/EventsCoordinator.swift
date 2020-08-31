@@ -32,8 +32,8 @@ class EventsCoordinator: ViewCoordinator {
     convenience init(flowCoordinator: FlowCoordinatorType, reference: Any?) {
         self.init(flowCoordinator: flowCoordinator)
         let reducer = EventsReducer()
-        self.store = CoordinatorStoreType(reducer: reducer.reduce,
-                                          state: EventsState(selectedDate: reference as? Date))
+        store = CoordinatorStoreType(reducer: reducer.reduce,
+                                     state: EventsState(selectedDate: reference as? Date))
         self.flowCoordinator = flowCoordinator
     }
     

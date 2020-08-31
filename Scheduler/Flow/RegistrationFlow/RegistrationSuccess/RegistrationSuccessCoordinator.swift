@@ -29,8 +29,8 @@ class RegistrationSuccessCoordinator: ViewCoordinator {
     
     required init(flowCoordinator: FlowCoordinatorType) {
         let reducer = RegistrationSuccessReducer()
-        self.store = CoordinatorStoreType(reducer: reducer.reduce,
-                                          state: RegistrationSuccessState())
+        store = CoordinatorStoreType(reducer: reducer.reduce,
+                                     state: RegistrationSuccessState())
         self.flowCoordinator = flowCoordinator
     }
 

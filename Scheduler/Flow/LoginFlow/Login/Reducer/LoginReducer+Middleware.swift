@@ -14,14 +14,14 @@ import CoreData
 extension LoginReducer {
     
     func middleware() -> Middleware<ReducerStateType> {
-        return { dispatch, getState in
-            return { next in
-                return { action in
-                    
+        return { [weak self] dispatch, getState in
+            return { [weak self] next in
+                return { [weak self] action in
                     switch action {
                     case let loginAction as LoginAction:
-                        next(LoginProcessAction(loginViewState: self.checkCredentials(username: loginAction.username,
-                                                                                      password: loginAction.password)))
+                        guard let strongself = self else { break }
+                        next(LoginProcessAction(loginViewState: strongself.checkCredentials(username: loginAction.username,
+                                                                                            password: loginAction.password)))
                         break
                     default:
                         next(action)

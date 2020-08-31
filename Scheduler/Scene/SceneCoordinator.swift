@@ -25,9 +25,9 @@ final class SceneCoordinator: Coordinator {
     
     required init(window: SceneWindow? = SceneWindow()) {
         let sceneReducer = SceneReducer()
-        self.store = CoordinatorStoreType(reducer: sceneReducer.reduce,
-                                          state: nil,
-                                          middleware: [sceneReducer.middleware()])
+        store = CoordinatorStoreType(reducer: sceneReducer.reduce,
+                                     state: nil,
+                                     middleware: [sceneReducer.middleware()])
         self.window = window
         window?.makeKeyAndVisible()
 
